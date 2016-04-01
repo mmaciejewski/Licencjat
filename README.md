@@ -19,5 +19,16 @@
 10. "Unity i Unreal, a przyszlosc"
 11. "Zakonczenie"
 
-### Wstep
+### Wstep (to moze bardziej pasowac pdo histore silnikow, zastanawiam sie jeszcze)
+
+Historia gier siega roku 1942, kiedy to dwoje amerykanów Thomasa A. Goldsmith Jr. oraz Estle Ray, tworzy prototyp gry komputerowej :
+symulator pocisku rakietowego. Kolejne lata przynosza nowe technolgie. Rok 1952 - pierwsza gra korzystajaca z prototypu monitora. 1958 - pierwsze kontrolery. 1961 - pierwsza gra z wektorowa grafika.
+
+Jednak to dopiero rok 1972 mozna uznac za poczatek nowej branzy, kiedy powstaje Pong - pierwsza gra odnoszaca komercyjny sukces. Udowadnia ona ze na grach mozna zarobic pieniadze, popyt okazal sie ogromny, zas rynek wyjatkowo maly.
+
+Nie mozna zapominac, ze byly to czasy gdy jezyki programowania znane nam dzisiaj nie byly tak rozpowszechnione, byly to poczatkwoe lata jezyka C, a najpopularniejszy powszechnie jezyk do tworzenia silnikow gier - C++ - nie istnial wogole. Wiekszosc gier byla tworzona od podstaw: budowano odpowiednie maszyny. Tak popularne w tamych czasach automaty nie byly niczym wiecej niz ladnie obudowanymi gotowymi urzadzeniami, tworzonymi pod konkretna gre - z zamknieta architektura i bez mozliwosci wprowadzania zmian. 
+
+Dopiero rozwoj komputerow osobistych pozwolil na wieksza swobode oraz pisanie wielu programow pod jedno urzadzenie. Nie zmienialo to faktu, ze ze wzgledu na roznorodna architekture kod napisany raz pod konkretna gre, po jej wydaniu stawal sie bezuzyteczny. Dodatkowo, wczesny sprzet komputerowy cechowal sie niewielka wydajnoscia, totez aby uzyskac jak najlepsza wydajnosc, pisano kod bezposrednio pod dany sprzet.
+
+// pierwszy kod lata 90, Quake engine etc.
 
