@@ -33,7 +33,7 @@ Na nasze szczescie dzisiaj kazdy z nas moze skorzystac z mozliwosci takiego siln
 Mimo ze istnieje wiele innych darmowych silnikow, to w tej pracy skupimy sie na dwoch obecnie najpopularniejszych darmowych silnikach:
 Unreal Engine udostepniane przez firme Epic Games, oraz Unity 3D udostepniane przez firme Unity Technologies. 
 
-Przyjrzymy sie krótkiej historii silników gier oraz porównamy oba oprogramowania. Dowiemy sie czym jest GDD, nastepnie przyjrzymy sie ich cechom i opiszemy proces tworzenia gier w kazdym z nich. Odkryjemy czym sa bugi, jak z nimi walczyc, a w podsumowaniu opiszemy krotko: stopien trudnosciw uzytkowaniu, czas potrzebny do stworzenia gry i zastanowimy sie nad przyszloscia obu silnikow.
+Przyjrzymy sie krótkiej historii silników gier oraz porównamy oba oprogramowania. Dowiemy sie czym jest GDD, nastepnie przyjrzymy sie ich cechom i opiszemy proces tworzenia gier w kazdym z nich. Odkryjemy najczestsze bugi w grach i jak z nimi walczyc, a w podsumowaniu opiszemy krotko: stopien trudnosci w uzytkowaniu, czas potrzebny do stworzenia gry i zastanowimy sie nad przyszloscia obu silnikow.
 
 
 
