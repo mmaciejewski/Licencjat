@@ -21,7 +21,7 @@
 
 ### Wstep 
 
-XXI wiek. Gry komputerowe wyrastaja na kolejne medium we wspolczesnym swiecie. Nikogo nie dziwia godziny spedzone przy komputerze na czystej rozrywce. Rynek gier siega 91 miliardow dolarow. Miliony graczy spedza wieczory przy niezliczonej ilosci gier. Jeszcze niespelna 20 lat temu moglismy liczyc na zaledwie kilkaset tytulow, a wiekszosc gier byla robiona przez pojedynczych utalentowanych pasjonatow. Tworzenie gier bylo nie lada wyzwaniem, wymagalo ogromnej cierpliwosci, sporej wiedzy z zakresu fizyki, informatyki i matematyki.
+XXI wiek. Gry komputerowe wyrastaja na kolejne medium we wspolczesnym swiecie. Nikogo nie dziwia godziny spedzone na czystej rozrywce przy komputerze. Rynek gier siega 91 miliardow dolarow. Miliony graczy spedza wieczory przy niezliczonej ilosci gier. Jeszcze niespelna 20 lat temu moglismy liczyc na zaledwie kilkaset tytulow, a wiekszosc gier byla robiona przez pojedynczych utalentowanych pasjonatow. Tworzenie gier bylo nie lada wyzwaniem, wymagalo ogromnej cierpliwosci, sporej wiedzy z zakresu fizyki, informatyki i matematyki.
 
 Dzisiaj gre stworzyc moze nawet przecietny ciekawski nastolatek. Ilosc gier wychodzacych na rynek jest tak duza, ze nie sposob sledzic pomniejsze tytuly. Serwisy z malymi grami pekaja w szwach, duze gry nie sa juz tylko domena duzych firm. Niejednokrotnie mali zawodnicy potrafia zawojowac rynek gra, ktora pod wzgledem skomplikowania bije wielkie tytuly lat 90 - robione przez ogromne zespoly.
 Jak to mozliwe?
