@@ -19,7 +19,25 @@
 10. "Unity i Unreal, a przyszlosc"
 11. "Zakonczenie"
 
-### Wstep (to moze bardziej pasowac pdo histore silnikow, zastanawiam sie jeszcze)
+### Wstep 
+
+XXI wiek. Gry komputerowe wyrastaja na kolejne medium we wspolczesnym swiecie. Nikogo nie dziwia godziny spedzone przy komputerze na czystej rozrywce. Rynek gier siega 91 miliardow dolarow. Miliony graczy spedza wieczory przy niezliczonej ilosci gier. Jeszcze niespelna 20 lat temu moglismy liczyc na zaledwie kilkaset tytulow, a wiekszosc gier byla robiona przez pojedynczych utalentowanych pasjonatow. Tworzenie gier bylo nie lada wyzwaniem, wymagalo ogromnej cierpliwosci, sporej wiedzy z zakresu fizyki, informatyki i matematyki.
+
+Dzisiaj gre stworzyc moze nawet przecietny ciekawski nastolatek. Ilosc gier wychodzacych na rynek jest tak duza, ze nie sposob sledzic pomniejsze tytuly. Serwisy z malymi grami pekaja w szwach, duze gry nie sa juz tylko domena duzych firm. Niejednokrotnie mali zawodnicy potrafia zawojowac rynek gra, ktora pod wzgledem skomplikowania bije wielkie tytuly lat 90 - robione przez ogromne zespoly.
+Jak to mozliwe?
+
+Odopowiedzia sa silniki gier - zaawansowane oprogramowanie tworzone przez firmy specjalnie na potrzeby nowych gier. Powolanie nowej gry do zycia wymaga ogromnych nakladow czasowych i finansowych. "Jak bedziemy generowac grafike? Czy w naszej grze bedzie realistyczna fizyka? A dynamiczne swiatlo? Co z dzwiekiem? Jaki jezyk programowania wybrac? A i trzeba jeszcze te gre zoptymalizowac pod konkretna platforme!". Na te i wiele innych pytan trzeba odpowiedziec kazdorazowo tworzac nowa gre. Doswiadczeni tworcy wiedza jednak, ze to wlasnie te pytania generuja najwieksze koszty. Aby uniknac odkrywania kola na nowo, firmy czesto tworza wlasne silniki, badz wykupuja licencje na inne. Wspolczesnie, wiekszosc nowych tytulow robiona jest na juz gotowych silnikach, a tylko maly procent z nich doczekuje sie wlasnego, wartego niejednokrotnie wiecej niz sama gra. 
+
+Na nasze szczescie dzisiaj kazdy z nas moze skorzystac z mozliwosci takiego silnika. O ile kiedys zaawansowane silniki byly zarezerwowane tylko dla waskiej grupy tworcow, szybko odkryto, ze na sprzedazy i udostepnianiu silnikow gier mozna takze zarobic spore pieniadze. Rynek gier jest nieprzewidywalny i nawet najlepsza gra moze okazac sie finansowa klapa, natomiast silnik na ktorym ta gra powstala nie traci przy tym na wartosci. Koszty licencji popularnych platnych silników takich jak Frostbite 3 lub Cry Engine 3, moga siegac milionowych kwot.
+
+Mimo ze istnieje wiele innych darmowych silnikow, to w tej pracy skupimy sie na dwoch obecnie najpopularniejszych darmowych silnikach:
+Unreal Engine udostepniane przez firme Epic Games, oraz Unity 3D udostepniane przez firme Unity Technologies. 
+
+Przyjrzymy sie krótkiej historii silników gier oraz porównamy oba oprogramowania. Dowiemy sie czym jest GDD, nastepnie przyjrzymy sie ich cechom i opiszemy proces tworzenia gier w kazdym z nich. Odkryjemy czym sa bugi, jak z nimi walczyc, a w podsumowaniu opiszemy krotko: stopien trudnosciw uzytkowaniu, czas potrzebny do stworzenia gry i zastanowimy sie nad przyszloscia obu silnikow.
+
+
+
+### Krótka historia silników do tworzenia gier
 
 Historia gier siega roku 1942, kiedy to dwoje amerykanów Thomasa A. Goldsmith Jr. oraz Estle Ray, tworzy prototyp gry komputerowej :
 symulator pocisku rakietowego. Kolejne lata przynosza nowe technolgie. Rok 1952 - pierwsza gra korzystajaca z prototypu monitora. 1958 - pierwsze kontrolery. 1961 - pierwsza gra z wektorowa grafika.
