@@ -1,0 +1,11 @@
+- Jezyki programowania - C#, Java Script, Boo
+- Unity UI (wprowadzono w unity 4) - narzedzie do tworzenia interfejsu użytkownika, opiera sie ono na obiekcie tzw. Canvasie, który rysuje 
+obiekty na warstwie kamery. 
+- Mecanim System - unitowe narzedzie do obsugi animacji 2D/3D. Unity pozwala na import obiektów graficznych we wszystkich popularnych formatach (.fbx, .blend, .max, .3DS, .dae ) dla 3D, (.png, .jpg , .psd  etc.) dla 2D.
+- Fizyka - unity korzysta z dwóch oddzielnych systemów: dla 2D jest to Box 2D - silnik tworzony przez Erina Catto, natomiast do 3D - PhysX 3 (od wersji unity 5 wzwyż) stworzony przez firme Nvidia
+- Unity skupia sie na prostocie uzytkowania. Calosc pracy wykonywana jest na tzw. Scenach - przestrzeniach 3D, na ktore przeciagamy badz tworzymy obiekty
+metoda drag and drop. Kazdy obiekt opiera sie na componentach - skryptach napisanych w jednym z powyzszych jezykow programowania.
+- Unity nie posiada wlasnego edytora do edycji kodu, korzysta jednak standardowo z IDE Mono Develop, mozna korzystac z innych IDE, np Visual Studio
+- Asset Store - wbudowany w unity funkcjonalnosc, pzowalajaca na pobieranie zarowno platnych jak i darmowych pluginow, skryptow, assetow tworzonych przez innych uzytkownikow
+- Unity pozwala na latwe tworzenie paczek oraz ich import / eksport, automatycznie wyszukuje referencje i umiejscawia potrzebne komponenty w odpowiednich miejscach
+- Unity pozwala na budowanie aplikacji na dowolne wspolczesne platformy: PC, MAC , Linux, IOS, Android, Tizen, AppleTV, Xbox 360, XboxOne, PS3, PS4 PsVita, BlackBerry, Windows Phone, Web Player
