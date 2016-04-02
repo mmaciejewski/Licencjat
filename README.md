@@ -1,13 +1,13 @@
-# Wspólczesne tworzenie gier na przykladzie Unity i Unreal Engine.
+## Wspólczesne tworzenie gier na przykladzie silników Unity i Unreal Engine
 
-## Slowa kluczowe
+### Slowa kluczowe
 
-"gry konsolowe", "silnik gier", "Unity", "Unreal", "animacja", "fizyka", "skrypty", "interfejs użytkownika", "scena", "obiekt", "platforma", "gry mobilne", "optymalizacja", "particle", "audio", "3D", "2D", "architektura", "oswietlenie", "komponent", "drag and drop"
+gry konsolowe, "silnik gier", "Unity", "Unreal", "animacja", "fizyka", "skrypty", "interfejs użytkownika", "scena", "obiekt", "platforma", "gry mobilne", "optymalizacja", "particle", "audio", "3D", "2D", "architektura", "oswietlenie", "komponent", "drag and drop"
 
-## Spis tresci
+### Spis tresci
 
-1. "Wstep"
-2. "Krótka historia silników do tworzenia gier"
+1. Wstep
+2. Krótka historia silników do tworzenia gier
 3. "Czym jest GDD?"
 3. "Przedstawienie Unity i Unreal Engine"
 4. "Podstawa tworzenia gier - Unity" (dodatek: video)
@@ -34,7 +34,6 @@ Mimo ze istnieje wiele innych darmowych silnikow, to w tej pracy skupimy sie na 
 Unreal Engine udostepniane przez firme Epic Games, oraz Unity 3D udostepniane przez firme Unity Technologies. 
 
 Przyjrzymy sie krótkiej historii silników gier oraz porównamy oba oprogramowania. Dowiemy sie czym jest GDD, nastepnie przyjrzymy sie ich cechom i opiszemy proces tworzenia gier w kazdym z nich. Odkryjemy najczestsze bugi w grach i jak z nimi walczyc, a w podsumowaniu opiszemy krotko: stopien trudnosci w uzytkowaniu, czas potrzebny do stworzenia gry i zastanowimy sie nad przyszloscia obu silnikow.
-
 
 
 ### Krótka historia silników do tworzenia gier
