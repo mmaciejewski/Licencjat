@@ -2,7 +2,7 @@
 
 ### Slowa kluczowe
 
-gry konsolowe, "silnik gier", "Unity", "Unreal", "animacja", "fizyka", "skrypty", "interfejs użytkownika", "scena", "obiekt", "platforma", "gry mobilne", "optymalizacja", "particle", "audio", "3D", "2D", "architektura", "oswietlenie", "komponent", "drag and drop"
+gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, interfejs użytkownika, scena, obiekt, platforma, optymalizacja, particle, audio, 3D, architektura, oswietlenie, komponent, drag and drop
 
 ### Spis treści
 
