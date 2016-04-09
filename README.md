@@ -15,18 +15,15 @@ gry konsolowe, "silnik gier", "Unity", "Unreal", "animacja", "fizyka", "skrypty"
    1. Unreal Engine (dodatek: video)
 1. Prosta gra krok po kroku - Unity
 1. Prosta gra krok po kroku - Unreal Engine
-1. Testowanie gier (lista „przykazań”)
-1. Podsumowanie procesu tworzenia dla obu silnikow
+1. Testowanie gier
+1. Podsumowanie procesu tworzenia gier dla obu silników
 1. Zakończenie
 
 ### Wstęp 
 
-Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej cierpliwości, sporej wiedzy z zakresu fizyki, informatyki i matematyki. Dzisiaj grę stworzyć może nawet przeciętny nastolatek. Ilość gier wychodzących na rynek jest tak duża, że nie sposób śledzic pomniejsze tytuly. Serwisy z małymi grami pękają w szwach. Duże gry nie są już tylko domeną dużych firm. Niejednokrotnie mali zawodnicy potrafią zawojowac rynek grą, która pod względem skomplikowania bije wielkie tytuły lat 90 - robione przez ogromne zespoly.
-
-Jak to możliwe?
+Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej cierpliwości, sporej wiedzy z zakresu fizyki, informatyki i matematyki. Dzisiaj grę stworzyć może nawet przeciętny nastolatek, dlatego liczba gier wychodzących na rynek jest tak duża, że nie sposób śledzić pomniejsze tytuły.
 
 Odopowiedzią są silniki gier - zaawansowane oprogramowanie tworzone przez firmy specjalnie na potrzeby nowych gier. Powołanie nowej gry do zycia wymaga ogromnych nakładow czasowych i finansowych. "Jak bedziemy generować grafikę? Czy w naszej grze będzie realistyczna fizyka? A dynamiczne światło? Co z dzwiękiem? Jaki język programowania wybrać? A i trzeba jeszcze tę grę zoptymalizować pod konkretną platformę!". Na te i wiele innych pytań trzeba odpowiedzieć za każdym razem tworząc nową grę. Doświadczeni twórcy wiedzą jednak, że to własnie odpowiedzi na te pytania generują największe koszty. Aby uniknąć odkrywania koła na nowo, firmy często tworzą własne silniki, bądź wykupują licencje na inne. Współcześnie, większość nowych tytułów robiona jest na już gotowych silnikach. Tylko mały procent doczeka się własnego, wartego niejednokrotnie więcej niż sama gra. 
-
 Na nasze szczęście dzisiaj każdy z nas może skorzystać z możliwości takiego silnika. O ile kiedyś były one zarezerwowane tylko dla wąskiej grupy twórców, szybko odkryto, że na sprzedaży i udostępnianiu silników gier można także zarobić spore pieniądze. Rynek gier jest nieprzewidywalny i nawet najlepsza gra może okazać sie finansową klapą. Jednak silnik na którym ta gra powstała nie traci przy tym na wartości. Koszty licencji popularnych płatnych silników takich jak Frostbite 3 lub Cry Engine 3 mogą sięgać milionowych kwot.
 
 Mimo, że istnieje wiele innych darmowych silnikow, to w tej pracy skupimy sie na dwóch obecnie najpopularniejszych darmowych silnikach:
