@@ -7,19 +7,19 @@ gry konsolowe, "silnik gier", "Unity", "Unreal", "animacja", "fizyka", "skrypty"
 ### Spis treści
 
 1. Wstęp
-2. Krótka historia silników do tworzenia gier
-3. Czym jest GDD?
-3. Przedstawienie Unity i Unreal Engine
-4. Podstawa tworzenia gier - Unity" (dodatek: video)
-5. Podstawa tworzenia gier - Unreal" (dodatek: video)
-6. Prosta gra krok po kroku - Unity
-7. Prosta gra krok po kroku - Unreal
-8. Bugi - jak ich unikac, testy gier" (lista „przykazań”)
-9. Podsumowanie procesu tworzenia dla obu silnikow
-10. Unity i Unreal, a przyszłość
-11. Zakończenie
+1. Krótka historia silników do tworzenia gier (tabelka – rok, autor, licencja…) – max. 1 strona
+1. Czym jest GDD?
+1. Przedstawienie Unity i Unreal Engine
+1. Podstawy tworzenia gier:
+   1.  Unity (dodatek: video)
+   1. Unreal Engine (dodatek: video)
+1. Prosta gra krok po kroku - Unity
+1. Prosta gra krok po kroku - Unreal Engine
+1. Testowanie gier (lista „przykazań”)
+1. Podsumowanie procesu tworzenia dla obu silnikow
+1. Zakończenie
 
-### Wstep 
+### Wstęp 
 
 Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej cierpliwości, sporej wiedzy z zakresu fizyki, informatyki i matematyki. Dzisiaj grę stworzyć może nawet przeciętny nastolatek. Ilość gier wychodzących na rynek jest tak duża, że nie sposób śledzic pomniejsze tytuly. Serwisy z małymi grami pękają w szwach. Duże gry nie są już tylko domeną dużych firm. Niejednokrotnie mali zawodnicy potrafią zawojowac rynek grą, która pod względem skomplikowania bije wielkie tytuły lat 90 - robione przez ogromne zespoly.
 
