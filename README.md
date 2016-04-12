@@ -34,7 +34,7 @@ Przyjrzymy się krótkiej historii silników gier oraz porównamy oba oprogramow
 
 ### Krótka historia silników do tworzenia gier
 
-Pierwsze silniki do tworzenia gier nie były zbyt powszechne. Były prostymi platformami do tworzenie gier 2D. Rozpowszechniły się dopiero w latach 90, wraz z rosnącą popularnością grafiki trójwymiarowej.
+Pierwsze silniki do tworzenia gier nie były zbyt powszechne. Były prostymi platformami do tworzenie gier 2D. Rozpowszechniły się dopiero w latach 90-tych, wraz z rosnącą popularnością grafiki trójwymiarowej.
 
 // pierwszy kod lata 90, Quake engine etc.
 
