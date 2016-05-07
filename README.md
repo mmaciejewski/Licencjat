@@ -1,4 +1,4 @@
-## Tworzenie gier na przykładzie silników Unity i Unreal Engine
+## Tworzenie gier w Unity i Unreal Engine
 
 ### Slowa kluczowe
 
