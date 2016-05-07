@@ -1,5 +1,7 @@
 ## Tworzenie gier w Unity i Unreal Engine
 
+#### Agnieszka Czerwińska, Michał Maviejewski i Mariusz Miszczykowski
+
 ### Slowa kluczowe
 
 gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, interfejs użytkownika, scena, obiekt, platforma, optymalizacja, particle, audio, 3D, architektura, oswietlenie, komponent, drag and drop
