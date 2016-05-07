@@ -19,6 +19,12 @@ gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, int
 1. Podsumowanie procesu tworzenia gier dla obu silników
 1. Zakończenie
 
+###Streszczenie
+Celem niniejszej pracy jest przedstawienie współczesnego podejścia do programowania gier z wykorzystaniem silników gier.
+Praca skupiać się będzie na porównaniu dwóch dostępnych darmowo silników: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D udostępnianym przez firmę Unity Technologies. W tej pracy termin „silniki” zawsze będzie odnosił się do ww. wymienionych oprogramowań, za wyjątkiem rozdziału drugiego - „Krótka historia silników gier”. Praca składa się  z części zarówno praktycznej jak i teoretycznej. Praktyczna: w jej wyniku zostały stworzone dwie gry - po jednej w każdym z silników. Zostały one oparte na jednym GDD (patrz, rozdział 3 – „czym jest gdd”). Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Cały przebieg procesu tworzenia owych gier został opisany w oddzielnych rozdziałach. Obejmują one wszystkie kroki niezbędne do stworzenia grywalnego produktu, zarówno od strony programistycznej, jak i projektowej. Poprzedza je rozdział zawierający niezbędne informacje potrzebne do zrozumienia podstawowych zagadnień oraz obsługi silników - w formie krótkich filmów wideo. Część teoretyczna skupia się przede wszystkich na przedstawieniu samego zagadnienia silników gier w ogólności, mającego pokrótce wprowadzić odbiorcę w temat tego typu oprogramowania - objaśnić ich cel i genezę. Porusza także tematy ściśle powiązane z samym programowaniem, którymi są zarówno planowanie jak i testowanie aplikacji. 
+Biorąc pod uwagę szerokie spektrum zagadnień powiązanych z całym procesem tworzenia gry, natomiast wychodzących poza zakres samego programowania konieczne było odpowiednie podzielenie pracy. Dlatego też część praktyczna skupia się na pracy w samych silnikach i ich funkcjonalności, a część teoretyczna na temacie tworzenia gier ogółem.
+
+
 ### Wstęp 
 
 Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej cierpliwości, sporej wiedzy z zakresu fizyki, informatyki i matematyki. Dzisiaj grę stworzyć może nawet przeciętny nastolatek. Dlatego liczba gier wychodzących na rynek jest tak duża, że nie sposób śledzić pomniejsze tytuły.
