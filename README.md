@@ -1,6 +1,6 @@
 ## Tworzenie gier w Unity i Unreal Engine
 
-#### Agnieszka Czerwińska, Michał Maviejewski i Mariusz Miszczykowski
+#### Agnieszka Czerwińska, Michał Maciejewski i Mariusz Miszczykowski
 
 ### Slowa kluczowe
 
