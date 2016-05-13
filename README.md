@@ -55,7 +55,7 @@ Teoretycznie prawie każda gra, która kiedykolwiek powstała, opiera się na ja
 Poniżej została zamieszczona tabelka z datami, autorami i szczególnymi cechami silników gier, poczynając od „Hovertank 3D”. Nie był to pierwszy silnik w historii, jednak jako pierwszy był rozwijany i użyty w wielu produkcjach. Był to także jeden z tytułów 3D z gatunku FPS ( ang. first-person-shooter ). Rozwój tego gatunku szedł w parze z powstaniem terminu „silnika gier”. Trzeba zaznaczyć, że ze względu na ogromną ilość różnych silników, poniższa lista nie jest kompletna i zawiera tylko te najpopularniejsze i/lub najbardziej zasłużone. 
 
 | Nazwa        | Rok powstania | Autor/właściciel  | Szczegóły |
-| -------------|----| --------- | ---------------- |
-| Hovertank 3D | right-aligne| $1600 |
+| -------------|----| --------- | ---------------- | --------- |
+| Hovertank 3D | 1991 | John Carmack (id Software) | Silnik powstał w 6 tygodni, wielokrotnie rozwijany, napisany w językach C i x86 Assembly |
 | col 2 is     | centered      |   $12 |
 | zebra stripes| are neat      |    $1 |
