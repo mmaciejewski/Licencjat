@@ -57,5 +57,8 @@ Poniżej została zamieszczona tabelka z datami, autorami i szczególnymi cecham
 | Nazwa        | Rok powstania | Autor/właściciel  | Szczegóły |
 | -------------|----| --------- | ---------------- | :---------: |
 | Hovertank 3D | 1991 | John Carmack (id Software) | Silnik powstał w 6 tygodni, wielokrotnie rozwijany, napisany w językach C i x86 Assembly |
-| col 2 is     | centered      |   $12 |
-| zebra stripes| are neat      |    $1 |
+| Wolfenstein 3D | 1992 | John Carmack (id Software) | Usprawniona wersja Hovertank 3D, dodano raycasty, i fizykę gracza, zwiększono wydajność |
+| ID Tech 1 | 1993 | John Carmack (id Software) | Pierwszy z serii silników id Tech, dodano opcje konfiguracji grafiki, otwarte przestrzenie, pełne oteksturowanie gry |
+| Build | 1996 | Ken Silverman (3D Realms) | Dodano woksele, podział na sektory, destrukcja otoczenia |
+| Quake Engine | 1996 | John Carmack (id Software) | Dodano statyczne oświetlenie, zwiększono wydajność, możliwość gry sieciowej, lightmapy |
+| Unreal Engine | 1998 | Epic Games | Używany i rozwijany do dziś silnik gier, korzysta z własnego języka skryptowego UnrealScript, modularna budowa silnika, łatwy do modowania, napisany w C++, jeden z najpopularniejszych silników w historii |
