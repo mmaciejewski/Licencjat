@@ -62,3 +62,9 @@ Poniżej została zamieszczona tabelka z datami, autorami i szczególnymi cecham
 | Build | 1996 | Ken Silverman (3D Realms) | Dodano woksele, podział na sektory, destrukcja otoczenia |
 | Quake Engine | 1996 | John Carmack (id Software) | Dodano statyczne oświetlenie, zwiększono wydajność, możliwość gry sieciowej, lightmapy |
 | Unreal Engine | 1998 | Epic Games | Używany i rozwijany do dziś silnik gier, korzysta z własnego języka skryptowego UnrealScript, modularna budowa silnika, łatwy do modowania, napisany w C++, jeden z najpopularniejszych silników w historii |
+| Id Tech 3 | 1999 | id Software | Powstał w odpowiedz na UnrealEngine, wymaga Open GL, dodanie shaderów,  dodano format MD3 do modeli 3D |
+| Infernal Engine | 2000 | Terminal Reality | Napisany w C++, język skryptowy Dante, niewymagający kompilacji przy zmianach, rozbudowany system zarządzania zasobami |
+| Cry Engine | 2004 | Crytek | Powstało wstępnie jako demo technologiczne karty graficznej GeForce 3, obsługa Shader Model 3.0, efekt HDR,  język programowania Lua i C# |
+| Source Engine | 2004 | Valve Corporation | Napisany w C++, Source SDK udostępniany dla każdego użytkownika posiadającego grę na platformie Steam, wsparcie wieloprocesowości |
+| Unity Engine | 2005 | Unity Technologies | Napisany w C, C++ i C#, pozwala robić gry na większość istniejących platform, łatwy w użytkowaniu |
+| Frostbite | 2008 | Digital Illusions CE | HDR Audio, system destrukcji otoczenia |
