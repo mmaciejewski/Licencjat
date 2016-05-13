@@ -68,3 +68,78 @@ Poniżej została zamieszczona tabelka z datami, autorami i szczególnymi cecham
 | Source Engine | 2004 | Valve Corporation | Napisany w C++, Source SDK udostępniany dla każdego użytkownika posiadającego grę na platformie Steam, wsparcie wieloprocesowości |
 | Unity Engine | 2005 | Unity Technologies | Napisany w C, C++ i C#, pozwala robić gry na większość istniejących platform, łatwy w użytkowaniu |
 | Frostbite | 2008 | Digital Illusions CE | HDR Audio, system destrukcji otoczenia |
+
+
+###Czym jest Game Design Document?
+
+Game Design Document (w skrócie GDD) jest dokumentem tworzonym jeszcze przed przystąpieniem do tworzenia gry. Najważniejszym celem dokumentu jest utrzymanie konsystencji oraz jednoznaczne wytyczenie celów związanych z projektem. GDD jest tak zwanym „żywym” dokumentem. Oznacza to, że może on być rozwijany i zmieniany podczas pracy nad grą. Jeśli pojawią się przeszkody uniemożliwiające wykonanie wcześniejszych założeń, lub powodujące znaczne opóźnienie w pracach nad grą dozwolone jest zmienianie danych części dokumentu. Zaleca się jednak w miarę możliwości, aby nie odchodzić za daleko od wyjściowych założeń, gdyż stoi to w konflikcie z założeniami owego dokumentu. 
+
+Struktura dokumentu nie jest jednoznacznie zdefiniowana. W zależności od wielkości zespołu oraz docelowych odbiorców może on przybierać różnorakie formy – od czysto formalnych mocno technicznych aspektów, do ogólnej wizji artystycznej świata i rodzaju rozgrywki. Dokument może składać się z czystego tekstu, ale również screenów, zdjęć, szkiców koncepcyjnych, diagramów. Każda forma jak najlepiej oddająca założenia gry jest akceptowalna. 
+
+Zdarza się, że GDD często zaczyna się tylko podstawowymi założeniami gry, a kończy jako rozbudowany wielostronicowy dokument opisujący każdy możliwy aspekt gry. Przy jego pisaniu nie można zapomnieć, że   będzie on czytany przez każdego członka zespołu tworzącego grę, nie tylko przez programistów, ale także artystów czy managerów. Dlatego pomimo ogólnej swobody przy jego pisaniu zaleca się zachowywać ogólnie pojętą strukturę, co pozwala na oddzielenie zagadnień typowo technicznych, od tych związanych z marketingiem czy kreacją świata. 
+
+Wiele firm wymaga od twórców gier aby dostarczali GDD. Jako, że nie ma określonego standardu dla tego typu dokumentu, autorzy muszą go tak zaprojektować, aby grę nie tylko przedstawić, ale także „sprzedać”. Sprawia to, że GDD potrafią się od siebie znacząco różnić. 
+
+Swoboda w tworzenia GDD daje wiele możliwości, ale potrafi także być sporym wyzwaniem. Osoby posiadające już doświadczenie przy robieniu gier zdecydowanie lepiej radzą sobie przy pisaniu takiego dokumentu, gdyż znają już wszystkie etapy produkcji, oraz problemy z nią związane. Korzystając z ich doświadczenia można nakreślić pewne prawidłowości przy jego pisaniu.
+
+Jak napisać dobre GDD.
+
+Jeśli GDD pisze kilka osób, wyznacz jedną osobę odpowiedzialną za funkcjonowanie dokumentu. 
+Zbyt duża swoboda  w dostępie do dokumentu wprowadza niepotrzebny chaos. Każdy pomysł przed wpisaniem powinien zostać najpierw rozpatrzony, aby nie wpuszczać do projektu nadmiarowych pomysłów.
+
+Nie pisz całego dokumentu na „raz”.
+Pamiętaj, że GDD tak samo jak projekt będzie ciągle ewoluować. Może się okazać, że wraz z rozwojem projektu, wiele pomysłów zostanie odrzuconych, a niektóre założenia ulegną zmianie. Jeśli nie pozostanie wystarczająco miejsca na zmiany, lub projekt zacznie przechodzić znaczące zmiany, może to zaważyć na czytelności dokumentu.
+
+Używaj różnych form przekazu.
+Obraz przy opisie lokacji, bądź referencja przy animacji powiedzą czytelnikowi więcej niż długi skomplikowany tekst. 
+
+Podziel dokument na sekcje.
+Stwórz dział „Użyte technologie” i „Świat gry”. W tym momencie każdy będzie wiedział, gdzie i jakiego typu informacje znajdują się w tekście.
+
+Wyznacz realistyczne cele.
+Zanim dokument zostanie ostatecznie zatwierdzony, powinien najpierw zostać rozpatrzony pod kątem potencjalnych kosztów czasowych i finansowych. Stworzenie wielkiego tytułu, może być zbyt ambitne dla małego zespołu. Głównym celem powinno być ukończenie gry w odpowiednim czasie. Trzeba wziąć pod uwagę ewentualne problemy i pamiętać, że każdy nowy pomysł generuje dodatkowe koszty.
+
+
+
+Przykładowa budowa GDD:
+
+Index
+
+1.	Założenia gry
+1. Ogólny opis (gatunek, format, założenia)
+2. Interakcja
+2. Przebieg rozgrywki
+3. Cel rozgrywki
+2.	Założenia techniczne
+1. Docelowe platformy
+2. Użyte technologie
+1.	silnik gry
+2.	pozostałe technologie (np. systemy kontroli wersji, frameworki)
+	3. Wyświetlanie/Obraz (np. orientacja na urządzeniu mobilnym)
+	4. Sterowanie
+	5. Mechanika gry
+	6. Inne
+
+       3.    Świat gry
+1.	Świat gry
+1.	Obiekty
+1.	statyczne
+2.	interaktywne
+2.	Środowisko
+1.	motywy 
+2.	otoczenie
+3.	Wyzwania
+4.	Przeciwnicy
+	
+2.	Poruszanie po świecie
+4.	Grafika
+1.  Style
+2. Assety
+	5.    Dżwięk
+1.	Style
+2.	Potrzebne dźwięki
+3.	Potrzebna muzyka
+		
+	6. Ramy czasowe projektu
+	7. Dodatkowe pomysły
+
