@@ -34,6 +34,7 @@ W tej pracy termin „silniki” zawsze będzie odnosił się do wyżej wymienio
 ### Wstęp (DO KOREKTY, DLACZEGO PODJELISMY TEMAT)
 
 Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej cierpliwości, sporej wiedzy z zakresu fizyki, informatyki i matematyki. Dzisiaj grę stworzyć może nawet przeciętny nastolatek. Dlatego liczba gier wychodzących na rynek jest tak duża, że nie sposób śledzić pomniejsze tytuły.
+
 Gry komputerowe towarzyszyły nam od dzieciństwa. Były naszym hobby i poświęcaliśmy im mnóstwo czasu. Od zawsze marzyliśmy, by zacząć tworzyć swoje własne gry. 
 Wiedza, którą zdobyliśmy w trakcie studiów pozwoliło nam nie tylko na realizację tego marzenia, ale dała nam również możliwość analizy różnych sposobów tworzenia oprogramowania. W tej pracy chcemy przedstawić różnice wynikające z oparcia jednej gry na dwóch silnikach do tworzenia gier - Unity i Unreal Engine. W tej pracy zawarliśmy podstawowe różnice między nimi, ich głowne zalety, jak i ograniczenia obu silników. Wierzymy, że pozwoli to początkującym twórcom gier, jak i tym bardziej doświadczonym, znaleźć właściwe narzędzie do wykonania zadania.
 
