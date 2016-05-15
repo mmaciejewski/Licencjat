@@ -21,7 +21,7 @@ gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, int
 1. Podsumowanie procesu tworzenia gier dla obu silników
 1. Zakończenie
 
-### Streszczenie (USTAWIC GDZIES TO ZDANIE ZE ZNAKIEM ZAPYTANIA)
+### Streszczenie
 
 W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier.
 Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D – Unity Technologies. 
