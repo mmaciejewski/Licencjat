@@ -31,7 +31,7 @@ Biorąc pod uwagę szerokie spektrum zagadnień powiązanych z całym procesem t
 W tej pracy termin „silniki” zawsze będzie odnosił się do wyżej wymienionych oprogramowań, za wyjątkiem rozdziału drugiego - „Krótka historia silników gier”. 
 
 
-### Wstęp (DO KOREKTY, DLACZEGO PODJELISMY TEMAT)
+### Wstęp (DO KOREKTY)
 
 Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej cierpliwości, sporej wiedzy z zakresu fizyki, informatyki i matematyki. Dzisiaj grę stworzyć może nawet przeciętny nastolatek. Dlatego liczba gier wychodzących na rynek jest tak duża, że nie sposób śledzić pomniejsze tytuły.
 
