@@ -9,7 +9,7 @@ gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, int
 ### Spis treści
 
 1. Wstęp
-1. Krótka historia silników do tworzenia gier (tabelka – rok, autor, licencja…) – max. 1 strona
+1. Krótka historia silników do tworzenia gier
 1. Czym jest Game Design Document?
 1. Przedstawienie Unity i Unreal Engine
 1. Podstawy tworzenia gier:
