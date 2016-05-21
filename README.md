@@ -26,10 +26,7 @@ gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, int
 W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier.
 Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D – Unity Technologies. 
 W części praktycznej pracy stworzono dwie wersje jednej gry - po jednej w każdym z silników. Zostały one oparte na jednym GDD (patrz, rozdział 3 – „czym jest gdd”).
-Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Cały przebieg procesu tworzenia owych gier został opisany w oddzielnych rozdziałach. Obejmują one wszystkie kroki niezbędne do stworzenia grywalnego produktu. Zarówno od strony programistycznej, jak i projektowej. Poprzedza je rozdział zawierający niezbędne informacje potrzebne do zrozumienia podstawowych zagadnień oraz obsługi silników - w formie krótkich filmów wideo. Część teoretyczna skupia się przede wszystkich na ogólnym przedstawieniu samego zagadnienia silników gier. Ma on pokrótce wprowadzić odbiorcę w temat tego typu oprogramowania - objaśnić ich cel i genezę. Porusza także tematy ściśle powiązane z samym programowaniem, którymi są zarówno planowanie jak i testowanie aplikacji. 
-Biorąc pod uwagę szerokie spektrum zagadnień powiązanych z całym procesem tworzenia gry, wychodzących poza zakres samego programowania odpowiednio podzieliliśmy pracę. Dlatego też część praktyczna skupia się na pracy w samych silnikach i ich funkcjonalności, a część teoretyczna na temacie tworzenia gier ogółem.
-W tej pracy termin „silniki” zawsze będzie odnosił się do wyżej wymienionych oprogramowań, za wyjątkiem rozdziału drugiego - „Krótka historia silników gier”. 
-
+Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Cały przebieg procesu tworzenia owych gier został opisany w oddzielnych rozdziałach.
 
 ### Wstęp (DO KOREKTY)
 
