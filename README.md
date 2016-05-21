@@ -15,8 +15,8 @@ gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, int
 1. Podstawy tworzenia gier:
    1.  Unity (dodatek: video)
    1. Unreal Engine (dodatek: video)
-1. Prosta gra krok po kroku -- Unity
-1. Prosta gra krok po kroku -- Unreal Engine
+1. The Climb krok po kroku -- Unity
+1. The Climb krok po kroku -- Unreal Engine
 1. Testowanie gier
 1. Podsumowanie procesu tworzenia gier dla obu silników
 1. Zakończenie
