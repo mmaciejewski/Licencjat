@@ -9,14 +9,14 @@ gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, int
 ### Spis treści
 
 1. Wstęp
-1. Krótka historia silników do tworzenia gier (tabelka – rok, autor, licencja…) – max. 1 strona
+1. Krótka historia silników do tworzenia gier
 1. Czym jest Game Design Document?
 1. Przedstawienie Unity i Unreal Engine
 1. Podstawy tworzenia gier:
    1.  Unity (dodatek: video)
    1. Unreal Engine (dodatek: video)
-1. Prosta gra krok po kroku - Unity
-1. Prosta gra krok po kroku - Unreal Engine
+1. Prosta gra krok po kroku -- Unity
+1. Prosta gra krok po kroku -- Unreal Engine
 1. Testowanie gier
 1. Podsumowanie procesu tworzenia gier dla obu silników
 1. Zakończenie
@@ -24,12 +24,9 @@ gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, int
 ### Streszczenie
 
 W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier.
-Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D – Unity Technologies. 
-W części praktycznej pracy stworzono dwie wersje jednej gry - po jednej w każdym z silników. Zostały one oparte na jednym GDD (patrz, rozdział 3 – „czym jest gdd”).
-Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Cały przebieg procesu tworzenia owych gier został opisany w oddzielnych rozdziałach. Obejmują one wszystkie kroki niezbędne do stworzenia grywalnego produktu. Zarówno od strony programistycznej, jak i projektowej. Poprzedza je rozdział zawierający niezbędne informacje potrzebne do zrozumienia podstawowych zagadnień oraz obsługi silników - w formie krótkich filmów wideo. Część teoretyczna skupia się przede wszystkich na ogólnym przedstawieniu samego zagadnienia silników gier. Ma on pokrótce wprowadzić odbiorcę w temat tego typu oprogramowania - objaśnić ich cel i genezę. Porusza także tematy ściśle powiązane z samym programowaniem, którymi są zarówno planowanie jak i testowanie aplikacji. 
-Biorąc pod uwagę szerokie spektrum zagadnień powiązanych z całym procesem tworzenia gry, wychodzących poza zakres samego programowania odpowiednio podzieliliśmy pracę. Dlatego też część praktyczna skupia się na pracy w samych silnikach i ich funkcjonalności, a część teoretyczna na temacie tworzenia gier ogółem.
-W tej pracy termin „silniki” zawsze będzie odnosił się do wyżej wymienionych oprogramowań, za wyjątkiem rozdziału drugiego - „Krótka historia silników gier”. 
-
+Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D –- Unity Technologies. 
+W części praktycznej pracy stworzono dwie wersje jednej gry - po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document (patrz, rozdział 3 –- „Czym jest Game Design Document”).
+Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Cały przebieg procesu tworzenia owych gier został opisany w oddzielnych rozdziałach.
 
 ### Wstęp (DO KOREKTY)
 
@@ -49,9 +46,9 @@ Przyjrzymy się krótkiej historii silników gier oraz porównamy oba oprogramow
 
 ### Krótka historia silników do tworzenia gier
 
-Silnik gier jest to specjalne oprogramowanie zaprojektowane z myślą o tworzeniu i rozbudowywaniu gier wideo. Jego typową funkcjonalnością jest obsługa generowania grafiki (zarówno 2D i 3D), fizyki, kolizji, dźwięku, sieci, animacji, procesora oraz pamięci itp. Większość silników opiera się na tzw. skryptach – krótkich programach pisanych wewnątrz aplikacji, pozwalających na stosunkowo nieskrępowaną modyfikację i ciągłe rozszerzanie możliwości danego silnika. Idzie to w parze z głównym założeniem jakim jest możliwość jego wielokrotnego wykorzystania do tworzenia kompletnie odmiennych tytułów.  
+Silnik gier jest to specjalne oprogramowanie zaprojektowane z myślą o tworzeniu i rozbudowywaniu gier wideo. Jego typową funkcjonalnością jest obsługa generowania grafiki (zarówno 2D i 3D), fizyki, kolizji, dźwięku, sieci, animacji, procesora, pamięci itp. Większość silników opiera się na tzw. skryptach – krótkich programach pisanych wewnątrz aplikacji, pozwalających na stosunkowo nieskrępowaną modyfikację i ciągłe rozszerzanie możliwości danego silnika. Idzie to w parze z głównym założeniem jakim jest możliwość jego wielokrotnego wykorzystania do tworzenia kompletnie odmiennych tytułów.  
 
-Teoretycznie prawie każda gra, która kiedykolwiek powstała, opiera się na jakimś silniku. Jednak dopiero lata 90' uznajemy za początek ich historii. Jest to związane z faktem, że pierwsze gry były tzw „hardkodowane”. Oznacza to, że wszelkie dane były bezpośrednio wpisywane w kod źródłowy, a ich wartości dostosowane bezpośrednio do urządzenia na które były tworzone. Ze względu na słabą wydajność i limity pamięci ówczesnych maszyn było to rozwiązanie konieczne. Uniemożliwiały jednak modyfikację kodu. Oznaczało to, że silnik wykorzystywany był tylko raz, pod konkretną grę, co stoi w konflikcie z wcześniej podaną definicją silnika gier.
+Teoretycznie prawie każda gra, która kiedykolwiek powstała, opiera się na jakimś silniku. Jednak dopiero lata 90' uznajemy za początek ich historii. Jest to związane z faktem, że pierwsze gry były tzw. „hardkodowane”. Oznacza to, że wszelkie dane były bezpośrednio wpisywane w kod źródłowy, a ich wartości dostosowane bezpośrednio do urządzenia na które były tworzone. Ze względu na niską wydajność i limity pamięci ówczesnych maszyn było to rozwiązanie konieczne. Uniemożliwiały jednak modyfikację kodu. Oznaczało to, że silnik wykorzystywany był tylko raz, pod konkretną grę, co stoi w konflikcie z wcześniej podaną definicją silnika gier.
 
 Poniżej została zamieszczona tabelka z datami, autorami i szczególnymi cechami silników gier, poczynając od „Hovertank 3D”. Nie był to pierwszy silnik w historii, jednak jako pierwszy był rozwijany i użyty w wielu produkcjach. Był to także jeden z tytułów 3D z gatunku FPS ( ang. first-person-shooter ). Rozwój tego gatunku szedł w parze z powstaniem terminu „silnika gier”. Trzeba zaznaczyć, że ze względu na ogromną ilość różnych silników, poniższa lista nie jest kompletna i zawiera tylko te najpopularniejsze i/lub najbardziej zasłużone. 
 
@@ -73,7 +70,7 @@ Poniżej została zamieszczona tabelka z datami, autorami i szczególnymi cecham
 
 ###Czym jest Game Design Document?
 
-Game Design Document (w skrócie GDD) jest dokumentem tworzonym jeszcze przed przystąpieniem do tworzenia gry. Najważniejszym celem dokumentu jest utrzymanie konsystencji oraz jednoznaczne wytyczenie celów związanych z projektem. GDD jest tak zwanym „żywym” dokumentem. Oznacza to, że może on być rozwijany i zmieniany podczas pracy nad grą. Jeśli pojawią się przeszkody uniemożliwiające wykonanie wcześniejszych założeń, lub powodujące znaczne opóźnienie w pracach nad grą dozwolone jest zmienianie danych części dokumentu. Zaleca się jednak w miarę możliwości, aby nie odchodzić za daleko od wyjściowych założeń, gdyż stoi to w konflikcie z założeniami owego dokumentu. 
+Game Design Document (w skrócie GDD) jest dokumentem tworzonym jeszcze przed przystąpieniem do tworzenia gry. Najważniejszym celem dokumentu jest utrzymanie spójności oraz jednoznaczne wytyczenie celów związanych z projektem. GDD jest tak zwanym „żywym” dokumentem. Oznacza to, że może on być rozwijany i zmieniany podczas pracy nad grą. Jeśli pojawią się przeszkody uniemożliwiające wykonanie wcześniejszych założeń, lub powodujące znaczne opóźnienie w pracach nad grą dozwolone jest zmienianie danych części dokumentu. Zaleca się jednak w miarę możliwości, aby nie odchodzić za daleko od wyjściowych założeń, gdyż stoi to w konflikcie z założeniami owego dokumentu. 
 
 Struktura dokumentu nie jest jednoznacznie zdefiniowana. W zależności od wielkości zespołu oraz docelowych odbiorców może on przybierać różnorakie formy – od czysto formalnych mocno technicznych aspektów, do ogólnej wizji artystycznej świata i rodzaju rozgrywki. Dokument może składać się z czystego tekstu, ale również screenów, zdjęć, szkiców koncepcyjnych, diagramów. Każda forma jak najlepiej oddająca założenia gry jest akceptowalna. 
 
