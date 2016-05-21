@@ -25,7 +25,7 @@ gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, int
 
 W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier.
 Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D – Unity Technologies. 
-W części praktycznej pracy stworzono dwie wersje jednej gry - po jednej w każdym z silników. Zostały one oparte na jednym GDD (patrz, rozdział 3 – „czym jest gdd”).
+W części praktycznej pracy stworzono dwie wersje jednej gry - po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document (patrz, rozdział 3 – „czym jest gdd”).
 Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Cały przebieg procesu tworzenia owych gier został opisany w oddzielnych rozdziałach.
 
 ### Wstęp (DO KOREKTY)
