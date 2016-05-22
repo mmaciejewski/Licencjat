@@ -1,0 +1,26 @@
+\select@language {polish}
+\contentsline {chapter}{Wprowadzenie}{5}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Krótka historia silników do tworzenia gier}{7}{chapter.1}
+\contentsline {chapter}{\numberline {2}Czym jest Game Design Document?}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Jak napisać dobre GDD}{10}{section.2.1}
+\contentsline {chapter}{\numberline {3}Podstawy tworzenia gier w Unity}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Planowanie}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Początek pracy z Unity}{14}{section.3.2}
+\contentsline {section}{\numberline {3.3}Podstawowe terminy}{14}{section.3.3}
+\contentsline {section}{\numberline {3.4}Ekran główny}{15}{section.3.4}
+\contentsline {section}{\numberline {3.5}Praca z obiektami i sceną}{16}{section.3.5}
+\contentsline {section}{\numberline {3.6}Okno inspektora i komponenty}{18}{section.3.6}
+\contentsline {section}{\numberline {3.7}Skrypty}{19}{section.3.7}
+\contentsline {section}{\numberline {3.8}Kamera, światło i Collidery}{23}{section.3.8}
+\contentsline {chapter}{\numberline {4}Podstawy tworzenia gier w Unreal Engine}{26}{chapter.4}
+\contentsline {section}{\numberline {4.1}Rozpoczęcie projektu}{26}{section.4.1}
+\contentsline {section}{\numberline {4.2}Ekran główny}{27}{section.4.2}
+\contentsline {section}{\numberline {4.3}System Persona i Animacje}{28}{section.4.3}
+\contentsline {chapter}{\numberline {5} Testowanie gier}{33}{chapter.5}
+\contentsline {chapter}{\numberline {6}Podsumowanie procesu tworzenia gier dla obu silników}{35}{chapter.6}
+\contentsline {chapter}{Zakończenie}{36}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Tytuł załącznika jeden}{37}{appendix.A}
+\contentsline {chapter}{\numberline {B}Tytuł załącznika dwa}{38}{appendix.B}
+\contentsline {chapter}{Spis tabel}{39}{appendix*.6}
+\contentsline {chapter}{Spis rysunków}{40}{appendix*.7}
+\contentsline {chapter}{Oświadczenie}{41}{appendix*.8}
