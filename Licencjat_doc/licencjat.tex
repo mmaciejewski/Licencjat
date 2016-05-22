@@ -43,8 +43,8 @@
 
 % streszczenie
 \begin{abstract}
-  W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier.
-  Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D –- Unity Technologies. 
+ W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier.
+ Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D –- Unity Technologies. 
 
  W części praktycznej pracy stworzono dwie wersje gry „The Climb” - po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document (patrz, rozdział 3 –- „Czym jest Game Design Document”).
 
@@ -78,10 +78,10 @@ drag and drop}
 % wstęp
 \introduction
 
-Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej cierpliwości, sporej wiedzy z zakresu fizyki, informatyki i matematyki. Dzisiaj zaawansowane oprogramowanie do tworzenia gier znacząco ułatwia tworzenie tego typu rozrywki. Dlatego liczba gier wychodzących na rynek jest tak duża, że nie sposób śledzić pomniejsze tytuły.
+Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej cierpliwości, sporej wiedzy z zakresu fizyki, informatyki i matematyki. Obecnie posiadamy zaawansowane oprogramowanie znacząco ułatwiające tworzenie tego typu rozrywki. Dlatego aktualnie liczba gier wychodzących na rynek jest tak duża, że nie sposób śledzić pomniejsze tytuły.
 
-Gry komputerowe towarzyszyły nam od dzieciństwa. Były naszym hobby i poświęcaliśmy im mnóstwo czasu. Od zawsze marzyliśmy, by zacząć tworzyć swoje własne gry. 
-Wiedza, którą zdobyliśmy w trakcie studiów pozwoliło nam nie tylko na realizację tego marzenia, ale dała nam również możliwość analizy różnych sposobów tworzenia oprogramowania. W tej pracy chcemy przedstawić różnice wynikające z oparcia jednej gry na dwóch silnikach do tworzenia gier - Unity i Unreal Engine. W tej pracy zawarliśmy podstawowe różnice między nimi, ich głowne zalety, jak i ograniczenia obu silników. Wierzymy, że pozwoli to początkującym twórcom gier, jak i tym bardziej doświadczonym, znaleźć właściwe narzędzie do wykonania zadania.
+Gry komputerowe towarzyszyły każdemu z nas od dzieciństwa. Były i są naszym hobby. Do dziś poświęcamy im mnóstwo czasu. Od zawsze marzyliśmy, by zacząć tworzyć swoje własne gry.
+Wiedza, którą zdobyliśmy w trakcie studiów pozwoliła nam nie tylko na realizację tego marzenia, ale również pokazała różne sposoby tworzenia oprogramowania. W tej pracy korzystamy z jednego z tych sposobów do stworzenia naszej gry. Oparliśmy ją na dwóch silnikach do tworzenia gier - Unity i Unreal Engine. W tej pracy przedstawiamy podstawowe różnice, głowne zalety, jak i ograniczenia obu silników. Wierzymy, że pozwoli to początkującym twórcom gier, jak i tym bardziej doświadczonym, znaleźć właściwe narzędzie do wykonania swojego projektu.
 
 Silniki gier to zaawansowane oprogramowanie tworzone przez firmy, specjalnie na potrzeby nowych gier. Powołanie nowej gry do życia wymaga ogromnych nakładów czasowych i finansowych. „Jak będziemy generować grafikę? Czy w naszej grze będzie realistyczna fizyka? A dynamiczne światło? Co z dzwiękiem? Jaki język programowania wybrać? A i trzeba jeszcze tę grę zoptymalizować pod konkretną platformę!" Na te i wiele innych pytań trzeba odpowiedzieć za każdym razem tworząc nową grę. Doświadczeni twórcy wiedzą jednak, że to własnie odpowiedzi na te pytania generują największe koszty. Aby uniknąć odkrywania koła na nowo, firmy często tworzą własne silniki, bądź wykupują licencje na inne. Współcześnie, większość nowych tytułów robiona jest na już gotowych silnikach. Tylko mały procent doczeka się własnego, wartego niejednokrotnie więcej niż sama gra. 
 Na nasze szczęście dzisiaj każdy z nas może skorzystać z możliwości takiego silnika. 
@@ -90,6 +90,8 @@ Mimo, że na rynku istnieje wiele innych darmowych silnikow, w tej pracy skupimy
 Unreal Engine udostępniane przez firmę Epic Games, oraz Unity 3D udostępniane przez firmę Unity Technologies. 
 
 Przyjrzymy się krótkiej historii silników gier oraz porównamy oba oprogramowania. Dowiemy sie czym jest GDD, następnie przyjrzymy się ich cechom i opiszemy proces tworzenia gier w każdym z nich. Odkryjemy najczęstsze bugi w grach i jak z nimi walczyć, a w podsumowaniu opiszemy krótko: stopień trudnosci w użytkowaniu, czas potrzebny do stworzenia gry i zastanowimy sie nad przyszłością obu silników.
+
+Należy zwrócić uwagę, że w rozdziałach w których opisywane są silniki (Podstawy tworzenie gier i The Climb krok po kroku), rozdziały dotyczące Unity są znacznie bardziej szczegółowe. Powodem jest fakt, że wiele terminów i pojęć, jakich używamy w tej pracy ma zastosowanie w obu silnikach. Opisując je tylko w jednym z rozdziałów, unikamy niepotrzebnych powtórzeń. Silnik Unity jest opisywany dokładniej, ponieważ zgodnie z porządkiem alfabetycznym opisujemy go przed Unreal Engine.
 
 \chapter{Krótka historia silników do tworzenia gier}
 
@@ -198,6 +200,46 @@ Index
      \item Dodatkowe pomysły
   \end{enumerate}
 \end{enumerate}
+
+\chapter{Przedstawienie Unity i Unreal Engine}
+
+Unity 3D i Unreal Engine 4, są bezsprzecznie jednymi z dwóch najpopularniejszych obecnie silników gier. Duże studia przeważnie tworzą własne silniki, jednak  w ostatnich latach w zawrotnym tempie zaczęła rozwijać się scena tzw. gier Indie. Stworzenie silnika jest kosztownym i czasochłonnym przedsięwzięciem, dlatego małe zespoły nie były w stanie sobie na nie pozwolić. 
+
+Unity Technologies wyszło naprzeciw twórcom poszukującym tańszych rozwiązań i w roku 2005 zaprezentowało prototyp darmowego, łatwego w obsłudze silnika. Unity zdobyło zainteresowanie twórców gier i w tym roku doczekało się swojej piątej odsłony.
+
+Unreal Engine 4 zadebiutował w 2014 roku, jako następca długiej i zasłużonej serii silników Unreal. Legendarny status poprzednich wersji i niesamowite możliwości graficzne pozwoliły mu szybko podbić rynek tanich silników gier, oraz wyrosnąć na jednego z największych konkurentów Unity.
+
+Cechy charakterystyczne obu silników:
+
+\textbf{Unity 5}
+
+	\begin{itemize}
+	\item obsługiwane języki programowania: C\# , Unity Script
+	\item proste budowanie aplikacji na 21 platform
+	\item w pełni customizowalny, prosty w obsłudze  i wydajny 64 bitowy edytor
+	\item Unity UI – narzędzie do tworzenia rozbudowanego interfejsu użytkownika, tworzony na zasadzie Canvasów
+	\item doskonała dokumentacja, mnogość tutoriali  i rozwinięta społeczność
+	\item możliwość tworzenia łatwych w eksporcie/imporcie paczek
+	\item wsparcie praktycznie wszystkich popularnych formatów plików
+	\item system fizyczny PhysX 3.3
+	\item asset store, dający dostęp do niezliczonej ilość skryptów, modeli i pluginów tworzonych przez innych użytkowników
+\end{itemize}
+
+\textbf{Unreal Engine 4}
+
+	\begin{itemize}
+	\item Język programowania C++ (brak wewnętrznego edytora, potrzebne np Visual Studio)
+	\item Unreal Motion Graphics UI Designer (UMG) – Narzędzie do projektowania UI. Tworzony 	na zasadzie widgetów
+	\item Persona, system do tworzenia animacji. Pozwala kontrolować szkielety, meshe, tekstury, 	 przejścia między animacjami (Blend Spaces) itp.
+	\item Matinee Cinematics, Sequencer (beta)  – narzędzia do tworzenia „filmików” wewnątrz gry.
+	\item Drzewka zachowań – „Visual scripting”, pozwala programowac bez ingerowania w kod.
+	\item Instant game preview, System umożliwiający szybkie testy scen. Spawnuje gracza w dowolnym miejscu projektu.
+	\item Fizyka – PhysX 3.3
+	\item Media Framework – możliwość używania zewnętrznych mediów wewnątrz gry.
+	\item The Landscape system – edytor terenu w grach.
+	\end{itemize}
+
+Oba silniki cechuje wiele podobieństw. Wybór jednego z nich może okazać się trudny ze względu na wiele wspólnych cech i porównywalnych narzędzi wspomagających proces tworzenia gier. Poniższe rozdziały pokażą nam jak wygląda praca z każdym z nich, pokażą nam różnice i podobieństwa obu silników i pomogą wyodrębnić ich cechy szczególne. W ostatecznym rachunku dowiemy się, który z silników bardziej nadaje się do konkretnych zadań i czym powinniśmy się sugerować w wyborze każdego z nich.
 
 \chapter{Podstawy tworzenia gier w Unity}
 
@@ -490,19 +532,46 @@ Gry stworzone na potrzeby projektu zostały przetestowane wyłącznie manualnie.
 
 \chapter{Podsumowanie procesu tworzenia gier dla obu silników}
 
-cos
+W tym rozdziale porównamy  oba silniki, ich mocne i słabe strony. Określimy również w jakich okolicznościach dany silnik jest preferowanym narzędziem.
 
+\section{Multiplatformowość}
+
+Twórcy Unity chwalą się, że gry w Unity mogą zostać wydane na ponad 21 platform. Wystarczy jedno kliknięcie, aby stworzyć build gry na komputery osobiste, wszelkiego rodzaju konsole, smartfony, a nawet przeglądarki internetowe. Ostatnimi czasy nawet wydanie gry na urządzenia VR (Virtual Reality) zostało dodane jako opcja.
+
+Unreal Engine prezentuje się pod tym względem dużo gorzej. Ma jedynie opcje wydania gier na komputery osobiste, urządzenia mobilne, przeglądarki internetowe i urządzenia VR. Taka multiplatformowość wymaga jednak dużo więcej wysiłku ze strony użytkownika.
+
+Jeśli chcemy wydać grę na wiele platform Unity jest preferowanym wyborem.
+
+\section{Przystępność}
+
+Jeśli chodzi o interfejs użytkownika, Unity ma bardzo przejrzysty i wygodny interfejs. Zdecydowaną większość działań wykonuje się na ekranie głównym. Nawet pierwszy raz używając silnika można intuicyjnie nawigować po wszystkich opcjach.
+W przypadku, w którym nie odpowiada nam obecny layout interfejsu możemy bez trudu zmienić konfigurację wszystkich menu.
+Dodać należy fakt, że wszystkie elementy silnika są bardzo dobrze udokumentowane, a w przypadku wątpliwości można odwołac się do ogromnej ilości wszelkiej maści tutoriali i forów tworzonych przez społeczność Unity.
+
+Unreal Engine mimo wielu podobieństw do Unity posiada dużo bardziej rozbudowany, skomplikowany interfejs. Każdy system wewnątrz silnika otwierany jest w osobnym okienku, lub karcie. W przypadku wyboru opcji programowania w C++ trzeba używać programów z zewnątrz UE, co jeszcze bardziej komplikuje sprawę. Taki interface może bardzo łatwo przytłoczyć początkującego użytkownika. Istnieje co prawda wbudowany w silnik samouczek, objaśniający wszystkie części interface’u, jednak nie wyjaśnia on wszystkiego.
+Z drugiej strony dzięki systemowi Blueprint’ów, przeciętny użytkownik silnika nie musi być zaznajomiony z żadnym językiem programowania.
+Problem może pojawić się, gdy twórca gry nie do końca zrozumie sposobu działania funkcji. Niestety UE jest znany z niepełnej i niedokładnej dokumentacji, która nie pokrywa wszystkich funkcji dostępnych w silniku.
+
+\section{Grafika}
+
+Unity od wersji 5.0 posiada wiele zaawansowanych opcji graficznych, które umożliwiają stworzenie gier wyglądem konkurującymi z produkcjami światowej klasy.
+Mimo to Unreal Engine nadal ma pod tym względem znacząca przewagę w niemal każdym aspekcie graficznym. Zarówno generowany teren, efekty cząsteczkowe oraz światło przekraczają możliwości Unity.
+
+\includegraphics[scale=0.5]{Screeny/UE_vs_Unity}
+
+\section{Programowanie i zasoby}
+
+Unity umożliwia programowanie w językach C\# i Unity Script. Pozwala to nie tylko elastyczność w wyborze. Same języki ułatwiają optymalizację gry, pozwalając na znaczące zmniejszenie wymagań systemowych.
+
+Unreal Engine korzysta wyłącznie z języka C++. Mimo, że sam język jest łatwy do optymalizacji, by go używać potrzebny jest zewnętrzny edytor. Wyjściowym sposobem tworzenia kodu jest Blueprint, który nie zapewnia bezpośredniego dostępu do kodu. Mimo, że upraszcza to proces tworzenia gry dla bardziej doświadczonych developerów, znacznie utrudnia to optymalizację gry.
 
 % zakończenie
 \summary
-Możliwości, jakie stoją przed archiwum prac magisterskich opartych na
-XML-u, są ograniczone jedynie czasem, jaki należy poświęcić na pełną
-implementację systemu. Nie ma przeszkód technologicznych do stworzenia
-co najmniej równie doskonałego repozytorium, jak ma to miejsce w
-przypadku ETD. Jeżeli chcemy w pełni uczestniczyć w rozwoju nowej ery
-informacji, musimy szczególną uwagę przykładać do odpowiedniej
-klasyfikacji i archiwizacji danych. Sądzę, że język XML znacznie to
-upraszcza.
+Oba silniki mają swoje zalety, jadnek należy używać ich w odpowiednich sytuacjach.
+
+Jeśli planujemy stworzyć mniejszy tytuł na jedną platformę, cechujący się wysokiej jakości grafiką, Unreal Engine jest bardzo dobrym wyborem.
+
+W przypadku w którym chcemy stworzyć grę na wiele platform, albo dopiero zaczynamy przygodę z tworzeniem gier, przystępnośc interfejsu, oraz elastyczność w wyborze języka programowania znacząco ułatwią nam stworzenie naszej pierwszej gry.
 
 % załączniki (opcjonalnie):
 \appendix
