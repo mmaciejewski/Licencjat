@@ -2,24 +2,30 @@
 \BOOKMARK [0][-]{chapter.1}{Krótka historia silników do tworzenia gier}{}% 2
 \BOOKMARK [0][-]{chapter.2}{Czym\040jest\040Game\040Design\040Document?}{}% 3
 \BOOKMARK [1][-]{section.2.1}{Jak napisać dobre GDD}{chapter.2}% 4
-\BOOKMARK [0][-]{chapter.3}{Podstawy\040tworzenia\040gier\040w\040Unity}{}% 5
-\BOOKMARK [1][-]{section.3.1}{Planowanie}{chapter.3}% 6
-\BOOKMARK [1][-]{section.3.2}{Początek pracy z Unity}{chapter.3}% 7
-\BOOKMARK [1][-]{section.3.3}{Podstawowe\040terminy}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.4}{Ekran główny}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.5}{Praca z obiektami i sceną}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.6}{Okno\040inspektora\040i\040komponenty}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.7}{Skrypty}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.8}{Kamera, światło i Collidery}{chapter.3}% 13
-\BOOKMARK [0][-]{chapter.4}{Podstawy\040tworzenia\040gier\040w\040Unreal\040Engine}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Rozpoczęcie projektu}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.2}{Ekran główny}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.3}{System\040Persona\040i\040Animacje}{chapter.4}% 17
-\BOOKMARK [0][-]{chapter.5}{\040Testowanie\040gier}{}% 18
-\BOOKMARK [0][-]{chapter.6}{Podsumowanie procesu tworzenia gier dla obu silników}{}% 19
-\BOOKMARK [0][-]{chapter*.5}{Zakończenie}{}% 20
-\BOOKMARK [0][-]{appendix.A}{Tytuł załącznika jeden}{}% 21
-\BOOKMARK [0][-]{appendix.B}{Tytuł załącznika dwa}{}% 22
-\BOOKMARK [0][-]{appendix*.6}{Spis\040tabel}{}% 23
-\BOOKMARK [0][-]{appendix*.7}{Spis rysunków}{}% 24
-\BOOKMARK [0][-]{appendix*.8}{Oświadczenie}{}% 25
+\BOOKMARK [0][-]{chapter.3}{Przedstawienie\040Unity\040i\040Unreal\040Engine}{}% 5
+\BOOKMARK [0][-]{chapter.4}{Podstawy\040tworzenia\040gier\040w\040Unity}{}% 6
+\BOOKMARK [1][-]{section.4.1}{Planowanie}{chapter.4}% 7
+\BOOKMARK [1][-]{section.4.2}{Początek pracy z Unity}{chapter.4}% 8
+\BOOKMARK [1][-]{section.4.3}{Podstawowe\040terminy}{chapter.4}% 9
+\BOOKMARK [1][-]{section.4.4}{Ekran główny}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.5}{Praca z obiektami i sceną}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.6}{Okno\040inspektora\040i\040komponenty}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.7}{Skrypty}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.8}{Kamera, światło i Collidery}{chapter.4}% 14
+\BOOKMARK [0][-]{chapter.5}{Podstawy\040tworzenia\040gier\040w\040Unreal\040Engine}{}% 15
+\BOOKMARK [1][-]{section.5.1}{Rozpoczęcie projektu}{chapter.5}% 16
+\BOOKMARK [1][-]{section.5.2}{Ekran główny}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.3}{System\040Persona\040i\040Animacje}{chapter.5}% 18
+\BOOKMARK [0][-]{chapter.6}{\040Testowanie\040gier}{}% 19
+\BOOKMARK [0][-]{chapter.7}{Podsumowanie procesu tworzenia gier dla obu silników}{}% 20
+\BOOKMARK [1][-]{section.7.1}{Multiplatformowość}{chapter.7}% 21
+\BOOKMARK [1][-]{section.7.2}{Przystępność}{chapter.7}% 22
+\BOOKMARK [1][-]{section.7.3}{Grafika}{chapter.7}% 23
+\BOOKMARK [1][-]{section.7.4}{Programowanie\040i\040zasoby}{chapter.7}% 24
+\BOOKMARK [0][-]{chapter*.5}{Zakończenie}{}% 25
+\BOOKMARK [0][-]{appendix.A}{Tytuł załącznika jeden}{}% 26
+\BOOKMARK [0][-]{appendix.B}{Tytuł załącznika dwa}{}% 27
+\BOOKMARK [0][-]{appendix*.6}{Bibliografia}{}% 28
+\BOOKMARK [0][-]{appendix*.7}{Spis\040tabel}{}% 29
+\BOOKMARK [0][-]{appendix*.8}{Spis rysunków}{}% 30
+\BOOKMARK [0][-]{appendix*.9}{Oświadczenie}{}% 31
