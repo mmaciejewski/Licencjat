@@ -30,7 +30,7 @@ Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez fir
 W części praktycznej pracy stworzono dwie wersje gry „The Climb” - po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document (patrz, rozdział 3 –- „Czym jest Game Design Document”).
 Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Cały przebieg procesu tworzenia owych gier został opisany w oddzielnych rozdziałach.
 
-### Wstęp (DO KOREKTY)
+### Wstęp
 
 Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej cierpliwości, sporej wiedzy z zakresu fizyki, informatyki i matematyki. Obecnie posiadamy zaawansowane oprogramowanie znacząco ułatwiające tworzenie tego typu rozrywki. Dlatego aktualnie liczba gier wychodzących na rynek jest tak duża, że nie sposób śledzić pomniejsze tytuły.
 
