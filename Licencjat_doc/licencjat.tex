@@ -42,12 +42,7 @@
 
 % streszczenie
 \begin{abstract}
- W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier.
- Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D –- Unity Technologies. 
-
- W części praktycznej pracy stworzono dwie wersje gry „The Climb” - po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document (patrz, rozdział 3 –- „Czym jest Game Design Document”).
-
- Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Cały przebieg procesu tworzenia owych gier został opisany w oddzielnych rozdziałach.
+W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier. Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D –- Unity Technologies. W części praktycznej pracy stworzono dwie wersje gry „The Jump” - po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document (patrz, rozdział 3 –- „Czym jest Game Design Document”). Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Aby uruchomić gry wystarczy uruchomić pliki exe w folderze z grą. Porównanie polega na opisie procesu tworzenia owych gier w oddzielnych rozdziałach. Rozdział podsumowujący opisuje różnice między silnikami. Przygotowaliśmy również dwa krótkie filmy, które ukazują podstawy tworzenia gier w obu silnikach -- [link Unity] i [link Unreal]
 \end{abstract}
 
 % słowa kluczowe
@@ -90,7 +85,7 @@ Unreal Engine udostępniane przez firmę Epic Games, oraz Unity 3D udostępniane
 
 Przyjrzymy się krótkiej historii silników gier oraz porównamy oba oprogramowania. Dowiemy sie czym jest GDD, następnie przyjrzymy się ich cechom i opiszemy proces tworzenia gier w każdym z nich. Odkryjemy najczęstsze bugi w grach i jak z nimi walczyć, a w podsumowaniu opiszemy krótko: stopień trudnosci w użytkowaniu, czas potrzebny do stworzenia gry i zastanowimy sie nad przyszłością obu silników.
 
-Należy zwrócić uwagę, że w rozdziałach w których opisywane są silniki (Podstawy tworzenie gier i The Climb krok po kroku), rozdziały dotyczące Unity są znacznie bardziej szczegółowe. Powodem jest fakt, że wiele terminów i pojęć, jakich używamy w tej pracy ma zastosowanie w obu silnikach. Opisując je tylko w jednym z rozdziałów, unikamy niepotrzebnych powtórzeń. Silnik Unity jest opisywany dokładniej, ponieważ zgodnie z porządkiem alfabetycznym opisujemy go przed Unreal Engine.
+Należy zwrócić uwagę, że w rozdziałach w których opisywane są silniki (Podstawy tworzenie gier i The Jump krok po kroku), rozdziały dotyczące Unity są znacznie bardziej szczegółowe. Powodem jest fakt, że wiele terminów i pojęć, jakich używamy w tej pracy ma zastosowanie w obu silnikach. Opisując je tylko w jednym z rozdziałów, unikamy niepotrzebnych powtórzeń. Silnik Unity jest opisywany dokładniej, ponieważ zgodnie z porządkiem alfabetycznym opisujemy go przed Unreal Engine.
 
 \chapter{Krótka historia silników do tworzenia gier}
 
@@ -277,7 +272,8 @@ Po stworzeniu projektu naszym oczom ukaże się główny ekran. Jeśli żaden pr
     \begin{center}
     \includegraphics[scale=0.15]{Screeny/rodzial5screeny/ekran_glowny}
     \end{center}
-    \caption{Unity - Ekran główny. Domyślny układ ekranu po stworzeniu nowego projektu, jeśli nie otwieralismy wcześniej na tym komputerze innego projekt Unity wraz z oznaczeniem poszczególnych okien.}
+    \caption{Podstawy - Unity - Ekran główny}
+    Domyślny układ ekranu po stworzeniu nowego projektu, jeśli nie otwieralismy wcześniej na tym komputerze innego projekt Unity wraz z oznaczeniem poszczególnych okien.
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -309,7 +305,7 @@ Pierwszy przycisk od lewej pozwala nam na poruszanie samym widokiem w przestrzen
     \begin{center}
     \includegraphics[scale=0.4]{Screeny/rodzial5screeny/drag_option}
     \end{center}
-    \caption{Unity - Opcja przemieszczania przedmiotu}
+    \caption{Podstawy - Unity - Opcja przemieszczania przedmiotu}
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -319,7 +315,7 @@ Drugi przycisk umożliwia nam na zmienianie pozycji obiektu w przestrzeni. Może
     \begin{center}
     \includegraphics[scale=0.4]{Screeny/rodzial5screeny/move_option}
     \end{center}
-    \caption{Unity - Opcja przemieszczania kamery}
+    \caption{Podstawy - Unity - Opcja przemieszczania kamery}
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -329,7 +325,7 @@ Trzeci przycisk służy to zmiany rotacji obiektu w przestrzeni. Po uruchomieniu
     \begin{center}
     \includegraphics[scale=0.4]{Screeny/rodzial5screeny/rotate_option}
     \end{center}
-    \caption{Unity - Opcja obkręcania przedmiotu}
+    \caption{Podstawy - Unity - Opcja obkręcania przedmiotu}
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -339,7 +335,7 @@ Czwarty przycisk służy do zmiany skali obiekty. Zmianę wykonujemy poprzez nac
     \begin{center}
     \includegraphics[scale=0.4]{Screeny/rodzial5screeny/scale_option}
     \end{center}
-    \caption{Unity - Opcja skalowania przedmiotu}
+    \caption{Podstawy - Unity - Opcja skalowania przedmiotu}
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -349,7 +345,7 @@ Ostatni przycisk służy do obsługi tzw. Rect Transform i wychodzi poza zakres 
     \begin{center}
     \includegraphics[scale=0.4]{Screeny/rodzial5screeny/recttrans_option}
     \end{center}
-    \caption{Unity - Opcja Rect Transform }
+    \caption{Podstawy - Unity - Opcja Rect Transform }
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -359,7 +355,8 @@ Mimo, że puste obiekty same w sobie nic nie robią to są używane równie czę
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/rodzial5screeny/przyklad_relacji_rodzic_dziecko}
     \end{center}
-    \caption{Unity - Relacja Rodzic - Dziecko. Kolorem czerwonym oznaczono obiekt gry, będący rodzicem znajdujących się w nim obiektów: bagażnik i przód, oznaczonych kolorem zielonym. Bagażnik i przód są jednocześnie dziećmi obiektu samochód jak i rodzicami obiektów: gaśnica, trójkąt, silnik, skrzynia biegów oraz akumulator oznaczonych kolorem niebieskim.}
+    \caption{Podstawy - Unity - Relacja Rodzic - Dziecko}
+Kolorem czerwonym oznaczono obiekt gry, będący rodzicem znajdujących się w nim obiektów: bagażnik i przód, oznaczonych kolorem zielonym. Bagażnik i przód są jednocześnie dziećmi obiektu samochód jak i rodzicami obiektów: gaśnica, trójkąt, silnik, skrzynia biegów oraz akumulator oznaczonych kolorem niebieskim.
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -379,8 +376,8 @@ Największą popularnością cieszy się C\#. Może też pochwalić się najleps
 
 Skrypty tworzymy klikając prawym przyciskiem myszy w oknie projektu i wybierając opcję  Create    → C\# Script z menu kontekstowego. Tak samo tworzymy foldery oraz wewnętrzne assety. Po wpisaniu nazwy (zaczynającej się dużą literą, gdyż mamy do czynienia z nazwą klasy) możemy kliknąć dwukrotnie lewym przyciskiem na skrypt, aby go otworzyć. Domyślnie uruchomi to środowisko programistyczne Mono Develop (możemy korzystać z dowolnego edytora, wymaga to jednak wcześniejszej konfiguracji, lub bezpośredniego otwierania pliku z folderu projektu). Każdy nowy skrypt posiada taki szablon (można go zmienić w pliku ScriptTemplates w folderze Unity):
 
+\newpage
 \begin{lstlisting}
-<code>
 using UnityEngine;
 using System.Collection;
 
@@ -396,7 +393,6 @@ public class NazwaSkryptu: MonoBehaviour {
 
 	}
 } 
-</code>
 \end{lstlisting}
 
 Każdy skrypt domyślnie dziedziczy po klasie MonoBehaviour, która  udostępnia wszystkie funkcje jakie oferuje nam Unity. Ta klasa jest niezbędna aby móc dodawać skrypty do Game Objectów.
@@ -423,9 +419,8 @@ Powyższe funkcje są jednymi z najbardziej podstawowych i najczęściej wykorzy
 
 Wszystkie komponenty są tak naprawdę skryptami. Oznacza to, że nie tylko możemy odwoływać się w napisanym przez nas skrypcie do dowolnego komponentu, ale możemy podpiąć dowolny skrypt do każdego obiektu w grze. Operując modyfikatorami dostępu możemy decydować do której właściwości możemy uzyskać dostęp i umożliwić jej zmianę z poziomu inspektora. Przeanalizujmy poniższy kod:
 
-
+\newpage
 \begin{lstlisting}
-<code>
 
 using UnityEngine;
 using System.Collections;
@@ -441,7 +436,6 @@ public class Move : MonoBehaviour {
 
 	}
 }
-</code>
 \end{lstlisting}
 
 Na początku zdefiniowaliśmy trzy zmienne. Pierwsza zmienna jest prywatna (jeśli nie zadeklarowaliśmy jawnego modyfikatora, to domyślnie zmienna jest prywatna). Prywatne zmienne nie są widziane przez inne skrypty. Nie są także widoczne z poziomu inspektora. Druga zmienna jest zmienna publiczną i można się do niej odwołać z poziomu innych skryptów. Dodatkowo będzie ona widoczna w inspektorze, i możliwa będzie jej modyfikacja bez konieczności jej zmiany w skrypcie. Raz tak zmieniona wartość jest na stałe zapamiętywana, do momentu jej ponownej zmiany w inspektorze lub modyfikacji kodu. Jeśli ta wartość zmienia się podczas samej gry, to ta zmiana zapamiętywana jest tylko do momentu zmiany sceny, bądź wyłączenia gry.
@@ -458,7 +452,8 @@ Skrypt podpinamy zaznaczając nasz obiekt (np. cube), i przenosząc skrypt z okn
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/rodzial5screeny/moving_cube}
     \end{center}
-    \caption{Unity - Przesuwanie sześcianu. Jeśli poprzednie kroki zostały wykonane pomyślnie, po przycisku play powinniśmy ujrzeć tak wyglądający obiekt Cube, poruszjący się ze średnią prędkością w kierunku północno – wschodnim.}
+    \caption{Podstawy - Unity - Przesuwanie sześcianu}
+Jeśli poprzednie kroki zostały wykonane pomyślnie, po przycisku play powinniśmy ujrzeć tak wyglądający obiekt Cube, poruszjący się ze średnią prędkością w kierunku północno – wschodnim.
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -484,7 +479,8 @@ Poniższy screen przedstawia przykładowy model korzystający z kilku podstawowy
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/rodzial5screeny/model_prymitywne_kolidery}
     \end{center}
-    \caption{Unity - Prymitywne kolidery. Model składa się z koliderów cylindrycznych oraz kołowych. Kolidery prymitywne zapewniają zadowolającą dokładność przy wykrywaniu kolizji, nie obciążając przy tym zbytnio zasobów sprzetowych.}
+    \caption{Podstawy - Unity - Prymitywne kolidery}
+Model składa się z koliderów cylindrycznych oraz kołowych. Kolidery prymitywne zapewniają zadowolającą dokładność przy wykrywaniu kolizji, nie obciążając przy tym zbytnio zasobów sprzetowych.
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -502,7 +498,7 @@ Rozpoczęcie tworzenia nowej gry w Unreal Engine jest bardzo proste. Po uruchomi
     \begin{center}
     \includegraphics[scale=0.35]{Screeny/New_project}
     \end{center}
-    \caption{UE - Nowy Projekt}
+    \caption{Podstawy - UE - Nowy Projekt}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -525,7 +521,7 @@ Po dokonaniu wyboru pozostaje już tylko nazwac projekt i wcisnąć „Create Pr
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/Main}
     \end{center}
-    \caption{UE - Ekran Główny}
+    \caption{Podstawy - UE - Ekran Główny}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -550,7 +546,7 @@ Sam system składa się z czterech głównych trybów, ukazanych w prawym górny
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/Skeleton}
     \end{center}
-    \caption{UE - Szkielet}
+    \caption{Podstawy - UE - Szkielet}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -561,7 +557,7 @@ Po lewej stronie wyświetlone są wszystkie wnęki i połączone z nimi kości o
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/Mesh}
     \end{center}
-    \caption{UE - Mesh}
+    \caption{Podstawy - UE - Mesh}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -575,7 +571,7 @@ Morph Target Preview pozwala na podgląd wszystkich modyfikacji mesha. Możemy n
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/Animation}
     \end{center}
-    \caption{UE - Animacja}
+    \caption{Podstawy - UE - Animacja}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -586,7 +582,7 @@ Pod oknem podglądu animacji widzimy narzędzie dzięki któremu możemy przewij
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/Blend_Space}
     \end{center}
-    \caption{UE -Blend Spaces}
+    \caption{Podstawy - UE - Blend Spaces}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -598,7 +594,7 @@ Aby stworzyć Blend Space, wystarczy kliknąć prawym przyciskiem myszy w przegl
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/AnimGraph_Event}
     \end{center}
-    \caption{UE - Graf Animacji}
+    \caption{Podstawy - UE - Graf Animacji}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -606,7 +602,7 @@ Aby stworzyć Blend Space, wystarczy kliknąć prawym przyciskiem myszy w przegl
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/EventGraph_Event}
     \end{center}
-    \caption{UE - Graf Zdarzeń}
+    \caption{Podstawy - UE - Graf Zdarzeń}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -636,7 +632,8 @@ Aby zawczasu zorganizować naszą pracę w oknie Project umieszczamy kilka folde
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/UnityKrokPoKroku/foldery}
     \end{center}
-    \caption{Unity - Foldery. Jeśli odpowiednio zaimportowaliśmy podstawowe assety, dodatkowo pojawią nam się foldery Editor i Standard Assets.}
+    \caption{Krok po kroku - Unity - Foldery}
+Jeśli odpowiednio zaimportowaliśmy podstawowe assety, dodatkowo pojawią nam się foldery Editor i Standard Assets.
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -656,39 +653,209 @@ Obiekt ten jest tzw. Prefabem. Prefaby są to obiekty gry z rozszerzeniem .prefa
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/UnityKrokPoKroku/krok1_endscreen.png}
     \end{center}
-    \caption{Unity - Scena. Zaznaczone elementy wystarczą by zbudować i przetestować podstawową mechanikę naszej gry: kamerę TPP oraz poruszanie postaci.}
+    \caption{Krok po kroku - Unity - Scena}
+Zaznaczone elementy wystarczą by zbudować i przetestować podstawową mechanikę naszej gry: kamerę TPP oraz poruszanie postaci.
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
+\section{Krok 2 – obsługa podstawowych mechanik}
+
+Do podstawowych mechanik rozgrywki, tzw. Core  Mechanics, zaliczane są wszystkie podstawowe czynności które będą wielokrotnie wykonywane przez gracza w przeciągu całej gry. W zależności od typu gry mogą się one znacząco od siebie różnić, i tak dla dwuwymiarowej gry platformowej podstawową mechaniką jest min. skakanie, w grach typu FPS jest to strzelanie, a dla gry przygodowej zbieranie przedmiotów i interakcja z otoczeniem.
+
+Niezależnie do rodzaju tworzonej gry do podstawowych mechanik zawsze zalicza się obsługa kamery oraz sterowanie. Stworzenie sprawnie operującej dynamicznej kamery może okazać się dużym wyzwaniem. Sterowanie zaś musi być płynne i responsywne. 
+
+W przypadku tworzonej przez nas gry, Unity zapewnia nam rozwiązania dla obu tych mechanik. Użyty przez nas w  poprzednim kroku model postaci, posiada już dwa komponenty, odpowiedzialne za poruszanie się i obsługę sterowania naszej postaci: Third Person User Control oraz Third Person Character. Dodatkowo możemy zauważyć komponent Animator, odpowiedzialny za wszystkie animacje naszego obiektu, oraz Rigidbody, który jest niezbędny do działania powyższych komponentów. Dzięki niemu, oraz komponentowi Capsule Collider, nasza postać może także poruszać się po utworzonym przez nas terenie.
+
+Jesteśmy już w stanie poruszać naszym obiektem jednak po odpaleniu gry przyciskiem Play nie jesteśmy w stanie niczego dostrzec. Wynika to z faktu, że nasza kamera wyświetla tę część sceny, która aktualnie jest pusta.
+
+Kamera jest jednym z najważniejszych środków przy budowaniu dynamiki gry. Statyczna kamera znajduje swoje zastosowanie jedynie przy prostych grach 2D, np. popularnych na urządzeniach mobilnych grach typu One Touch, gdzie obsługujemy sterowanie tylko pojedynczymi tapnięciami. W tego typu grach to Game Objecty są poruszane tak by wchodziły/wychodziły z pola widzenia kamery. Zdecydowana większość gier skupia się jednak na odpowiednich ujęciach i pracy kamery, aby – podobnie jak w filmach – przedstawiać graczowi najważniejsze wydarzenia.
+
+I w tym wypadku Unity wychodzi nam naprzeciw, dostarczając prefaby obsługujące pracę kamery. Podobnie jak w wypadku naszego modelu, przy tworzeniu projektu zaimportowaliśmy odpowiednie assety. Aby umieścić nową kamerę na scenie przenosimy na nią prefab FreeLookCameraRig znajdujacy się w Standard Assets $\rightarrow$ Cameras $\rightarrow$ Prefabs. Aby kamera zaczęła śledzić naszego gracza, po kliknięciu go na scenie, w oknie inspektora zmieniamy Tag, na „Player”. Ustawiamy kamerę możliwie blisko modelu, kopiując jego zawartość Transform do prefaba naszej kamery (robimy to klikając prawym przyciskiem myszki na nazwie komponentu i wybieramy opcję „Copy Component”, następnie w docelowym komponencie wybieramy opcę „Paste Component Values”).
+
+Zarówno obiekt ThirdPersonController (zmieńmy jego nazwę na Player) jak i FreeLookCameraRig (nazwijmy go TPPCamera), dają nam do dyspozycji różne opcje, umożliwiające dostosowanie sterowania i pracy kamery do naszych potrzeb. Jeśli chcemy jedynie poeksperymentować z różnymi ustawieniami, warto robić to po wciśnięciu przycisku Play. Wszystkie zmiany dokonane podczas działania gry będą natychmiast widoczne, jednak zostaną cofnięte po jej wyłączeniu.
+
+\section{Krok 3 - Cele gry}
+
+Możemy już biegać i skakać naszą postacią, a także swobodnie rozglądać się przy pomocy kamery. Cele gry powinny zostać uprzednio zdefiniowane w GDD, szczególnie jeśli do ich osiągnięcia niezbędna jest implementacja odpowiednich mechanik. Najprostszym podejściem jest ustalenie warunków wygranej i przegranej, oraz danie graczowi jasno do zrozumienia na jakich zasadach się one opierają.
+
+W naszej grze, aby odnieść sukces, gracz będzie musiał odnaleźć i dotrzeć do specyficznego punktu na mapie, sygnalizowanego przez czerwony słup dymu.
+
+Warunkiem przegranej będzie śmierć gracza. Gracz umrzeć będzie mógł na dwa sposoby: upadając z dużej wysokości lub wpadając do wody.
+
+Aby móc testować mechanizm śmierci podczas upadku, dodajemy do gry przykładowe wzniesienie. Klikamy na obiekt Terrain i wybieramy pierwszą opcje od lewej. Służy ona do tworzenia wzniesień na naszym terenie. Tworzymy wolno wznoszące się wzniesienie na które może wbiec gracz, punkt szczytowy powinien wynieść co najmniej czterokrotność wysokości gracza. Następnie tworzymy skrypt WinLoseCondition i podpinamy go do obiektu Player:
+
+\begin{lstlisting}
+
+using UnityEngine;
+using System.Collections;
+
+public class WinLoseCondition : MonoBehaviour {
+    Rigidbody rb;
+    Animator anim;
+    // Use this for initialization
+    void Start ()
+    {
+        rb = gameObject.GetComponent<Rigidbody> ();
+        anim = gameObject.GetComponent<Animator> ();
+    }
+
+    void OnCollisionEnter (Collision other)
+    {
+        if (other.gameObject.tag == "Water") {
+            Death ();
+
+        }
+        if (rb.velocity.y < -10) {
+            if (other.gameObject.tag == "Ground") {
+                Death ();
+            }
+        }
+        if (other.gameObject.tag == "Finish") {
+            Win ();
+
+        }
+    } 
+        
+}  
+
+\end{lstlisting}
+
+W powyższym kodzie tworzymy prywatne zmienne rb i anim. Następnie korzystamy z funkcji GetComponent. Służy ona do uzyskiwania dostepu do komponentów wybranego przez nas GameObjectu. GameObject pisany z małej litery oznacza w tym wypadku obiekt do którego ten skrypt jest podpięty. Możemy w tym miejscu umieścić dowolną zmienną typu GameObject, należy jednak zwrócić uwagę na to, czy obiekt ten posiada komponent do którego próbujemy się dostać. Jeśli odwołamy się do nieistniejącego komponentu to wartość zmiennej będzie równa null. Wszelkie późniejsze odwołanie do niej spowoduje zawieszenie bądź wywalenie się gry. Najprostszym sposobem unikania tego problemów jest stawianie flagi, sprawdzającej czy wykorzystywana wartość jest różna od null.
+
+Funkcja OnCollisionEnter wykonuje się za każdym razem gdy kolider obiektu do którego podpięliśmy skrypt, zetknie się z innym koliderem. Pierwszy warunek sprawdza, czy tag obiektu, do którego należy kolider z którym się zetknęliśmy, nazywa się „Water”. Jeśli tak to nastąpi śmierć gracza. Drugi warunek sprawdza aktualną prędkość poruszania się naszej postaci w pozycji wertykalnej. Jeśli jest ona odpowiednio wysoka (wartość ujemna oznacza, że nasza postać porusza się z góry do dołu, z im większej wysokości spadamy, tym bardziej wzrasta prędkość zgodnie z wartością przyspieszenia ziemskiego) w momencie zderzenia z ziemią gracz umrze. Ostatni warunek sprawdza czy dotarliśmy do punktu oznaczonego tagiem Finish, który oznacza naszą wygraną.
+
+Chcemy aby w momencie śmierci bohatera odtwarzana była odpowiednia animacja, a po chwili następował restart gry. Nasza postać nie posiada animacji śmierci, możemy jednak bez problemu wyszukać gotowe animacje oparte na humanoidalnym szkielecie w Asset Store. Ułatwieniem dla nas będzie jeśli uda nam się znaleźć animację w formacie .fbx. Aby dodać nową animację dla postaci, musi otworzyć okno animatora. Robimy to klikając dwukrotnie na obiekt animatora znajdujący się w Standard Assets $\rightarrow$ ThirdPersonCharacter $\rightarrow$ Animator. Po otwarciu animatora zobaczymy siatkę na której umieszczono animacje. Strzałki pomiędzy nimi oznaczają przejścia w animacji. Przenieśmy nasz plik .fbx z animacją do animatora i zmieńmy jego nazwę na Death. Dzięki temu będziemy w stanie odwołać się do niej z komponentu Animator naszego obiektu.
+W naszym projekcie wykorzystaliśmy paczkę Huge Mockap Library do pobrania za darmo z Asset Store.
+
+Do naszego skryptu dodajemy poniższe funkcje :
+
+\begin{lstlisting}
+
+void Death ()
+    {
+        anim.Play ("Death");
+        Invoke ("Restart", 2f);
+
+        Debug.Log ("Nie żyjesz");
+    }
+
+    void Win ()
+    {
+        Invoke ("Restart", 2f);
+        Debug.Log ("Wygrałeś");
+    }
+
+    void Restart ()
+    {
+        Application.LoadLevel (Application.loadedLevelName);
+    } 
+
+\end{lstlisting}
+
+W funkcji Death() najpierw wywołujemy animację, którą właśnie dodaliśmy.
+Funkcja Invoke służy do opóźniania wywołania funkcji. W tym wypadku po dwóch sekundach wywołamy funkcję Restart, która załaduje aktualna scenę na nowo.
+
+\section1{Krok 4 – Interfejs użytkownika}
+
+Kolejnym ważnym aspektem gry jest to jak „rozmawiamy” z graczem. Do komunikacji wykorzystujemy przede wszystkim wydarzenia w świecie gry, oraz tzw. UI – user interface. 
+
+UI służy do obsługi i wyświetlania opcji gry dostępnych graczowi, informowania o aktualnym celach i stanie rozgrywki. Wydarzenia w świecie gry mogą spełniać podobną rolę, jednak nie muszą one mieć konkretnego wpływu na przebieg rozgrywki, elementy UI zaś powinny zawsze oferować jakąś funkcjonalność.
+
+Aby stworzyć podstawowe UI w Unity, z pasku menu wybieramy opcję GameObject $\rightarrow$ UI $\rightarrow$ Button. W oknie hierarchii pojawią się nam dwa nowe obiekty: Canvas, będący tłem dla wszystkich  elementów UI, oraz EventSystem odpowiedzialny m.in. za obsługę przycisków. Wewnątrz obiektu Canvas znajdziemy obiekt o nazwie Button – zduplikujmy go. Rozstawiamy nasze przyciski na scenie, oraz zmieniamy ich nazwy na Play oraz Exit. Po odpaleniu gry zauważymy, że niezależnie od pozycji naszej kamery, oba przyciski znajdują się na pierwszym planie. 
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/UnityKrokPoKroku/krok4_buttony.png}
+    \end{center}
+    \caption{Krok po kroku - Unity - Przyciski}
+Możemy dowolnie przekształcać rozmiar oraz wygląd przycisków utworzonych przy pomocy unitowego UI. Służą do tego komponenty RectT Transform, Image oraz Button.
+    \source{Zrzut ekranu z Unity}
+\end{figure}
+
+Aby nasze przyciski zaczęły coś robić musimy stworzyć skrypt obsługujący ich działanie, nazwijmy go UIController:
+
+\begin{lstlisting}
+
+using UnityEngine;
+using System.Collections;
+
+public class UIController : MonoBehaviour {
+    public GameObject Canvas;
+    public GameObject Player;
+    public GameObject Camera;
+
+
+    public void PlayButton() {
+        Canvas.SetActive (false);
+        Player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl> ().enabled = true;
+        Camera.GetComponent<UnityStandardAssets.Cameras.FreeLookCam> ().enabled = true;
+    }
+
+    public void ExitButton() {
+        Application.Quit ();
+    }
+} 
+
+\end{lstlisting}
+
+Dodajemy pusty obiekt UI Controll do naszej sceny, i podpinamy do niej powyższy skrypt. Następnie zaznaczamy stworzone przez nas wcześniej przyciski. Używamy znaku plusa na dole komponentu Button i przenieśmy do niego obiekt UI Controll. Dzięki temu uzyskamy dostęp do wszystkich publicznych funkcji skryptu UI Controll. Dla przycisku Play zaznaczamy funkcję PlayButton(), a do przycisku Exit – ExitButton(). 
+
+Funkcja PlayButton() wyłącza Canvas, oraz włącza komponenty ThirdPersonUserControl i FreeLookCam. Funkcja ExitButton zamyka naszą aplikację.
+
+Tworząc obiekt UI typu Text możemy dodatkowo umieścić nazwę naszej gry jako element Canvasu.
+
+Czerwony dym widoczny w naszej grze także pełni rolę UI – wskazuje nam gdzie znajduje się nasz cel na mapie. Tego typu informacje zaliczamy do wydarzeń w świecie gry.
+
+\section{Krok 5 – Kreacja świata gry}
+
+W tym momencie nasza gra znajduje się już w stadium grywalności, można więc rozpocząć prace nad stworzeniem odpowiedniego otoczenia. Wszystkie zaprogramowane funkcje i stworzone assety są w tym etapie łączone ze sobą w jedną całość. 
+
+Nasz gracz jest  w stanie zginąć spadając z wysokości lub wpadając do wody. Ustawiamy w naszej grze kilka wzniesień. Możemy do tego użyć naszego obiektu Terrain lub wyszukać odpowiednie assety w Asset Storze. 
+
+Domyślna woda Unity dostępna jest tylko w płatnej wersji. Wodę w grze dodaliśmy korzystając z odpowiedniej paczki pobranej ze strony:
+
+\url{http://forum.unity3d.com/threads/riverwater-the-free-epic-water-solution-for-unity-free-users.235860/}
+
+Korzystając z zakładki Lighting możemy odpowiednio modyfikować kolor i natężenie swiatła naszego otoczenia lub dodać mgłę.
+
+Dodatkowo wykorzystaliśmy na scenie tzw. Skybox. Jest to asset służący do tworzenia złudzenia realistycznego nieba. Skybox otacza całą scenę dając złudzenie złożonej przestrzeni ponad horyzontem. Możemy go ustawić w tej samej zakładce co światło otoczenia i mgłę.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/UnityKrokPoKroku/gotowa_gra.png}
+    \end{center}
+    \caption{Krok po kroku - Unity - Gotowa gra}
+Przykładowy screen z gry po dodaniu Skyboxa, mgły i zmianie koloru światła na cieplejszy.
+    \source{Zrzut ekranu z Unity}
+\end{figure}
+
+Jeśli chcemy dodatkowo upiększyć nasza grę, w Asset Storze możemy znaleźć mnóstwo darmowych modeli 3D, generatorów otoczenia oraz efektów specjalnych, które niejednokrotnie są importowane z przykładowymi scenami, pozwalającymi nam podejrzeć ich działanie.
+
+Teraz gdy nasza gra jest gotowa, powinniśmy zbudować ją na wybrane urządzenie i przetestować jej działanie. W zależności od wybranej platformy, gotowy plik może wymagać kompilacji w dodatkowych programach dostarczanych przez producentów danej platformy np. Xcode dla IOS -a i AppleTV, lub Android Studio dla urządzeń z systemem Android. 
+
+PC, Linux i Mac nie wymagają dodatkowego oprogramowania. Aby zbudować grę na te urządzenia wybieramy z paska menu File $\rightarrow$ Build Setting. W zakładce Player Settings możemy m.in. zmienić tytuł naszej gry, zmienić sposób jej wyświetlania, dodać ikonki i splashe. Następnie zaznaczamy naszą platformę i klikamy przycisk build. Pozostaje nam czekać, aż gra się skompiluje.
+
 \chapter{"The Jump" krok po kroku -- Unreal Engine}
 
-W tym rozdziale prześledzimy proces tworzenia systemu wspinaczki w Unreal Engine. Przy tworzeniu nowego projektu wybieramy szablon trzecioosobowy i upewniamy się, że zaimportuje on zawartość początkową dla danego projektu. Animacje chwytania krawędzi oraz wspinaczki można pobrać ze strony \url{https://www.crocopede.com/free-stuff}.
-
-\section{Wykrywanie krawędzi}
-
 \begin{figure}[!htb]
     \begin{center}
-    \includegraphics[scale=0.35]{Screeny/UE-Climb-NewProject.png}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-Climb-NewProject.png}
     \end{center}
-    \caption{UE - The Climb - Nowy projekt}
+    \caption{Krok po kroku - UE - Nowy projekt}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-\begin{figure}[!htb]
-    \begin{center}
-    \includegraphics[scale=0.35]{Screeny/UE-Climb-ProjectSettings.png}
-    \end{center}
-    \caption{UE - The Climb - Ustawienia Projektu}
-    \source{Zrzut ekranu z UnrealEngine}
-\end{figure}
+W tym rozdziale prześledzimy proces tworzenia systemu wspinaczki w Unreal Engine przy pomocy Blueprintów. Dla ułatwienia przy tworzeniu nowego projektu wybieramy szablon trzecioosobowy i upewniamy się, że zaimportuje on zawartość początkową dla danego projektu. Dzięki temu zabiegowi otrzymamy nie tylko gotowy system biegania i skoku, ale również już ustawioną scenę, postać wraz z podstawowymi animacjami, przedmioty i materiały przydatne przy tworzeniu naszej gry. Animacje chwytania krawędzi oraz wspinaczki można pobrać ze strony \url{https://www.crocopede.com/free-stuff}.
 
-Pierwsze co musimy zrobić to ustalić obszar kolizji postaci. Dzięki temu postać będzie wiedziała kiedy napotka ścianę na którą może się wspinać. W tym celu nq początku w lewym górnym rogu programu klikamy "Edit" i wybieramy opcję Project Settings. 
+\section{Krok 1 - Kolizje}
+
+Pierwsze co musimy zrobić to ustalić obszar kolizji dla naszej postaci. Dzięki temu będzie ona wiedziała m.in kiedy napotka ścianę na którą może się wspinać. Na początku powinniśmy w ustawieniach projektu zadeklarować "tracery" - funkcje, które będą śledzić czy i kiedy postać się do czegoś zbliża. W tym celu w lewym górnym rogu programu klikamy "Edit" i wybieramy opcję Project Settings. 
 
 \begin{figure}[!htb]
     \begin{center}
-    \includegraphics[scale=0.35]{Screeny/UE-Climb-Collision.png}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-Climb-ProjectSettings.png}
     \end{center}
-    \caption{UE - The Climb - Kolizja}
+    \caption{Krok po kroku - UE - Ustawienia Projektu}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -696,35 +863,49 @@ Wyskoczy nam nowe okienko. Z panelu po lewej stronie wyszukujemy i wybieramy "Co
 
 \begin{figure}[!htb]
     \begin{center}
-    \includegraphics[scale=0.35]{Screeny/UE-Climb-Sphere01.png}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-Climb-Collision.png}
     \end{center}
-    \caption{UE - The Climb - Kolizja}
+    \caption{Krok po kroku - UE -  Kolizje - Tworzenie tracerów}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Następnie wyszukujemy pliku ThirdPersonCharacter
+Następnie tworzymy obszar kolizyjny za pomocą sfery. W tym celu wyszukujemy i otwieramy plik ThirdPersonCharacter. Ukaże nam się kolejne okno. W jego lewym górnym rogu powinna znajdować się lista komponentów. Tam dodajemy nowy komponent "Sphere Collision" i nazywamy go "SphereTracer". Klikamy na niego dwukrotnie - przeniesie nas to do kolejnego okna, gdzie będziemy mogli edytować obszar kolizji.
 
 \begin{figure}[!htb]
     \begin{center}
-    \includegraphics[scale=0.35]{Screeny/UE-Climb-Sphere02.png}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-Climb-Sphere01.png}
     \end{center}
-    \caption{UE - The Climb - Kolizja}
+    \caption{Krok po kroku - UE - Kolizje - Tworzenie sfery}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-\begin{figure}[!htb]
-    \begin{center}
-    \includegraphics[scale=0.35]{Screeny/UE-Climb-Sphere03.png}
-    \end{center}
-    \caption{UE - The Climb - Kolizja}
-    \source{Zrzut ekranu z UnrealEngine}
-\end{figure}
+W menu po prawej stronie wyszukujemy zakładkę "Shape". Tam możemy zmienić promień naszej sfery powiększając lub pomniejszając obszar kolizji naszej postaci. Dla celów wspinaczkowych obszar ten został ustawiony na nieco większy niż postać.
 
 \begin{figure}[!htb]
     \begin{center}
-    \includegraphics[scale=0.35]{Screeny/UE-Climb-ObjectCollision.png}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-Climb-Sphere02.png}
     \end{center}
-    \caption{UE - The Climb - Kolizja}
+    \caption{Krok po kroku - UE - Kolizje - Edycja rozmiaru sfery}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Następnie również po prawej stronie wyszukujemy zakładkę "colliision". Upewniamy się, że "Generate Overlap Events" zostało ustawione na "prawdę". Następnie "Collision Presets" zmieniamy na "Custom...". Upewniamy się, że "Object Type" został ustawiony na "SphereTracer". Następnie w "Collision Response" ustawiamy wszystko na "Ingore" - jedyne wyjątki stanową "LedgeTracer", który powinien być ustawiony na "Block", oraz "WorldStatic", który powinien być ustawiony na "Overlap".
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-Climb-Sphere03.png}
+    \end{center}
+    \caption{Krok po kroku - UE - Kolizje - Edycja ustawień kolizji sfery}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Teraz możemy powrócić do naszej sceny i wybrać obiekt na który gracz będzie mógł się wspinać. W tym celu klikamy na niego i w prawym menu szukamy zakładki "Collision". Upewniamy się, że "Generate Overlap Events" zostało ustawione na fałsz. Następnie "Collision Presets" zmieniamy na "Custom...". Upewniamy się, że "Object Type" został ustawiony na "WorldStatic". Następnie w "Collision Response" ustawiamy wszystko na "Block" - jedynie "SphereTracer" powinien być ustawiony na "Overlap".
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-Climb-ObjectCollision}
+    \end{center}
+    \caption{Krok po kroku - UE - Kolizje - Ustawienia obiektu}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
