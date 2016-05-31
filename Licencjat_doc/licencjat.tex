@@ -273,7 +273,13 @@ Używając wyrażenia obiekt i komponent w tej pracy, będziemy każdorazowo odn
 
 Po stworzeniu projektu naszym oczom ukaże się główny ekran. Jeśli żaden projekt nie był wcześniej otwierany na tym komputerze to ekran będzie wyglądał jak na zdjęciu poniżej (dla wersji 5.x ). 
 
-ekran glowny
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.15]{Screeny/rodzial5screeny/ekran_glowny}
+    \end{center}
+    \caption{Unity - Ekran główny. Domyślny układ ekranu po stworzeniu nowego projektu, jeśli nie otwieralismy wcześniej na tym komputerze innego projekt Unity wraz z oznaczeniem poszczególnych okien.}
+    \source{Zrzut ekranu z Unity}
+\end{figure}
 
 Cyfry na zdjęciu oznaczają poszczególne okna: 
 
@@ -299,27 +305,63 @@ Jako, że obiekt posiada już domyślny komponent Transform, możliwe są operac
 
 Pierwszy przycisk od lewej pozwala nam na poruszanie samym widokiem w przestrzeni przy pomocy myszki, nawet gdy obiekt jest zaznaczony. 
 
-drag option
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.4]{Screeny/rodzial5screeny/drag_option}
+    \end{center}
+    \caption{Unity - Opcja przemieszczania przedmiotu}
+    \source{Zrzut ekranu z Unity}
+\end{figure}
 
 Drugi przycisk umożliwia nam na zmienianie pozycji obiektu w przestrzeni. Możemy swobodnie poruszać obiektem klikając na kwadrat, bądź jeśli chcemy poruszać obiekt po konkretnej osi – na odpowiednie strzałki. Można uruchomić ten tryb korzystając z przycisku „W” na klawiaturze.
 
-move option
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.4]{Screeny/rodzial5screeny/move_option}
+    \end{center}
+    \caption{Unity - Opcja przemieszczania kamery}
+    \source{Zrzut ekranu z Unity}
+\end{figure}
 
 Trzeci przycisk służy to zmiany rotacji obiektu w przestrzeni. Po uruchomieniu tego trybu zobaczymy, że wygląd osi zmienił się na kształt sfery. Rotację wykonujemy ta samo jak zmianę pozycji poprzez klikanie na odpowiednie osie. 
 
-rotate option
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.4]{Screeny/rodzial5screeny/rotate_option}
+    \end{center}
+    \caption{Unity - Opcja obkręcania przedmiotu}
+    \source{Zrzut ekranu z Unity}
+\end{figure}
 
 Czwarty przycisk służy do zmiany skali obiekty. Zmianę wykonujemy poprzez naciśnięcie na małe szcześciany widoczne na osiach.
 
-scale option
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.4]{Screeny/rodzial5screeny/scale_option}
+    \end{center}
+    \caption{Unity - Opcja skalowania przedmiotu}
+    \source{Zrzut ekranu z Unity}
+\end{figure}
 
-Ostatni przycisk służy do obsługi tzw. Rect Transform i wychodzi poza zakres podstawow i nie będzie omawiany w tym rozdziale.
+Ostatni przycisk służy do obsługi tzw. Rect Transform i wychodzi poza zakres podstawowy i nie będzie omawiany w tym rozdziale.
 
-recttrans option
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.4]{Screeny/rodzial5screeny/recttrans_option}
+    \end{center}
+    \caption{Unity - Opcja Rect Transform }
+    \source{Zrzut ekranu z Unity}
+\end{figure}
 
 Mimo, że puste obiekty same w sobie nic nie robią to są używane równie często, co obiekty z komponentami. Wynika to z faktu, że można je zagnieżdżać tak samo jak foldery – przenosząc jeden obiekt na drugi w oknie hierarchii. Ma to kilka zastosowań. Po pierwsze pozwala na zorganizowanie obiektów na scenie, która może składać się z tysięcy obiektów i nawigacja między nimi mogłaby być bardzo kłopotliwa. Przykładowo posiadając obiekt „samochód”, obiekty takie jak „koło”, „karoseria” , „lampy” itd. powinny być umieszczone w tym obiekcie. Dzięki temu, poruszając „samochodem”, jednocześnie przemieścimy o tę samą wartość „koła”, „karoserię” i „lampy”. Te obiekty nazywane są obiektami potomnymi, ang. Child Objects. Samochód jest w tym momencie rodzicem, ang Parent Object. Ma to szczególne znaczenie przy skomplikowanych obiektach, gdzie przemieszczanie każdego z nich oddzielnie byłoby bardzo niepraktyczne. Ta sama zasada dotyczy się rotacji i skali. Modyfikacja obiektu potomnego nie wpływa za to na jego rodzica. Drugim ważnym zastosowaniem obiektów potomnych jest możliwość odwoływania się do nich poprzez rodzica. Oznacza to, że skrypty umieszczone w obiekcie, posiadającym jedno lub wiele dzieci, mogą za jednym zamachem kontrolować wszystkie z nich.
 
-relacja rodzic dziecko
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/rodzial5screeny/przyklad_relacji_rodzic_dziecko}
+    \end{center}
+    \caption{Unity - Relacja Rodzic - Dziecko. Kolorem czerwonym oznaczono obiekt gry, będący rodzicem znajdujących się w nim obiektów: bagażnik i przód, oznaczonych kolorem zielonym. Bagażnik i przód są jednocześnie dziećmi obiektu samochód jak i rodzicami obiektów: gaśnica, trójkąt, silnik, skrzynia biegów oraz akumulator oznaczonych kolorem niebieskim.}
+    \source{Zrzut ekranu z Unity}
+\end{figure}
 
 Każdy obiekt który umieszczamy na scenie automatycznie pojawia się w oknie hierarchii. Zaznaczenie obiektu w hierarchii zaznaczy nam obiekt na scenie i vice versa, a także wyświetli wszystkie komponenty podpięte do tego obiektu w oknie inspektora (4).
 
@@ -412,7 +454,13 @@ W funkcji Update(), która jak wiemy jest wykonywana co klatkę dodaliśmy możl
 
 Skrypt podpinamy zaznaczając nasz obiekt (np. cube), i przenosząc skrypt z okna Projects do inspektora, lub klikając Add component i wyszukując nasz skrypt. Aby zobaczyć efekt działania skryptu nasz obiekt musi znaleźć się w polu widzenia kamery. Domyślnie jeśli pozycja kamery nie była zmieniana, to umieszczenie obiektu w pozycji x=0, y=0,z=0 ustawi go na środku pola widzenia. Po naciśnięciu przycisku Play ujrzymy efekt działania naszego skryptu.
 
-moving cube
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/rodzial5screeny/moving_cube}
+    \end{center}
+    \caption{Unity - Przesuwanie sześcianu. Jeśli poprzednie kroki zostały wykonane pomyślnie, po przycisku play powinniśmy ujrzeć tak wyglądający obiekt Cube, poruszjący się ze średnią prędkością w kierunku północno – wschodnim.}
+    \source{Zrzut ekranu z Unity}
+\end{figure}
 
 \section{Kamera, światło i Collidery}
 
@@ -432,7 +480,13 @@ Korzystając z koliderów trzeba bardzo uważać by nie zagnieżdżać wielu kol
 
 Poniższy screen przedstawia przykładowy model korzystający z kilku podstawowych koliderów:
 
-model prymitywne kolidery
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/rodzial5screeny/model_prymitywne_kolidery}
+    \end{center}
+    \caption{Unity - Prymitywne kolidery. Model składa się z koliderów cylindrycznych oraz kołowych. Kolidery prymitywne zapewniają zadowolającą dokładność przy wykrywaniu kolizji, nie obciążając przy tym zbytnio zasobów sprzetowych.}
+    \source{Zrzut ekranu z Unity}
+\end{figure}
 
 Temat Colliderów zamyka podstawowe zagadnienia związane z Unity. 
 
