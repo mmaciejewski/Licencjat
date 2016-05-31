@@ -15,18 +15,21 @@
 \contentsline {section}{\numberline {4.8}Kamera, światło i Collidery}{26}{section.4.8}
 \contentsline {chapter}{\numberline {5}Podstawy tworzenia gier w Unreal Engine}{29}{chapter.5}
 \contentsline {section}{\numberline {5.1}Rozpoczęcie projektu}{29}{section.5.1}
-\contentsline {section}{\numberline {5.2}Ekran główny}{30}{section.5.2}
-\contentsline {section}{\numberline {5.3}System Persona i Animacje}{31}{section.5.3}
-\contentsline {chapter}{\numberline {6} Testowanie gier}{36}{chapter.6}
-\contentsline {chapter}{\numberline {7}Podsumowanie procesu tworzenia gier dla obu silników}{38}{chapter.7}
-\contentsline {section}{\numberline {7.1}Multiplatformowość}{38}{section.7.1}
-\contentsline {section}{\numberline {7.2}Przystępność}{38}{section.7.2}
-\contentsline {section}{\numberline {7.3}Grafika}{39}{section.7.3}
-\contentsline {section}{\numberline {7.4}Programowanie i zasoby}{40}{section.7.4}
-\contentsline {chapter}{Zakończenie}{41}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Tytuł załącznika jeden}{42}{appendix.A}
-\contentsline {chapter}{\numberline {B}Tytuł załącznika dwa}{43}{appendix.B}
-\contentsline {chapter}{Bibliografia}{44}{appendix*.6}
-\contentsline {chapter}{Spis tabel}{45}{appendix*.7}
-\contentsline {chapter}{Spis rysunków}{46}{appendix*.8}
-\contentsline {chapter}{Oświadczenie}{47}{appendix*.9}
+\contentsline {section}{\numberline {5.2}Ekran główny}{31}{section.5.2}
+\contentsline {section}{\numberline {5.3}System Persona i Animacje}{32}{section.5.3}
+\contentsline {chapter}{\numberline {6}The Climb krok po kroku -- Unreal Engine}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}Wykrywanie krawędzi}{37}{section.6.1}
+\contentsline {chapter}{\numberline {7}Podsumowanie tworzenia gier dla obu silników}{42}{chapter.7}
+\contentsline {section}{\numberline {7.1}Multiplatformowość}{42}{section.7.1}
+\contentsline {section}{\numberline {7.2}Przystępność}{42}{section.7.2}
+\contentsline {section}{\numberline {7.3}Grafika}{43}{section.7.3}
+\contentsline {section}{\numberline {7.4}Programowanie i zasoby}{44}{section.7.4}
+\contentsline {section}{\numberline {7.5}Podsumowanie}{45}{section.7.5}
+\contentsline {chapter}{\numberline {8} Testowanie gier}{46}{chapter.8}
+\contentsline {chapter}{Zakończenie}{48}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Tytuł załącznika jeden}{49}{appendix.A}
+\contentsline {chapter}{\numberline {B}Tytuł załącznika dwa}{50}{appendix.B}
+\contentsline {chapter}{Bibliografia}{51}{appendix*.6}
+\contentsline {chapter}{Spis tabel}{52}{appendix*.7}
+\contentsline {chapter}{Spis rysunków}{53}{appendix*.8}
+\contentsline {chapter}{Oświadczenie}{54}{appendix*.9}
