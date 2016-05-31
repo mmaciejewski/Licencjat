@@ -617,7 +617,50 @@ Graf animacji korzysta z grafu zdarzeń, by określić finalną pozę mesh’u w
 
 W następnym rozdziale przyjżymy się bliżej tym systemom i zaprezentujemy je w praktyce.
 
-\chapter{The Climb krok po kroku -- Unreal Engine}
+\chapter{"The Jump" krok po kroku -- Unity}
+
+Rozdział ten jest w całości poświęcony opisowi tworzenia jednego konkretnego tytułu przez jedną osobę. Zostały tu zachowane wszystkie ogólne zasady dotyczące tego procesu, trzeba jednak uwzględnić fakt, że w zależności od rodzaju tworzonego tytułu oraz wielkości zespołu przy nim pracującego, konkretne kroki mogą być wykonywane w odmiennej kolejności. Przykładowo jedna część osób pracujących nad grą może zostać oddelegowana do tworzenia UI, druga do programowania rozgrywki, a jeszcze inna do prac nad obsługą reklam bądź modułu sieciowego. Dopiero w późniejszej fazie produkcji są one łączone w jedną całość. 
+
+W przypadku gdy nad grą pracuje jedna osoba, zaleca się aby najpierw implementować podstawowy mechanizm rozgrywki i dopiero w momencie gdy spełni on nasze oczekiwania, kontynuować prace nad pozostałymi częściami gry.
+
+W tej pracy, w fazie planowania zdecydowaliśmy się na stworzenie trójwymiarowej gry z widokiem z trzeciej osoby, z ang. TPP w której biegamy i skaczemy po platformach, z rozgrywką tylko dla jednego gracza. Decyzję taką podjęliśmy z kilku powodów. Oba silniki omawiane w tej pracy dysponują podobnymi narzędziami do obsługi kamery dla tego typu gry. Grę stworzyliśmy w technologii 3D, gdyż zarówno Unity jak i Unreal zostały zaprojektowane właśnie z myślą o trójwymiarowych tytułach. Jednocześnie mogliśmy dostrzec znaczne różnice pomiędzy możliwościami renderowania przez nie grafiki i obsługi fizyki. Dane nam było skorzystać z narzędzi do generowania terenu, popracować nad oświetleniem i zobaczyć jak radzą sobie wbudowane narzędzia do obsługi animacji.
+
+\section{Krok 1 – przygotowanie sceny}
+
+
+Tworzymy nowy projekt, wybierając opcje 3D i importujemy standardowe assety: Characters i Cameras.
+
+Aby zawczasu zorganizować naszą pracę w oknie Project umieszczamy kilka folderów Scripts, 3D Assets, Prefabs  i Scenes.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/UnityKrokPoKroku/foldery}
+    \end{center}
+    \caption{Unity - Foldery. Jeśli odpowiednio zaimportowaliśmy podstawowe assety, dodatkowo pojawią nam się foldery Editor i Standard Assets.}
+    \source{Zrzut ekranu z Unity}
+\end{figure}
+
+Dodajemy poziom gry na której toczyć się będzie akcja, poprzez wybranie File $\rightarrow$ New Scene w pasku menu i umieszczamy ją w folderze Scenes. Otwieramy tę scenę klikając na nią dwukrotnie w oknie projektu.
+
+W zależności od użyej wersji Unity, na nowej scenie może brakować światła, dodajemy je z paska menu GameObject $\rightarrow$ Light $\rightarrow$ Directional Light.
+
+Teraz tworzymy nowy teren, klikamy GameObject w pasku menu i wybieramy 3D Object $\rightarrow$ Terrain, nazywamy go Ground i umieszczamy w folderze 3D Assets.
+
+Jeśli nie posiadamy domyślnych tekstur terenu możemy je pobrać z Asset Store. Z paska menu wybieramy Window $\rightarrow$ Asset Store. Następnie wyszukujemy interesujące nas tekstury i importujemy je do Unity. W tym projekcie skorzystaliśmy z darmowej paczki Forest Grounds Texture Pack. Tekstury terenu możemy stworzyć też sami przy pomocy zewnętrznego programu graficznego. Teksturę dodajemy zaznaczając obiekt Terrain $\rightarrow$ klikamy ikonkę pędzla we właściwościach komponentu $\rightarrow$ Edit Textures. Jeśli chcemy aby nasz teren składał się z różnych tekstur, ponownie doddajemy teksturę i przy pomocy pędzla „malujemy” podłoże.
+
+Podstawą naszej postaci będzie przykładowy model który zaimportowaliśmy przy tworzeniu nowego projektu. Znajduje się on w folderze Standard Assets $\rightarrow$ ThirdPersonCharacter $\rightarrow$ Prefabs $\rightarrow$ ThirdPersonController.
+
+Obiekt ten jest tzw. Prefabem. Prefaby są to obiekty gry z rozszerzeniem .prefab w naszym projekcie. W odróznieniu od zwykłych obiektów pozwalaja one na modyfikowanie ich kopii  z poziomu jednego prefaba, bez konieczności edycji każdego obiektu oddzielnie. Oznacza to, że jeśli umieścimy wiele kopii tego samego przeciwnika w wielu miejscach, to jeśli będzie on prefabem, modyfikując wartości jednego z nich równocześnie wprowadzimy zmiany dla pozostałych kopii.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/UnityKrokPoKroku/krok1_endscreen.png}
+    \end{center}
+    \caption{Unity - Scena. Zaznaczone elementy wystarczą by zbudować i przetestować podstawową mechanikę naszej gry: kamerę TPP oraz poruszanie postaci.}
+    \source{Zrzut ekranu z Unity}
+\end{figure}
+
+\chapter{"The Jump" krok po kroku -- Unreal Engine}
 
 W tym rozdziale prześledzimy proces tworzenia systemu wspinaczki w Unreal Engine. Przy tworzeniu nowego projektu wybieramy szablon trzecioosobowy i upewniamy się, że zaimportuje on zawartość początkową dla danego projektu. Animacje chwytania krawędzi oraz wspinaczki można pobrać ze strony \url{https://www.crocopede.com/free-stuff}.
 

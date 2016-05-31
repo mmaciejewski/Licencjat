@@ -22,15 +22,18 @@
 \contentsline {figure}{\numberline {5.7}{\ignorespaces UE - Graf Animacji}}{39}{figure.5.7}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces UE - Graf Zdarzeń}}{39}{figure.5.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces UE - The Climb - Nowy projekt}}{40}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces UE - The Climb - Ustawienia Projektu}}{41}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces UE - The Climb - Kolizja}}{42}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces UE - The Climb - Kolizja}}{42}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces UE - The Climb - Kolizja}}{43}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces UE - The Climb - Kolizja}}{43}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces UE - The Climb - Kolizja}}{44}{figure.6.7}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Unity - Foldery. Jeśli odpowiednio zaimportowaliśmy podstawowe assety, dodatkowo pojawią nam się foldery Editor i Standard Assets.}}{41}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Unity - Scena. Zaznaczone elementy wystarczą by zbudować i przetestować podstawową mechanikę naszej gry: kamerę TPP oraz poruszanie postaci.}}{42}{figure.6.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces UnrealEngine a Unity - porównanie grafiki}}{47}{figure.7.1}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces UE - The Climb - Nowy projekt}}{43}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces UE - The Climb - Ustawienia Projektu}}{44}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces UE - The Climb - Kolizja}}{45}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces UE - The Climb - Kolizja}}{45}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces UE - The Climb - Kolizja}}{46}{figure.7.5}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces UE - The Climb - Kolizja}}{46}{figure.7.6}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces UE - The Climb - Kolizja}}{47}{figure.7.7}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces UnrealEngine a Unity - porównanie grafiki}}{50}{figure.8.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
