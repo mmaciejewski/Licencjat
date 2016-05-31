@@ -24,8 +24,7 @@
 \email    {michal.maciejewski92@gmail.coml}
 
 \author   {Miszczykowski Mariusz}
-\nralbumu {000\,000}
-\email {000@gmail.com}
+\nralbumu {206\,361}
 
 \title    {Tworzenie gier na przykładzie silników Unity i Unreal Engine}
 \date     {2016}
@@ -445,7 +444,13 @@ Ten rozdział poświęcony jest podstawowym elementom Unreal Engine. Nie jest to
 
 Rozpoczęcie tworzenia nowej gry w Unreal Engine jest bardzo proste. Po uruchomieniu silnika, wystarczy kliknąć w zakładkę „New Project”.
 
-\includegraphics[scale=0.25]{Screeny/New_project}
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/New_project}
+    \end{center}
+    \caption{UE - Nowy Projekt}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
 Przeniesie nas to na ekran, na którym wybierzemy wstępne ustawienia naszego projektu. Pierwszą decyzją jaką musimy podjąć, to w jaki sposób będziemy rodzić sobie z logiką- poprzez pisanie kodu w C++, czy ustawianie bloków logicznych w tzw. Blueprint’ach.
 
@@ -459,9 +464,16 @@ Kolejnym krokiem jest wybór schematu, jakim będziemy się posługiwać. W zale
 Ostatnim krokiem jest wybór platformy na jaką chcemy tworzyć grę, jakość grafiki (istotna w przypadku słabszych sprzętów), oraz czy chcemy, by projekt zaimportował wstępne zasoby przygotowane dla nas przez Epic Games. Zasoby te składają sie między innymi z podstawowych animacji, tekstur i odgłosów.
 Po dokonaniu wyboru pozostaje już tylko nazwac projekt i wcisnąć „Create Project”.
 
+\newpage
 \section{Ekran główny}
 
-\includegraphics[scale=0.25]{Screeny/Main}
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/Main}
+    \end{center}
+    \caption{UE - Ekran Główny}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
 Po stworzeniu projektu, załaduje nam się ekran główny Unreal Engine. Na jego środku widzimy podgląd sceny nad którą obecnie pracujemy. Scena jest po prostu jednym z pozomów naszej gry.
 Pod ekranem podglądu mamy przeglądarkę plików znajdujących się w projekcie. 
@@ -480,31 +492,69 @@ Aby uruchomić Personę, wystarczy dwa razy kliknąć w edytorze na dowolny obie
 
 Sam system składa się z czterech głównych trybów, ukazanych w prawym górnym rogu okienka.
 
-\includegraphics[scale=0.25]{Screeny/Skeleton}
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/Skeleton}
+    \end{center}
+    \caption{UE - Szkielet}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
 Pierwszy tryb odpowiada za edycję szkieletu animacji. Po uruchomieniu od razu rzuca się w oczy podgląd animacji na środku okna. Rejestruje on obecny stan animacji. Podgląd ten jest częścią wspólną wszystkich trybó pracy w Personie.
 Po lewej stronie wyświetlone są wszystkie wnęki i połączone z nimi kości obecnego modelu. Można dowolnie dodawać je i usuwać ze szkieletu postaci. Jest to szczególnie przydatne, gdy chcemy aby nasza postać np. chwytała broń. Wystarczy dodać wnękę do ręki szkieletu i już jest to możliwe.
 
-\includegraphics[scale=0.25]{Screeny/Mesh}
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/Mesh}
+    \end{center}
+    \caption{UE - Mesh}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
 Kolejny ekran jest odpowiedzialny za edycję meshy. Mesh to nic innego ja zbiór punktów, linii i wieloboków, które składają się na ostateczny kształt obiektu.
 Ten tryb ma wiele wspólnego z poprzednim. Ma jednak dwa ważne menu, niedostępne w innych podsystemach Persony – „Mesh Details” i „Morph Target Preview”.
 Mesh Details odpowiada głównie za edycję mesh’u nad którym obecnie pracujemy. Możemy dodać do niego nowe tekstury, kontrolować właściwości fizyczne (np. Płaszcz łopoczący na wietrze), lub umożliwić kolizję z innymi obiektami w grze.
 Morph Target Preview pozwala na podgląd wszystkich modyfikacji mesha. Możemy na przykład zmienić wyraz twarzy postaci, zapisać go i użyć w odpowiedniej sytuacji, a potem obejżeć go bez konieczności trwałej zmiany samego mesha.
 
-\includegraphics[scale=0.25]{Screeny/Animation}
+\newpage
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/Animation}
+    \end{center}
+    \caption{UE - Animacja}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
 Następny tryb daje nam kontrolę nad animacjami. W lewym dolnym rogu widzimy szczegułowe ustawienia wybranej w tym momencie animacji.
 Pod oknem podglądu animacji widzimy narzędzie dzięki któremu możemy przewijać wybraną animację klatka po klatce. Po wybraniu interesującego nas momentu animacji, możemy dodać różnego rodzaju efekty np. w momencie, gdy model w animacji biegu dotyka ziemi, możemy dodać odgłos kroku, albo efekt, który wznieci tuman kurzu pod stopą modelu.
 
-\includegraphics[scale=0.25]{Screeny/Blend_Space}
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/Blend_Space}
+    \end{center}
+    \caption{UE -Blend Spaces}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
 Warto również wspomnieć o tzw. „Blend Spaces”, czyli możliwość łączenia kilku animacji w jedną. Tej metody używa się, gdy zajdą ustalone okoliczności. Gwarantuje to płynność w przechodzeniu między animacjami. Na przykład, stojąca postać pod wpływem wciśnięcia przycisku zaczyna iść (wartość zmiennej „prędkość” zwiększa się). Jeśli gracz nie puści przycisku, chód zamienia się w bieg.
 Aby stworzyć Blend Space, wystarczy kliknąć prawym przyciskiem myszy w przeglądarce plików, w ekranie głównym. Potem z menu kontekstowego wybieramy Animation > Blend Speaces
 
-\includegraphics[scale=0.25]{Screeny/AnimGraph_Event}
 
-\includegraphics[scale=0.25]{Screeny/EventGraph_Event}
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/AnimGraph_Event}
+    \end{center}
+    \caption{UE - Graf Animacji}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.25]{Screeny/EventGraph_Event}
+    \end{center}
+    \caption{UE - Graf Zdarzeń}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
 Ostatnią opcją Persony jest ekran grafów. Dzieli się on na dwa ekrany- Graf animacji, oraz graf zdarzeń. Każdy Blueprint związany z animacją posiada oba grafy.
 Graf zdarzeń określa wszystkie zdarzenia jakie muszą zajść, aby odtworzona została konkretna animacja w grze. Najczęściej robi się to poprzez modyfikowanie zmiennych zadeklarowanych w grafie. Zmiany zachodzą pod konkretnymi warunkami w grze.
@@ -513,24 +563,75 @@ Graf animacji korzysta z grafu zdarzeń, by określić finalną pozę mesh’u w
 
 W następnym rozdziale przyjżymy się bliżej tym systemom i zaprezentujemy je w praktyce.
 
-\chapter{ Testowanie gier}
+\chapter{The Climb krok po kroku -- Unreal Engine}
 
-Wśród programistów gier panuje przekonanie, że tworzenie zautomatyzowanych testów do gier jest pozbawione sensu. Większość firm zatrudnia sztab testerów, którzy manualnie sprawdzają najdrobniejsze elementy danej gry. Wynika to z kilku wyjątkowych cech tworzenia gier.
+W tym rozdziale prześledzimy proces tworzenia systemu wspinaczki w Unreal Engine. Przy tworzeniu nowego projektu wybieramy szablon trzecioosobowy i upewniamy się, że zaimportuje on zawartość początkową dla danego projektu. Animacje chwytania krawędzi oraz wspinaczki można pobrać ze strony \url{https://www.crocopede.com/free-stuff}.
 
-Po pierwsze, zdecydowana większość logiki używanej w grach zależy od czynników, które nie są do końca deterministyczne. Oznacza to, że warunki w jakich użytkowana będzie gra często mogą być przypadkowe i niemożliwe do przewidzenia. Na przykład, gra może być uruchamiana na setkach różnych konfiguracji sprzętu. Przetestowanie każdej z nich jest niemożliwe. Dodajmy do tego fakt, że sprzęt może znajdować się w gorącym pomieszczeniu, co pogorszy jego osiągi. W tle mogą również być uruchomione inne programy, które zajmują zasoby danego sprzętu. To tylko kilka przykładów czynników nad którymi twórcy gier nie mają żadnej kontroli. Ustalenie standardu według którego możnaby napisac test, w takich warunkach jest niemal niewykonalne.
+\section{Wykrywanie krawędzi}
 
-Innym problemem jest, że większość wyników produkowanych przez grę jest niemożliwa do zmierzenia. 
-W grach generowane są takie elementy jak grafika i dźwięk.  Skuteczność efektów wizualnych, jak i dźwiękowych jest rzeczą załkowicie subiektywną. Nie da się określić automatycznym testem czy muzyka jest dostatecznie głośna, lub czy dana tekstura wygląda dobrze w danym miejscu. Wszystko zależy od wizji twórcór gry. W takim wypadku jedyny możliwy test, to test manualny.
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UE-Climb-NewProject.png}
+    \end{center}
+    \caption{UE - The Climb - Nowy projekt}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
-Kolejną przeszkodą jest fakt, że w większości gier wszystkie mechaniki i podsystemy składają się na jedną spójną całością. W grach stworzonych na potrzeby tego projektu zaimplementowaliśmy mechanikę wspinaczki. Aby działała, zarówno fizyka gry, jak i animacje oraz kod wykrywający kolizję muszą działać poprawnie. W przypadku porażki nie sposób na pierwszy rzut oka okreslić, który z tych systemów zawiódł. Możemy napisać testy, które sprawdzą wszystkie po kolei, jednak wszelkie wyniki jakie dostaniemy będą wyrwane z kontekstu i nie powiedzą co się stało, gdy wszystkie czynniki złączyły się w jedną całość. W związku z tym tu również musimy zdać się na testowanie ręczne.
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UE-Climb-ProjectSettings.png}
+    \end{center}
+    \caption{UE - The Climb - Ustawienia Projektu}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
-Mimo powyższych problemów, pisanie unit testów do gier nie jest całkowicie niemożliwe. Wymaga to jednak bardzo specyficznych warunków. Głównym warunkiem jest określenie testów jeszcze przed rozpoczeciem programowania samej gry. Jest to jednak niepraktyczne podejście, które wiąże ręce twórcom gry.
+Pierwsze co musimy zrobić to ustalić obszar kolizji postaci. Dzięki temu postać będzie wiedziała kiedy napotka ścianę na którą może się wspinać. W tym celu nq początku w lewym górnym rogu programu klikamy "Edit" i wybieramy opcję Project Settings. 
 
-Gry stworzone na potrzeby projektu zostały przetestowane wyłącznie manualnie. Testowaliśmy głównie mechanikę skoku, wspinaczki i biegu, ponieważ są to główne elementy naszych gier.
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UE-Climb-Collision.png}
+    \end{center}
+    \caption{UE - The Climb - Kolizja}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
+Wyskoczy nam nowe okienko. Z panelu po lewej stronie wyszukujemy i wybieramy "Collision". W tym miejscu tworzymy dwa kanały. Jeden dla obiektu/postaci (SphereTracer), drugi dla znajdywania krawędzi (LedgeTracer). W obydwu przypadkach domyślną odpowiedź ustawiamy na "ignore".
 
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UE-Climb-Sphere01.png}
+    \end{center}
+    \caption{UE - The Climb - Kolizja}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
-\chapter{Podsumowanie procesu tworzenia gier dla obu silników}
+Następnie wyszukujemy pliku ThirdPersonCharacter
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UE-Climb-Sphere02.png}
+    \end{center}
+    \caption{UE - The Climb - Kolizja}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UE-Climb-Sphere03.png}
+    \end{center}
+    \caption{UE - The Climb - Kolizja}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UE-Climb-ObjectCollision.png}
+    \end{center}
+    \caption{UE - The Climb - Kolizja}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\chapter{Podsumowanie tworzenia gier dla obu silników}
 
 W tym rozdziale porównamy  oba silniki, ich mocne i słabe strony. Określimy również w jakich okolicznościach dany silnik jest preferowanym narzędziem.
 
@@ -554,10 +655,16 @@ Problem może pojawić się, gdy twórca gry nie do końca zrozumie sposobu dzia
 
 \section{Grafika}
 
-Unity od wersji 5.0 posiada wiele zaawansowanych opcji graficznych, które umożliwiają stworzenie gier wyglądem konkurującymi z produkcjami światowej klasy.
-Mimo to Unreal Engine nadal ma pod tym względem znacząca przewagę w niemal każdym aspekcie graficznym. Zarówno generowany teren, efekty cząsteczkowe oraz światło przekraczają możliwości Unity.
+Unity od wersji 5.0 posiada wiele zaawansowanych opcji graficznych, takich jak wysokiej jakości shadery, lightmapy, filtry anizotropowe. Obsługuje również efekty takie jak głębia terenu, czy motion blur, zoptymalizowane pod DirectX 11. Umożliwia to stworzenie gier wyglądem konkurującymi z produkcjami światowej klasy, takich jak Wiedźmin 3 .
+Mimo to Unreal Engine nadal ma pod tym względem znacząca przewagę. Polega ona na uproszczonym procesie tworzenia grafiki. Tworzenie wysokiej jakości grafiki w Unity, wymaga wiele pracy w zewnętrznym programie graficznym. W Unreal Engine, dzięki systemowi Blueprint’ów i idei skryptowania wizualnego, wystarczy kilka kliknięć myszką, aby osiągnąć znacznie lepsze efekty, mniejszym wysiłkiem. Tekstury w UE posiadają własny, rozbudowany edytor. Pozwala on nie tylko na dowolnie modyfikować materiałem, kolorem i innymi właściwościami tekstury, ale również kontrolować jej mapę UV. Dzięki temu, tekstura nie „rozjeżdża się” na trójwymiarowym obiekcie. Generowany teren, efekty cząsteczkowe (takie jak płomienie, czy pył unoszący się w powietrzu) oraz światło również przekraczają możliwości Unity. Dodatkowo Unreal Engine 4 posiada już wsparcie DirectX 12, co znacznie poprawia wydajność i zmniejsza czas renderowania grafiki.
 
-\includegraphics[scale=0.5]{Screeny/UE_vs_Unity}
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UE_vs_Unity}
+    \end{center}
+    \caption{UnrealEngine a Unity - porównanie grafiki}
+    \source{forum.unity3d.com}
+\end{figure}
 
 \section{Programowanie i zasoby}
 
@@ -565,13 +672,32 @@ Unity umożliwia programowanie w językach C\# i Unity Script. Pozwala to nie ty
 
 Unreal Engine korzysta wyłącznie z języka C++. Mimo, że sam język jest łatwy do optymalizacji, by go używać potrzebny jest zewnętrzny edytor. Wyjściowym sposobem tworzenia kodu jest Blueprint, który nie zapewnia bezpośredniego dostępu do kodu. Mimo, że upraszcza to proces tworzenia gry dla bardziej doświadczonych developerów, znacznie utrudnia to optymalizację gry.
 
-% zakończenie
-\summary
+\section{Podsumowanie}
+
 Oba silniki mają swoje zalety, jadnek należy używać ich w odpowiednich sytuacjach.
 
 Jeśli planujemy stworzyć mniejszy tytuł na jedną platformę, cechujący się wysokiej jakości grafiką, Unreal Engine jest bardzo dobrym wyborem.
 
-W przypadku w którym chcemy stworzyć grę na wiele platform, albo dopiero zaczynamy przygodę z tworzeniem gier, przystępnośc interfejsu, oraz elastyczność w wyborze języka programowania znacząco ułatwią nam stworzenie naszej pierwszej gry.
+W przypadku w którym chcemy stworzyć grę na wiele platform, albo dopiero zaczynamy przygodę z tworzeniem gier, przystępnośc interfejsu Unity, oraz elastyczność w wyborze języka programowania znacząco ułatwią nam stworzenie naszej pierwszej gry.
+
+\chapter{ Testowanie gier}
+
+Wśród programistów gier panuje przekonanie, że tworzenie zautomatyzowanych testów do gier jest pozbawione sensu. Większość firm zatrudnia sztab testerów, którzy manualnie sprawdzają najdrobniejsze elementy danej gry. Wynika to z kilku wyjątkowych cech tworzenia gier.
+
+Po pierwsze, zdecydowana większość logiki używanej w grach zależy od czynników, które nie są do końca deterministyczne. Oznacza to, że warunki w jakich użytkowana będzie gra często mogą być przypadkowe i niemożliwe do przewidzenia. Na przykład, gra może być uruchamiana na setkach różnych konfiguracji sprzętu. Przetestowanie każdej z nich jest niemożliwe. Dodajmy do tego fakt, że sprzęt może znajdować się w gorącym pomieszczeniu, co pogorszy jego osiągi. W tle mogą również być uruchomione inne programy, które zajmują zasoby danego sprzętu. To tylko kilka przykładów czynników nad którymi twórcy gier nie mają żadnej kontroli. Ustalenie standardu według którego możnaby napisac test, w takich warunkach jest niemal niewykonalne.
+
+Innym problemem jest, że większość wyników produkowanych przez grę jest niemożliwa do zmierzenia. 
+W grach generowane są takie elementy jak grafika i dźwięk.  Skuteczność efektów wizualnych, jak i dźwiękowych jest rzeczą załkowicie subiektywną. Nie da się określić automatycznym testem czy muzyka jest dostatecznie głośna, lub czy dana tekstura wygląda dobrze w danym miejscu. Wszystko zależy od wizji twórcór gry. W takim wypadku jedyny możliwy test, to test manualny.
+
+Kolejną przeszkodą jest fakt, że w większości gier wszystkie mechaniki i podsystemy składają się na jedną spójną całością. W grach stworzonych na potrzeby tego projektu zaimplementowaliśmy mechanikę wspinaczki. Aby działała, zarówno fizyka gry, jak i animacje oraz kod wykrywający kolizję muszą działać poprawnie. W przypadku porażki nie sposób na pierwszy rzut oka okreslić, który z tych systemów zawiódł. Możemy napisać testy, które sprawdzą wszystkie po kolei, jednak wszelkie wyniki jakie dostaniemy będą wyrwane z kontekstu i nie powiedzą co się stało, gdy wszystkie czynniki złączyły się w jedną całość. W związku z tym tu również musimy zdać się na testowanie ręczne.
+
+Mimo powyższych problemów, pisanie unit testów do gier nie jest całkowicie niemożliwe. Wymaga to jednak bardzo specyficznych warunków. Głównym warunkiem jest określenie testów jeszcze przed rozpoczeciem programowania samej gry. Jest to jednak niepraktyczne podejście, które wiąże ręce twórcom gry.
+
+Gry stworzone na potrzeby projektu zostały przetestowane wyłącznie manualnie. Testowaliśmy głównie mechanikę skoku, wspinaczki i biegu, ponieważ są to główne elementy naszych gier.
+
+
+% zakończenie
+\summary
 
 % załączniki (opcjonalnie):
 \appendix
