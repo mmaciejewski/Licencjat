@@ -1,44 +1,44 @@
 \select@language {polish}
-\contentsline {chapter}{Wprowadzenie}{6}{chapter*.4}
-\contentsline {chapter}{\numberline {1}Krótka historia silników do tworzenia gier}{8}{chapter.1}
-\contentsline {chapter}{\numberline {2}Czym jest Game Design Document?}{10}{chapter.2}
-\contentsline {section}{\numberline {2.1}Jak napisać dobre GDD}{11}{section.2.1}
-\contentsline {chapter}{\numberline {3}Przedstawienie Unity i Unreal Engine}{14}{chapter.3}
-\contentsline {chapter}{\numberline {4}Podstawy tworzenia gier w Unity}{16}{chapter.4}
-\contentsline {section}{\numberline {4.1}Planowanie}{16}{section.4.1}
-\contentsline {section}{\numberline {4.2}Początek pracy z Unity}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Podstawowe terminy}{17}{section.4.3}
-\contentsline {section}{\numberline {4.4}Ekran główny}{18}{section.4.4}
-\contentsline {section}{\numberline {4.5}Praca z obiektami i sceną}{20}{section.4.5}
-\contentsline {section}{\numberline {4.6}Okno inspektora i komponenty}{23}{section.4.6}
-\contentsline {section}{\numberline {4.7}Skrypty}{24}{section.4.7}
-\contentsline {section}{\numberline {4.8}Kamera, światło i Collidery}{28}{section.4.8}
-\contentsline {chapter}{\numberline {5}Podstawy tworzenia gier w Unreal Engine}{32}{chapter.5}
-\contentsline {section}{\numberline {5.1}Rozpoczęcie projektu}{32}{section.5.1}
-\contentsline {section}{\numberline {5.2}Ekran główny}{34}{section.5.2}
-\contentsline {section}{\numberline {5.3}System Persona i Animacje}{35}{section.5.3}
-\contentsline {chapter}{\numberline {6}"The Jump" krok po kroku -- Unity}{40}{chapter.6}
-\contentsline {section}{\numberline {6.1}Krok 1 – przygotowanie sceny}{40}{section.6.1}
-\contentsline {section}{\numberline {6.2}Krok 2 – obsługa podstawowych mechanik}{42}{section.6.2}
-\contentsline {section}{\numberline {6.3}Krok 3 - Cele gry}{44}{section.6.3}
-\contentsline {section}{\numberline {6.4}Krok 4 – Interfejs użytkownika}{47}{section.6.4}
-\contentsline {section}{\numberline {6.5}Krok 5 – Kreacja świata gry}{49}{section.6.5}
-\contentsline {chapter}{\numberline {7}"The Jump" krok po kroku -- Unreal Engine}{52}{chapter.7}
-\contentsline {section}{\numberline {7.1}Krok 1 - Kolizje}{53}{section.7.1}
-\contentsline {section}{\numberline {7.2}Krok 2 - Tracery}{56}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Wysokość}{58}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Odległość od ściany}{60}{subsection.7.2.2}
+\contentsline {chapter}{Wprowadzenie}{7}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Krótka historia silników do tworzenia gier}{9}{chapter.1}
+\contentsline {chapter}{\numberline {2}Czym jest Game Design Document?}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Jak napisać dobre GDD}{12}{section.2.1}
+\contentsline {chapter}{\numberline {3}Przedstawienie Unity i Unreal Engine}{15}{chapter.3}
+\contentsline {chapter}{\numberline {4}Podstawy tworzenia gier w Unity}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Planowanie}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Początek pracy z Unity}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}Podstawowe terminy}{18}{section.4.3}
+\contentsline {section}{\numberline {4.4}Ekran główny}{19}{section.4.4}
+\contentsline {section}{\numberline {4.5}Praca z obiektami i sceną}{21}{section.4.5}
+\contentsline {section}{\numberline {4.6}Okno inspektora i komponenty}{24}{section.4.6}
+\contentsline {section}{\numberline {4.7}Skrypty}{25}{section.4.7}
+\contentsline {section}{\numberline {4.8}Kamera, światło i Collidery}{29}{section.4.8}
+\contentsline {chapter}{\numberline {5}Podstawy tworzenia gier w Unreal Engine}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Rozpoczęcie projektu}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}Ekran główny}{35}{section.5.2}
+\contentsline {section}{\numberline {5.3}System Persona i Animacje}{36}{section.5.3}
+\contentsline {chapter}{\numberline {6}"The Jump" krok po kroku -- Unity}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Krok 1 – przygotowanie sceny}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}Krok 2 – obsługa podstawowych mechanik}{43}{section.6.2}
+\contentsline {section}{\numberline {6.3}Krok 3 - Cele gry}{45}{section.6.3}
+\contentsline {section}{\numberline {6.4}Krok 4 – Interfejs użytkownika}{48}{section.6.4}
+\contentsline {section}{\numberline {6.5}Krok 5 – Kreacja świata gry}{50}{section.6.5}
+\contentsline {chapter}{\numberline {7}"The Jump" krok po kroku -- Unreal Engine}{53}{chapter.7}
+\contentsline {section}{\numberline {7.1}Krok 1 - Kolizje}{54}{section.7.1}
+\contentsline {section}{\numberline {7.2}Krok 2 - Tracery}{57}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Wysokość}{59}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Odległość od ściany}{61}{subsection.7.2.2}
 \contentsline {section}{\numberline {7.3}Krok 3 - Chwytanie}{62}{section.7.3}
-\contentsline {chapter}{\numberline {8}Podsumowanie tworzenia gier dla obu silników}{65}{chapter.8}
-\contentsline {section}{\numberline {8.1}Multiplatformowość}{65}{section.8.1}
-\contentsline {section}{\numberline {8.2}Przystępność}{65}{section.8.2}
-\contentsline {section}{\numberline {8.3}Grafika}{66}{section.8.3}
-\contentsline {section}{\numberline {8.4}Programowanie i zasoby}{67}{section.8.4}
-\contentsline {chapter}{\numberline {9} Testowanie gier}{68}{chapter.9}
-\contentsline {chapter}{Zakończenie}{70}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Tytuł załącznika jeden}{71}{appendix.A}
-\contentsline {chapter}{\numberline {B}Tytuł załącznika dwa}{72}{appendix.B}
-\contentsline {chapter}{Bibliografia}{73}{appendix*.6}
-\contentsline {chapter}{Spis tabel}{74}{appendix*.7}
-\contentsline {chapter}{Spis rysunków}{75}{appendix*.8}
-\contentsline {chapter}{Oświadczenie}{77}{appendix*.9}
+\contentsline {chapter}{\numberline {8}Podsumowanie tworzenia gier dla obu silników}{67}{chapter.8}
+\contentsline {section}{\numberline {8.1}Multiplatformowość}{67}{section.8.1}
+\contentsline {section}{\numberline {8.2}Przystępność}{67}{section.8.2}
+\contentsline {section}{\numberline {8.3}Grafika}{68}{section.8.3}
+\contentsline {section}{\numberline {8.4}Programowanie i zasoby}{69}{section.8.4}
+\contentsline {chapter}{\numberline {9} Testowanie gier}{71}{chapter.9}
+\contentsline {chapter}{Zakończenie}{73}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Tytuł załącznika jeden}{75}{appendix.A}
+\contentsline {chapter}{\numberline {B}Tytuł załącznika dwa}{77}{appendix.B}
+\contentsline {chapter}{Bibliografia}{79}{appendix*.6}
+\contentsline {chapter}{Spis tabel}{81}{appendix*.7}
+\contentsline {chapter}{Spis rysunków}{83}{appendix*.8}
+\contentsline {chapter}{Oświadczenie}{85}{appendix*.9}

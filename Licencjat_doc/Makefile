@@ -1,5 +1,6 @@
-BOOK=licencjatTEX=xelatex
-BIBTEX=bibtex
+BOOK = licencjat
+TEX = xelatex
+BIBTEX = bibtex
 
 .PHONY: pdf
 

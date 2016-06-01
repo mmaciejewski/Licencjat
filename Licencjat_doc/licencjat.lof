@@ -3,50 +3,50 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Podstawy - Unity - Ekran główny}}{19}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Podstawy - Unity - Opcja przemieszczania przedmiotu}}{20}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Podstawy - Unity - Opcja przemieszczania kamery}}{21}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Podstawy - Unity - Opcja obkręcania przedmiotu}}{21}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Podstawy - Unity - Opcja skalowania przedmiotu}}{21}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Podstawy - Unity - Opcja Rect Transform }}{22}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Podstawy - Unity - Relacja Rodzic - Dziecko}}{23}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Podstawy - Unity - Przesuwanie sześcianu}}{29}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Podstawy - Unity - Prymitywne kolidery}}{31}{figure.4.9}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Podstawy - Unity - Ekran główny}}{20}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Podstawy - Unity - Opcja przemieszczania przedmiotu}}{21}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Podstawy - Unity - Opcja przemieszczania kamery}}{22}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Podstawy - Unity - Opcja obkręcania przedmiotu}}{22}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Podstawy - Unity - Opcja skalowania przedmiotu}}{22}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Podstawy - Unity - Opcja Rect Transform }}{23}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Podstawy - Unity - Relacja Rodzic - Dziecko}}{24}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Podstawy - Unity - Przesuwanie sześcianu}}{30}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Podstawy - Unity - Prymitywne kolidery}}{32}{figure.4.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Podstawy - UE - Nowy Projekt}}{32}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Podstawy - UE - Ekran Główny}}{34}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Podstawy - UE - Szkielet}}{35}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Podstawy - UE - Mesh}}{36}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Podstawy - UE - Animacja}}{37}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Podstawy - UE - Blend Spaces}}{38}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Podstawy - UE - Graf Animacji}}{39}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Podstawy - UE - Graf Zdarzeń}}{39}{figure.5.8}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Podstawy - UE - Nowy Projekt}}{33}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Podstawy - UE - Ekran Główny}}{35}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Podstawy - UE - Szkielet}}{36}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Podstawy - UE - Mesh}}{37}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Podstawy - UE - Animacja}}{38}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Podstawy - UE - Blend Spaces}}{39}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Podstawy - UE - Graf Animacji}}{40}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Podstawy - UE - Graf Zdarzeń}}{40}{figure.5.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Krok po kroku - Unity - Foldery}}{41}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Krok po kroku - Unity - Scena}}{42}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Krok po kroku - Unity - Przyciski}}{48}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Krok po kroku - Unity - Gotowa gra}}{50}{figure.6.4}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Krok po kroku - Unity - Foldery}}{42}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Krok po kroku - Unity - Scena}}{43}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Krok po kroku - Unity - Przyciski}}{49}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Krok po kroku - Unity - Gotowa gra}}{51}{figure.6.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Krok po kroku - UE - Nowy projekt}}{52}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Krok po kroku - UE - Ustawienia Projektu}}{53}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Krok po kroku - UE - Kolizje - Tworzenie tracerów}}{54}{figure.7.3}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Krok po kroku - UE - Kolizje - Tworzenie sfery}}{55}{figure.7.4}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Krok po kroku - UE - Kolizje - Edycja rozmiaru sfery}}{55}{figure.7.5}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Krok po kroku - UE - Kolizje - Edycja ustawień kolizji sfery}}{56}{figure.7.6}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Krok po kroku - UE - Kolizje - Ustawienia obiektu}}{57}{figure.7.7}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Krok po kroku - UE - Tracery - Tick}}{57}{figure.7.8}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Krok po kroku - UE - Tracery - Zdarzenia "Can Trace"}}{58}{figure.7.9}
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Krok po kroku - UE - Tracery - Trzon}}{59}{figure.7.10}
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Krok po kroku - UE - Tracery - Wysokość - Macro}}{59}{figure.7.11}
-\contentsline {figure}{\numberline {7.12}{\ignorespaces Krok po kroku - UE - Tracery - Wysokość}}{60}{figure.7.12}
-\contentsline {figure}{\numberline {7.13}{\ignorespaces Krok po kroku - UE - Tracery - Odległość od ściany - Macro}}{61}{figure.7.13}
-\contentsline {figure}{\numberline {7.14}{\ignorespaces Krok po kroku - UE - Tracery - Odległość od ściany}}{61}{figure.7.14}
-\contentsline {figure}{\numberline {7.15}{\ignorespaces Krok po kroku - UE - Tracery - Końcowy efekt}}{62}{figure.7.15}
-\contentsline {figure}{\numberline {7.16}{\ignorespaces Krok po kroku - UE - Chwytanie - Interfejs}}{63}{figure.7.16}
-\contentsline {figure}{\numberline {7.17}{\ignorespaces Krok po kroku - UE - Chwytanie}}{63}{figure.7.17}
-\contentsline {figure}{\numberline {7.18}{\ignorespaces Krok po kroku - UE - Chwytanie - Przesuwanie postaci do krawędzi}}{64}{figure.7.18}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Krok po kroku - UE - Nowy projekt}}{53}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Krok po kroku - UE - Ustawienia Projektu}}{54}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Krok po kroku - UE - Kolizje - Tworzenie tracerów}}{55}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Krok po kroku - UE - Kolizje - Tworzenie sfery}}{56}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Krok po kroku - UE - Kolizje - Edycja rozmiaru sfery}}{56}{figure.7.5}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Krok po kroku - UE - Kolizje - Edycja ustawień kolizji sfery}}{57}{figure.7.6}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Krok po kroku - UE - Kolizje - Ustawienia obiektu}}{58}{figure.7.7}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Krok po kroku - UE - Tracery - Tick}}{58}{figure.7.8}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Krok po kroku - UE - Tracery - Zdarzenia "Can Trace"}}{59}{figure.7.9}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Krok po kroku - UE - Tracery - Trzon}}{60}{figure.7.10}
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Krok po kroku - UE - Tracery - Wysokość - Macro}}{60}{figure.7.11}
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Krok po kroku - UE - Tracery - Wysokość}}{61}{figure.7.12}
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Krok po kroku - UE - Tracery - Odległość od ściany - Macro}}{62}{figure.7.13}
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Krok po kroku - UE - Tracery - Odległość od ściany}}{63}{figure.7.14}
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Krok po kroku - UE - Tracery - Końcowy efekt}}{64}{figure.7.15}
+\contentsline {figure}{\numberline {7.16}{\ignorespaces Krok po kroku - UE - Chwytanie - Interfejs}}{64}{figure.7.16}
+\contentsline {figure}{\numberline {7.17}{\ignorespaces Krok po kroku - UE - Chwytanie}}{65}{figure.7.17}
+\contentsline {figure}{\numberline {7.18}{\ignorespaces Krok po kroku - UE - Chwytanie - Przesuwanie postaci do krawędzi}}{65}{figure.7.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces UnrealEngine a Unity - porównanie grafiki}}{67}{figure.8.1}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces UnrealEngine a Unity - porównanie grafiki}}{69}{figure.8.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

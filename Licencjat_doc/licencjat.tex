@@ -1,14 +1,14 @@
-\documentclass[brudnopis]{xmgr}
+%\documentclass[brudnopis]{xmgr}
 % Jeśli nowe rozdziały mają się zaczynać na stronach
 % nieparzystych:
-%\documentclass[openright]{xmgr}
+\documentclass[openright]{xmgr}
 
 %\defaultfontfeatures{Scale=MatchLowercase}
-%\setmainfont[Numbers=OldStyle,Ligatures=TeX]{Minion Pro}
-%\setsansfont[Numbers=OldStyle,Ligatures=TeX]{Myriad Pro}
+\setmainfont[Numbers=OldStyle,Ligatures=TeX]{Minion Pro}
+\setsansfont[Numbers=OldStyle,Ligatures=TeX]{Myriad Pro}
 % for fontspec version < 2.0
-\setmainfont[Numbers=OldStyle,Mapping=tex-text]{Minion Pro}
-\setsansfont[Numbers=OldStyle,Mapping=tex-text]{Myriad Pro}
+%\setmainfont[Numbers=OldStyle,Mapping=tex-text]{Minion Pro}
+%\setsansfont[Numbers=OldStyle,Mapping=tex-text]{Myriad Pro}
 %\setmonofont[Scale=0.75]{Monaco}
 
 % Opcjonalnie identyfikator dokumentu
@@ -42,14 +42,26 @@
 
 % streszczenie
 \begin{abstract}
-W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier. Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D –- Unity Technologies. W części praktycznej pracy stworzono dwie wersje gry „The Jump” - po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document (patrz, rozdział 3 –- „Czym jest Game Design Document”). Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Aby uruchomić gry wystarczy uruchomić pliki exe w folderze z grą. Porównanie polega na opisie procesu tworzenia owych gier w oddzielnych rozdziałach. Rozdział podsumowujący opisuje różnice między silnikami. Przygotowaliśmy również dwa krótkie filmy, które ukazują podstawy tworzenia gier w obu silnikach -- [link Unity] i [link Unreal]
+W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier.
+Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games,
+oraz Unity 3D -- Unity Technologies. W części praktycznej pracy stworzono dwie wersje gry
+„The Jump” -- po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document
+(patrz, rozdział 3 -- „Czym jest Game Design Document”).
+Pozwoliło to na stworzenie gier o podobnych cechach,
+jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości
+żadnego z silników. Aby uruchomić gry wystarczy uruchomić pliki exe w folderze z grą.
+Porównanie polega na opisie procesu tworzenia owych gier w oddzielnych rozdziałach.
+Rozdział podsumowujący opisuje różnice między silnikami.
+
+Przygotowano również dwa krótkie filmy, które ukazują podstawy
+tworzenia gier w obu silnikach -- [link Unity] i [link Unreal]
 \end{abstract}
 
 % słowa kluczowe
-\keywords{gry konsolowe, 
-silnik gier, 
-Unity, 
-Unreal Engine, 
+\keywords{gry konsolowe,
+silnik gier,
+Unity,
+Unreal Engine,
 animacja,
 fizyka,
 skrypty,
@@ -77,11 +89,11 @@ Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej 
 Gry komputerowe towarzyszyły każdemu z nas od dzieciństwa. Były i są naszym hobby. Do dziś poświęcamy im mnóstwo czasu. Od zawsze marzyliśmy, by zacząć tworzyć swoje własne gry.
 Wiedza, którą zdobyliśmy w trakcie studiów pozwoliła nam nie tylko na realizację tego marzenia, ale również pokazała różne sposoby tworzenia oprogramowania. W tej pracy korzystamy z jednego z tych sposobów do stworzenia naszej gry. Oparliśmy ją na dwóch silnikach do tworzenia gier - Unity i Unreal Engine. W tej pracy przedstawiamy podstawowe różnice, głowne zalety, jak i ograniczenia obu silników. Wierzymy, że pozwoli to początkującym twórcom gier, jak i tym bardziej doświadczonym, znaleźć właściwe narzędzie do wykonania swojego projektu.
 
-Silniki gier to zaawansowane oprogramowanie tworzone przez firmy, specjalnie na potrzeby nowych gier. Powołanie nowej gry do życia wymaga ogromnych nakładów czasowych i finansowych. „Jak będziemy generować grafikę? Czy w naszej grze będzie realistyczna fizyka? A dynamiczne światło? Co z dzwiękiem? Jaki język programowania wybrać? A i trzeba jeszcze tę grę zoptymalizować pod konkretną platformę!" Na te i wiele innych pytań trzeba odpowiedzieć za każdym razem tworząc nową grę. Doświadczeni twórcy wiedzą jednak, że to własnie odpowiedzi na te pytania generują największe koszty. Aby uniknąć odkrywania koła na nowo, firmy często tworzą własne silniki, bądź wykupują licencje na inne. Współcześnie, większość nowych tytułów robiona jest na już gotowych silnikach. Tylko mały procent doczeka się własnego, wartego niejednokrotnie więcej niż sama gra. 
-Na nasze szczęście dzisiaj każdy z nas może skorzystać z możliwości takiego silnika. 
+Silniki gier to zaawansowane oprogramowanie tworzone przez firmy, specjalnie na potrzeby nowych gier. Powołanie nowej gry do życia wymaga ogromnych nakładów czasowych i finansowych. „Jak będziemy generować grafikę? Czy w naszej grze będzie realistyczna fizyka? A dynamiczne światło? Co z dzwiękiem? Jaki język programowania wybrać? A i trzeba jeszcze tę grę zoptymalizować pod konkretną platformę!" Na te i wiele innych pytań trzeba odpowiedzieć za każdym razem tworząc nową grę. Doświadczeni twórcy wiedzą jednak, że to własnie odpowiedzi na te pytania generują największe koszty. Aby uniknąć odkrywania koła na nowo, firmy często tworzą własne silniki, bądź wykupują licencje na inne. Współcześnie, większość nowych tytułów robiona jest na już gotowych silnikach. Tylko mały procent doczeka się własnego, wartego niejednokrotnie więcej niż sama gra.
+Na nasze szczęście dzisiaj każdy z nas może skorzystać z możliwości takiego silnika.
 
 Mimo, że na rynku istnieje wiele innych darmowych silnikow, w tej pracy skupimy sie na dwóch obecnie najpopularniejszych darmowych silnikach:
-Unreal Engine udostępniane przez firmę Epic Games, oraz Unity 3D udostępniane przez firmę Unity Technologies. 
+Unreal Engine udostępniane przez firmę Epic Games, oraz Unity 3D udostępniane przez firmę Unity Technologies.
 
 Przyjrzymy się krótkiej historii silników gier oraz porównamy oba oprogramowania. Dowiemy sie czym jest GDD, następnie przyjrzymy się ich cechom i opiszemy proces tworzenia gier w każdym z nich. Odkryjemy najczęstsze bugi w grach i jak z nimi walczyć, a w podsumowaniu opiszemy krótko: stopień trudnosci w użytkowaniu, czas potrzebny do stworzenia gry i zastanowimy sie nad przyszłością obu silników.
 
@@ -89,7 +101,7 @@ Należy zwrócić uwagę, że w rozdziałach w których opisywane są silniki (P
 
 \chapter{Krótka historia silników do tworzenia gier}
 
-Silnik gier jest to specjalne oprogramowanie zaprojektowane z myślą o tworzeniu i rozbudowywaniu gier wideo. Jego typową funkcjonalnością jest obsługa generowania grafiki (zarówno 2D i 3D), fizyki, kolizji, dźwięku, sieci, animacji, procesora, pamięci itp. Większość silników opiera się na tzw. skryptach – krótkich programach pisanych wewnątrz aplikacji, pozwalających na stosunkowo nieskrępowaną modyfikację i ciągłe rozszerzanie możliwości danego silnika. Idzie to w parze z głównym założeniem jakim jest możliwość jego wielokrotnego wykorzystania do tworzenia kompletnie odmiennych tytułów.  
+Silnik gier jest to specjalne oprogramowanie zaprojektowane z myślą o tworzeniu i rozbudowywaniu gier wideo. Jego typową funkcjonalnością jest obsługa generowania grafiki (zarówno 2D i 3D), fizyki, kolizji, dźwięku, sieci, animacji, procesora, pamięci itp. Większość silników opiera się na tzw. skryptach – krótkich programach pisanych wewnątrz aplikacji, pozwalających na stosunkowo nieskrępowaną modyfikację i ciągłe rozszerzanie możliwości danego silnika. Idzie to w parze z głównym założeniem jakim jest możliwość jego wielokrotnego wykorzystania do tworzenia kompletnie odmiennych tytułów.
 
 Teoretycznie prawie każda gra, która kiedykolwiek powstała, opiera się na jakimś silniku. Jednak dopiero lata 90' uznajemy za początek ich historii. Jest to związane z faktem, że pierwsze gry były tzw. „hardkodowane”. Oznacza to, że wszelkie dane były bezpośrednio wpisywane w kod źródłowy, a ich wartości dostosowane bezpośrednio do urządzenia na które były tworzone. Ze względu na niską wydajność i limity pamięci ówczesnych maszyn było to rozwiązanie konieczne. Uniemożliwiały jednak modyfikację kodu. Oznaczało to, że silnik wykorzystywany był tylko raz, pod konkretną grę, co stoi w konflikcie z wcześniej podaną definicją silnika gier.
 
@@ -119,26 +131,26 @@ Frostbite & 2008 & Digital Illusions CE & HDR Audio, system destrukcji otoczenia
 
 \chapter{Czym jest Game Design Document?}
 
-Game Design Document (w skrócie GDD) jest dokumentem tworzonym jeszcze przed przystąpieniem do tworzenia gry. Najważniejszym celem dokumentu jest utrzymanie spójności oraz jednoznaczne wytyczenie celów związanych z projektem. GDD jest tak zwanym „żywym” dokumentem. Oznacza to, że może on być rozwijany i zmieniany podczas pracy nad grą. Jeśli pojawią się przeszkody uniemożliwiające wykonanie wcześniejszych założeń, lub powodujące znaczne opóźnienie w pracach nad grą dozwolone jest zmienianie danych części dokumentu. Zaleca się jednak w miarę możliwości, aby nie odchodzić za daleko od wyjściowych założeń, gdyż stoi to w konflikcie z założeniami owego dokumentu. 
+Game Design Document (w skrócie GDD) jest dokumentem tworzonym jeszcze przed przystąpieniem do tworzenia gry. Najważniejszym celem dokumentu jest utrzymanie spójności oraz jednoznaczne wytyczenie celów związanych z projektem. GDD jest tak zwanym „żywym” dokumentem. Oznacza to, że może on być rozwijany i zmieniany podczas pracy nad grą. Jeśli pojawią się przeszkody uniemożliwiające wykonanie wcześniejszych założeń, lub powodujące znaczne opóźnienie w pracach nad grą dozwolone jest zmienianie danych części dokumentu. Zaleca się jednak w miarę możliwości, aby nie odchodzić za daleko od wyjściowych założeń, gdyż stoi to w konflikcie z założeniami owego dokumentu.
 
-Struktura dokumentu nie jest jednoznacznie zdefiniowana. W zależności od wielkości zespołu oraz docelowych odbiorców może on przybierać różnorakie formy – od czysto formalnych mocno technicznych aspektów, do ogólnej wizji artystycznej świata i rodzaju rozgrywki. Dokument może składać się z czystego tekstu, ale również screenów, zdjęć, szkiców koncepcyjnych, diagramów. Każda forma jak najlepiej oddająca założenia gry jest akceptowalna. 
+Struktura dokumentu nie jest jednoznacznie zdefiniowana. W zależności od wielkości zespołu oraz docelowych odbiorców może on przybierać różnorakie formy – od czysto formalnych mocno technicznych aspektów, do ogólnej wizji artystycznej świata i rodzaju rozgrywki. Dokument może składać się z czystego tekstu, ale również screenów, zdjęć, szkiców koncepcyjnych, diagramów. Każda forma jak najlepiej oddająca założenia gry jest akceptowalna.
 
-Zdarza się, że GDD często zaczyna się tylko podstawowymi założeniami gry, a kończy jako rozbudowany wielostronicowy dokument opisujący każdy możliwy aspekt gry. Przy jego pisaniu nie można zapomnieć, że   będzie on czytany przez każdego członka zespołu tworzącego grę, nie tylko przez programistów, ale także artystów czy managerów. Dlatego pomimo ogólnej swobody przy jego pisaniu zaleca się zachowywać ogólnie pojętą strukturę, co pozwala na oddzielenie zagadnień typowo technicznych, od tych związanych z marketingiem czy kreacją świata. 
+Zdarza się, że GDD często zaczyna się tylko podstawowymi założeniami gry, a kończy jako rozbudowany wielostronicowy dokument opisujący każdy możliwy aspekt gry. Przy jego pisaniu nie można zapomnieć, że   będzie on czytany przez każdego członka zespołu tworzącego grę, nie tylko przez programistów, ale także artystów czy managerów. Dlatego pomimo ogólnej swobody przy jego pisaniu zaleca się zachowywać ogólnie pojętą strukturę, co pozwala na oddzielenie zagadnień typowo technicznych, od tych związanych z marketingiem czy kreacją świata.
 
-Wiele firm wymaga od twórców gier aby dostarczali GDD. Jako, że nie ma określonego standardu dla tego typu dokumentu, autorzy muszą go tak zaprojektować, aby grę nie tylko przedstawić, ale także „sprzedać”. Sprawia to, że GDD potrafią się od siebie znacząco różnić. 
+Wiele firm wymaga od twórców gier aby dostarczali GDD. Jako, że nie ma określonego standardu dla tego typu dokumentu, autorzy muszą go tak zaprojektować, aby grę nie tylko przedstawić, ale także „sprzedać”. Sprawia to, że GDD potrafią się od siebie znacząco różnić.
 
 Swoboda w tworzenia GDD daje wiele możliwości, ale potrafi także być sporym wyzwaniem. Osoby posiadające już doświadczenie przy robieniu gier zdecydowanie lepiej radzą sobie przy pisaniu takiego dokumentu, gdyż znają już wszystkie etapy produkcji, oraz problemy z nią związane. Korzystając z ich doświadczenia można nakreślić pewne prawidłowości przy jego pisaniu.
 
 \section{Jak napisać dobre GDD}
 
-Jeśli GDD pisze kilka osób, wyznacz jedną osobę odpowiedzialną za funkcjonowanie dokumentu. 
+Jeśli GDD pisze kilka osób, wyznacz jedną osobę odpowiedzialną za funkcjonowanie dokumentu.
 Zbyt duża swoboda  w dostępie do dokumentu wprowadza niepotrzebny chaos. Każdy pomysł przed wpisaniem powinien zostać najpierw rozpatrzony, aby nie wpuszczać do projektu nadmiarowych pomysłów.
 
 Nie pisz całego dokumentu na „raz”.
 Pamiętaj, że GDD tak samo jak projekt będzie ciągle ewoluować. Może się okazać, że wraz z rozwojem projektu, wiele pomysłów zostanie odrzuconych, a niektóre założenia ulegną zmianie. Jeśli nie pozostanie wystarczająco miejsca na zmiany, lub projekt zacznie przechodzić znaczące zmiany, może to zaważyć na czytelności dokumentu.
 
 Używaj różnych form przekazu.
-Obraz przy opisie lokacji, bądź referencja przy animacji powiedzą czytelnikowi więcej niż długi skomplikowany tekst. 
+Obraz przy opisie lokacji, bądź referencja przy animacji powiedzą czytelnikowi więcej niż długi skomplikowany tekst.
 
 Podziel dokument na sekcje.
 Stwórz dział „Użyte technologie” i „Świat gry”. W tym momencie każdy będzie wiedział, gdzie i jakiego typu informacje znajdują się w tekście.
@@ -176,7 +188,7 @@ Index
      \item interaktywne
   \end{enumerate}
   \item Środowisko
-  \item Motywy 
+  \item Motywy
   \item Otoczenie
   \item Wyzwania
   \item Przeciwnicy
@@ -197,7 +209,7 @@ Index
 
 \chapter{Przedstawienie Unity i Unreal Engine}
 
-Unity 3D i Unreal Engine 4, są bezsprzecznie jednymi z dwóch najpopularniejszych obecnie silników gier. Duże studia przeważnie tworzą własne silniki, jednak  w ostatnich latach w zawrotnym tempie zaczęła rozwijać się scena tzw. gier Indie. Stworzenie silnika jest kosztownym i czasochłonnym przedsięwzięciem, dlatego małe zespoły nie były w stanie sobie na nie pozwolić. 
+Unity 3D i Unreal Engine 4, są bezsprzecznie jednymi z dwóch najpopularniejszych obecnie silników gier. Duże studia przeważnie tworzą własne silniki, jednak  w ostatnich latach w zawrotnym tempie zaczęła rozwijać się scena tzw. gier Indie. Stworzenie silnika jest kosztownym i czasochłonnym przedsięwzięciem, dlatego małe zespoły nie były w stanie sobie na nie pozwolić.
 
 Unity Technologies wyszło naprzeciw twórcom poszukującym tańszych rozwiązań i w roku 2005 zaprezentowało prototyp darmowego, łatwego w obsłudze silnika. Unity zdobyło zainteresowanie twórców gier i w tym roku doczekało się swojej piątej odsłony.
 
@@ -237,36 +249,36 @@ Oba silniki cechuje wiele podobieństw. Wybór jednego z nich może okazać się
 
 \chapter{Podstawy tworzenia gier w Unity}
 
-Ten rozdział poświęcony jest podstawowym elementom tworzenia gier w Unity. Trzeba zaznaczyć, że tworzenie pełnoprawnej gry wymaga bardzo szerokiego zakresu informacji, zaś niniejszy rozdział skupia się tylko na aspektach niezbędnych do stworzenia grywalnego tytułu. 
+Ten rozdział poświęcony jest podstawowym elementom tworzenia gier w Unity. Trzeba zaznaczyć, że tworzenie pełnoprawnej gry wymaga bardzo szerokiego zakresu informacji, zaś niniejszy rozdział skupia się tylko na aspektach niezbędnych do stworzenia grywalnego tytułu.
 
-\section{Planowanie} 
+\section{Planowanie}
 
-Jednym z decydujących czynników przy rozpoczynaniu pracy nad grą jest odpowiednie zaplanowanie procesu jej tworzenia. Podstawą jest opisany w trzecim rozdziale dokument GDD, który zawiera w sobie wszelkie niezbędne informacje, poczynając od opisu gier, kończąc na narzędziach potrzebnych do pracy nad nią. Jest to aspekt niezwykle ważny, gdyż może się okazać, że np. silnik który wybraliśmy nie jest w stanie sprostać zaawansowanym obliczeniom fizycznym, portowanie gry na inną platformę jest zbyt czasochłonne, bądź jakość renderowanej przezeń grafki jest za niska. 
+Jednym z decydujących czynników przy rozpoczynaniu pracy nad grą jest odpowiednie zaplanowanie procesu jej tworzenia. Podstawą jest opisany w trzecim rozdziale dokument GDD, który zawiera w sobie wszelkie niezbędne informacje, poczynając od opisu gier, kończąc na narzędziach potrzebnych do pracy nad nią. Jest to aspekt niezwykle ważny, gdyż może się okazać, że np. silnik który wybraliśmy nie jest w stanie sprostać zaawansowanym obliczeniom fizycznym, portowanie gry na inną platformę jest zbyt czasochłonne, bądź jakość renderowanej przezeń grafki jest za niska.
 
-W niektórych silnikach optymalizacja gry jest znacznie trudniejszym zadaniem niż w innych, co ma duże znaczenie jeśli tworzymy grę mobilną. Ważny jest także format danych z których będziemy korzystać, np. modeli 3D, oraz czy rozgrywka skupiać będzie się na grze dla pojedynczego gracza, czy na grze wieloosobowej, ze względu na różne implementacje obsługi sieci w silnikach. Przykładowy typ gry odpowiedni dla silnika Unity: mała gra, tworzona przez mały niedoświadczony zespół. 
+W niektórych silnikach optymalizacja gry jest znacznie trudniejszym zadaniem niż w innych, co ma duże znaczenie jeśli tworzymy grę mobilną. Ważny jest także format danych z których będziemy korzystać, np. modeli 3D, oraz czy rozgrywka skupiać będzie się na grze dla pojedynczego gracza, czy na grze wieloosobowej, ze względu na różne implementacje obsługi sieci w silnikach. Przykładowy typ gry odpowiedni dla silnika Unity: mała gra, tworzona przez mały niedoświadczony zespół.
 
-Gra ma być platformówką, działać dobrze na telefonach, ale zostać też wypuszczona na konsole i pecety i nie zawierać rozgrywki multiplayer. Grafka 3D mocno stylizowana/uproszczona, bez grafcznych fajerwerków. 
+Gra ma być platformówką, działać dobrze na telefonach, ale zostać też wypuszczona na konsole i pecety i nie zawierać rozgrywki multiplayer. Grafka 3D mocno stylizowana/uproszczona, bez grafcznych fajerwerków.
 
 Powyższe wymagania idealnie łączą się z tym co ma do zaoferowania Unity: prostota obsługi, wsparcie aż 21 platform, możliwość importowania/eksportowania paczek, obsługa wielu formatów modeli 3D i narzędzia do ich obsługi. Dzięki temu, że gra ma posiadać prostą grafkę nie musimy przejmować się faktem, że Unity ustępuje innym silnikom w kwestii fizyki i zaawansowanego renderingu 3D. W fazie planowania nie powinno się także zapominać, że tworzenie gier jest bardzo czasochłonne, dlatego warto wyznaczyć sobie ramy czasowe dla danego projektu. Pozwoli to określić czy proces produkcji przebiega prawidłowo i uniknąć częstego powodu śmierci gry jakim jest za długi czas produkcji i brak środków na kontynuowanie prac.
- 
+
 \section{Początek pracy z Unity}
 
-Silnik pobieramy z oficjalnej strony. Od wersji 5 Unity, po odpaleniu instalatora i zaakceptowaniu regulaminu, sami decydujemy o tym, które komponenty zostaną zainstalowane. Pozwala to pominąć nieistotne dla nas opcje. Warto zaznaczyć, że o ile sam silnik jest darmowy, to możliwość wydawania gier na niektóre platformy wymaga posiadania odpowiedniej licencji. Przy tworzeniu nowego projektu, możemy zaznaczyć, czy nasza gra będzie w 2D, czy w 3D. Zaznaczenie odpowiedniej opcji zaimportuje nam odpowiednie podstawowe assety (materiały używane przy tworzeniu gier), oraz ustawi odpowiednią konfgurację. 
-Wybraną opcję można później zmienić. 
+Silnik pobieramy z oficjalnej strony. Od wersji 5 Unity, po odpaleniu instalatora i zaakceptowaniu regulaminu, sami decydujemy o tym, które komponenty zostaną zainstalowane. Pozwala to pominąć nieistotne dla nas opcje. Warto zaznaczyć, że o ile sam silnik jest darmowy, to możliwość wydawania gier na niektóre platformy wymaga posiadania odpowiedniej licencji. Przy tworzeniu nowego projektu, możemy zaznaczyć, czy nasza gra będzie w 2D, czy w 3D. Zaznaczenie odpowiedniej opcji zaimportuje nam odpowiednie podstawowe assety (materiały używane przy tworzeniu gier), oraz ustawi odpowiednią konfgurację.
+Wybraną opcję można później zmienić.
 
 \section{Podstawowe terminy}
 
-Assets/assety - to reprezentacja każdego pliku, który może być użyty w grze. Asset może być dowolnym plikiem zewnętrznym np. dźwiękiem lub modelem 3D wspieranym przez Unity, a także wewnętrznym, tworzonym w Unity takim jak scena lub renderer. 
+Assets/assety - to reprezentacja każdego pliku, który może być użyty w grze. Asset może być dowolnym plikiem zewnętrznym np. dźwiękiem lub modelem 3D wspieranym przez Unity, a także wewnętrznym, tworzonym w Unity takim jak scena lub renderer.
 
-Game Objects/obiekty gry – to podstawowe obiekty w Unity, które reprezentują wszystkie elementy widoczne w grze. Same z siebie nie robią nic, za to ich rolą jest bycie kontenerem na tzw. Komponenty, która implementują ich prawdziwą funkcjonalność. Przykładowo poruszająca się dwuwymiarowa piłka, powstaje poprzez dodanie do Game Objectu komponentu do renderowania grafki 2D, odpowiedniego skryptu i animacji. Component/komponenty – są podstawą każdego obiektu i zachowania w grze. Są częścią funkcjonalną każdego Game Objectu i są bezpośrednio doń przypisywane. 
+Game Objects/obiekty gry – to podstawowe obiekty w Unity, które reprezentują wszystkie elementy widoczne w grze. Same z siebie nie robią nic, za to ich rolą jest bycie kontenerem na tzw. Komponenty, która implementują ich prawdziwą funkcjonalność. Przykładowo poruszająca się dwuwymiarowa piłka, powstaje poprzez dodanie do Game Objectu komponentu do renderowania grafki 2D, odpowiedniego skryptu i animacji. Component/komponenty – są podstawą każdego obiektu i zachowania w grze. Są częścią funkcjonalną każdego Game Objectu i są bezpośrednio doń przypisywane.
 
-Każdy obiekt domyślnie posiada komponent Transform, który opisuje jego pozycję, skalę i rotację. Bez tych informacji obiekt byłby nie do zlokalizowania na scenie. 
+Każdy obiekt domyślnie posiada komponent Transform, który opisuje jego pozycję, skalę i rotację. Bez tych informacji obiekt byłby nie do zlokalizowania na scenie.
 
-Używając wyrażenia obiekt i komponent w tej pracy, będziemy każdorazowo odnosić się odpowiednio do wyżej zdefniowanych Game Objectów i Componentów. 
+Używając wyrażenia obiekt i komponent w tej pracy, będziemy każdorazowo odnosić się odpowiednio do wyżej zdefniowanych Game Objectów i Componentów.
 
 \section{Ekran główny}
 
-Po stworzeniu projektu naszym oczom ukaże się główny ekran. Jeśli żaden projekt nie był wcześniej otwierany na tym komputerze to ekran będzie wyglądał jak na zdjęciu poniżej (dla wersji 5.x ). 
+Po stworzeniu projektu naszym oczom ukaże się główny ekran. Jeśli żaden projekt nie był wcześniej otwierany na tym komputerze to ekran będzie wyglądał jak na zdjęciu poniżej (dla wersji 5.x ).
 
 \begin{figure}[!htb]
     \begin{center}
@@ -277,29 +289,29 @@ Po stworzeniu projektu naszym oczom ukaże się główny ekran. Jeśli żaden pr
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
-Cyfry na zdjęciu oznaczają poszczególne okna: 
+Cyfry na zdjęciu oznaczają poszczególne okna:
 
 \begin{enumerate}
   \item Pasek Menu – daje dostęp do bardziej zaawansowanych opcji, min. pozwala na dodawanie nowych okien, komponentów czy konfgurowanie całej aplikacji.
-  \item  Project – tu umieszczone są wszystkie pliki jakie znajdują się w grze. Pliki możemy dodawać do projektu, przenosząc je bezpośrednio do tego okna, lub dodając je do folderu „Assets” w naszym projekcie. 
-  \item Scene – jest to przestrzeń 3D na której umieszczane są wszystkie obiekty znajdujące się w grze. 
-  \item Game – okno pozwalające na zobaczenie naszej gry w akcji po naciśnięciu przysiku „Play”. Domyślnie widać tylko niebieskie tło – jest to aktualny obraz z głównej kamery umieszczonej na scenie. 
-  \item Hierarchy – w tym oknie znajduje się lista wszystkich obiektów znajdujących się na scenie. Pozwala nam na manipulowanie obiektem bez konieczności szukania go bezpośrednio na scenie. 
+  \item  Project – tu umieszczone są wszystkie pliki jakie znajdują się w grze. Pliki możemy dodawać do projektu, przenosząc je bezpośrednio do tego okna, lub dodając je do folderu „Assets” w naszym projekcie.
+  \item Scene – jest to przestrzeń 3D na której umieszczane są wszystkie obiekty znajdujące się w grze.
+  \item Game – okno pozwalające na zobaczenie naszej gry w akcji po naciśnięciu przysiku „Play”. Domyślnie widać tylko niebieskie tło – jest to aktualny obraz z głównej kamery umieszczonej na scenie.
+  \item Hierarchy – w tym oknie znajduje się lista wszystkich obiektów znajdujących się na scenie. Pozwala nam na manipulowanie obiektem bez konieczności szukania go bezpośrednio na scenie.
   \item Inspector – wyświetla właściwości aktualnie zaznaczonego obiektu.
   \item  Pasek opcji – pozwala na zmianę opcji poruszania się po scenie, zmianę widoku przy zaznaczaniu obiektu, odpalenie naszej gry, zarządzanie warstwami i zmianę layoutu.
 \end{enumerate}
 
- Ułożeniem poszczególnych okien można swobodnie manipulować poprzez przenoszenie zakładek lub zmianę layoutu z paska opcji. Możliwe jest też dodawanie nowych zakładek. Przy tworzeniu nowego projektu Unity wczyta ustawienia okien z poprzednio otwartego projektu, zaś przy otwieraniu innego projektu, okna ustawione będą tak jak ustawiła je osoba przy nim pracująca. Wszystkimi oknami można zarządzać klikając na nie, bądź korzystając z zakładki „Window” z paska menu (1). 
+ Ułożeniem poszczególnych okien można swobodnie manipulować poprzez przenoszenie zakładek lub zmianę layoutu z paska opcji. Możliwe jest też dodawanie nowych zakładek. Przy tworzeniu nowego projektu Unity wczyta ustawienia okien z poprzednio otwartego projektu, zaś przy otwieraniu innego projektu, okna ustawione będą tak jak ustawiła je osoba przy nim pracująca. Wszystkimi oknami można zarządzać klikając na nie, bądź korzystając z zakładki „Window” z paska menu (1).
 
-\section{Praca z obiektami i sceną} 
+\section{Praca z obiektami i sceną}
 
-Scena jest miejscem na którym umieszczać będziemy każdy element gry. Aby zapewnić sobie swobodną pracę, niezbędne jest opanowanie podstawowych zasad poruszania się po niej. Jak w każdej przestrzeni 3D podstawowym sposobem przemiszczania się po scenie jest oddalanie/przybliżanie widoku oraz obracanie go w dowolnym kierunku. Po kliknięciu na scenę, aby przybliżyć bądź oddalić kamerę korzystamy z pomocy rolki myszki, lub wciskamy klawisz alt i przytrzymujemy prawy przycisk, poruszając jednocześnie myszką w tył lub przód. Aby rotować widok, przytrzymujemy alt i lewy przycisk poruszając myszką w dowolnym kierunku. Aby mieć na czym operować niezbędne jest stworzenie Game Objectu. Aby to zrobić klikamy lewym przyciskiem myszki w oknie Hierarchy (5), lub klikając Game Object z paska menu (1) i i wybieramy „Create empty”. 
+Scena jest miejscem na którym umieszczać będziemy każdy element gry. Aby zapewnić sobie swobodną pracę, niezbędne jest opanowanie podstawowych zasad poruszania się po niej. Jak w każdej przestrzeni 3D podstawowym sposobem przemiszczania się po scenie jest oddalanie/przybliżanie widoku oraz obracanie go w dowolnym kierunku. Po kliknięciu na scenę, aby przybliżyć bądź oddalić kamerę korzystamy z pomocy rolki myszki, lub wciskamy klawisz alt i przytrzymujemy prawy przycisk, poruszając jednocześnie myszką w tył lub przód. Aby rotować widok, przytrzymujemy alt i lewy przycisk poruszając myszką w dowolnym kierunku. Aby mieć na czym operować niezbędne jest stworzenie Game Objectu. Aby to zrobić klikamy lewym przyciskiem myszki w oknie Hierarchy (5), lub klikając Game Object z paska menu (1) i i wybieramy „Create empty”.
 
-Stworzy nam to na scenie pusty obiekt, a w hierarchii pojawi się jego nazwa i możliwość zaznaczenia go. Po zaznaczeniu zobaczymy jego pozycję na scenie reprezentowaną przez mały sześcian i 3 strzałki różnego koloru. Kolory strzałek oznaczają różne osie - zielona oś Y, symbolizująca ruch góra/dół, czerwona oś X, symbolizująca ruch lewo/prawo, oraz niebieska oś Z symbolizująca głębię. 
+Stworzy nam to na scenie pusty obiekt, a w hierarchii pojawi się jego nazwa i możliwość zaznaczenia go. Po zaznaczeniu zobaczymy jego pozycję na scenie reprezentowaną przez mały sześcian i 3 strzałki różnego koloru. Kolory strzałek oznaczają różne osie - zielona oś Y, symbolizująca ruch góra/dół, czerwona oś X, symbolizująca ruch lewo/prawo, oraz niebieska oś Z symbolizująca głębię.
 
 Jako, że obiekt posiada już domyślny komponent Transform, możliwe są operacje na jego prezentacji w przestrzeni. Na pasku opcji (7), poczynając od lewej znajduje się 5 przycisków do wykonywania tych operacji i odpowiedniego przełączania się między nimi. Wszystkie tryby można uruchamiać także  przy pomocy skrótów klawiszowych.
 
-Pierwszy przycisk od lewej pozwala nam na poruszanie samym widokiem w przestrzeni przy pomocy myszki, nawet gdy obiekt jest zaznaczony. 
+Pierwszy przycisk od lewej pozwala nam na poruszanie samym widokiem w przestrzeni przy pomocy myszki, nawet gdy obiekt jest zaznaczony.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -319,7 +331,7 @@ Drugi przycisk umożliwia nam na zmienianie pozycji obiektu w przestrzeni. Może
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
-Trzeci przycisk służy to zmiany rotacji obiektu w przestrzeni. Po uruchomieniu tego trybu zobaczymy, że wygląd osi zmienił się na kształt sfery. Rotację wykonujemy ta samo jak zmianę pozycji poprzez klikanie na odpowiednie osie. 
+Trzeci przycisk służy to zmiany rotacji obiektu w przestrzeni. Po uruchomieniu tego trybu zobaczymy, że wygląd osi zmienił się na kształt sfery. Rotację wykonujemy ta samo jak zmianę pozycji poprzez klikanie na odpowiednie osie.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -367,12 +379,12 @@ Każdy obiekt który umieszczamy na scenie automatycznie pojawia się w oknie hi
 Unity daje nam dostęp do kilku niepustych obiektów pozwalających na szybkie rozpoczęcie pracy. Aby stworzyć taki obiekt klikamy na zakładkę „GameObject” z paska menu (1). Do wyboru mamy kilka obiektów. Wybieramy 3D Object → Cube, co stworzy nam na scenie obiekt w kształcie szarego sześcianu i automatycznie go zaznaczy. W oknie inspektora (5) poza komponentem Transform dostrzeżemy też trzy inne. Mesh Filter pobiera informacje na temat siatki modelu i przekazuje je do ostatniego komponentu, Mesh Renderera, który tę siatkę renderuje. Box Collider tworzy kolider wokół siatki który pozwala na interakcje z innymi obiektami – zostanie on omówiony w dalszej części tego rozdziału. Większość komponentów zawiera w sobie dodatkowe opcje umożliwiające modyfikację ich działania. Przykładowo zmiana wartości x, y  lub z w komponencie Box Collider zmieni jego rozmiary podobnie jak właściwość Scale w komponencie Transform. Komponenty można dodawać, usuwać, zmieniać ich kolejność oraz kopiować, klikającym prawym przyciskiem na jego nazwie, klikając przycisk Add component na dole inspektora. Przykładowo, usunięcie komponentu Mesh Renderer z naszego obiektu, sprawi, że jego ściany przestaną się wyświetlać jednak nadal będą możliwe kolizje z innymi obiektami.
 Istnieje też możliwość wyłączenia danego komponentu (nie będzie on działał, ale nie będzie też usunięty) poprzez kliknięcie checkboxa  oraz ukrycie właściwości przy pomocy małej strzałeczki, oba usytuowane tuż obok jego nazwy.
 
-Za każdym razem gdy zaznaczymy nowy obiekt, w inspektorze wyświetlą się jego komponenty. Klikając na małą ikonkę w górnym prawym rogu inspektora, możemy zablokować widok na komponentach aktualnie wybranego obiektu. 
+Za każdym razem gdy zaznaczymy nowy obiekt, w inspektorze wyświetlą się jego komponenty. Klikając na małą ikonkę w górnym prawym rogu inspektora, możemy zablokować widok na komponentach aktualnie wybranego obiektu.
 
 \section{Skrypty}
 
 Unity umożliwia nam rozszerzanie swojej funkcjonalności oraz kontrolę zachowań poprzez skrypty. Do wyboru mamy trzy języki – C\#, Unity Script (zmodyfikowana wersja Java Script) oraz Boo, który jednak przestał być wspierany od wersji 5.0 . Zaleca się aby w ramach danego projektu używać tylko jednego języka aby uniknąć problemów z kompatybilnością.
-Największą popularnością cieszy się C\#. Może też pochwalić się najlepszą dokumentacją, dlatego jest zalecany osobom zaczynającym pracę z Unity. Także wszystkie skrypty wykorzystane w tej pracy napisane zostały w tym języku. 
+Największą popularnością cieszy się C\#. Może też pochwalić się najlepszą dokumentacją, dlatego jest zalecany osobom zaczynającym pracę z Unity. Także wszystkie skrypty wykorzystane w tej pracy napisane zostały w tym języku.
 
 Skrypty tworzymy klikając prawym przyciskiem myszy w oknie projektu i wybierając opcję  Create    → C\# Script z menu kontekstowego. Tak samo tworzymy foldery oraz wewnętrzne assety. Po wpisaniu nazwy (zaczynającej się dużą literą, gdyż mamy do czynienia z nazwą klasy) możemy kliknąć dwukrotnie lewym przyciskiem na skrypt, aby go otworzyć. Domyślnie uruchomi to środowisko programistyczne Mono Develop (możemy korzystać z dowolnego edytora, wymaga to jednak wcześniejszej konfiguracji, lub bezpośredniego otwierania pliku z folderu projektu). Każdy nowy skrypt posiada taki szablon (można go zmienić w pliku ScriptTemplates w folderze Unity):
 
@@ -392,7 +404,7 @@ public class NazwaSkryptu: MonoBehaviour {
 	void Update() {
 
 	}
-} 
+}
 \end{lstlisting}
 
 Każdy skrypt domyślnie dziedziczy po klasie MonoBehaviour, która  udostępnia wszystkie funkcje jakie oferuje nam Unity. Ta klasa jest niezbędna aby móc dodawać skrypty do Game Objectów.
@@ -463,11 +475,11 @@ Nawet bezpośrednio po stworzeniu nowego projektu nasza scena nie jest całkowic
 
 Directional light służy do generowania odpowiedniego oświetlenia na scenie. Istnieje kilka rodzajów świateł i ich odpowiednie ustawienie jest kluczowe przy budowaniu świata gry. Directional Light cechuje się głównie tym, że jego położenie na scenie nie ma najmniejszego znaczenia, cała scena oświetlana jest równomiernie,za to rotacja ma wpływ na to z której strony to światło pada. Ten rodzaj światła praktycznie zawsze reprezentuje światło słoneczne na otwartych przestrzeniach. W zależności od pory dnia można modyfikować jego intensywność oraz inne parametry. Wbrew pozorom usunięcie światła ze sceny nie spowoduje, że obiekty będą kompletnie niewidoczne, a powiązane jest to z tzw. Ambient Light, opis którego nie wchodzi w zakres tego rozdziału.
 
-Collider jest to komponent, który definiuje fizyczny kształt danego obiektu, niezbędny do wykrywania kolizji z innymi obiektami. Często przybiera on kształt siatki modelu który został podpięty do danego obiektu. Ze względu na fakt, że skomplikowane kolidery są bardzo procesożerne, bardzo często korzysta się z tzw. prymitywnych koliderów – w kształcie sfer, sześcianów i kul. Obiekt może posiadać dowolną liczbę ich liczbę, dlatego skomplikowane modele z reguły składają się z wielu prymitywnych koliderów. Efekt tego bardzo często widać w grach, gdy część postaci przenika przez ścianę, lub jesteśmy blokowani przez przeszkodę nie dotykając jej. Odpowiednie ustawienie koliderów ma więc kluczowe znaczenie i pozwala uniknąć tzw. Glitchy, gdy w pewnych miejscach obiekty przechodzą przez siebie mimo że nie powinny. Collidery opierają się mocno na fizyce, co także bywa przyczyną błędów, np. gdy obiekty zderzają się ze sobą przy zbyt dużej prędkości. Bardziej zaawansowane kolidery takie jak Mesh Collider, zapewniają lepszą dokładność niż kolidery prymitywne, jest to jednak okupione większym zużyciem zasobów sprzętowych. 
+Collider jest to komponent, który definiuje fizyczny kształt danego obiektu, niezbędny do wykrywania kolizji z innymi obiektami. Często przybiera on kształt siatki modelu który został podpięty do danego obiektu. Ze względu na fakt, że skomplikowane kolidery są bardzo procesożerne, bardzo często korzysta się z tzw. prymitywnych koliderów – w kształcie sfer, sześcianów i kul. Obiekt może posiadać dowolną liczbę ich liczbę, dlatego skomplikowane modele z reguły składają się z wielu prymitywnych koliderów. Efekt tego bardzo często widać w grach, gdy część postaci przenika przez ścianę, lub jesteśmy blokowani przez przeszkodę nie dotykając jej. Odpowiednie ustawienie koliderów ma więc kluczowe znaczenie i pozwala uniknąć tzw. Glitchy, gdy w pewnych miejscach obiekty przechodzą przez siebie mimo że nie powinny. Collidery opierają się mocno na fizyce, co także bywa przyczyną błędów, np. gdy obiekty zderzają się ze sobą przy zbyt dużej prędkości. Bardziej zaawansowane kolidery takie jak Mesh Collider, zapewniają lepszą dokładność niż kolidery prymitywne, jest to jednak okupione większym zużyciem zasobów sprzętowych.
 
 Collidery dzielą się jeszcze na dwa  oddzielne typy niezależnie od ich kształtu. Są to tzw. Trigger Collidery i Collision Collidery. Pomiędzy tymi dwoma typami możemy przełączać się przy pomocy checkboxa „isTrigger” we właściwościach komponentu. Różnica między nimi polega na tym, że w przypadku tego pierwszego, gdy dwa obiekty zetkną się to zostanie to odnotowane i przy pomocy odpowiedniej funkcji (OnTriggerEnter()) będziemy mogli je obsłużyć, lecz obiekty przenikną się i nie będą miały wpływu na swoją pozycję w przestrzeni. W wypadku gdy opcja „isTrigger” jest odznaczona, oba obiekty zderzą się i w zależności od ich parametrów fizycznych nastąpi odpowiednia reakcja. Ten typ zderzenia obsługujemy funkcją OnCollissionEnter().
 
-Jako, że Collidery opierają się na fizyce, obiekty z nich korzystające muszą posiadać odpowiednie cechy fizyczne. Aby nadać te cechy obiektowi musimy dodać do niego komponent Rigidbody. Pozwala on min. na ustalenie masy obiektu i czy działa na niego grawitacja. 
+Jako, że Collidery opierają się na fizyce, obiekty z nich korzystające muszą posiadać odpowiednie cechy fizyczne. Aby nadać te cechy obiektowi musimy dodać do niego komponent Rigidbody. Pozwala on min. na ustalenie masy obiektu i czy działa na niego grawitacja.
 
 Co ciekawe Unity korzysta aż z dwóch systemów do obsługi fizyki, jeden dla obiektów 2D i drugi dla obiektów 3D. Każdy komponent korzystający z fizyki 3D ma swój odpowiednik 2D. Aby uzyskać do niego dostęp przy nazwie komponentu/funkcji dopisujemy na końcu 2D, np. Rigidbody2D lub OnCollisionEnter2D. Obiekty 2D nie mogą kolidować z obiektami 3D, a korzystanie z funkcji dedykowanej 2D, przy trójwymiarowym modelu korzystającym z kolidera 3D zwróci błąd.
 
@@ -484,7 +496,7 @@ Model składa się z koliderów cylindrycznych oraz kołowych. Kolidery prymityw
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
-Temat Colliderów zamyka podstawowe zagadnienia związane z Unity. 
+Temat Colliderów zamyka podstawowe zagadnienia związane z Unity.
 
 \chapter{Podstawy tworzenia gier w Unreal Engine}
 
@@ -526,13 +538,13 @@ Po dokonaniu wyboru pozostaje już tylko nazwac projekt i wcisnąć „Create Pr
 \end{figure}
 
 Po stworzeniu projektu, załaduje nam się ekran główny Unreal Engine. Na jego środku widzimy podgląd sceny nad którą obecnie pracujemy. Scena jest po prostu jednym z pozomów naszej gry.
-Pod ekranem podglądu mamy przeglądarkę plików znajdujących się w projekcie. 
+Pod ekranem podglądu mamy przeglądarkę plików znajdujących się w projekcie.
 
 Po prawej stronie znajduje się lista obiektów, znajdujących się w obecnej scenie. Jako obiekt traktowane jest wszystko, od podłoża, przez postacie, aż po źródło światła, czy sam dźwięk.
-Pod listą obiektów znajdują się szczegóły obecnie wybranego obiektu. 
+Pod listą obiektów znajdują się szczegóły obecnie wybranego obiektu.
 
 Po lewej stronie znajdują się narzędzia do tworzenia obiektów. Jest to pięć zakładek zawierających w sobie wszystkie potrzebne opcje do tworzenia świata gry. Od tworzenia oświetlenia i prostych kształtów po nakładanie tekstur i modyfikowanie terenu.
- 
+
 \section{System Persona i Animacje}
 Persona jest bardzo rozbudowanym narzędziem do edycji animacji. To jeden z najważniejszych systemów silnika. To dzięki niemu możemy okreslić gdzie, kiedy i w jakich warunkach  rozpoczyna się i kończy każda animacja w grze, od postaci, aż po spadające liście.
 
@@ -615,7 +627,7 @@ W następnym rozdziale przyjżymy się bliżej tym systemom i zaprezentujemy je 
 
 \chapter{"The Jump" krok po kroku -- Unity}
 
-Rozdział ten jest w całości poświęcony opisowi tworzenia jednego konkretnego tytułu przez jedną osobę. Zostały tu zachowane wszystkie ogólne zasady dotyczące tego procesu, trzeba jednak uwzględnić fakt, że w zależności od rodzaju tworzonego tytułu oraz wielkości zespołu przy nim pracującego, konkretne kroki mogą być wykonywane w odmiennej kolejności. Przykładowo jedna część osób pracujących nad grą może zostać oddelegowana do tworzenia UI, druga do programowania rozgrywki, a jeszcze inna do prac nad obsługą reklam bądź modułu sieciowego. Dopiero w późniejszej fazie produkcji są one łączone w jedną całość. 
+Rozdział ten jest w całości poświęcony opisowi tworzenia jednego konkretnego tytułu przez jedną osobę. Zostały tu zachowane wszystkie ogólne zasady dotyczące tego procesu, trzeba jednak uwzględnić fakt, że w zależności od rodzaju tworzonego tytułu oraz wielkości zespołu przy nim pracującego, konkretne kroki mogą być wykonywane w odmiennej kolejności. Przykładowo jedna część osób pracujących nad grą może zostać oddelegowana do tworzenia UI, druga do programowania rozgrywki, a jeszcze inna do prac nad obsługą reklam bądź modułu sieciowego. Dopiero w późniejszej fazie produkcji są one łączone w jedną całość.
 
 W przypadku gdy nad grą pracuje jedna osoba, zaleca się aby najpierw implementować podstawowy mechanizm rozgrywki i dopiero w momencie gdy spełni on nasze oczekiwania, kontynuować prace nad pozostałymi częściami gry.
 
@@ -662,7 +674,7 @@ Zaznaczone elementy wystarczą by zbudować i przetestować podstawową mechanik
 
 Do podstawowych mechanik rozgrywki, tzw. Core  Mechanics, zaliczane są wszystkie podstawowe czynności które będą wielokrotnie wykonywane przez gracza w przeciągu całej gry. W zależności od typu gry mogą się one znacząco od siebie różnić, i tak dla dwuwymiarowej gry platformowej podstawową mechaniką jest min. skakanie, w grach typu FPS jest to strzelanie, a dla gry przygodowej zbieranie przedmiotów i interakcja z otoczeniem.
 
-Niezależnie do rodzaju tworzonej gry do podstawowych mechanik zawsze zalicza się obsługa kamery oraz sterowanie. Stworzenie sprawnie operującej dynamicznej kamery może okazać się dużym wyzwaniem. Sterowanie zaś musi być płynne i responsywne. 
+Niezależnie do rodzaju tworzonej gry do podstawowych mechanik zawsze zalicza się obsługa kamery oraz sterowanie. Stworzenie sprawnie operującej dynamicznej kamery może okazać się dużym wyzwaniem. Sterowanie zaś musi być płynne i responsywne.
 
 W przypadku tworzonej przez nas gry, Unity zapewnia nam rozwiązania dla obu tych mechanik. Użyty przez nas w  poprzednim kroku model postaci, posiada już dwa komponenty, odpowiedzialne za poruszanie się i obsługę sterowania naszej postaci: Third Person User Control oraz Third Person Character. Dodatkowo możemy zauważyć komponent Animator, odpowiedzialny za wszystkie animacje naszego obiektu, oraz Rigidbody, który jest niezbędny do działania powyższych komponentów. Dzięki niemu, oraz komponentowi Capsule Collider, nasza postać może także poruszać się po utworzonym przez nas terenie.
 
@@ -714,9 +726,9 @@ public class WinLoseCondition : MonoBehaviour {
             Win ();
 
         }
-    } 
-        
-}  
+    }
+
+}
 
 \end{lstlisting}
 
@@ -748,7 +760,7 @@ void Death ()
     void Restart ()
     {
         Application.LoadLevel (Application.loadedLevelName);
-    } 
+    }
 
 \end{lstlisting}
 
@@ -757,11 +769,11 @@ Funkcja Invoke służy do opóźniania wywołania funkcji. W tym wypadku po dwó
 
 \section{Krok 4 – Interfejs użytkownika}
 
-Kolejnym ważnym aspektem gry jest to jak „rozmawiamy” z graczem. Do komunikacji wykorzystujemy przede wszystkim wydarzenia w świecie gry, oraz tzw. UI – user interface. 
+Kolejnym ważnym aspektem gry jest to jak „rozmawiamy” z graczem. Do komunikacji wykorzystujemy przede wszystkim wydarzenia w świecie gry, oraz tzw. UI – user interface.
 
 UI służy do obsługi i wyświetlania opcji gry dostępnych graczowi, informowania o aktualnym celach i stanie rozgrywki. Wydarzenia w świecie gry mogą spełniać podobną rolę, jednak nie muszą one mieć konkretnego wpływu na przebieg rozgrywki, elementy UI zaś powinny zawsze oferować jakąś funkcjonalność.
 
-Aby stworzyć podstawowe UI w Unity, z pasku menu wybieramy opcję GameObject $\rightarrow$ UI $\rightarrow$ Button. W oknie hierarchii pojawią się nam dwa nowe obiekty: Canvas, będący tłem dla wszystkich  elementów UI, oraz EventSystem odpowiedzialny m.in. za obsługę przycisków. Wewnątrz obiektu Canvas znajdziemy obiekt o nazwie Button – zduplikujmy go. Rozstawiamy nasze przyciski na scenie, oraz zmieniamy ich nazwy na Play oraz Exit. Po odpaleniu gry zauważymy, że niezależnie od pozycji naszej kamery, oba przyciski znajdują się na pierwszym planie. 
+Aby stworzyć podstawowe UI w Unity, z pasku menu wybieramy opcję GameObject $\rightarrow$ UI $\rightarrow$ Button. W oknie hierarchii pojawią się nam dwa nowe obiekty: Canvas, będący tłem dla wszystkich  elementów UI, oraz EventSystem odpowiedzialny m.in. za obsługę przycisków. Wewnątrz obiektu Canvas znajdziemy obiekt o nazwie Button – zduplikujmy go. Rozstawiamy nasze przyciski na scenie, oraz zmieniamy ich nazwy na Play oraz Exit. Po odpaleniu gry zauważymy, że niezależnie od pozycji naszej kamery, oba przyciski znajdują się na pierwszym planie.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -794,11 +806,11 @@ public class UIController : MonoBehaviour {
     public void ExitButton() {
         Application.Quit ();
     }
-} 
+}
 
 \end{lstlisting}
 
-Dodajemy pusty obiekt UI Controll do naszej sceny, i podpinamy do niej powyższy skrypt. Następnie zaznaczamy stworzone przez nas wcześniej przyciski. Używamy znaku plusa na dole komponentu Button i przenieśmy do niego obiekt UI Controll. Dzięki temu uzyskamy dostęp do wszystkich publicznych funkcji skryptu UI Controll. Dla przycisku Play zaznaczamy funkcję PlayButton(), a do przycisku Exit – ExitButton(). 
+Dodajemy pusty obiekt UI Controll do naszej sceny, i podpinamy do niej powyższy skrypt. Następnie zaznaczamy stworzone przez nas wcześniej przyciski. Używamy znaku plusa na dole komponentu Button i przenieśmy do niego obiekt UI Controll. Dzięki temu uzyskamy dostęp do wszystkich publicznych funkcji skryptu UI Controll. Dla przycisku Play zaznaczamy funkcję PlayButton(), a do przycisku Exit – ExitButton().
 
 Funkcja PlayButton() wyłącza Canvas, oraz włącza komponenty ThirdPersonUserControl i FreeLookCam. Funkcja ExitButton zamyka naszą aplikację.
 
@@ -808,9 +820,9 @@ Czerwony dym widoczny w naszej grze także pełni rolę UI – wskazuje nam gdzi
 
 \section{Krok 5 – Kreacja świata gry}
 
-W tym momencie nasza gra znajduje się już w stadium grywalności, można więc rozpocząć prace nad stworzeniem odpowiedniego otoczenia. Wszystkie zaprogramowane funkcje i stworzone assety są w tym etapie łączone ze sobą w jedną całość. 
+W tym momencie nasza gra znajduje się już w stadium grywalności, można więc rozpocząć prace nad stworzeniem odpowiedniego otoczenia. Wszystkie zaprogramowane funkcje i stworzone assety są w tym etapie łączone ze sobą w jedną całość.
 
-Nasz gracz jest  w stanie zginąć spadając z wysokości lub wpadając do wody. Ustawiamy w naszej grze kilka wzniesień. Możemy do tego użyć naszego obiektu Terrain lub wyszukać odpowiednie assety w Asset Storze. 
+Nasz gracz jest  w stanie zginąć spadając z wysokości lub wpadając do wody. Ustawiamy w naszej grze kilka wzniesień. Możemy do tego użyć naszego obiektu Terrain lub wyszukać odpowiednie assety w Asset Storze.
 
 Domyślna woda Unity dostępna jest tylko w płatnej wersji. Wodę w grze dodaliśmy korzystając z odpowiedniej paczki pobranej ze strony:
 
@@ -831,7 +843,7 @@ Przykładowy screen z gry po dodaniu Skyboxa, mgły i zmianie koloru światła n
 
 Jeśli chcemy dodatkowo upiększyć nasza grę, w Asset Storze możemy znaleźć mnóstwo darmowych modeli 3D, generatorów otoczenia oraz efektów specjalnych, które niejednokrotnie są importowane z przykładowymi scenami, pozwalającymi nam podejrzeć ich działanie.
 
-Teraz gdy nasza gra jest gotowa, powinniśmy zbudować ją na wybrane urządzenie i przetestować jej działanie. W zależności od wybranej platformy, gotowy plik może wymagać kompilacji w dodatkowych programach dostarczanych przez producentów danej platformy np. Xcode dla IOS -a i AppleTV, lub Android Studio dla urządzeń z systemem Android. 
+Teraz gdy nasza gra jest gotowa, powinniśmy zbudować ją na wybrane urządzenie i przetestować jej działanie. W zależności od wybranej platformy, gotowy plik może wymagać kompilacji w dodatkowych programach dostarczanych przez producentów danej platformy np. Xcode dla IOS -a i AppleTV, lub Android Studio dla urządzeń z systemem Android.
 
 PC, Linux i Mac nie wymagają dodatkowego oprogramowania. Aby zbudować grę na te urządzenia wybieramy z paska menu File $\rightarrow$ Build Setting. W zakładce Player Settings możemy m.in. zmienić tytuł naszej gry, zmienić sposób jej wyświetlania, dodać ikonki i splashe. Następnie zaznaczamy naszą platformę i klikamy przycisk build. Pozostaje nam czekać, aż gra się skompiluje.
 
@@ -849,7 +861,7 @@ W tym rozdziale prześledzimy proces tworzenia systemu wspinaczki w Unreal Engin
 
 \section{Krok 1 - Kolizje}
 
-Pierwsze co musimy zrobić to ustalić obszar kolizji dla naszej postaci. Dzięki temu będzie ona wiedziała m.in kiedy napotka ścianę na którą może się wspinać. Na początku powinniśmy w ustawieniach projektu zadeklarować "tracery" - funkcje, które będą śledzić czy i kiedy postać się do czegoś zbliża. W tym celu w lewym górnym rogu programu klikamy "Edit" i wybieramy opcję Project Settings. 
+Pierwsze co musimy zrobić to ustalić obszar kolizji dla naszej postaci. Dzięki temu będzie ona wiedziała m.in kiedy napotka ścianę na którą może się wspinać. Na początku powinniśmy w ustawieniach projektu zadeklarować "tracery" - funkcje, które będą śledzić czy i kiedy postać się do czegoś zbliża. W tym celu w lewym górnym rogu programu klikamy "Edit" i wybieramy opcję Project Settings.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -911,7 +923,7 @@ Teraz możemy powrócić do naszej sceny i wybrać obiekt na który gracz będzi
 
 \section{Krok 2 - Tracery}
 
-Powracamy do pliku "ThirdPersonCharacter". Tam w grafie zdarzeń tworzymy "Event Tick" - zdarzenie, które wykonuje się co klatkę w grze. Aby utworzyć jakąkolwiek akcję w grafach wystarczy kliknąć prawym przyciskiem myszy na wolnej przestrzeni. We wspomnianym zdarzeniu tworzymy linię od białego pięcioboku i tworzymy brancha. W nim z kolei od czerwonej kropki przy "condition" tworzymy kolejne połączenie. Z dostępnych opcji wybieramy "Promote to Variable" i powstałą wartość nazywamy "CanTrace". 
+Powracamy do pliku "ThirdPersonCharacter". Tam w grafie zdarzeń tworzymy "Event Tick" - zdarzenie, które wykonuje się co klatkę w grze. Aby utworzyć jakąkolwiek akcję w grafach wystarczy kliknąć prawym przyciskiem myszy na wolnej przestrzeni. We wspomnianym zdarzeniu tworzymy linię od białego pięcioboku i tworzymy brancha. W nim z kolei od czerwonej kropki przy "condition" tworzymy kolejne połączenie. Z dostępnych opcji wybieramy "Promote to Variable" i powstałą wartość nazywamy "CanTrace".
 W "Bramchu" mamy dwie opcje. W przypadku, kiedy nie znaleźliśmy krawędzi na którą możemy się wspinać nic nie robi. Jeżeli jednak ją znaleźlimy wykonujemy dalsze instrukcje. Dlatego też tworzymy kolejną linię tylko od prawdy i tworzymy "sequence".
 
 \begin{figure}[!htb]
@@ -1014,7 +1026,7 @@ Ponownie wracamy do "ThirdPersonCharacter" i do "Ledge Height Tracer". Od "Ledge
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Wracamy do pliku "ThirdPersonCharacter". Od zadeklarowanego niedawno "DoOnce" przeciągamy linie i tworzymy schemt zgodny z rysunkami 7.17 i 7.18. 
+Wracamy do pliku "ThirdPersonCharacter". Od zadeklarowanego niedawno "DoOnce" przeciągamy linie i tworzymy schemt zgodny z rysunkami 7.17 i 7.18.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -1032,7 +1044,7 @@ Wracamy do pliku "ThirdPersonCharacter". Od zadeklarowanego niedawno "DoOnce" pr
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Po raz kolejny wracamy do "ThirdPerson$\_$AnimBP", tym razem przechodzimy jednak do Animacji Grafu. 
+Po raz kolejny wracamy do "ThirdPerson$\_$AnimBP", tym razem przechodzimy jednak do Animacji Grafu.
 
 \chapter{Podsumowanie tworzenia gier dla obu silników}
 
@@ -1081,7 +1093,7 @@ Wśród programistów gier panuje przekonanie, że tworzenie zautomatyzowanych t
 
 Po pierwsze, zdecydowana większość logiki używanej w grach zależy od czynników, które nie są do końca deterministyczne. Oznacza to, że warunki w jakich użytkowana będzie gra często mogą być przypadkowe i niemożliwe do przewidzenia. Na przykład, gra może być uruchamiana na setkach różnych konfiguracji sprzętu. Przetestowanie każdej z nich jest niemożliwe. Dodajmy do tego fakt, że sprzęt może znajdować się w gorącym pomieszczeniu, co pogorszy jego osiągi. W tle mogą również być uruchomione inne programy, które zajmują zasoby danego sprzętu. To tylko kilka przykładów czynników nad którymi twórcy gier nie mają żadnej kontroli. Ustalenie standardu według którego możnaby napisac test, w takich warunkach jest niemal niewykonalne.
 
-Innym problemem jest, że większość wyników produkowanych przez grę jest niemożliwa do zmierzenia. 
+Innym problemem jest, że większość wyników produkowanych przez grę jest niemożliwa do zmierzenia.
 W grach generowane są takie elementy jak grafika i dźwięk.  Skuteczność efektów wizualnych, jak i dźwiękowych jest rzeczą załkowicie subiektywną. Nie da się określić automatycznym testem czy muzyka jest dostatecznie głośna, lub czy dana tekstura wygląda dobrze w danym miejscu. Wszystko zależy od wizji twórcór gry. W takim wypadku jedyny możliwy test, to test manualny.
 
 Kolejną przeszkodą jest fakt, że w większości gier wszystkie mechaniki i podsystemy składają się na jedną spójną całością. W grach stworzonych na potrzeby tego projektu zaimplementowaliśmy mechanikę wspinaczki. Aby działała, zarówno fizyka gry, jak i animacje oraz kod wykrywający kolizję muszą działać poprawnie. W przypadku porażki nie sposób na pierwszy rzut oka okreslić, który z tych systemów zawiódł. Możemy napisać testy, które sprawdzą wszystkie po kolei, jednak wszelkie wyniki jakie dostaniemy będą wyrwane z kontekstu i nie powiedzą co się stało, gdy wszystkie czynniki złączyły się w jedną całość. W związku z tym tu również musimy zdać się na testowanie ręczne.
