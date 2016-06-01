@@ -20,21 +20,24 @@
 \BOOKMARK [1][-]{section.6.1}{Krok 1 – przygotowanie sceny}{chapter.6}% 20
 \BOOKMARK [1][-]{section.6.2}{Krok 2 – obsługa podstawowych mechanik}{chapter.6}% 21
 \BOOKMARK [1][-]{section.6.3}{Krok\0403\040-\040Cele\040gry}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.4}{1}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.4}{Krok 4 – Interfejs użytkownika}{chapter.6}% 23
 \BOOKMARK [1][-]{section.6.5}{Krok 5 – Kreacja świata gry}{chapter.6}% 24
 \BOOKMARK [0][-]{chapter.7}{"The Jump" krok po kroku – Unreal Engine}{}% 25
 \BOOKMARK [1][-]{section.7.1}{Krok\0401\040-\040Kolizje}{chapter.7}% 26
-\BOOKMARK [0][-]{chapter.8}{Podsumowanie tworzenia gier dla obu silników}{}% 27
-\BOOKMARK [1][-]{section.8.1}{Multiplatformowość}{chapter.8}% 28
-\BOOKMARK [1][-]{section.8.2}{Przystępność}{chapter.8}% 29
-\BOOKMARK [1][-]{section.8.3}{Grafika}{chapter.8}% 30
-\BOOKMARK [1][-]{section.8.4}{Programowanie\040i\040zasoby}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.5}{Podsumowanie}{chapter.8}% 32
-\BOOKMARK [0][-]{chapter.9}{\040Testowanie\040gier}{}% 33
-\BOOKMARK [0][-]{chapter*.5}{Zakończenie}{}% 34
-\BOOKMARK [0][-]{appendix.A}{Tytuł załącznika jeden}{}% 35
-\BOOKMARK [0][-]{appendix.B}{Tytuł załącznika dwa}{}% 36
-\BOOKMARK [0][-]{appendix*.6}{Bibliografia}{}% 37
-\BOOKMARK [0][-]{appendix*.7}{Spis\040tabel}{}% 38
-\BOOKMARK [0][-]{appendix*.8}{Spis rysunków}{}% 39
-\BOOKMARK [0][-]{appendix*.9}{Oświadczenie}{}% 40
+\BOOKMARK [1][-]{section.7.2}{Krok\0402\040-\040Tracery}{chapter.7}% 27
+\BOOKMARK [2][-]{subsection.7.2.1}{Wysokość}{section.7.2}% 28
+\BOOKMARK [2][-]{subsection.7.2.2}{Odległość od ściany}{section.7.2}% 29
+\BOOKMARK [1][-]{section.7.3}{Krok\0403\040-\040Chwytanie}{chapter.7}% 30
+\BOOKMARK [0][-]{chapter.8}{Podsumowanie tworzenia gier dla obu silników}{}% 31
+\BOOKMARK [1][-]{section.8.1}{Multiplatformowość}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.2}{Przystępność}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.3}{Grafika}{chapter.8}% 34
+\BOOKMARK [1][-]{section.8.4}{Programowanie\040i\040zasoby}{chapter.8}% 35
+\BOOKMARK [0][-]{chapter.9}{\040Testowanie\040gier}{}% 36
+\BOOKMARK [0][-]{chapter*.5}{Zakończenie}{}% 37
+\BOOKMARK [0][-]{appendix.A}{Tytuł załącznika jeden}{}% 38
+\BOOKMARK [0][-]{appendix.B}{Tytuł załącznika dwa}{}% 39
+\BOOKMARK [0][-]{appendix*.6}{Bibliografia}{}% 40
+\BOOKMARK [0][-]{appendix*.7}{Spis\040tabel}{}% 41
+\BOOKMARK [0][-]{appendix*.8}{Spis rysunków}{}% 42
+\BOOKMARK [0][-]{appendix*.9}{Oświadczenie}{}% 43

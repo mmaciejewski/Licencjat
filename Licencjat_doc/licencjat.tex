@@ -755,7 +755,7 @@ void Death ()
 W funkcji Death() najpierw wywołujemy animację, którą właśnie dodaliśmy.
 Funkcja Invoke służy do opóźniania wywołania funkcji. W tym wypadku po dwóch sekundach wywołamy funkcję Restart, która załaduje aktualna scenę na nowo.
 
-\section1{Krok 4 – Interfejs użytkownika}
+\section{Krok 4 – Interfejs użytkownika}
 
 Kolejnym ważnym aspektem gry jest to jak „rozmawiamy” z graczem. Do komunikacji wykorzystujemy przede wszystkim wydarzenia w świecie gry, oraz tzw. UI – user interface. 
 
@@ -909,6 +909,131 @@ Teraz możemy powrócić do naszej sceny i wybrać obiekt na który gracz będzi
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
+\section{Krok 2 - Tracery}
+
+Powracamy do pliku "ThirdPersonCharacter". Tam w grafie zdarzeń tworzymy "Event Tick" - zdarzenie, które wykonuje się co klatkę w grze. Aby utworzyć jakąkolwiek akcję w grafach wystarczy kliknąć prawym przyciskiem myszy na wolnej przestrzeni. We wspomnianym zdarzeniu tworzymy linię od białego pięcioboku i tworzymy brancha. W nim z kolei od czerwonej kropki przy "condition" tworzymy kolejne połączenie. Z dostępnych opcji wybieramy "Promote to Variable" i powstałą wartość nazywamy "CanTrace". 
+W "Bramchu" mamy dwie opcje. W przypadku, kiedy nie znaleźliśmy krawędzi na którą możemy się wspinać nic nie robi. Jeżeli jednak ją znaleźlimy wykonujemy dalsze instrukcje. Dlatego też tworzymy kolejną linię tylko od prawdy i tworzymy "sequence".
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-Tick}
+    \end{center}
+    \caption{Krok po kroku - UE - Tracery - Tick}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Następnie musimy powiedzieć programowi kiedy możliwość śledzenia jest prawdziwa, a kiedy nie. W tym celu obok w grafie zdarzeń tworzymy kolejne dwa zdarzenia. W tym celu klikamy raz lewym klawiszem myszy na SphereTracer w menu komponentów, a następnie prawym klawiszem myszy w wolnej przestrzeni grafu zdarzeń. W ten sposób tworzymy "Add on component begin overlap" oraz "Add on component end overlap". Następnie od każdego z nich od białego pięcioboku wyprowadzamy "set CanTrace". W przypadku rozpoczęcia przenikania "CanTrace" ustawiamy na fałsz. W przypadku zakończenia przenikania "CanTrace" ustawiamy na prawdę.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-canTrace}
+    \end{center}
+    \caption{Krok po kroku - UE - Tracery - Zdarzenia "Can Trace"}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Nie każdy na każdą ścianę się wespnie. Musimy też znać wysokość ściany aby wiedzieć jak wysoko unieść naszą postać. "Sequence" pozwoli nam wyegzekwować dwa tracery jednoczenie. Obie opcje mają taki sam trzon - został on przedstawiony na obrazku 7.10
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-Tracer}
+    \end{center}
+    \caption{Krok po kroku - UE - Tracery - Trzon}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\subsection{Wysokość}
+
+W obu przypadkach na początku musimy zmodyfikować wektor sfery. W tym celu od żółtej kropki koło "End" w "SphereTraceByChannel" prowadzimy linię i wybieramy "make vector". Dla czystości kodu możemy kliknąć na nowopowstały wektor prawym przyciskiem myszy i wybrać "Collapse to Macro". Nazwijmy go "LedgeTracer". Następnie możemy w niego wejść i zacząć go modyfikować. W rezultacie powinien wyglądać tak jak na obrazku 7.11
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-HeightMacro}
+    \end{center}
+    \caption{Krok po kroku - UE - Tracery - Wysokość - Macro}
+    Liczba, którą dodajemy (200) jest liczbą określającą wysokość sfery, t.j. jest najwyższym punktem tracera. Liczba przy mnożeniu (70) określa jak daleko od postaci ma znajdować się tracer. Liczba zdefiniowana w "distance" jest długością tracera.
+\end{figure}
+
+"Start" i "End" z "LedgeTracer" powinniśmy odpowiednio połączyć ze "Startem" i "Endem" w "SphereTraceByChannel". Ostatnia rzecz jaką powinniśmy zrobić jest przeciągnięcie linni od żółtej kropki koło "Impact Point" w "Break Hit Result", wybranie opcji "promote to variable", nazwanie nowopowstałego okienka LedgeHeight i dołączenie do niego opcji "prawda" z brancha. Powinno to wyglądać tak jak na obrazku 7.12.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-Height}
+    \end{center}
+    \caption{Krok po kroku - UE - Tracery - Wysokość}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\subsection{Odległość od ściany}
+
+Wygląda bardzo podobnie do wysokości. Również możemy utworzyć nowy wektor i również możemo go zwinąć do macro. Tym razem nazwijmy go "WallTracer". Jego zawartość powinna wyglądać taj ka na obrazku 7.13.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/WallMacro}
+    \end{center}
+    \caption{Krok po kroku - UE - Tracery - Odległość od ściany - Macro}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Tak jak w poprzednim przypadku "Start" i "End" z "WallTracer" powinniśmy odpowiednio połączyć ze "Startem" i "Endem" w "SphereTraceByChannel". Następnie " w "Break Hit Result" awansujemy na zmienne "Impact Point" nazywając ją "WallTraceImpact", oraz " Normal" nazywając "WallNormal". Następnie "prawdę" z brancha łączymy z "WallTraceImpact", a ten następnie z "WallNormal". Całość powinna wyglądać tak jak na rysunku 7.14.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-WallTracer}
+    \end{center}
+    \caption{Krok po kroku - UE - Tracery - Odległość od ściany}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Jeżeli wszystko wykonalimy poprawnie po kliknięciu "play" na ekranie powinny nam się pojawić czerwone sfery koło postaci. Zmienią one kolor na zielony kiedy zbliżymy się do ściany, która została ustawiona do wspinaczki - rys. 7.15
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/spherecollision}
+    \end{center}
+    \caption{Krok po kroku - UE - Tracery - Końcowy efekt}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\section{Krok 3 - Chwytanie}
+
+Teraz kiedy już nasza postać wykrywa ściany do wspinaczki możemy zająć się chwytaniem krawędzi. Na początek stwórzmy nowy interfejs. Aby to zrobić w menu kontekstowym {lewy dolny róg} klikamy przycisk "Add New", następnie rozwijamy "Bueprints" i wybieramy "Blueprint interface". Nazwijmy go "CharMoveInterface" i od razu go otwórzmy.
+
+W prawym górym rogu nowootwartego okienka mamy możliwość dodania nowych funkcji. Pierwszą jaką dodamy nazwijmy CanGrabLedge$\_$BI. W nie w "Inputs" dodajmy wartość "Boolean" o nazwie "CanGrab$\_$BI.
+
+Wróćmy do "ThirdPersonCharacter". Z górnego menu klikamy na "Class Settings". Powinno nam się pojawić menu po prawej. Tam w zakładce Interfaces klikamy "Add" i dodajemy nasz niedawno utwożony interfejs. Tę samą operację wykonujemy w pliku "ThirdPerson$\_$AnimBP".
+
+Ponownie wracamy do "ThirdPersonCharacter" i do "Ledge Height Tracer". Od "Ledge Height" tworzymy linię i wybieramy opcję "DoOnce". Wracamy do "ThirdPerson$\_$AnimBP". Tam tworzymy nowe zdarzenie "Event Can Grab Ledge BI". Następnie przeciągamy od czerwonej kropki linię i wybieramy opcję "Promote to variable". Naszą nową zmienną nazwijmy "CanGrab".
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/CanGrabInterface}
+    \end{center}
+    \caption{Krok po kroku - UE - Chwytanie - Interfejs}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Wracamy do pliku "ThirdPersonCharacter". Od zadeklarowanego niedawno "DoOnce" przeciągamy linie i tworzymy schemt zgodny z rysunkami 7.17 i 7.18. 
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/GrabLedge}
+    \end{center}
+    \caption{Krok po kroku - UE - Chwytanie}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/WallGoToLocation}
+    \end{center}
+    \caption{Krok po kroku - UE - Chwytanie - Przesuwanie postaci do krawędzi}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Po raz kolejny wracamy do "ThirdPerson$\_$AnimBP", tym razem przechodzimy jednak do Animacji Grafu. 
+
 \chapter{Podsumowanie tworzenia gier dla obu silników}
 
 W tym rozdziale porównamy  oba silniki, ich mocne i słabe strony. Określimy również w jakich okolicznościach dany silnik jest preferowanym narzędziem.
@@ -950,14 +1075,6 @@ Unity umożliwia programowanie w językach C\# i Unity Script. Pozwala to nie ty
 
 Unreal Engine korzysta wyłącznie z języka C++. Mimo, że sam język jest łatwy do optymalizacji, by go używać potrzebny jest zewnętrzny edytor. Wyjściowym sposobem tworzenia kodu jest Blueprint, który nie zapewnia bezpośredniego dostępu do kodu. Mimo, że upraszcza to proces tworzenia gry dla bardziej doświadczonych developerów, znacznie utrudnia to optymalizację gry.
 
-\section{Podsumowanie}
-
-Oba silniki mają swoje zalety, jadnek należy używać ich w odpowiednich sytuacjach.
-
-Jeśli planujemy stworzyć mniejszy tytuł na jedną platformę, cechujący się wysokiej jakości grafiką, Unreal Engine jest bardzo dobrym wyborem.
-
-W przypadku w którym chcemy stworzyć grę na wiele platform, albo dopiero zaczynamy przygodę z tworzeniem gier, przystępnośc interfejsu Unity, oraz elastyczność w wyborze języka programowania znacząco ułatwią nam stworzenie naszej pierwszej gry.
-
 \chapter{ Testowanie gier}
 
 Wśród programistów gier panuje przekonanie, że tworzenie zautomatyzowanych testów do gier jest pozbawione sensu. Większość firm zatrudnia sztab testerów, którzy manualnie sprawdzają najdrobniejsze elementy danej gry. Wynika to z kilku wyjątkowych cech tworzenia gier.
@@ -976,6 +1093,11 @@ Gry stworzone na potrzeby projektu zostały przetestowane wyłącznie manualnie.
 
 % zakończenie
 \summary
+Oba silniki mają swoje zalety, jadnek należy używać ich w odpowiednich sytuacjach.
+
+Jeśli planujemy stworzyć mniejszy tytuł na jedną platformę, cechujący się wysokiej jakości grafiką, Unreal Engine jest bardzo dobrym wyborem.
+
+W przypadku w którym chcemy stworzyć grę na wiele platform, albo dopiero zaczynamy przygodę z tworzeniem gier, przystępnośc interfejsu Unity, oraz elastyczność w wyborze języka programowania znacząco ułatwią nam stworzenie naszej pierwszej gry.
 
 % załączniki (opcjonalnie):
 \appendix
