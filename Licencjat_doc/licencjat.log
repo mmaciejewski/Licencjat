@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xelatex 2016.3.7)  1 JUN 2016 00:01
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xelatex 2016.3.7)  1 JUN 2016 03:59
 entering extended mode
 **./licencjat.tex
 (licencjat.tex
@@ -1214,12 +1214,15 @@ Overfull \hbox (423.60828pt too wide) in paragraph at lines 790--791
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[48]
+
 Overfull \hbox (236.40637pt too wide) in paragraph at lines 791--792
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
+Underfull \vbox (badness 6995) has occurred while \output is active []
+
+ [48]
 Overfull \hbox (213.04413pt too wide) in paragraph at lines 817--818
 [][][]$[][][][] [] [] [] [][][][][] [] [][][][][][][] [] [][][] [] [][][][][][]
 [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -1263,65 +1266,122 @@ Overfull \vbox (2.78397pt too high) has occurred while \output is active []
 [55]
 File: Screeny/UeKrokPoKroku/UE-Climb-ObjectCollision.png Graphic file (type QTm
 )
- <use  "Screeny/UeKrokPoKroku/UE-Climb-ObjectCollision.png" > [56] [57]
+ <use  "Screeny/UeKrokPoKroku/UE-Climb-ObjectCollision.png" >
+File: Screeny/UeKrokPoKroku/UE-Tick.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/UE-Tick.png" >
+Underfull \vbox (badness 1067) has occurred while \output is active []
+
+ [56]
+Overfull \hbox (6.9409pt too wide) in paragraph at lines 925--926
+[]\EU1/MinionPro(0)/m/n/12 Następnie musimy powiedzieć programowi kiedy możliwo
+ść śledzenia jest praw-
+ []
+
+[57]
+File: Screeny/UeKrokPoKroku/UE-canTrace.png Graphic file (type QTm)
+ <use  "Screeny/UeKrokPoKroku/UE-canTrace.png" >
+File: Screeny/UeKrokPoKroku/UE-Tracer.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/UE-Tracer.png" >
+File: Screeny/UeKrokPoKroku/UE-HeightMacro.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/UE-HeightMacro.png" >
+Overfull \hbox (81.49886pt too wide) in paragraph at lines 951--952
+ [] 
+ []
+
+[58]
+
+LaTeX Warning: Text page 59 contains only floats.
+
+[59]
+File: Screeny/UeKrokPoKroku/UE-Height.png Graphic file (type QTm)
+ <use  "Screeny/UeKrokPoKroku/UE-Height.png" >
+Overfull \hbox (37.99896pt too wide) in paragraph at lines 961--962
+ [] 
+ []
+
+File: Screeny/UeKrokPoKroku/WallMacro.png Graphic file (type QTm)
+<use  "Screeny/UeKrokPoKroku/WallMacro.png" >
+Overfull \hbox (67.49889pt too wide) in paragraph at lines 973--974
+ [] 
+ []
+
+File: Screeny/UeKrokPoKroku/UE-WallTracer.png Graphic file (type QTm)
+<use  "Screeny/UeKrokPoKroku/UE-WallTracer.png" >
+Overfull \hbox (18.99901pt too wide) in paragraph at lines 983--984
+ [] 
+ []
+
+File: Screeny/UeKrokPoKroku/spherecollision.png Graphic file (type QTm)
+<use  "Screeny/UeKrokPoKroku/spherecollision.png" > [60] [61] [62]
+File: Screeny/UeKrokPoKroku/CanGrabInterface.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/CanGrabInterface.png" >
+File: Screeny/UeKrokPoKroku/GrabLedge.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/GrabLedge.png" >
+Overfull \hbox (35.99896pt too wide) in paragraph at lines 1021--1022
+ [] 
+ []
+
+File: Screeny/UeKrokPoKroku/WallGoToLocation.png Graphic file (type QTm)
+<use  "Screeny/UeKrokPoKroku/WallGoToLocation.png" > [63] [64]
 Rozdział 8.
-[58
-
-]
-File: Screeny/UE_vs_Unity.png Graphic file (type QTm)
- <use  "Screeny/UE_vs_Unity.png" > [59]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [60]
-[61]
-Rozdział 9.
-[62
-
-] [63] [64
-
-]
-Dodatek A.
 [65
 
 ]
+File: Screeny/UE_vs_Unity.png Graphic file (type QTm)
+ <use  "Screeny/UE_vs_Unity.png" > [66] [67]
+Rozdział 9.
+[68
+
+] [69] [70
+
+]
+Dodatek A.
+[71
+
+]
 Dodatek B.
-(licencjat.bbl [66
+(licencjat.bbl [72
 
 ]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [67
+) [73
 
 ] (licencjat.lot)
 \tf@lot=\write5
 \openout5 = `licencjat.lot'.
 
- [68
+ [74
 
-] (licencjat.lof [69
+] (licencjat.lof [75
 
 ])
 \tf@lof=\write6
 \openout6 = `licencjat.lof'.
 
- [70] [71
+ [76] [77
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1002.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1002.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1124.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1124.
  (licencjat.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1002.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1002.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1002.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1124.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1124.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1124.
  ) 
 Here is how much of TeX's memory you used:
- 23568 strings out of 428721
- 430769 string characters out of 3163015
- 471189 words of memory out of 3000000
- 26715 multiletter control sequences out of 15000+200000
+ 23591 strings out of 428721
+ 431368 string characters out of 3163015
+ 471472 words of memory out of 3000000
+ 26727 multiletter control sequences out of 15000+200000
  7921 words of font info for 61 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
  55i,12n,61p,10401b,1619s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on licencjat.pdf (71 pages).
+Output written on licencjat.pdf (77 pages).
