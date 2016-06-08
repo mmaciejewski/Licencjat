@@ -27,7 +27,7 @@ gry konsolowe, silnik gier, Unity, Unreal Engine, animacja, fizyka, skrypty, int
 
 W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier.
 Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D –- Unity Technologies.
-W części praktycznej pracy stworzono dwie wersje gry „The Jump” - po jednej w każdym z silników. Aby uruchomić gry wystarczy uruchomić pliki exe w folderze z grą.
+W części praktycznej pracy stworzono dwie wersje gry „The Jump” - po jednej w każdym z silników. Aby uruchomić gry wystarczy uruchomić pliki exe w folderze z grą. Gry są kompatybilne z system operacyjny Windows, od wersji 7 wzwyż.
 Porównanie polega na opisie procesu tworzenia owych gier w oddzielnych rozdziałach. Rozdział podsumowujący opisuje różnice między silnikami.
 Przygotowaliśmy również dwa krótkie filmy, które ukazują podstawy tworzenia gier w obu silnikach -- [link Unity] i [link Unreal]
 
