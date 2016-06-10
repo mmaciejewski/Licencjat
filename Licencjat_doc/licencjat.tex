@@ -42,23 +42,14 @@
 
 % streszczenie
 \begin{abstract}
-W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier.
-Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games,
-oraz Unity 3D -- Unity Technologies. W części praktycznej pracy stworzono dwie wersje gry
-„The Jump” -- po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document
-(patrz, rozdział 3 -- „Czym jest Game Design Document”).
-Pozwoliło to na stworzenie gier o podobnych cechach,
-jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości
-żadnego z silników. Aby uruchomić gry wystarczy uruchomić pliki exe w folderze z grą.
-Porównanie polega na opisie procesu tworzenia owych gier w oddzielnych rozdziałach.
-Rozdział podsumowujący opisuje różnice między silnikami.
+W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier. Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D -- Unity Technologies. W części praktycznej pracy stworzono dwie wersje gry
+„The Jump” -- po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document (patrz, rozdział 3 -- „Czym jest Game Design Document”). Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Aby uruchomić gry wystarczy uruchomić pliki exe w folderze z grą. Porównanie polega na opisie procesu tworzenia owych gier w oddzielnych rozdziałach. Rozdział podsumowujący opisuje różnice między silnikami.
 
-Przygotowano również dwa krótkie filmy, które ukazują podstawy
-tworzenia gier w obu silnikach -- [link Unity] i [link Unreal]
+Przygotowano również dwa krótkie filmy, które ukazują podstawy tworzenia gier w obu silnikach -- \href{https://www.youtube.com/watch?v=phQOiSH_uXU}{Unity} i \href{https://www.youtube.com/watch?v=V53ZVRSyOgc}{UnrealEngine}
 \end{abstract}
 
 % słowa kluczowe
-\keywords{gry konsolowe,
+\keywords{gry komputerowe,
 silnik gier,
 Unity,
 Unreal Engine,
@@ -70,11 +61,11 @@ scena,
 obiekt,
 platforma,
 optymalizacja,
-particle,
-audio,
+kamera,
+kolider,
 3D,
 architektura,
-oswietlenie,
+oświetlenie,
 komponent,
 drag and drop}
 
@@ -86,16 +77,14 @@ drag and drop}
 
 Jeszcze 20 lat temu tworzenie gier było nie lada wyzwaniem, wymagało ogromnej cierpliwości, sporej wiedzy z zakresu fizyki, informatyki i matematyki. Obecnie posiadamy zaawansowane oprogramowanie znacząco ułatwiające tworzenie tego typu rozrywki. Dlatego aktualnie liczba gier wychodzących na rynek jest tak duża, że nie sposób śledzić pomniejsze tytuły.
 
-Gry komputerowe towarzyszyły każdemu z nas od dzieciństwa. Były i są naszym hobby. Do dziś poświęcamy im mnóstwo czasu. Od zawsze marzyliśmy, by zacząć tworzyć swoje własne gry.
-Wiedza, którą zdobyliśmy w trakcie studiów pozwoliła nam nie tylko na realizację tego marzenia, ale również pokazała różne sposoby tworzenia oprogramowania. W tej pracy korzystamy z jednego z tych sposobów do stworzenia naszej gry. Oparliśmy ją na dwóch silnikach do tworzenia gier - Unity i Unreal Engine. W tej pracy przedstawiamy podstawowe różnice, głowne zalety, jak i ograniczenia obu silników. Wierzymy, że pozwoli to początkującym twórcom gier, jak i tym bardziej doświadczonym, znaleźć właściwe narzędzie do wykonania swojego projektu.
+Gry komputerowe towarzyszyły każdemu z nas od dzieciństwa. Były i są naszym hobby. Do dziś poświęcamy im mnóstwo czasu. Zawsze też marzyliśmy o tworzeniu własnych gier. Na studiach zdobyliśmy szeroką wiedzę na temat różnych sposobów tworzenia oprogramowania, co umożliwiło nam realizację tego marzenia. W tej pracy korzystamy z jednego z tych właśnie sposobów do stworzenia naszej gry. Oparliśmy ją na dwóch silnikach do tworzenia gier - Unity i Unreal Engine. W tej pracy przedstawiamy podstawowe różnice, główne zalety, jak i ograniczenia obu silników. Wierzymy, że pozwoli to zarówno początkującym, jak i bardziej doświadczonym twórcom gier znaleźć właściwe narzędzie do wykonania swojego projektu.
 
-Silniki gier to zaawansowane oprogramowanie tworzone przez firmy, specjalnie na potrzeby nowych gier. Powołanie nowej gry do życia wymaga ogromnych nakładów czasowych i finansowych. „Jak będziemy generować grafikę? Czy w naszej grze będzie realistyczna fizyka? A dynamiczne światło? Co z dzwiękiem? Jaki język programowania wybrać? A i trzeba jeszcze tę grę zoptymalizować pod konkretną platformę!" Na te i wiele innych pytań trzeba odpowiedzieć za każdym razem tworząc nową grę. Doświadczeni twórcy wiedzą jednak, że to własnie odpowiedzi na te pytania generują największe koszty. Aby uniknąć odkrywania koła na nowo, firmy często tworzą własne silniki, bądź wykupują licencje na inne. Współcześnie, większość nowych tytułów robiona jest na już gotowych silnikach. Tylko mały procent doczeka się własnego, wartego niejednokrotnie więcej niż sama gra.
-Na nasze szczęście dzisiaj każdy z nas może skorzystać z możliwości takiego silnika.
+Silniki gier to zaawansowane oprogramowanie tworzone przez firmy, specjalnie na potrzeby nowych gier. Powołanie nowej gry do życia wymaga ogromnych nakładów czasowych i finansowych. „Jak będziemy generować grafikę? Czy w naszej grze będzie realistyczna fizyka? A dynamiczne światło? Co z dźwiękiem? Jaki język programowania wybrać? A i trzeba jeszcze tę grę zoptymalizować pod konkretną platformę!" Na te i wiele innych pytań trzeba odpowiedzieć za każdym razem tworząc nową grę. Doświadczeni twórcy wiedzą jednak, że to własnie odpowiedzi na te pytania generują największe koszty. Aby uniknąć odkrywania koła na nowo, firmy często tworzą własne silniki, bądź wykupują licencje na inne. Współcześnie, większość nowych tytułów robiona jest na już gotowych silnikach. Tylko mały procent doczeka się własnego, wartego niejednokrotnie więcej niż sama gra. Na nasze szczęście dzisiaj każdy z nas może skorzystać z możliwości takiego silnika.
 
 Mimo, że na rynku istnieje wiele innych darmowych silnikow, w tej pracy skupimy sie na dwóch obecnie najpopularniejszych darmowych silnikach:
 Unreal Engine udostępniane przez firmę Epic Games, oraz Unity 3D udostępniane przez firmę Unity Technologies.
 
-Przyjrzymy się krótkiej historii silników gier oraz porównamy oba oprogramowania. Dowiemy sie czym jest GDD, następnie przyjrzymy się ich cechom i opiszemy proces tworzenia gier w każdym z nich. Odkryjemy najczęstsze bugi w grach i jak z nimi walczyć, a w podsumowaniu opiszemy krótko: stopień trudnosci w użytkowaniu, czas potrzebny do stworzenia gry i zastanowimy sie nad przyszłością obu silników.
+Przyjrzymy się krótkiej historii silników gier oraz porównamy oba oprogramowania. Dowiemy sie czym jest GDD, następnie opiszemy ich cechy szczególne i prześledzimy  proces tworzenia gier w każdym z nich. Odkryjemy najczęstsze bugi w grach i jak z nimi walczyć, a w podsumowaniu opiszemy krótko: stopień trudnosci w użytkowaniu, czas potrzebny do stworzenia gry i zastanowimy sie nad przyszłością obu silników.
 
 Należy zwrócić uwagę, że w rozdziałach w których opisywane są silniki (Podstawy tworzenie gier i The Jump krok po kroku), rozdziały dotyczące Unity są znacznie bardziej szczegółowe. Powodem jest fakt, że wiele terminów i pojęć, jakich używamy w tej pracy ma zastosowanie w obu silnikach. Opisując je tylko w jednym z rozdziałów, unikamy niepotrzebnych powtórzeń. Silnik Unity jest opisywany dokładniej, ponieważ zgodnie z porządkiem alfabetycznym opisujemy go przed Unreal Engine.
 
@@ -103,7 +92,7 @@ Należy zwrócić uwagę, że w rozdziałach w których opisywane są silniki (P
 
 Silnik gier jest to specjalne oprogramowanie zaprojektowane z myślą o tworzeniu i rozbudowywaniu gier wideo. Jego typową funkcjonalnością jest obsługa generowania grafiki (zarówno 2D i 3D), fizyki, kolizji, dźwięku, sieci, animacji, procesora, pamięci itp. Większość silników opiera się na tzw. skryptach – krótkich programach pisanych wewnątrz aplikacji, pozwalających na stosunkowo nieskrępowaną modyfikację i ciągłe rozszerzanie możliwości danego silnika. Idzie to w parze z głównym założeniem jakim jest możliwość jego wielokrotnego wykorzystania do tworzenia kompletnie odmiennych tytułów.
 
-Teoretycznie prawie każda gra, która kiedykolwiek powstała, opiera się na jakimś silniku. Jednak dopiero lata 90' uznajemy za początek ich historii. Jest to związane z faktem, że pierwsze gry były tzw. „hardkodowane”. Oznacza to, że wszelkie dane były bezpośrednio wpisywane w kod źródłowy, a ich wartości dostosowane bezpośrednio do urządzenia na które były tworzone. Ze względu na niską wydajność i limity pamięci ówczesnych maszyn było to rozwiązanie konieczne. Uniemożliwiały jednak modyfikację kodu. Oznaczało to, że silnik wykorzystywany był tylko raz, pod konkretną grę, co stoi w konflikcie z wcześniej podaną definicją silnika gier.
+Teoretycznie prawie każda gra, która kiedykolwiek powstała, opiera się na jakimś silniku. Jednak dopiero lata 90' uznajemy za początek ich historii. Jest to związane z faktem, że pierwsze gry były tzw. „hardkodowane”. Oznacza to, że wszelkie dane były bezpośrednio wpisywane w kod źródłowy, a ich wartości dostosowane bezpośrednio do urządzenia na które były tworzone. Ze względu na niską wydajność i limity pamięci ówczesnych maszyn było to rozwiązanie konieczne. Uniemożliwiało ono jednak późniejszą modyfikację kodu. Oznaczało to, że silnik wykorzystywany był tylko raz, pod konkretną grę, co stoi w konflikcie z wcześniej podaną definicją silnika gier.
 
 Poniżej została zamieszczona tabelka z datami, autorami i szczególnymi cechami silników gier, poczynając od „Hovertank 3D”. Nie był to pierwszy silnik w historii, jednak jako pierwszy był rozwijany i użyty w wielu produkcjach. Był to także jeden z tytułów 3D z gatunku FPS ( ang. first-person-shooter ). Rozwój tego gatunku szedł w parze z powstaniem terminu „silnika gier”. Trzeba zaznaczyć, że ze względu na ogromną ilość różnych silników, poniższa lista nie jest kompletna i zawiera tylko te najpopularniejsze i/lub najbardziej zasłużone.
 
@@ -126,14 +115,14 @@ Frostbite & 2008 & Digital Illusions CE & HDR Audio, system destrukcji otoczenia
 \end{tabular}
 \caption{Skrócona historia silników gier
   typu dokumentu\label{tab:dtd-cmp}}
-\source{Wikipedia}
+\source{\href{http://www.benchmark.pl/}{Benchmark}, \href{https://pl.wikipedia.org}{Wikipedia} }
 \end{table}
 
 \chapter{Czym jest Game Design Document?}
 
 Game Design Document (w skrócie GDD) jest dokumentem tworzonym jeszcze przed przystąpieniem do tworzenia gry. Najważniejszym celem dokumentu jest utrzymanie spójności oraz jednoznaczne wytyczenie celów związanych z projektem. GDD jest tak zwanym „żywym” dokumentem. Oznacza to, że może on być rozwijany i zmieniany podczas pracy nad grą. Jeśli pojawią się przeszkody uniemożliwiające wykonanie wcześniejszych założeń, lub powodujące znaczne opóźnienie w pracach nad grą dozwolone jest zmienianie danych części dokumentu. Zaleca się jednak w miarę możliwości, aby nie odchodzić za daleko od wyjściowych założeń, gdyż stoi to w konflikcie z założeniami owego dokumentu.
 
-Struktura dokumentu nie jest jednoznacznie zdefiniowana. W zależności od wielkości zespołu oraz docelowych odbiorców może on przybierać różnorakie formy – od czysto formalnych mocno technicznych aspektów, do ogólnej wizji artystycznej świata i rodzaju rozgrywki. Dokument może składać się z czystego tekstu, ale również screenów, zdjęć, szkiców koncepcyjnych, diagramów. Każda forma jak najlepiej oddająca założenia gry jest akceptowalna.
+Struktura dokumentu nie jest jednoznacznie zdefiniowana. W zależności od wielkości zespołu oraz docelowych odbiorców może on przybierać różnorakie formy – od czysto formalnych mocno technicznych aspektów, do ogólnej wizji artystycznej świata i rodzaju rozgrywki. Dokument może składać się z czystego tekstu, ale również screenów, zdjęć, szkiców koncepcyjnych, diagramów. Każda forma jak najlepiej oddająca to jak ma wyglądać gra jest akceptowalna.
 
 Zdarza się, że GDD często zaczyna się tylko podstawowymi założeniami gry, a kończy jako rozbudowany wielostronicowy dokument opisujący każdy możliwy aspekt gry. Przy jego pisaniu nie można zapomnieć, że   będzie on czytany przez każdego członka zespołu tworzącego grę, nie tylko przez programistów, ale także artystów czy managerów. Dlatego pomimo ogólnej swobody przy jego pisaniu zaleca się zachowywać ogólnie pojętą strukturę, co pozwala na oddzielenie zagadnień typowo technicznych, od tych związanych z marketingiem czy kreacją świata.
 
@@ -164,47 +153,57 @@ Index
 
 \begin{enumerate}
   \item Założenia gry
-  \item Ogólny opis (gatunek, format, założenia)
-  \item Interakcja
-  \item Przebieg rozgrywki
-  \item Cel rozgrywki
+  \item Ogólny opis (gatunek, format, przeznaczenie)
   \item Założenia techniczne
-  \item Docelowe platformy
-  \item Użyte technologie
-  \item silnik gry
-  \item pozostałe technologie (np. systemy kontroli wersji, frameworki)
   \begin{enumerate}
-      \item Wyświetlanie/Obraz (np. orientacja na urządzeniu mobilnym)
-      \item Sterowanie
-      \item  Mechanika gry
+    \item Docelowe platformy
+    \item Użyte technologie
+    \item Silnik gry
+    \item Pozostałe technologie (np. systemy kontroli wersji, frameworki)
+  \end{enumerate}
+  \item Rozgrywka
+  \begin{enumerate}
+    \item Interakcja
+    \item Przebieg rozgrywki
+    \item Cel rozgrywki
+    \item Wyświetlanie/Obraz (np. orientacja na urządzeniu mobilnym)
+    \item Sterowanie
+    \begin{enumerate}
+      \item Główna mechanika
       \item Inne
-      \begin{enumerate}
-         \item  Świat gry
-      \end{enumerate}
+    \end{enumerate}
   \end{enumerate}
-  \item Obiekty
+  \item Świat gry
   \begin{enumerate}
-     \item statyczne
-     \item interaktywne
+    \item Obiekty
+    \begin{enumerate}
+      \item statyczne
+      \item interaktywne
+   \end{enumerate}
+   \item Środowisko
+   \begin{enumerate}
+      \item motywy
+      \item otoczenie
+    \end{enumerate}
+    \item Wyzwania 
+    \item Przeciwnicy
+    \item Poruszanie po świecie
   \end{enumerate}
-  \item Środowisko
-  \item Motywy
-  \item Otoczenie
-  \item Wyzwania
-  \item Przeciwnicy
-  \item Poruszanie po świecie
   \item Grafika
-  \item Style
+  \begin{enumerate}
+    \item Style
+  \end{enumerate}
   \item Assety
   \begin{enumerate}
-     \item Dżwięk
+    \item Dźwięk i Muzyka
+    \begin{enumerate}
+      \item Potrzebne dźwięki
+      \item Potrzebna muzyka
+    \end{enumerate}
   \end{enumerate}
-  \item Potrzebne dźwięki
-  \item Potrzebna muzyka
-  \begin{enumerate}
-     \item Ramy czasowe projektu
-     \item Dodatkowe pomysły
-  \end{enumerate}
+  \item Ramy czasowe projektu
+  \item Dodatkowe pomysły
+  \item Notatki / lista zmian (często dopisuje się na początku dokumentu)	
 \end{enumerate}
 
 \chapter{Przedstawienie Unity i Unreal Engine}
@@ -214,7 +213,8 @@ Unity 3D i Unreal Engine 4, są bezsprzecznie jednymi z dwóch najpopularniejszy
 Unity Technologies wyszło naprzeciw twórcom poszukującym tańszych rozwiązań i w roku 2005 zaprezentowało prototyp darmowego, łatwego w obsłudze silnika. Unity zdobyło zainteresowanie twórców gier i w tym roku doczekało się swojej piątej odsłony.
 
 Unreal Engine 4 zadebiutował w 2014 roku, jako następca długiej i zasłużonej serii silników Unreal. Legendarny status poprzednich wersji i niesamowite możliwości graficzne pozwoliły mu szybko podbić rynek tanich silników gier, oraz wyrosnąć na jednego z największych konkurentów Unity.
-
+\\
+\\
 Cechy charakterystyczne obu silników:
 
 \textbf{Unity 5}
@@ -238,14 +238,14 @@ Cechy charakterystyczne obu silników:
 	\item Unreal Motion Graphics UI Designer (UMG) – Narzędzie do projektowania UI. Tworzony 	na zasadzie widgetów
 	\item Persona, system do tworzenia animacji. Pozwala kontrolować szkielety, meshe, tekstury, 	 przejścia między animacjami (Blend Spaces) itp.
 	\item Matinee Cinematics, Sequencer (beta)  – narzędzia do tworzenia „filmików” wewnątrz gry.
-	\item Drzewka zachowań – „Visual scripting”, pozwala programowac bez ingerowania w kod.
-	\item Instant game preview, System umożliwiający szybkie testy scen. Spawnuje gracza w dowolnym miejscu projektu.
+	\item Drzewka zachowań – „Visual scripting”, pozwala programować bez ingerowania w kod.
+	\item Instant game preview, System umożliwiający szybkie testy scen. Ustawia gracza w dowolnym miejscu projektu.
 	\item Fizyka – PhysX 3.3
 	\item Media Framework – możliwość używania zewnętrznych mediów wewnątrz gry.
 	\item The Landscape system – edytor terenu w grach.
 	\end{itemize}
 
-Oba silniki cechuje wiele podobieństw. Wybór jednego z nich może okazać się trudny ze względu na wiele wspólnych cech i porównywalnych narzędzi wspomagających proces tworzenia gier. Poniższe rozdziały pokażą nam jak wygląda praca z każdym z nich, pokażą nam różnice i podobieństwa obu silników i pomogą wyodrębnić ich cechy szczególne. W ostatecznym rachunku dowiemy się, który z silników bardziej nadaje się do konkretnych zadań i czym powinniśmy się sugerować w wyborze każdego z nich.
+Oba silniki cechuje multum podpobieństw. Wybór jednego z nich może okazać się trudny ze względu na wiele wspólnych cech i porównywalnych narzędzi wspomagających proces tworzenia gier. Poniższe rozdziały pokażą nam jak wygląda praca z każdym z nich, pokażą nam różnice i podobieństwa obu silników i pomogą wyodrębnić ich cechy szczególne. W ostatecznym rachunku dowiemy się, który z silników bardziej nadaje się do konkretnych zadań i czym powinniśmy się sugerować w wyborze każdego z nich.
 
 \chapter{Podstawy tworzenia gier w Unity}
 
@@ -257,7 +257,7 @@ Jednym z decydujących czynników przy rozpoczynaniu pracy nad grą jest odpowie
 
 W niektórych silnikach optymalizacja gry jest znacznie trudniejszym zadaniem niż w innych, co ma duże znaczenie jeśli tworzymy grę mobilną. Ważny jest także format danych z których będziemy korzystać, np. modeli 3D, oraz czy rozgrywka skupiać będzie się na grze dla pojedynczego gracza, czy na grze wieloosobowej, ze względu na różne implementacje obsługi sieci w silnikach. Przykładowy typ gry odpowiedni dla silnika Unity: mała gra, tworzona przez mały niedoświadczony zespół.
 
-Gra ma być platformówką, działać dobrze na telefonach, ale zostać też wypuszczona na konsole i pecety i nie zawierać rozgrywki multiplayer. Grafka 3D mocno stylizowana/uproszczona, bez grafcznych fajerwerków.
+Gra ma być platformówką, działać dobrze na telefonach, ale zostać też wypuszczona na konsole i pecety i nie zawierać rozgrywki multiplayer. Grafka 3D mocno stylizowana/uproszczona, bez graficznych fajerwerków.
 
 Powyższe wymagania idealnie łączą się z tym co ma do zaoferowania Unity: prostota obsługi, wsparcie aż 21 platform, możliwość importowania/eksportowania paczek, obsługa wielu formatów modeli 3D i narzędzia do ich obsługi. Dzięki temu, że gra ma posiadać prostą grafkę nie musimy przejmować się faktem, że Unity ustępuje innym silnikom w kwestii fizyki i zaawansowanego renderingu 3D. W fazie planowania nie powinno się także zapominać, że tworzenie gier jest bardzo czasochłonne, dlatego warto wyznaczyć sobie ramy czasowe dla danego projektu. Pozwoli to określić czy proces produkcji przebiega prawidłowo i uniknąć częstego powodu śmierci gry jakim jest za długi czas produkcji i brak środków na kontynuowanie prac.
 
@@ -268,44 +268,47 @@ Wybraną opcję można później zmienić.
 
 \section{Podstawowe terminy}
 
-Assets/assety - to reprezentacja każdego pliku, który może być użyty w grze. Asset może być dowolnym plikiem zewnętrznym np. dźwiękiem lub modelem 3D wspieranym przez Unity, a także wewnętrznym, tworzonym w Unity takim jak scena lub renderer.
+\quad Assets/assety - to reprezentacja każdego pliku, który może być użyty w grze. Asset może być dowolnym plikiem zewnętrznym np. dźwiękiem lub modelem 3D wspieranym przez Unity, a także wewnętrznym, tworzonym w Unity takim jak scena lub renderer.
 
-Game Objects/obiekty gry – to podstawowe obiekty w Unity, które reprezentują wszystkie elementy widoczne w grze. Same z siebie nie robią nic, za to ich rolą jest bycie kontenerem na tzw. Komponenty, która implementują ich prawdziwą funkcjonalność. Przykładowo poruszająca się dwuwymiarowa piłka, powstaje poprzez dodanie do Game Objectu komponentu do renderowania grafki 2D, odpowiedniego skryptu i animacji. Component/komponenty – są podstawą każdego obiektu i zachowania w grze. Są częścią funkcjonalną każdego Game Objectu i są bezpośrednio doń przypisywane.
+Game Objects/obiekty gry – to podstawowe obiekty w Unity, które reprezentują wszystkie elementy widoczne w grze. Same z siebie nie robią nic, za to ich rolą jest bycie kontenerem na tzw. Komponenty, która implementują ich prawdziwą funkcjonalność. Przykładowo, poruszająca się dwuwymiarowa piłka, powstaje poprzez dodanie do Game Objectu komponentu do renderowania grafki 2D, odpowiedniego skryptu i animacji. 
+Component/komponenty – są podstawą każdego obiektu i zachowania w grze. Są częścią funkcjonalną każdego Game Objectu i są bezpośrednio doń przypisywane.
 
 Każdy obiekt domyślnie posiada komponent Transform, który opisuje jego pozycję, skalę i rotację. Bez tych informacji obiekt byłby nie do zlokalizowania na scenie.
 
 Używając wyrażenia obiekt i komponent w tej pracy, będziemy każdorazowo odnosić się odpowiednio do wyżej zdefniowanych Game Objectów i Componentów.
 
+\newpage
 \section{Ekran główny}
 
 Po stworzeniu projektu naszym oczom ukaże się główny ekran. Jeśli żaden projekt nie był wcześniej otwierany na tym komputerze to ekran będzie wyglądał jak na zdjęciu poniżej (dla wersji 5.x ).
-
+\\
+\\
 \begin{figure}[!htb]
     \begin{center}
     \includegraphics[scale=0.15]{Screeny/rodzial5screeny/ekran_glowny}
     \end{center}
     \caption{Podstawy - Unity - Ekran główny}
-    Domyślny układ ekranu po stworzeniu nowego projektu, jeśli nie otwieralismy wcześniej na tym komputerze innego projekt Unity wraz z oznaczeniem poszczególnych okien.
+    Domyślny układ ekranu po stworzeniu nowego projektu, jeśli nie otwieraliśmy wcześniej na tym komputerze innego projekt Unity wraz z oznaczeniem poszczególnych okien.
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
 Cyfry na zdjęciu oznaczają poszczególne okna:
 
 \begin{enumerate}
-  \item Pasek Menu – daje dostęp do bardziej zaawansowanych opcji, min. pozwala na dodawanie nowych okien, komponentów czy konfgurowanie całej aplikacji.
+  \item Pasek Menu – daje dostęp do bardziej zaawansowanych opcji, m.in. pozwala na dodawanie nowych okien, komponentów czy konfgurowanie całej aplikacji.
   \item  Project – tu umieszczone są wszystkie pliki jakie znajdują się w grze. Pliki możemy dodawać do projektu, przenosząc je bezpośrednio do tego okna, lub dodając je do folderu „Assets” w naszym projekcie.
   \item Scene – jest to przestrzeń 3D na której umieszczane są wszystkie obiekty znajdujące się w grze.
   \item Game – okno pozwalające na zobaczenie naszej gry w akcji po naciśnięciu przysiku „Play”. Domyślnie widać tylko niebieskie tło – jest to aktualny obraz z głównej kamery umieszczonej na scenie.
-  \item Hierarchy – w tym oknie znajduje się lista wszystkich obiektów znajdujących się na scenie. Pozwala nam na manipulowanie obiektem bez konieczności szukania go bezpośrednio na scenie.
+  \item Hierarchy – w tym oknie wypisana jest lista wszystkich obiektów znajdujących się na scenie. Pozwala nam na manipulowanie obiektem bez konieczności szukania go bezpośrednio na scenie.
   \item Inspector – wyświetla właściwości aktualnie zaznaczonego obiektu.
   \item  Pasek opcji – pozwala na zmianę opcji poruszania się po scenie, zmianę widoku przy zaznaczaniu obiektu, odpalenie naszej gry, zarządzanie warstwami i zmianę layoutu.
 \end{enumerate}
 
  Ułożeniem poszczególnych okien można swobodnie manipulować poprzez przenoszenie zakładek lub zmianę layoutu z paska opcji. Możliwe jest też dodawanie nowych zakładek. Przy tworzeniu nowego projektu Unity wczyta ustawienia okien z poprzednio otwartego projektu, zaś przy otwieraniu innego projektu, okna ustawione będą tak jak ustawiła je osoba przy nim pracująca. Wszystkimi oknami można zarządzać klikając na nie, bądź korzystając z zakładki „Window” z paska menu (1).
-
+\newpage
 \section{Praca z obiektami i sceną}
 
-Scena jest miejscem na którym umieszczać będziemy każdy element gry. Aby zapewnić sobie swobodną pracę, niezbędne jest opanowanie podstawowych zasad poruszania się po niej. Jak w każdej przestrzeni 3D podstawowym sposobem przemiszczania się po scenie jest oddalanie/przybliżanie widoku oraz obracanie go w dowolnym kierunku. Po kliknięciu na scenę, aby przybliżyć bądź oddalić kamerę korzystamy z pomocy rolki myszki, lub wciskamy klawisz alt i przytrzymujemy prawy przycisk, poruszając jednocześnie myszką w tył lub przód. Aby rotować widok, przytrzymujemy alt i lewy przycisk poruszając myszką w dowolnym kierunku. Aby mieć na czym operować niezbędne jest stworzenie Game Objectu. Aby to zrobić klikamy lewym przyciskiem myszki w oknie Hierarchy (5), lub klikając Game Object z paska menu (1) i i wybieramy „Create empty”.
+Scena jest miejscem na którym umieszczać będziemy każdy element gry. Aby zapewnić sobie swobodną pracę, niezbędne jest opanowanie podstawowych zasad poruszania się po niej. Jak w każdej przestrzeni 3D, podstawowym sposobem przemiszczania się po scenie jest oddalanie/przybliżanie widoku oraz obracanie go w dowolnym kierunku. Po kliknięciu na scenę, aby przybliżyć bądź oddalić kamerę korzystamy z pomocy rolki myszki, lub wciskamy klawisz alt i przytrzymujemy prawy przycisk, poruszając jednocześnie myszką w tył lub przód. Aby rotować widok, przytrzymujemy alt i lewy przycisk poruszając myszką w dowolnym kierunku. Aby mieć na czym operować niezbędne jest stworzenie Game Objectu. Aby to zrobić klikamy lewym przyciskiem myszki w oknie Hierarchy (5), lub klikając Game Object z paska menu (1) i i wybieramy „Create empty”.
 
 Stworzy nam to na scenie pusty obiekt, a w hierarchii pojawi się jego nazwa i możliwość zaznaczenia go. Po zaznaczeniu zobaczymy jego pozycję na scenie reprezentowaną przez mały sześcian i 3 strzałki różnego koloru. Kolory strzałek oznaczają różne osie - zielona oś Y, symbolizująca ruch góra/dół, czerwona oś X, symbolizująca ruch lewo/prawo, oraz niebieska oś Z symbolizująca głębię.
 
@@ -317,7 +320,7 @@ Pierwszy przycisk od lewej pozwala nam na poruszanie samym widokiem w przestrzen
     \begin{center}
     \includegraphics[scale=0.4]{Screeny/rodzial5screeny/drag_option}
     \end{center}
-    \caption{Podstawy - Unity - Opcja przemieszczania przedmiotu}
+    \caption{Podstawy - Unity - Opcja poruszania kamery}
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -327,17 +330,17 @@ Drugi przycisk umożliwia nam na zmienianie pozycji obiektu w przestrzeni. Może
     \begin{center}
     \includegraphics[scale=0.4]{Screeny/rodzial5screeny/move_option}
     \end{center}
-    \caption{Podstawy - Unity - Opcja przemieszczania kamery}
+    \caption{Podstawy - Unity - Opcja przemieszczania obiektu}
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
-Trzeci przycisk służy to zmiany rotacji obiektu w przestrzeni. Po uruchomieniu tego trybu zobaczymy, że wygląd osi zmienił się na kształt sfery. Rotację wykonujemy ta samo jak zmianę pozycji poprzez klikanie na odpowiednie osie.
+Trzeci przycisk służy to zmiany rotacji obiektu w przestrzeni. Po uruchomieniu tego trybu zobaczymy, że wygląd osi zmienił się na kształt sfery. Rotację wykonujemy tak samo jak zmianę pozycji poprzez klikanie na odpowiednie osie.
 
 \begin{figure}[!htb]
     \begin{center}
     \includegraphics[scale=0.4]{Screeny/rodzial5screeny/rotate_option}
     \end{center}
-    \caption{Podstawy - Unity - Opcja obkręcania przedmiotu}
+    \caption{Podstawy - Unity - Opcja rotowania obiektu}
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -347,7 +350,7 @@ Czwarty przycisk służy do zmiany skali obiekty. Zmianę wykonujemy poprzez nac
     \begin{center}
     \includegraphics[scale=0.4]{Screeny/rodzial5screeny/scale_option}
     \end{center}
-    \caption{Podstawy - Unity - Opcja skalowania przedmiotu}
+    \caption{Podstawy - Unity - Opcja skalowania obiektu}
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -361,7 +364,7 @@ Ostatni przycisk służy do obsługi tzw. Rect Transform i wychodzi poza zakres 
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
-Mimo, że puste obiekty same w sobie nic nie robią to są używane równie często, co obiekty z komponentami. Wynika to z faktu, że można je zagnieżdżać tak samo jak foldery – przenosząc jeden obiekt na drugi w oknie hierarchii. Ma to kilka zastosowań. Po pierwsze pozwala na zorganizowanie obiektów na scenie, która może składać się z tysięcy obiektów i nawigacja między nimi mogłaby być bardzo kłopotliwa. Przykładowo posiadając obiekt „samochód”, obiekty takie jak „koło”, „karoseria” , „lampy” itd. powinny być umieszczone w tym obiekcie. Dzięki temu, poruszając „samochodem”, jednocześnie przemieścimy o tę samą wartość „koła”, „karoserię” i „lampy”. Te obiekty nazywane są obiektami potomnymi, ang. Child Objects. Samochód jest w tym momencie rodzicem, ang Parent Object. Ma to szczególne znaczenie przy skomplikowanych obiektach, gdzie przemieszczanie każdego z nich oddzielnie byłoby bardzo niepraktyczne. Ta sama zasada dotyczy się rotacji i skali. Modyfikacja obiektu potomnego nie wpływa za to na jego rodzica. Drugim ważnym zastosowaniem obiektów potomnych jest możliwość odwoływania się do nich poprzez rodzica. Oznacza to, że skrypty umieszczone w obiekcie, posiadającym jedno lub wiele dzieci, mogą za jednym zamachem kontrolować wszystkie z nich.
+Mimo, że puste obiekty same w sobie nic nie robią to są używane równie często, co obiekty z komponentami. Wynika to z faktu, że można je zagnieżdżać tak samo jak foldery – przenosząc jeden obiekt na drugi w oknie hierarchii. Ma to kilka zastosowań. Po pierwsze pozwala na zorganizowanie obiektów na scenie, która może składać się z tysięcy obiektów i nawigacja między nimi mogłaby być bardzo kłopotliwa. Przykładowo, posiadając obiekt „samochód”, obiekty takie jak „koło”, „karoseria”, „lampy” itd. powinny być umieszczone w tym obiekcie. Dzięki temu, poruszając „samochodem”, jednocześnie przemieścimy o tę samą wartość „koła”, „karoserię” i „lampy”. Te obiekty nazywane są obiektami potomnymi, ang. Child Objects. Samochód jest w tym momencie rodzicem, ang. Parent Object. Ma to szczególne znaczenie przy skomplikowanych obiektach, gdzie przemieszczanie każdego z nich oddzielnie byłoby bardzo niepraktyczne. Ta sama zasada dotyczy się rotacji i skali. Modyfikacja obiektu potomnego nie wpływa za to na jego rodzica. Drugim ważnym zastosowaniem obiektów potomnych jest możliwość odwoływania się do nich poprzez rodzica. Oznacza to, że skrypty umieszczone w obiekcie, posiadającym jedno lub wiele dzieci, mogą za jednym zamachem kontrolować wszystkie z nich.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -376,7 +379,7 @@ Każdy obiekt który umieszczamy na scenie automatycznie pojawia się w oknie hi
 
 \section{Okno inspektora i komponenty}
 
-Unity daje nam dostęp do kilku niepustych obiektów pozwalających na szybkie rozpoczęcie pracy. Aby stworzyć taki obiekt klikamy na zakładkę „GameObject” z paska menu (1). Do wyboru mamy kilka obiektów. Wybieramy 3D Object → Cube, co stworzy nam na scenie obiekt w kształcie szarego sześcianu i automatycznie go zaznaczy. W oknie inspektora (5) poza komponentem Transform dostrzeżemy też trzy inne. Mesh Filter pobiera informacje na temat siatki modelu i przekazuje je do ostatniego komponentu, Mesh Renderera, który tę siatkę renderuje. Box Collider tworzy kolider wokół siatki który pozwala na interakcje z innymi obiektami – zostanie on omówiony w dalszej części tego rozdziału. Większość komponentów zawiera w sobie dodatkowe opcje umożliwiające modyfikację ich działania. Przykładowo zmiana wartości x, y  lub z w komponencie Box Collider zmieni jego rozmiary podobnie jak właściwość Scale w komponencie Transform. Komponenty można dodawać, usuwać, zmieniać ich kolejność oraz kopiować, klikającym prawym przyciskiem na jego nazwie, klikając przycisk Add component na dole inspektora. Przykładowo, usunięcie komponentu Mesh Renderer z naszego obiektu, sprawi, że jego ściany przestaną się wyświetlać jednak nadal będą możliwe kolizje z innymi obiektami.
+Unity daje nam dostęp do kilku niepustych obiektów pozwalających na szybkie rozpoczęcie pracy. Aby stworzyć taki obiekt klikamy na zakładkę „GameObject” z paska menu (1). Do wyboru mamy kilka obiektów. Wybieramy 3D Object → Cube, co stworzy nam na scenie obiekt w kształcie szarego sześcianu i automatycznie go zaznaczy. W oknie inspektora (5) poza komponentem Transform dostrzeżemy też trzy inne. Mesh Filter pobiera informacje na temat siatki modelu i przekazuje je do ostatniego komponentu, Mesh Renderera, który tę siatkę renderuje. Box Collider tworzy kolider wokół siatki który pozwala na interakcje z innymi obiektami – zostanie on omówiony w dalszej części tego rozdziału. Większość komponentów zawiera w sobie dodatkowe opcje umożliwiające modyfikację ich działania. Przykładowo, zmiana wartości x, y  lub z w komponencie Box Collider zmieni jego rozmiary podobnie jak właściwość Scale w komponencie Transform. Komponenty można dodawać, usuwać, zmieniać ich kolejność oraz kopiować, klikając prawym przyciskiem na jego nazwie lub klikając przycisk Add component na dole inspektora. Przykładowo, usunięcie komponentu Mesh Renderer z naszego obiektu, sprawi, że jego ściany przestaną się wyświetlać jednak nadal będą możliwe kolizje z innymi obiektami.
 Istnieje też możliwość wyłączenia danego komponentu (nie będzie on działał, ale nie będzie też usunięty) poprzez kliknięcie checkboxa  oraz ukrycie właściwości przy pomocy małej strzałeczki, oba usytuowane tuż obok jego nazwy.
 
 Za każdym razem gdy zaznaczymy nowy obiekt, w inspektorze wyświetlą się jego komponenty. Klikając na małą ikonkę w górnym prawym rogu inspektora, możemy zablokować widok na komponentach aktualnie wybranego obiektu.
@@ -412,9 +415,13 @@ Każdy skrypt domyślnie dziedziczy po klasie MonoBehaviour, która  udostępnia
 Funkcja Start() wywołuje się zawsze, jednorazowo przy załadowywaniu nowej sceny. Jest wykorzystywana do inicjalizacji wszelkich ustawień i zachowań na początku gry. Jeśli na scenie znajduje się wiele obiektów z podpiętymi różnymi skryptami posiadającymi tę funkcję, dla każdego  z nich ta funkcja wykona się raz, jednak kolejność ich wykonywania zależna będzie od rodzaju i specyfikacji urządzenia. Jeśli w jednym Starcie użyty będzie kod, który wymaga wpierw inizjalizacji Startu z innego skryptu może wystąpić tzw. efekt wyścigów. Może to spowodować wyświetlanie błędów, lub prowadzić do niechcianych i trudnych do przewidzenia zachowań.
 
 Aby pomóc w uniknięciu tego typu problemów Unity udostępnia, trzy dodatkowe funkcje tego typu, które różnią się przede wszystkim kolejnością ich wykonywania dla wszystkich skryptów:
+
 Awake() - wykonuje się jako pierwsze
+
 OnEnable – wykonuje się gdy obiekt staje się aktywny, jeśli jest on aktywny od samego początku, to wykonuje się on tuż po Awake()
+
 OnLevelWasLoaded() - wykonuje się tuż przed Startem, jednak nie bezpośrednio po starcie gry, a dopiero po zmianie sceny
+
 Start() - wykonuje się jako ostatnia, tuż przed startem pierwszej klatki funkcji Update() jeśli obiekt jest aktywny
 
 Istnieje specjalna funkcja DontDestroyOnLoad(), która powoduje, że obiekt nie jest niszczony pomiędzy scenami, oznacza to, że niektóre z powyższych funkcji nie wykonają się po zmianie sceny.
@@ -428,7 +435,8 @@ Update() - wykonuje się drugie w kolejności. Wszystkie pozostałe akcje niezwi
 LateUpdate() - jw. z tym, że wykonuje się dopiero gdy dana klatka została wykonana wcześniej we wszystkich Updateach
 
 Powyższe funkcje są jednymi z najbardziej podstawowych i najczęściej wykorzystywanych funkcji w Unity, dlatego ich znajomość jest taka ważna.
-
+\\
+\\
 Wszystkie komponenty są tak naprawdę skryptami. Oznacza to, że nie tylko możemy odwoływać się w napisanym przez nas skrypcie do dowolnego komponentu, ale możemy podpiąć dowolny skrypt do każdego obiektu w grze. Operując modyfikatorami dostępu możemy decydować do której właściwości możemy uzyskać dostęp i umożliwić jej zmianę z poziomu inspektora. Przeanalizujmy poniższy kod:
 
 \newpage
@@ -444,8 +452,11 @@ public class Move : MonoBehaviour {
 	[SerializeField]
 	int randomNumber = 8;
 	void Update () {
-	gameObject.transform.Translate (Time.deltaTime * speedX, Time.deltaTime * speedY, 0);
-
+		gameObject.transform.Translate (
+			Time.deltaTime * speedX, 
+			Time.deltaTime * speedY,
+			0
+		);
 	}
 }
 \end{lstlisting}
@@ -456,9 +467,9 @@ Mimo, że ostatnia zmienna także jest zmienną prywatną, to pole [SerializeFie
 
 Aby zapamiętać wartość zmiennej pomiędzy scenami należy użyć modyfikatora static, bądź skorzystać ze specjalnej klasy PlayerPrefs.
 
-W funkcji Update(), która jak wiemy jest wykonywana co klatkę dodaliśmy możliwość poruszania się dla obiektu. Oto jak działą ta linia kodu: gameObject wkazuje na obiekt do którego aktualnie jest podpięty nasz skrypt, a transform odwołuje nas do komponentu Transform tego obiektu. Translate() jest nazwą funkcji w klasie Translate z której korzystamy. Translate przyjmuje parametr typu Vector3 (wkazuje on na punkt o danych x,y,z w przestrzeni trójwymiarowej). W tym wypadku podaliśmy wartości naszych zmiennych pomnożone przez wartość Time.deltaTime. Zrobiliśmy to, ponieważ bez tego nasz obiekt zmieniałby pozycję o 3 punkty w górę i 3 punkty w prawo co wyświetlaną klatkę. Ilość klatek w jednej sekundzie może sięgać nawet kilkuset, dlatego nasz obiekt poruszałby się z tak dużą prędkością, że byłoby to niewidoczne dla oka. Time.deltaTime dzieli naszą wartość odpowiednio do ilości wyświetlanych  klatek, dzięki czemu nasza pozycja będzie zmieniać się co sekundę zamiast co klatkę.
+W funkcji Update(), która jak wiemy jest wykonywana co klatkę dodaliśmy możliwość poruszania się dla obiektu. Oto jak działa ta linia kodu: gameObject wkazuje na obiekt do którego aktualnie jest podpięty nasz skrypt, a transform odwołuje nas do komponentu Transform tego obiektu. Translate() jest nazwą funkcji w klasie Translate z której korzystamy. Translate przyjmuje parametr typu Vector3 (wkazuje on na punkt o danych x,y,z w przestrzeni trójwymiarowej). W tym wypadku podaliśmy wartości naszych zmiennych pomnożone przez wartość Time.deltaTime. Zrobiliśmy to, ponieważ bez tego nasz obiekt zmieniałby pozycję o 3 punkty w górę i 3 punkty w prawo co wyświetlaną klatkę. Ilość klatek w jednej sekundzie może sięgać nawet kilkuset, dlatego nasz obiekt poruszałby się z tak dużą prędkością, że byłoby to niewidoczne dla oka. Time.deltaTime dzieli naszą wartość odpowiednio do ilości wyświetlanych  klatek, dzięki czemu nasza pozycja będzie zmieniać się co sekundę zamiast co klatkę.
 
-Skrypt podpinamy zaznaczając nasz obiekt (np. cube), i przenosząc skrypt z okna Projects do inspektora, lub klikając Add component i wyszukując nasz skrypt. Aby zobaczyć efekt działania skryptu nasz obiekt musi znaleźć się w polu widzenia kamery. Domyślnie jeśli pozycja kamery nie była zmieniana, to umieszczenie obiektu w pozycji x=0, y=0,z=0 ustawi go na środku pola widzenia. Po naciśnięciu przycisku Play ujrzymy efekt działania naszego skryptu.
+Skrypt podpinamy zaznaczając nasz obiekt (np. cube), i przenosząc skrypt z okna Projects do inspektora, lub klikając Add component i wyszukując nasz skrypt. Aby zobaczyć efekt działania skryptu nasz obiekt musimy znaleźć się w polu widzenia kamery. Domyślnie jeśli pozycja kamery nie była zmieniana, to umieszczenie obiektu w pozycji x=0, y=0,z=0 ustawi go na środku pola widzenia. Po naciśnięciu przycisku Play ujrzymy efekt działania naszego skryptu.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -469,17 +480,19 @@ Jeśli poprzednie kroki zostały wykonane pomyślnie, po przycisku play powinni�
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
-\section{Kamera, światło i Collidery}
 
-Nawet bezpośrednio po stworzeniu nowego projektu nasza scena nie jest całkowicie pusta. W oknie hierarchii znajdziemy dwa obiekty: Main Camera oraz Directional Light. Pierwsze służy do przechwytywania i wyświetlania elementów sceny które ma widzieć gracz. Tak naprawdę poruszając się po scenie również korzystamy z kamery aby widzieć określoną część sceny. Ilość kamer na scenie jest nieograniczona. Przy pomocy skryptów możemy przemieszczać kamery i dodawać do nich różne efekty. Odpowiednie ustawienie widoków pozwala nam na podgląd kilku, nawet zupełnie oddalonych od siebie fragmentów sceny na jednym ekranie. Dobrym przykładem wykorzystania dodatkowej kamery jest minimapa, używana często w strategiach czasu rzeczywistego lub w grach fabularnych.  Main Camera jak sama nazwa sugeruje pełni główną rolę w wyświetlaniu akcji gry i tylko ona wykorzystywana była w tej pracy.
+\newpage
+\section{Kamera, światło i collidery}
+
+Nawet bezpośrednio po stworzeniu nowego projektu nasza scena nie jest całkowicie pusta. W oknie hierarchii znajdziemy dwa obiekty: Main Camera oraz Directional Light. Pierwsze służy do przechwytywania i wyświetlania elementów sceny które ma widzieć gracz. Tak naprawdę poruszając się po scenie również korzystamy z kamery aby widzieć jej określoną część. Ilość kamer na scenie jest nieograniczona. Przy pomocy skryptów możemy przemieszczać kamery i dodawać do nich różne efekty. Odpowiednie ustawienie widoków pozwala nam na podgląd kilku, nawet zupełnie oddalonych od siebie fragmentów sceny na jednym ekranie. Dobrym przykładem wykorzystania dodatkowej kamery jest minimapa, używana często w strategiach czasu rzeczywistego lub w grach fabularnych.  Main Camera jak sama nazwa sugeruje pełni główną rolę w wyświetlaniu akcji gry i tylko ona wykorzystywana była w tej pracy.
 
 Directional light służy do generowania odpowiedniego oświetlenia na scenie. Istnieje kilka rodzajów świateł i ich odpowiednie ustawienie jest kluczowe przy budowaniu świata gry. Directional Light cechuje się głównie tym, że jego położenie na scenie nie ma najmniejszego znaczenia, cała scena oświetlana jest równomiernie,za to rotacja ma wpływ na to z której strony to światło pada. Ten rodzaj światła praktycznie zawsze reprezentuje światło słoneczne na otwartych przestrzeniach. W zależności od pory dnia można modyfikować jego intensywność oraz inne parametry. Wbrew pozorom usunięcie światła ze sceny nie spowoduje, że obiekty będą kompletnie niewidoczne, a powiązane jest to z tzw. Ambient Light, opis którego nie wchodzi w zakres tego rozdziału.
 
-Collider jest to komponent, który definiuje fizyczny kształt danego obiektu, niezbędny do wykrywania kolizji z innymi obiektami. Często przybiera on kształt siatki modelu który został podpięty do danego obiektu. Ze względu na fakt, że skomplikowane kolidery są bardzo procesożerne, bardzo często korzysta się z tzw. prymitywnych koliderów – w kształcie sfer, sześcianów i kul. Obiekt może posiadać dowolną liczbę ich liczbę, dlatego skomplikowane modele z reguły składają się z wielu prymitywnych koliderów. Efekt tego bardzo często widać w grach, gdy część postaci przenika przez ścianę, lub jesteśmy blokowani przez przeszkodę nie dotykając jej. Odpowiednie ustawienie koliderów ma więc kluczowe znaczenie i pozwala uniknąć tzw. Glitchy, gdy w pewnych miejscach obiekty przechodzą przez siebie mimo że nie powinny. Collidery opierają się mocno na fizyce, co także bywa przyczyną błędów, np. gdy obiekty zderzają się ze sobą przy zbyt dużej prędkości. Bardziej zaawansowane kolidery takie jak Mesh Collider, zapewniają lepszą dokładność niż kolidery prymitywne, jest to jednak okupione większym zużyciem zasobów sprzętowych.
+Collider jest to komponent, który definiuje fizyczny kształt danego obiektu, niezbędny do wykrywania kolizji z innymi obiektami. Często przybiera on kształt siatki modelu który został podpięty do danego obiektu. Ze względu na fakt, że skomplikowane kolidery są bardzo procesożerne, bardzo często korzysta się z tzw. prymitywnych koliderów – w kształcie sfer, sześcianów i kul. Obiekt może posiadać dowolną ich liczbę, dlatego skomplikowane modele z reguły składają się z wielu prymitywnych koliderów. Efekt tego bardzo często widać w grach, gdy część postaci przenika przez ścianę, lub jesteśmy blokowani przez przeszkodę nie dotykając jej. Odpowiednie ustawienie koliderów ma więc kluczowe znaczenie i pozwala uniknąć tzw. Glitchy, gdy w pewnych miejscach obiekty przechodzą przez siebie mimo że nie powinny. Collidery opierają się mocno na fizyce, co także bywa przyczyną błędów, np. gdy obiekty zderzają się ze sobą przy zbyt dużej prędkości. Bardziej zaawansowane kolidery takie jak Mesh Collider, zapewniają lepszą dokładność niż kolidery prymitywne, jest to jednak okupione większym zużyciem zasobów sprzętowych.
 
-Collidery dzielą się jeszcze na dwa  oddzielne typy niezależnie od ich kształtu. Są to tzw. Trigger Collidery i Collision Collidery. Pomiędzy tymi dwoma typami możemy przełączać się przy pomocy checkboxa „isTrigger” we właściwościach komponentu. Różnica między nimi polega na tym, że w przypadku tego pierwszego, gdy dwa obiekty zetkną się to zostanie to odnotowane i przy pomocy odpowiedniej funkcji (OnTriggerEnter()) będziemy mogli je obsłużyć, lecz obiekty przenikną się i nie będą miały wpływu na swoją pozycję w przestrzeni. W wypadku gdy opcja „isTrigger” jest odznaczona, oba obiekty zderzą się i w zależności od ich parametrów fizycznych nastąpi odpowiednia reakcja. Ten typ zderzenia obsługujemy funkcją OnCollissionEnter().
+Collidery dzielą się jeszcze na dwa  oddzielne typy niezależnie od ich kształtu. Są to tzw. Trigger Collidery i Collision Collidery. Pomiędzy tymi dwoma typami możemy przełączać się przy pomocy checkboxa „isTrigger” we właściwościach komponentu. Różnica między nimi polega na tym, że w przypadku tego pierwszego, gdy dwa obiekty zetkną się to zostanie to odnotowane i przy pomocy odpowiedniej funkcji OnTriggerEnter() będziemy mogli je obsłużyć, lecz obiekty przenikną się i nie będą miały wpływu na swoją pozycję w przestrzeni. W wypadku gdy opcja „isTrigger” jest odznaczona, oba obiekty zderzą się i w zależności od ich parametrów fizycznych nastąpi odpowiednia reakcja. Ten typ zderzenia obsługujemy funkcją OnCollissionEnter().
 
-Jako, że Collidery opierają się na fizyce, obiekty z nich korzystające muszą posiadać odpowiednie cechy fizyczne. Aby nadać te cechy obiektowi musimy dodać do niego komponent Rigidbody. Pozwala on min. na ustalenie masy obiektu i czy działa na niego grawitacja.
+Jako, że Collidery opierają się na fizyce, obiekty z nich korzystające muszą posiadać odpowiednie cechy fizyczne. Aby nadać te cechy obiektowi musimy dodać do niego komponent Rigidbody. Pozwala on m.in. na ustalenie masy obiektu i czy działa na niego grawitacja.
 
 Co ciekawe Unity korzysta aż z dwóch systemów do obsługi fizyki, jeden dla obiektów 2D i drugi dla obiektów 3D. Każdy komponent korzystający z fizyki 3D ma swój odpowiednik 2D. Aby uzyskać do niego dostęp przy nazwie komponentu/funkcji dopisujemy na końcu 2D, np. Rigidbody2D lub OnCollisionEnter2D. Obiekty 2D nie mogą kolidować z obiektami 3D, a korzystanie z funkcji dedykowanej 2D, przy trójwymiarowym modelu korzystającym z kolidera 3D zwróci błąd.
 
@@ -492,7 +505,7 @@ Poniższy screen przedstawia przykładowy model korzystający z kilku podstawowy
     \includegraphics[scale=0.25]{Screeny/rodzial5screeny/model_prymitywne_kolidery}
     \end{center}
     \caption{Podstawy - Unity - Prymitywne kolidery}
-Model składa się z koliderów cylindrycznych oraz kołowych. Kolidery prymitywne zapewniają zadowolającą dokładność przy wykrywaniu kolizji, nie obciążając przy tym zbytnio zasobów sprzetowych.
+Model składa się z koliderów cylindrycznych oraz kołowych. Kolidery prymitywne zapewniają zadowolającą dokładność przy wykrywaniu kolizji, nie obciążając przy tym zbytnio zasobów sprzętowych.
     \source{Zrzut ekranu z Unity}
 \end{figure}
 
@@ -514,9 +527,9 @@ Rozpoczęcie tworzenia nowej gry w Unreal Engine jest bardzo proste. Po uruchomi
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Przeniesie nas to na ekran, na którym wybierzemy wstępne ustawienia naszego projektu. Pierwszą decyzją jaką musimy podjąć, to w jaki sposób będziemy rodzić sobie z logiką- poprzez pisanie kodu w C++, czy ustawianie bloków logicznych w tzw. Blueprint’ach.
+Przeniesie nas to na ekran, na którym wybierzemy wstępne ustawienia naszego projektu. Pierwszą decyzją jaką musimy podjąć, to w jaki sposób będziemy radzić sobie z logiką- poprzez pisanie kodu w C++, czy ustawianie bloków logicznych w tzw. Blueprint’ach.
 
-Blueprint to system oparty na wizualny przesuwaniu bloków logicznych, zamiast ręcznego pisania kodu. System ten jest bardzo prostu w obsłudze. Każdy obiekt wymagający logiki może posiadac odpowiadający mu Blueprint. Pozwala to tworzenie skomplikowanej logiki bez konieczności pisania ogromnej ilości kodu. Blueprint, podobnie jak klasa w obiektowych językach programowania, może zostać użyty wielokrotnie. Na przykład stworzenie Blueprintu lampy, pozwoli ustawić ją w wielu miejscach w grze. Każda będzie działała tak samo.
+Blueprint to system oparty na wizualnym przesuwaniu bloków logicznych, zamiast ręcznego pisania kodu. System ten jest bardzo prostu w obsłudze. Każdy obiekt wymagający logiki może posiadac odpowiadający mu Blueprint. Pozwala to tworzenie skomplikowanej logiki bez konieczności pisania ogromnej ilości kodu. Blueprint, podobnie jak klasa w obiektowych językach programowania, może zostać użyty wielokrotnie. Na przykład stworzenie Blueprintu lampy, pozwoli ustawić ją w wielu miejscach w grze. Każda będzie działała tak samo.
 
 Należy zaznaczyć, że wybór jednego sposobu, nie wyklucza nas całkowicie z korzystania z drugiej opcji. Jest to po prostu wskazanie, że preferujemy radzić sobie z logiką w taki, a nie inny sposób.
 Warto również pamiętać, że Unreal Engine nie posiada dedykowanego edytora kodu C++. Jeśli chcemy programować w tym języku potrzebujemy zewnętrznego edytora, np. Visual Studio.
@@ -524,7 +537,7 @@ Warto również pamiętać, że Unreal Engine nie posiada dedykowanego edytora k
 Kolejnym krokiem jest wybór schematu, jakim będziemy się posługiwać. W zależności od tego jaką grę tworzymy, scemat może zdecydowanie uprościć pierwsze kroki w edytorze gry (np. Schemat „2D Side Scroller”, stworzony z myślą o grach dwuwymiarowych, od razu będzie miał odpowiednio ustawioną kamerę). Istnieje również możliwość stworzenia pustego projektu, poprzez wybór opcji „Blank”.
 
 Ostatnim krokiem jest wybór platformy na jaką chcemy tworzyć grę, jakość grafiki (istotna w przypadku słabszych sprzętów), oraz czy chcemy, by projekt zaimportował wstępne zasoby przygotowane dla nas przez Epic Games. Zasoby te składają sie między innymi z podstawowych animacji, tekstur i odgłosów.
-Po dokonaniu wyboru pozostaje już tylko nazwac projekt i wcisnąć „Create Project”.
+Po dokonaniu wyboru pozostaje już tylko nazwać projekt i wcisnąć „Create Project”.
 
 \newpage
 \section{Ekran główny}
@@ -546,11 +559,11 @@ Pod listą obiektów znajdują się szczegóły obecnie wybranego obiektu.
 Po lewej stronie znajdują się narzędzia do tworzenia obiektów. Jest to pięć zakładek zawierających w sobie wszystkie potrzebne opcje do tworzenia świata gry. Od tworzenia oświetlenia i prostych kształtów po nakładanie tekstur i modyfikowanie terenu.
 
 \section{System Persona i Animacje}
-Persona jest bardzo rozbudowanym narzędziem do edycji animacji. To jeden z najważniejszych systemów silnika. To dzięki niemu możemy okreslić gdzie, kiedy i w jakich warunkach  rozpoczyna się i kończy każda animacja w grze, od postaci, aż po spadające liście.
+Persona jest bardzo rozbudowanym narzędziem do edycji animacji. To jeden z najważniejszych systemów silnika. To dzięki niemu możemy określić gdzie, kiedy i w jakich warunkach  rozpoczyna się i kończy każda animacja w grze, od postaci, aż po spadające liście.
 
 Trzeba pamiętać, że Unreal Engine nie posiada w sobie narzędzi do tworzenia animacji. Potrafi je tylko w pewnym stopniu modyfikować. Animacje należy importować z zewnętrznych programów do tworzenia animacji, takich jak Maya, lub Blender. Wystarczy przeciągnąć animację do przeglądarki plików.
 
-Aby uruchomić Personę, wystarczy dwa razy kliknąć w edytorze na dowolny obiekt związany z animacją (np. Sama animacja, lub Blueprint animacji).
+Aby uruchomić Personę, wystarczy dwa razy kliknąć w edytorze na dowolny obiekt związany z animacją (np. sama animacja, lub Blueprint animacji).
 
 Sam system składa się z czterech głównych trybów, ukazanych w prawym górnym rogu okienka.
 
@@ -562,8 +575,7 @@ Sam system składa się z czterech głównych trybów, ukazanych w prawym górny
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Pierwszy tryb odpowiada za edycję szkieletu animacji. Po uruchomieniu od razu rzuca się w oczy podgląd animacji na środku okna. Rejestruje on obecny stan animacji. Podgląd ten jest częścią wspólną wszystkich trybó pracy w Personie.
-Po lewej stronie wyświetlone są wszystkie wnęki i połączone z nimi kości obecnego modelu. Można dowolnie dodawać je i usuwać ze szkieletu postaci. Jest to szczególnie przydatne, gdy chcemy aby nasza postać np. chwytała broń. Wystarczy dodać wnękę do ręki szkieletu i już jest to możliwe.
+Pierwszy tryb odpowiada za edycję szkieletu animacji. Po uruchomieniu od razu rzuca się w oczy podgląd animacji na środku okna. Rejestruje on jej obecny stan. Podgląd ten jest częścią wspólną wszystkich trybów pracy w Personie. Po lewej stronie wyświetlone są wszystkie wnęki i połączone z nimi kości obecnego modelu. Można dowolnie dodawać je i usuwać ze szkieletu postaci. Jest to szczególnie przydatne, gdy chcemy aby nasza postać np. chwytała broń. Wystarczy, że dodamy wnękę do ręki szkieletu, a nasza postać będzie już w stanie wykonać tę czynność.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -576,7 +588,7 @@ Po lewej stronie wyświetlone są wszystkie wnęki i połączone z nimi kości o
 Kolejny ekran jest odpowiedzialny za edycję meshy. Mesh to nic innego ja zbiór punktów, linii i wieloboków, które składają się na ostateczny kształt obiektu.
 Ten tryb ma wiele wspólnego z poprzednim. Ma jednak dwa ważne menu, niedostępne w innych podsystemach Persony – „Mesh Details” i „Morph Target Preview”.
 Mesh Details odpowiada głównie za edycję mesh’u nad którym obecnie pracujemy. Możemy dodać do niego nowe tekstury, kontrolować właściwości fizyczne (np. Płaszcz łopoczący na wietrze), lub umożliwić kolizję z innymi obiektami w grze.
-Morph Target Preview pozwala na podgląd wszystkich modyfikacji mesha. Możemy na przykład zmienić wyraz twarzy postaci, zapisać go i użyć w odpowiedniej sytuacji, a potem obejżeć go bez konieczności trwałej zmiany samego mesha.
+Morph Target Preview pozwala na podgląd wszystkich modyfikacji mesha. Możemy na przykład zmienić wyraz twarzy postaci, zapisać go i użyć w odpowiedniej sytuacji, a potem obejrzeć go bez konieczności trwałej zmiany samego mesha.
 
 \newpage
 \begin{figure}[!htb]
@@ -587,9 +599,10 @@ Morph Target Preview pozwala na podgląd wszystkich modyfikacji mesha. Możemy n
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Następny tryb daje nam kontrolę nad animacjami. W lewym dolnym rogu widzimy szczegułowe ustawienia wybranej w tym momencie animacji.
+Następny tryb daje nam kontrolę nad animacjami. W lewym dolnym rogu widzimy szczegółowe ustawienia wybranej w tym momencie animacji.
 Pod oknem podglądu animacji widzimy narzędzie dzięki któremu możemy przewijać wybraną animację klatka po klatce. Po wybraniu interesującego nas momentu animacji, możemy dodać różnego rodzaju efekty np. w momencie, gdy model w animacji biegu dotyka ziemi, możemy dodać odgłos kroku, albo efekt, który wznieci tuman kurzu pod stopą modelu.
 
+\newpage
 \begin{figure}[!htb]
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/Blend_Space}
@@ -599,12 +612,12 @@ Pod oknem podglądu animacji widzimy narzędzie dzięki któremu możemy przewij
 \end{figure}
 
 Warto również wspomnieć o tzw. „Blend Spaces”, czyli możliwość łączenia kilku animacji w jedną. Tej metody używa się, gdy zajdą ustalone okoliczności. Gwarantuje to płynność w przechodzeniu między animacjami. Na przykład, stojąca postać pod wpływem wciśnięcia przycisku zaczyna iść (wartość zmiennej „prędkość” zwiększa się). Jeśli gracz nie puści przycisku, chód zamienia się w bieg.
-Aby stworzyć Blend Space, wystarczy kliknąć prawym przyciskiem myszy w przeglądarce plików, w ekranie głównym. Potem z menu kontekstowego wybieramy Animation > Blend Speaces
+Aby stworzyć Blend Space, wystarczy kliknąć prawym przyciskiem myszy w przeglądarce plików, w ekranie głównym. Potem z menu kontekstowego wybieramy Animation > Blend Spaces
 
-
+\newpage
 \begin{figure}[!htb]
     \begin{center}
-    \includegraphics[scale=0.25]{Screeny/AnimGraph_Event}
+    \includegraphics[scale=0.2]{Screeny/AnimGraph_Event}
     \end{center}
     \caption{Podstawy - UE - Graf Animacji}
     \source{Zrzut ekranu z UnrealEngine}
@@ -612,7 +625,7 @@ Aby stworzyć Blend Space, wystarczy kliknąć prawym przyciskiem myszy w przegl
 
 \begin{figure}[!htb]
     \begin{center}
-    \includegraphics[scale=0.25]{Screeny/EventGraph_Event}
+    \includegraphics[scale=0.2]{Screeny/EventGraph_Event}
     \end{center}
     \caption{Podstawy - UE - Graf Zdarzeń}
     \source{Zrzut ekranu z UnrealEngine}
@@ -621,13 +634,13 @@ Aby stworzyć Blend Space, wystarczy kliknąć prawym przyciskiem myszy w przegl
 Ostatnią opcją Persony jest ekran grafów. Dzieli się on na dwa ekrany- Graf animacji, oraz graf zdarzeń. Każdy Blueprint związany z animacją posiada oba grafy.
 Graf zdarzeń określa wszystkie zdarzenia jakie muszą zajść, aby odtworzona została konkretna animacja w grze. Najczęściej robi się to poprzez modyfikowanie zmiennych zadeklarowanych w grafie. Zmiany zachodzą pod konkretnymi warunkami w grze.
 
-Graf animacji korzysta z grafu zdarzeń, by określić finalną pozę mesh’u w danej klatce. Używa on głównie logiki zawartej w grafie zdarzeń, aby określić czy powinny zajść zmiany. Na przykład, gdy gracz wciska przycisk skoku, wcześniej przygotowany graf zdarzeń może zarejestrować, że powinno to zmienić wartośc bolleanu „skok” na True.  Graf animacji rejestruje zmianę i zmienia animację z biegu na skok.
+Graf animacji korzysta z grafu zdarzeń, by określić finalną pozę mesh’u w danej klatce. Używa on głównie logiki zawartej w grafie zdarzeń, aby określić czy powinny zajść zmiany. Na przykład, gdy gracz wciska przycisk skoku, wcześniej przygotowany graf zdarzeń może zarejestrować, że powinno to zmienić wartość zmiennej typu bool o nazwie „skok” na True.  Graf animacji rejestruje zmianę i zmienia animację z biegu na skok.
 
-W następnym rozdziale przyjżymy się bliżej tym systemom i zaprezentujemy je w praktyce.
+W następnym rozdziale związanym  z Unreal Engine przyjrzymy się bliżej tym systemom i zaprezentujemy je w praktyce.
 
-\chapter{"The Jump" krok po kroku -- Unity}
+\chapter{„The Jump" krok po kroku -- Unity}
 
-Rozdział ten jest w całości poświęcony opisowi tworzenia jednego konkretnego tytułu przez jedną osobę. Zostały tu zachowane wszystkie ogólne zasady dotyczące tego procesu, trzeba jednak uwzględnić fakt, że w zależności od rodzaju tworzonego tytułu oraz wielkości zespołu przy nim pracującego, konkretne kroki mogą być wykonywane w odmiennej kolejności. Przykładowo jedna część osób pracujących nad grą może zostać oddelegowana do tworzenia UI, druga do programowania rozgrywki, a jeszcze inna do prac nad obsługą reklam bądź modułu sieciowego. Dopiero w późniejszej fazie produkcji są one łączone w jedną całość.
+Rozdział ten jest w całości poświęcony opisowi tworzenia jednego konkretnego tytułu przez jedną osobę. Zostały tu zachowane wszystkie ogólne zasady dotyczące tego procesu, trzeba jednak uwzględnić fakt, że w zależności od rodzaju tworzonego tytułu oraz wielkości zespołu przy nim pracującego, konkretne kroki mogą być wykonywane w odmiennej kolejności. Przykładowo, jedna część osób pracujących nad grą może zostać oddelegowana do tworzenia UI, druga do programowania rozgrywki, a jeszcze inna do prac nad obsługą reklam bądź modułu sieciowego. Dopiero w późniejszej fazie produkcji są one łączone w jedną całość.
 
 W przypadku gdy nad grą pracuje jedna osoba, zaleca się aby najpierw implementować podstawowy mechanizm rozgrywki i dopiero w momencie gdy spełni on nasze oczekiwania, kontynuować prace nad pozostałymi częściami gry.
 
@@ -638,7 +651,7 @@ W tej pracy, w fazie planowania zdecydowaliśmy się na stworzenie trójwymiarow
 
 Tworzymy nowy projekt, wybierając opcje 3D i importujemy standardowe assety: Characters i Cameras.
 
-Aby zawczasu zorganizować naszą pracę w oknie Project umieszczamy kilka folderów Scripts, 3D Assets, Prefabs  i Scenes.
+Aby zawczasu zorganizować naszą pracę w oknie Project umieszczamy kilka folderów: Scripts, 3D Assets, Prefabs  i Scenes.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -672,7 +685,7 @@ Zaznaczone elementy wystarczą by zbudować i przetestować podstawową mechanik
 
 \section{Krok 2 – obsługa podstawowych mechanik}
 
-Do podstawowych mechanik rozgrywki, tzw. Core  Mechanics, zaliczane są wszystkie podstawowe czynności które będą wielokrotnie wykonywane przez gracza w przeciągu całej gry. W zależności od typu gry mogą się one znacząco od siebie różnić, i tak dla dwuwymiarowej gry platformowej podstawową mechaniką jest min. skakanie, w grach typu FPS jest to strzelanie, a dla gry przygodowej zbieranie przedmiotów i interakcja z otoczeniem.
+Do podstawowych mechanik rozgrywki, tzw. Core  Mechanics, zaliczane są wszystkie podstawowe czynności które będą wielokrotnie wykonywane przez gracza w przeciągu całej gry. W zależności od typu gry mogą się one znacząco od siebie różnić, i tak dla dwuwymiarowej gry platformowej podstawową mechaniką jest m.in. skakanie, w grach typu FPS jest to strzelanie, a dla gry przygodowej zbieranie przedmiotów i interakcja z otoczeniem.
 
 Niezależnie do rodzaju tworzonej gry do podstawowych mechanik zawsze zalicza się obsługa kamery oraz sterowanie. Stworzenie sprawnie operującej dynamicznej kamery może okazać się dużym wyzwaniem. Sterowanie zaś musi być płynne i responsywne.
 
@@ -736,7 +749,7 @@ W powyższym kodzie tworzymy prywatne zmienne rb i anim. Następnie korzystamy z
 
 Funkcja OnCollisionEnter wykonuje się za każdym razem gdy kolider obiektu do którego podpięliśmy skrypt, zetknie się z innym koliderem. Pierwszy warunek sprawdza, czy tag obiektu, do którego należy kolider z którym się zetknęliśmy, nazywa się „Water”. Jeśli tak to nastąpi śmierć gracza. Drugi warunek sprawdza aktualną prędkość poruszania się naszej postaci w pozycji wertykalnej. Jeśli jest ona odpowiednio wysoka (wartość ujemna oznacza, że nasza postać porusza się z góry do dołu, z im większej wysokości spadamy, tym bardziej wzrasta prędkość zgodnie z wartością przyspieszenia ziemskiego) w momencie zderzenia z ziemią gracz umrze. Ostatni warunek sprawdza czy dotarliśmy do punktu oznaczonego tagiem Finish, który oznacza naszą wygraną.
 
-Chcemy aby w momencie śmierci bohatera odtwarzana była odpowiednia animacja, a po chwili następował restart gry. Nasza postać nie posiada animacji śmierci, możemy jednak bez problemu wyszukać gotowe animacje oparte na humanoidalnym szkielecie w Asset Store. Ułatwieniem dla nas będzie jeśli uda nam się znaleźć animację w formacie .fbx. Aby dodać nową animację dla postaci, musi otworzyć okno animatora. Robimy to klikając dwukrotnie na obiekt animatora znajdujący się w Standard Assets $\rightarrow$ ThirdPersonCharacter $\rightarrow$ Animator. Po otwarciu animatora zobaczymy siatkę na której umieszczono animacje. Strzałki pomiędzy nimi oznaczają przejścia w animacji. Przenieśmy nasz plik .fbx z animacją do animatora i zmieńmy jego nazwę na Death. Dzięki temu będziemy w stanie odwołać się do niej z komponentu Animator naszego obiektu.
+Chcemy aby w momencie śmierci bohatera odtwarzana była odpowiednia animacja, a po chwili następował restart gry. Nasza postać nie posiada animacji śmierci, możemy jednak bez problemu wyszukać gotowe animacje oparte na humanoidalnym szkielecie w Asset Store. Ułatwieniem dla nas będzie jeśli uda nam się znaleźć animację w formacie .fbx. Aby dodać nową animację dla postaci, musi otworzyć okno animatora. Robimy to klikając dwukrotnie na obiekt animatora znajdujący się w Standard Assets $\rightarrow$ ThirdPersonCharacter $\rightarrow$ Animator. Po otwarciu animatora zobaczymy siatkę na której umieszczono animacje. Strzałki pomiędzy nimi oznaczają przejścia w animacji. Przenosimy nasz plik .fbx z animacją do animatora i zmieńmy jego nazwę na Death. Dzięki temu będziemy w stanie odwołać się do niej z komponentu Animator naszego obiektu.
 W naszym projekcie wykorzystaliśmy paczkę Huge Mockap Library do pobrania za darmo z Asset Store.
 
 Do naszego skryptu dodajemy poniższe funkcje :
@@ -775,6 +788,7 @@ UI służy do obsługi i wyświetlania opcji gry dostępnych graczowi, informowa
 
 Aby stworzyć podstawowe UI w Unity, z pasku menu wybieramy opcję GameObject $\rightarrow$ UI $\rightarrow$ Button. W oknie hierarchii pojawią się nam dwa nowe obiekty: Canvas, będący tłem dla wszystkich  elementów UI, oraz EventSystem odpowiedzialny m.in. za obsługę przycisków. Wewnątrz obiektu Canvas znajdziemy obiekt o nazwie Button – zduplikujmy go. Rozstawiamy nasze przyciski na scenie, oraz zmieniamy ich nazwy na Play oraz Exit. Po odpaleniu gry zauważymy, że niezależnie od pozycji naszej kamery, oba przyciski znajdują się na pierwszym planie.
 
+\newpage
 \begin{figure}[!htb]
     \begin{center}
     \includegraphics[scale=0.25]{Screeny/UnityKrokPoKroku/krok4_buttony.png}
@@ -799,8 +813,10 @@ public class UIController : MonoBehaviour {
 
     public void PlayButton() {
         Canvas.SetActive (false);
-        Player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl> ().enabled = true;
-        Camera.GetComponent<UnityStandardAssets.Cameras.FreeLookCam> ().enabled = true;
+        Player.GetComponent<UnityStandardAssets.Characters
+	.ThirdPerson.ThirdPersonUserControl> ().enabled = true;
+        Camera.GetComponent<UnityStandardAssets.Cameras
+			.FreeLookCam> ().enabled = true;
     }
 
     public void ExitButton() {
@@ -810,7 +826,7 @@ public class UIController : MonoBehaviour {
 
 \end{lstlisting}
 
-Dodajemy pusty obiekt UI Controll do naszej sceny, i podpinamy do niej powyższy skrypt. Następnie zaznaczamy stworzone przez nas wcześniej przyciski. Używamy znaku plusa na dole komponentu Button i przenieśmy do niego obiekt UI Controll. Dzięki temu uzyskamy dostęp do wszystkich publicznych funkcji skryptu UI Controll. Dla przycisku Play zaznaczamy funkcję PlayButton(), a do przycisku Exit – ExitButton().
+Dodajemy pusty obiekt UI Controll do naszej sceny, i podpinamy do niej powyższy skrypt. Następnie zaznaczamy stworzone przez nas wcześniej przyciski. Używamy znaku plusa na dole komponentu Button i przenosimy do niego obiekt UI Controll. Dzięki temu uzyskamy dostęp do wszystkich publicznych funkcji skryptu UI Controll. Dla przycisku Play zaznaczamy funkcję PlayButton(), a dla przycisku Exit – ExitButton().
 
 Funkcja PlayButton() wyłącza Canvas, oraz włącza komponenty ThirdPersonUserControl i FreeLookCam. Funkcja ExitButton zamyka naszą aplikację.
 
@@ -824,9 +840,9 @@ W tym momencie nasza gra znajduje się już w stadium grywalności, można więc
 
 Nasz gracz jest  w stanie zginąć spadając z wysokości lub wpadając do wody. Ustawiamy w naszej grze kilka wzniesień. Możemy do tego użyć naszego obiektu Terrain lub wyszukać odpowiednie assety w Asset Storze.
 
-Domyślna woda Unity dostępna jest tylko w płatnej wersji. Wodę w grze dodaliśmy korzystając z odpowiedniej paczki pobranej ze strony:
+Domyślna woda Unity dostępna jest tylko w płatnej wersji. Wodę w grze dodaliśmy korzystając z odpowiedniej paczki pobranej ze strony.
 
-\url{http://forum.unity3d.com/threads/riverwater-the-free-epic-water-solution-for-unity-free-users.235860/}
+\href{http://forum.unity3d.com/threads/riverwater-the-free-epic-water-solution-for-unity-free-users.235860/}{http://forum.unity3d.com/threads/riverwater-the-free-epic-water-solution-for-unity-free-users.235860/}
 
 Korzystając z zakładki Lighting możemy odpowiednio modyfikować kolor i natężenie swiatła naszego otoczenia lub dodać mgłę.
 
@@ -845,9 +861,9 @@ Jeśli chcemy dodatkowo upiększyć nasza grę, w Asset Storze możemy znaleźć
 
 Teraz gdy nasza gra jest gotowa, powinniśmy zbudować ją na wybrane urządzenie i przetestować jej działanie. W zależności od wybranej platformy, gotowy plik może wymagać kompilacji w dodatkowych programach dostarczanych przez producentów danej platformy np. Xcode dla IOS -a i AppleTV, lub Android Studio dla urządzeń z systemem Android.
 
-PC, Linux i Mac nie wymagają dodatkowego oprogramowania. Aby zbudować grę na te urządzenia wybieramy z paska menu File $\rightarrow$ Build Setting. W zakładce Player Settings możemy m.in. zmienić tytuł naszej gry, zmienić sposób jej wyświetlania, dodać ikonki i splashe. Następnie zaznaczamy naszą platformę i klikamy przycisk build. Pozostaje nam czekać, aż gra się skompiluje.
+PC, Linux i Mac nie wymagają dodatkowego oprogramowania. Aby zbudować grę na te urządzenia wybieramy z paska menu File $\rightarrow$ Build Setting. W zakładce Player Settings możemy m.in. zmienić tytuł naszej gry lub sposób jej wyświetlania, dodać ikonki i splashe. Następnie zaznaczamy naszą platformę i klikamy przycisk build. Pozostaje nam czekać, aż gra się skompiluje.
 
-\chapter{"The Jump" krok po kroku -- Unreal Engine}
+\chapter{„"The Jump" krok po kroku -- Unreal Engine}
 
 \begin{figure}[!htb]
     \begin{center}
@@ -861,17 +877,18 @@ W tym rozdziale prześledzimy proces tworzenia systemu wspinaczki w Unreal Engin
 
 \section{Krok 1 - Kolizje}
 
-Pierwsze co musimy zrobić to ustalić obszar kolizji dla naszej postaci. Dzięki temu będzie ona wiedziała m.in kiedy napotka ścianę na którą może się wspinać. Na początku powinniśmy w ustawieniach projektu zadeklarować "tracery" - funkcje, które będą śledzić czy i kiedy postać się do czegoś zbliża. W tym celu w lewym górnym rogu programu klikamy "Edit" i wybieramy opcję Project Settings.
+Pierwsze co musimy zrobić to ustalić obszar kolizji dla naszej postaci. Dzięki temu będzie ona wiedziała m.in kiedy napotka ścianę na którą może się wspinać. Na początku powinniśmy w ustawieniach projektu zadeklarować „tracery" - funkcje, które będą śledzić czy i kiedy postać się do czegoś zbliża.
 
 \begin{figure}[!htb]
     \begin{center}
     \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-Climb-ProjectSettings.png}
     \end{center}
     \caption{Krok po kroku - UE - Ustawienia Projektu}
+    Aby dostać się do ustawień projektu, należy kliknąć na zakładkę „Edit" w lewym górny rogu progamu, a następnie z listy wybrać opcję „Project settings".
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
-
-Wyskoczy nam nowe okienko. Z panelu po lewej stronie wyszukujemy i wybieramy "Collision". W tym miejscu tworzymy dwa kanały. Jeden dla obiektu/postaci (SphereTracer), drugi dla znajdywania krawędzi (LedgeTracer). W obydwu przypadkach domyślną odpowiedź ustawiamy na "ignore".
+\newpage
+Wyskoczy nam nowe okienko. Z panelu po lewej stronie wyszukujemy i wybieramy „Collision". W tym miejscu tworzymy dwa kanały. Jeden dla obiektu/postaci (SphereTracer), drugi dla znajdywania krawędzi (LedgeTracer). W obydwu przypadkach domyślną odpowiedź ustawiamy na „ignore".
 
 \begin{figure}[!htb]
     \begin{center}
@@ -880,8 +897,8 @@ Wyskoczy nam nowe okienko. Z panelu po lewej stronie wyszukujemy i wybieramy "Co
     \caption{Krok po kroku - UE -  Kolizje - Tworzenie tracerów}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
-
-Następnie tworzymy obszar kolizyjny za pomocą sfery. W tym celu wyszukujemy i otwieramy plik ThirdPersonCharacter. Ukaże nam się kolejne okno. W jego lewym górnym rogu powinna znajdować się lista komponentów. Tam dodajemy nowy komponent "Sphere Collision" i nazywamy go "SphereTracer". Klikamy na niego dwukrotnie - przeniesie nas to do kolejnego okna, gdzie będziemy mogli edytować obszar kolizji.
+\newpage
+Następnie tworzymy obszar kolizyjny za pomocą sfery. W tym celu wyszukujemy i otwieramy plik ThirdPersonCharacter. Ukaże nam się kolejne okno. W jego lewym górnym rogu powinna znajdować się lista komponentów. Tam dodajemy nowy komponent „Sphere Collision" i nazywamy go „SphereTracer". Klikamy na niego dwukrotnie - przeniesie nas to do kolejnego okna, gdzie będziemy mogli edytować obszar kolizji.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -890,8 +907,9 @@ Następnie tworzymy obszar kolizyjny za pomocą sfery. W tym celu wyszukujemy i 
     \caption{Krok po kroku - UE - Kolizje - Tworzenie sfery}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
+\newpage
 
-W menu po prawej stronie wyszukujemy zakładkę "Shape". Tam możemy zmienić promień naszej sfery powiększając lub pomniejszając obszar kolizji naszej postaci. Dla celów wspinaczkowych obszar ten został ustawiony na nieco większy niż postać.
+W menu po prawej stronie wyszukujemy zakładkę „Shape". Tam możemy zmienić promień naszej sfery powiększając lub pomniejszając obszar kolizji naszej postaci. Dla celów wspinaczkowych obszar ten został ustawiony na nieco większy niż postać.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -900,8 +918,9 @@ W menu po prawej stronie wyszukujemy zakładkę "Shape". Tam możemy zmienić pr
     \caption{Krok po kroku - UE - Kolizje - Edycja rozmiaru sfery}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
+\newpage
 
-Następnie również po prawej stronie wyszukujemy zakładkę "colliision". Upewniamy się, że "Generate Overlap Events" zostało ustawione na "prawdę". Następnie "Collision Presets" zmieniamy na "Custom...". Upewniamy się, że "Object Type" został ustawiony na "SphereTracer". Następnie w "Collision Response" ustawiamy wszystko na "Ingore" - jedyne wyjątki stanową "LedgeTracer", który powinien być ustawiony na "Block", oraz "WorldStatic", który powinien być ustawiony na "Overlap".
+Następnie również po prawej stronie wyszukujemy zakładkę „collision". Upewniamy się, że „Generate Overlap Events" zostało ustawione na „prawdę". Następnie "Collision Presets" zmieniamy na „Custom...". Upewniamy się, że „Object Type" został ustawiony na „SphereTracer". Następnie w „Collision Response" ustawiamy wszystko na „Ingore" - jedyne wyjątki stanową "LedgeTracer", który powinien być ustawiony na „Block", oraz „WorldStatic", który powinien być ustawiony na „Overlap".
 
 \begin{figure}[!htb]
     \begin{center}
@@ -910,8 +929,9 @@ Następnie również po prawej stronie wyszukujemy zakładkę "colliision". Upew
     \caption{Krok po kroku - UE - Kolizje - Edycja ustawień kolizji sfery}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
+\newpage
 
-Teraz możemy powrócić do naszej sceny i wybrać obiekt na który gracz będzie mógł się wspinać. W tym celu klikamy na niego i w prawym menu szukamy zakładki "Collision". Upewniamy się, że "Generate Overlap Events" zostało ustawione na fałsz. Następnie "Collision Presets" zmieniamy na "Custom...". Upewniamy się, że "Object Type" został ustawiony na "WorldStatic". Następnie w "Collision Response" ustawiamy wszystko na "Block" - jedynie "SphereTracer" powinien być ustawiony na "Overlap".
+Teraz możemy powrócić do naszej sceny i wybrać obiekt na który gracz będzie mógł się wspinać. W tym celu klikamy na niego i w prawym menu szukamy zakładki „Collision". Upewniamy się, że "Generate Overlap Events" zostało ustawione na fałsz. Następnie „Collision Presets" zmieniamy na „Custom...". Upewniamy się, że „Object Type" został ustawiony na „WorldStatic". Następnie w „Collision Response" ustawiamy wszystko na „Block" - jedynie „SphereTracer" powinien być ustawiony na „Overlap".
 
 \begin{figure}[!htb]
     \begin{center}
@@ -923,8 +943,8 @@ Teraz możemy powrócić do naszej sceny i wybrać obiekt na który gracz będzi
 
 \section{Krok 2 - Tracery}
 
-Powracamy do pliku "ThirdPersonCharacter". Tam w grafie zdarzeń tworzymy "Event Tick" - zdarzenie, które wykonuje się co klatkę w grze. Aby utworzyć jakąkolwiek akcję w grafach wystarczy kliknąć prawym przyciskiem myszy na wolnej przestrzeni. We wspomnianym zdarzeniu tworzymy linię od białego pięcioboku i tworzymy brancha. W nim z kolei od czerwonej kropki przy "condition" tworzymy kolejne połączenie. Z dostępnych opcji wybieramy "Promote to Variable" i powstałą wartość nazywamy "CanTrace".
-W "Bramchu" mamy dwie opcje. W przypadku, kiedy nie znaleźliśmy krawędzi na którą możemy się wspinać nic nie robi. Jeżeli jednak ją znaleźlimy wykonujemy dalsze instrukcje. Dlatego też tworzymy kolejną linię tylko od prawdy i tworzymy "sequence".
+Powracamy do pliku „ThirdPersonCharacter". Tam w grafie zdarzeń tworzymy „Event Tick" - zdarzenie, które wykonuje się co klatkę w grze. Aby utworzyć jakąkolwiek akcję w grafach wystarczy kliknąć prawym przyciskiem myszy na wolnej przestrzeni. We wspomnianym zdarzeniu tworzymy linię od białego pięcioboku i tworzymy brancha. W nim z kolei od czerwonej kropki przy "condition" tworzymy kolejne połączenie. Z dostępnych opcji wybieramy „Promote to Variable" i powstałą wartość nazywamy „CanTrace".
+W „Branchu" mamy dwie opcje. W przypadku, kiedy nie znaleźliśmy krawędzi na którą możemy się wspinać nic nie robi. Jeżeli jednak ją znaleźlimy wykonujemy dalsze instrukcje. Dlatego też tworzymy kolejną linię tylko od prawdy i tworzymy „sequence".
 
 \begin{figure}[!htb]
     \begin{center}
@@ -934,17 +954,17 @@ W "Bramchu" mamy dwie opcje. W przypadku, kiedy nie znaleźliśmy krawędzi na k
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Następnie musimy powiedzieć programowi kiedy możliwość śledzenia jest prawdziwa, a kiedy nie. W tym celu obok w grafie zdarzeń tworzymy kolejne dwa zdarzenia. W tym celu klikamy raz lewym klawiszem myszy na SphereTracer w menu komponentów, a następnie prawym klawiszem myszy w wolnej przestrzeni grafu zdarzeń. W ten sposób tworzymy "Add on component begin overlap" oraz "Add on component end overlap". Następnie od każdego z nich od białego pięcioboku wyprowadzamy "set CanTrace". W przypadku rozpoczęcia przenikania "CanTrace" ustawiamy na fałsz. W przypadku zakończenia przenikania "CanTrace" ustawiamy na prawdę.
-
+Następnie musimy powiedzieć programowi kiedy możliwość śledzenia jest prawdziwa, a kiedy nie. W tym celu obok w grafie zdarzeń tworzymy kolejne dwa zdarzenia. W tym celu klikamy raz lewym klawiszem myszy na SphereTracer w menu komponentów, a następnie prawym klawiszem myszy w wolnej przestrzeni grafu zdarzeń. W ten sposób tworzymy „Add on component begin overlap" oraz „Add on component end overlap". Następnie od każdego z nich od białego pięcioboku wyprowadzamy „set CanTrace". W przypadku rozpoczęcia przenikania „CanTrace" ustawiamy na fałsz. W przypadku zakończenia przenikania „CanTrace" ustawiamy na prawdę.
+\newpage
 \begin{figure}[!htb]
     \begin{center}
     \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-canTrace}
     \end{center}
-    \caption{Krok po kroku - UE - Tracery - Zdarzenia "Can Trace"}
+    \caption{Krok po kroku - UE - Tracery - Zdarzenia „Can Trace"}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Nie każdy na każdą ścianę się wespnie. Musimy też znać wysokość ściany aby wiedzieć jak wysoko unieść naszą postać. "Sequence" pozwoli nam wyegzekwować dwa tracery jednoczenie. Obie opcje mają taki sam trzon - został on przedstawiony na obrazku 7.10
+Nie każdy na każdą ścianę się wespnie. Musimy też znać wysokość ściany aby wiedzieć jak wysoko unieść naszą postać. „Sequence" pozwoli nam wyegzekwować dwa tracery jednocześnie. Obie opcje mają taki sam trzon - został on przedstawiony na obrazku poniżej.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -956,17 +976,18 @@ Nie każdy na każdą ścianę się wespnie. Musimy też znać wysokość ścian
 
 \subsection{Wysokość}
 
-W obu przypadkach na początku musimy zmodyfikować wektor sfery. W tym celu od żółtej kropki koło "End" w "SphereTraceByChannel" prowadzimy linię i wybieramy "make vector". Dla czystości kodu możemy kliknąć na nowopowstały wektor prawym przyciskiem myszy i wybrać "Collapse to Macro". Nazwijmy go "LedgeTracer". Następnie możemy w niego wejść i zacząć go modyfikować. W rezultacie powinien wyglądać tak jak na obrazku 7.11
+W obu przypadkach na początku musimy zmodyfikować wektor sfery. W tym celu od żółtej kropki koło „End" w „SphereTraceByChannel" prowadzimy linię i wybieramy „make vector". Dla czystości kodu możemy kliknąć na nowopowstały wektor prawym przyciskiem myszy i wybrać „Collapse to Macro". Nazwijmy go „LedgeTracer". Następnie możemy w niego wejść i zacząć go modyfikować. W rezultacie powinien wyglądać tak jak na obrazku poniżej.
 
 \begin{figure}[!htb]
     \begin{center}
-    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-HeightMacro}
+    \includegraphics[scale=0.4]{Screeny/UeKrokPoKroku/UE-HeightMacro}
     \end{center}
     \caption{Krok po kroku - UE - Tracery - Wysokość - Macro}
     Liczba, którą dodajemy (200) jest liczbą określającą wysokość sfery, t.j. jest najwyższym punktem tracera. Liczba przy mnożeniu (70) określa jak daleko od postaci ma znajdować się tracer. Liczba zdefiniowana w "distance" jest długością tracera.
+    \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
-
-"Start" i "End" z "LedgeTracer" powinniśmy odpowiednio połączyć ze "Startem" i "Endem" w "SphereTraceByChannel". Ostatnia rzecz jaką powinniśmy zrobić jest przeciągnięcie linni od żółtej kropki koło "Impact Point" w "Break Hit Result", wybranie opcji "promote to variable", nazwanie nowopowstałego okienka LedgeHeight i dołączenie do niego opcji "prawda" z brancha. Powinno to wyglądać tak jak na obrazku 7.12.
+\newpage
+„Start" i „End" z „LedgeTracer" powinniśmy odpowiednio połączyć ze „Startem" i „Endem" w „SphereTraceByChannel". Ostatnia rzecz jaką powinniśmy zrobić jest przeciągnięcie linii od żółtej kropki koło „Impact Point" w „Break Hit Result", wybranie opcji „promote to variable", nazwanie nowopowstałego okienka LedgeHeight i dołączenie do niego opcji "prawda" z brancha. Powinno to wyglądać tak jak na obrazku poniżej.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -975,10 +996,10 @@ W obu przypadkach na początku musimy zmodyfikować wektor sfery. W tym celu od 
     \caption{Krok po kroku - UE - Tracery - Wysokość}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
-
+\newpage
 \subsection{Odległość od ściany}
 
-Wygląda bardzo podobnie do wysokości. Również możemy utworzyć nowy wektor i również możemo go zwinąć do macro. Tym razem nazwijmy go "WallTracer". Jego zawartość powinna wyglądać taj ka na obrazku 7.13.
+Wygląda bardzo podobnie do wysokości. Również możemy utworzyć nowy wektor i również możemy go zwinąć do macro. Tym razem nazwijmy go „WallTracer". Jego zawartość powinna wyglądać tak jak na obrazku poniżej
 
 \begin{figure}[!htb]
     \begin{center}
@@ -987,8 +1008,8 @@ Wygląda bardzo podobnie do wysokości. Również możemy utworzyć nowy wektor 
     \caption{Krok po kroku - UE - Tracery - Odległość od ściany - Macro}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
-
-Tak jak w poprzednim przypadku "Start" i "End" z "WallTracer" powinniśmy odpowiednio połączyć ze "Startem" i "Endem" w "SphereTraceByChannel". Następnie " w "Break Hit Result" awansujemy na zmienne "Impact Point" nazywając ją "WallTraceImpact", oraz " Normal" nazywając "WallNormal". Następnie "prawdę" z brancha łączymy z "WallTraceImpact", a ten następnie z "WallNormal". Całość powinna wyglądać tak jak na rysunku 7.14.
+\newpage
+Tak jak w poprzednim przypadku „Start" i „End" z „WallTracer" powinniśmy odpowiednio połączyć ze „Startem" i „Endem" w „SphereTraceByChannel". Następnie w „Break Hit Result" awansujemy na zmienne „Impact Point" nazywając ją „WallTraceImpact", oraz „Normal" nazywając „WallNormal". Następnie „prawdę" z brancha łączymy z „WallTraceImpact", a ten następnie z „WallNormal". Całość powinna wyglądać tak jak na rysunku poniżej.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -997,8 +1018,8 @@ Tak jak w poprzednim przypadku "Start" i "End" z "WallTracer" powinniśmy odpowi
     \caption{Krok po kroku - UE - Tracery - Odległość od ściany}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
-
-Jeżeli wszystko wykonalimy poprawnie po kliknięciu "play" na ekranie powinny nam się pojawić czerwone sfery koło postaci. Zmienią one kolor na zielony kiedy zbliżymy się do ściany, która została ustawiona do wspinaczki - rys. 7.15
+\newpage
+Jeżeli wszystko wykonaliśmy poprawnie po kliknięciu „play" na ekranie powinny nam się pojawić czerwone sfery koło postaci. Zmienią one kolor na zielony kiedy zbliżymy się do ściany, która została ustawiona do wspinaczki.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -1010,13 +1031,13 @@ Jeżeli wszystko wykonalimy poprawnie po kliknięciu "play" na ekranie powinny n
 
 \section{Krok 3 - Chwytanie}
 
-Teraz kiedy już nasza postać wykrywa ściany do wspinaczki możemy zająć się chwytaniem krawędzi. Na początek stwórzmy nowy interfejs. Aby to zrobić w menu kontekstowym {lewy dolny róg} klikamy przycisk "Add New", następnie rozwijamy "Bueprints" i wybieramy "Blueprint interface". Nazwijmy go "CharMoveInterface" i od razu go otwórzmy.
+Teraz kiedy już nasza postać wykrywa ściany do wspinaczki możemy zająć się chwytaniem krawędzi. Na początek stwórzmy nowy interfejs. Aby to zrobić, w menu kontekstowym (w lewym dolnym rogu) klikamy przycisk „Add New", następnie rozwijamy „Bueprints" i wybieramy „Blueprint interface". Nazwijmy go "CharMoveInterface" i od razu go otwórzmy.
 
-W prawym górym rogu nowootwartego okienka mamy możliwość dodania nowych funkcji. Pierwszą jaką dodamy nazwijmy CanGrabLedge$\_$BI. W nie w "Inputs" dodajmy wartość "Boolean" o nazwie "CanGrab$\_$BI.
+W prawym górym rogu nowo otwartego okienka mamy możliwość dodania nowych funkcji. Pierwszą jaką dodamy nazwijmy CanGrabLedge$\_$BI. W nią w „Inputs" dodajmy wartość „Boolean" o nazwie "CanGrab$\_$BI.
 
-Wróćmy do "ThirdPersonCharacter". Z górnego menu klikamy na "Class Settings". Powinno nam się pojawić menu po prawej. Tam w zakładce Interfaces klikamy "Add" i dodajemy nasz niedawno utwożony interfejs. Tę samą operację wykonujemy w pliku "ThirdPerson$\_$AnimBP".
+Wróćmy do „ThirdPersonCharacter". Z górnego menu klikamy na „Class Settings". Powinno nam się pojawić menu po prawej. Tam w zakładce Interfaces klikamy „Add" i dodajemy nasz niedawno utworzony interfejs. Tę samą operację wykonujemy w pliku „ThirdPerson$\_$AnimBP".
 
-Ponownie wracamy do "ThirdPersonCharacter" i do "Ledge Height Tracer". Od "Ledge Height" tworzymy linię i wybieramy opcję "DoOnce". Wracamy do "ThirdPerson$\_$AnimBP". Tam tworzymy nowe zdarzenie "Event Can Grab Ledge BI". Następnie przeciągamy od czerwonej kropki linię i wybieramy opcję "Promote to variable". Naszą nową zmienną nazwijmy "CanGrab".
+Ponownie wracamy do „ThirdPersonCharacter" i do „Ledge Height Tracer". Od „Ledge Height" tworzymy linię i wybieramy opcję „DoOnce". Wracamy do „ThirdPerson$\_$AnimBP". Tam tworzymy nowe zdarzenie „Event Can Grab Ledge BI". Następnie przeciągamy od czerwonej kropki linię i wybieramy opcję „Promote to variable". Naszą nową zmienną nazwijmy „CanGrab".
 
 \begin{figure}[!htb]
     \begin{center}
@@ -1026,7 +1047,8 @@ Ponownie wracamy do "ThirdPersonCharacter" i do "Ledge Height Tracer". Od "Ledge
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Wracamy do pliku "ThirdPersonCharacter". Od zadeklarowanego niedawno "DoOnce" przeciągamy linie i tworzymy schemt zgodny z rysunkami 7.17 i 7.18.
+\newpage
+Wracamy do pliku „ThirdPersonCharacter". Od zadeklarowanego niedawno „DoOnce" przeciągamy linie i tworzymy schemat zgodny z poniższymi rysunkami.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -1044,7 +1066,7 @@ Wracamy do pliku "ThirdPersonCharacter". Od zadeklarowanego niedawno "DoOnce" pr
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Po raz kolejny wracamy do "ThirdPerson$\_$AnimBP", tym razem przechodzimy jednak do Animacji Grafu.
+Po raz kolejny wracamy do „ThirdPerson$\_$AnimBP", tym razem przechodzimy do Animacji Grafu. Tam klikamy prawym przyciskiem myszy na tło i wybieramy „Add state...". Nasz nowy stan możemy nazwać „LedgeGrab". Klikamy na niego dwukrotnie, aby dodać animacje. Wystarczy, że 
 
 \chapter{Podsumowanie tworzenia gier dla obu silników}
 
@@ -1062,7 +1084,7 @@ Jeśli chcemy wydać grę na wiele platform Unity jest preferowanym wyborem.
 
 Jeśli chodzi o interfejs użytkownika, Unity ma bardzo przejrzysty i wygodny interfejs. Zdecydowaną większość działań wykonuje się na ekranie głównym. Nawet pierwszy raz używając silnika można intuicyjnie nawigować po wszystkich opcjach.
 W przypadku, w którym nie odpowiada nam obecny layout interfejsu możemy bez trudu zmienić konfigurację wszystkich menu.
-Dodać należy fakt, że wszystkie elementy silnika są bardzo dobrze udokumentowane, a w przypadku wątpliwości można odwołac się do ogromnej ilości wszelkiej maści tutoriali i forów tworzonych przez społeczność Unity.
+Dodać należy fakt, że wszystkie elementy silnika są bardzo dobrze udokumentowane, a w przypadku wątpliwości można odwołać się do ogromnej ilości wszelkiej maści tutoriali i forów tworzonych przez społeczność Unity.
 
 Unreal Engine mimo wielu podobieństw do Unity posiada dużo bardziej rozbudowany, skomplikowany interfejs. Każdy system wewnątrz silnika otwierany jest w osobnym okienku, lub karcie. W przypadku wyboru opcji programowania w C++ trzeba używać programów z zewnątrz UE, co jeszcze bardziej komplikuje sprawę. Taki interface może bardzo łatwo przytłoczyć początkującego użytkownika. Istnieje co prawda wbudowany w silnik samouczek, objaśniający wszystkie części interface’u, jednak nie wyjaśnia on wszystkiego.
 Z drugiej strony dzięki systemowi Blueprint’ów, przeciętny użytkownik silnika nie musi być zaznajomiony z żadnym językiem programowania.
@@ -1070,8 +1092,8 @@ Problem może pojawić się, gdy twórca gry nie do końca zrozumie sposobu dzia
 
 \section{Grafika}
 
-Unity od wersji 5.0 posiada wiele zaawansowanych opcji graficznych, takich jak wysokiej jakości shadery, lightmapy, filtry anizotropowe. Obsługuje również efekty takie jak głębia terenu, czy motion blur, zoptymalizowane pod DirectX 11. Umożliwia to stworzenie gier wyglądem konkurującymi z produkcjami światowej klasy, takich jak Wiedźmin 3 .
-Mimo to Unreal Engine nadal ma pod tym względem znacząca przewagę. Polega ona na uproszczonym procesie tworzenia grafiki. Tworzenie wysokiej jakości grafiki w Unity, wymaga wiele pracy w zewnętrznym programie graficznym. W Unreal Engine, dzięki systemowi Blueprint’ów i idei skryptowania wizualnego, wystarczy kilka kliknięć myszką, aby osiągnąć znacznie lepsze efekty, mniejszym wysiłkiem. Tekstury w UE posiadają własny, rozbudowany edytor. Pozwala on nie tylko na dowolnie modyfikować materiałem, kolorem i innymi właściwościami tekstury, ale również kontrolować jej mapę UV. Dzięki temu, tekstura nie „rozjeżdża się” na trójwymiarowym obiekcie. Generowany teren, efekty cząsteczkowe (takie jak płomienie, czy pył unoszący się w powietrzu) oraz światło również przekraczają możliwości Unity. Dodatkowo Unreal Engine 4 posiada już wsparcie DirectX 12, co znacznie poprawia wydajność i zmniejsza czas renderowania grafiki.
+Unity od wersji 5.0 posiada wiele zaawansowanych opcji graficznych, takich jak wysokiej jakości shadery, lightmapy, filtry anizotropowe. Obsługuje również efekty takie jak głębia terenu, czy motion blur, zoptymalizowane pod DirectX 11. Umożliwia to stworzenie gier wyglądem konkurującymi z produkcjami światowej klasy.
+Mimo to Unreal Engine nadal ma pod tym względem znaczącą przewagę. Polega ona na uproszczonym procesie tworzenia grafiki. Tworzenie wysokiej jakości grafiki w Unity, wymaga wiele pracy w zewnętrznym programie graficznym. W Unreal Engine, dzięki systemowi Blueprint’ów i idei skryptowania wizualnego, wystarczy kilka kliknięć myszką, aby osiągnąć znacznie lepsze efekty, przy mniejszym wysiłku. Tekstury w UE posiadają własny, rozbudowany edytor. Pozwala on nie tylko dowolnie modyfikować materiał, kolor i inne właściwości  tekstury, ale również kontrolować jej mapę UV. Dzięki temu, tekstura nie „rozjeżdża się” na trójwymiarowym obiekcie. Generowany teren, efekty cząsteczkowe (takie jak płomienie, czy pył unoszący się w powietrzu) oraz światło również przekraczają możliwości Unity. Dodatkowo Unreal Engine 4 posiada już wsparcie DirectX 12, co znacznie poprawia wydajność i zmniejsza czas renderowania grafiki.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -1085,7 +1107,7 @@ Mimo to Unreal Engine nadal ma pod tym względem znacząca przewagę. Polega ona
 
 Unity umożliwia programowanie w językach C\# i Unity Script. Pozwala to nie tylko elastyczność w wyborze. Same języki ułatwiają optymalizację gry, pozwalając na znaczące zmniejszenie wymagań systemowych.
 
-Unreal Engine korzysta wyłącznie z języka C++. Mimo, że sam język jest łatwy do optymalizacji, by go używać potrzebny jest zewnętrzny edytor. Wyjściowym sposobem tworzenia kodu jest Blueprint, który nie zapewnia bezpośredniego dostępu do kodu. Mimo, że upraszcza to proces tworzenia gry dla bardziej doświadczonych developerów, znacznie utrudnia to optymalizację gry.
+Unreal Engine korzysta wyłącznie z języka C++. Mimo, że sam język jest łatwy do optymalizacji, by go używać potrzebny jest zewnętrzny edytor. Wyjściowym sposobem tworzenia kodu jest Blueprint, który nie zapewnia bezpośredniego dostępu do kodu. Mimo, że upraszcza proces tworzenia gry dla bardziej doświadczonych developerów, to znacznie utrudnia optymalizację gry.
 
 \chapter{ Testowanie gier}
 
@@ -1094,9 +1116,9 @@ Wśród programistów gier panuje przekonanie, że tworzenie zautomatyzowanych t
 Po pierwsze, zdecydowana większość logiki używanej w grach zależy od czynników, które nie są do końca deterministyczne. Oznacza to, że warunki w jakich użytkowana będzie gra często mogą być przypadkowe i niemożliwe do przewidzenia. Na przykład, gra może być uruchamiana na setkach różnych konfiguracji sprzętu. Przetestowanie każdej z nich jest niemożliwe. Dodajmy do tego fakt, że sprzęt może znajdować się w gorącym pomieszczeniu, co pogorszy jego osiągi. W tle mogą również być uruchomione inne programy, które zajmują zasoby danego sprzętu. To tylko kilka przykładów czynników nad którymi twórcy gier nie mają żadnej kontroli. Ustalenie standardu według którego możnaby napisac test, w takich warunkach jest niemal niewykonalne.
 
 Innym problemem jest, że większość wyników produkowanych przez grę jest niemożliwa do zmierzenia.
-W grach generowane są takie elementy jak grafika i dźwięk.  Skuteczność efektów wizualnych, jak i dźwiękowych jest rzeczą załkowicie subiektywną. Nie da się określić automatycznym testem czy muzyka jest dostatecznie głośna, lub czy dana tekstura wygląda dobrze w danym miejscu. Wszystko zależy od wizji twórcór gry. W takim wypadku jedyny możliwy test, to test manualny.
+W grach generowane są takie elementy jak grafika i dźwięk.  Skuteczność efektów wizualnych, jak i dźwiękowych jest rzeczą załkowicie subiektywną. Nie da się określić automatycznym testem czy muzyka jest dostatecznie głośna, lub czy dana tekstura wygląda dobrze w danym miejscu. Wszystko zależy od wizji twórców gry. W takim wypadku jedyny możliwy test, to test manualny.
 
-Kolejną przeszkodą jest fakt, że w większości gier wszystkie mechaniki i podsystemy składają się na jedną spójną całością. W grach stworzonych na potrzeby tego projektu zaimplementowaliśmy mechanikę wspinaczki. Aby działała, zarówno fizyka gry, jak i animacje oraz kod wykrywający kolizję muszą działać poprawnie. W przypadku porażki nie sposób na pierwszy rzut oka okreslić, który z tych systemów zawiódł. Możemy napisać testy, które sprawdzą wszystkie po kolei, jednak wszelkie wyniki jakie dostaniemy będą wyrwane z kontekstu i nie powiedzą co się stało, gdy wszystkie czynniki złączyły się w jedną całość. W związku z tym tu również musimy zdać się na testowanie ręczne.
+Kolejną przeszkodą jest fakt, że w większości gier wszystkie mechaniki i podsystemy składają się na jedną spójną całość. W jednej z gier stworzonych na potrzeby tego projektu zaimplementowaliśmy mechanikę wspinaczki. Aby działała, zarówno fizyka gry, jak i animacje oraz kod wykrywający kolizję muszą działać poprawnie. W przypadku porażki nie sposób na pierwszy rzut oka określić, który z tych systemów zawiódł. Możemy napisać testy, które sprawdzą wszystkie po kolei, jednak wszelkie wyniki jakie dostaniemy będą wyrwane z kontekstu i nie powiedzą co się stało, gdy wszystkie czynniki złączyły się w jedną całość. W związku z tym tu również musimy zdać się na testowanie ręczne.
 
 Mimo powyższych problemów, pisanie unit testów do gier nie jest całkowicie niemożliwe. Wymaga to jednak bardzo specyficznych warunków. Głównym warunkiem jest określenie testów jeszcze przed rozpoczeciem programowania samej gry. Jest to jednak niepraktyczne podejście, które wiąże ręce twórcom gry.
 
@@ -1105,7 +1127,7 @@ Gry stworzone na potrzeby projektu zostały przetestowane wyłącznie manualnie.
 
 % zakończenie
 \summary
-Oba silniki mają swoje zalety, jadnek należy używać ich w odpowiednich sytuacjach.
+Oba silniki mają swoje zalety, jednak należy używać ich w odpowiednich sytuacjach.
 
 Jeśli planujemy stworzyć mniejszy tytuł na jedną platformę, cechujący się wysokiej jakości grafiką, Unreal Engine jest bardzo dobrym wyborem.
 
