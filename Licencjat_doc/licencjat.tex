@@ -1,7 +1,8 @@
 %\documentclass[brudnopis]{xmgr}
 % Jeśli nowe rozdziały mają się zaczynać na stronach
 % nieparzystych:
-\documentclass[openright]{xmgr}
+%\documentclass[openright]{xmgr}
+\documentclass[12pt]{xmgr}
 
 %\defaultfontfeatures{Scale=MatchLowercase}
 \setmainfont[Numbers=OldStyle,Ligatures=TeX]{Minion Pro}
@@ -42,10 +43,10 @@
 
 % streszczenie
 \begin{abstract}
-W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier. Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D -- Unity Technologies. W części praktycznej pracy stworzono dwie wersje gry
-„The Jump” -- po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document (patrz, rozdział 3 -- „Czym jest Game Design Document”). Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Aby uruchomić gry wystarczy uruchomić pliki exe w folderze z grą. Porównanie polega na opisie procesu tworzenia owych gier w oddzielnych rozdziałach. Rozdział podsumowujący opisuje różnice między silnikami.
+W pracy opisano współczesne podejście do programowania gier z wykorzystaniem silników gier. Porównano dwa silniki o otwartym kodzie: Unreal Engine udostępnianym przez firmę Epic Games, oraz Unity 3D — Unity Technologies. W części praktycznej pracy stworzono dwie wersje gry
+„The Jump” — po jednej w każdym z silników. Zostały one oparte na jednym Game Design Document (patrz, rozdział 3 — „Czym jest Game Design Document”). Pozwoliło to na stworzenie gier o podobnych cechach, jednak dzięki specyfice samego dokumentu, także nie ograniczających możliwości żadnego z silników. Aby uruchomić gry wystarczy uruchomić pliki exe w folderze z grą. Porównanie polega na opisie procesu tworzenia owych gier w oddzielnych rozdziałach. Rozdział podsumowujący opisuje różnice między silnikami.
 
-Przygotowano również dwa krótkie filmy, które ukazują podstawy tworzenia gier w obu silnikach -- \href{https://www.youtube.com/watch?v=phQOiSH_uXU}{Unity} i \href{https://www.youtube.com/watch?v=V53ZVRSyOgc}{UnrealEngine}
+Przygotowano również dwa krótkie filmy, które ukazują podstawy tworzenia gier w obu silnikach — \href{https://www.youtube.com/watch?v=phQOiSH_uXU}{Unity} i \href{https://www.youtube.com/watch?v=V53ZVRSyOgc}{UnrealEngine}
 \end{abstract}
 
 % słowa kluczowe
@@ -115,7 +116,7 @@ Frostbite & 2008 & Digital Illusions CE & HDR Audio, system destrukcji otoczenia
 \end{tabular}
 \caption{Skrócona historia silników gier
   typu dokumentu\label{tab:dtd-cmp}}
-\source{\href{http://www.benchmark.pl/}{Benchmark}, \href{https://pl.wikipedia.org}{Wikipedia} }
+\source{\href{http://www.benchmark.pl/}{Benchmark}}
 \end{table}
 
 \chapter{Czym jest Game Design Document?}
@@ -638,7 +639,7 @@ Graf animacji korzysta z grafu zdarzeń, by określić finalną pozę mesh’u w
 
 W następnym rozdziale związanym  z Unreal Engine przyjrzymy się bliżej tym systemom i zaprezentujemy je w praktyce.
 
-\chapter{„The Jump" krok po kroku -- Unity}
+\chapter{„The Jump" krok po kroku — Unity}
 
 Rozdział ten jest w całości poświęcony opisowi tworzenia jednego konkretnego tytułu przez jedną osobę. Zostały tu zachowane wszystkie ogólne zasady dotyczące tego procesu, trzeba jednak uwzględnić fakt, że w zależności od rodzaju tworzonego tytułu oraz wielkości zespołu przy nim pracującego, konkretne kroki mogą być wykonywane w odmiennej kolejności. Przykładowo, jedna część osób pracujących nad grą może zostać oddelegowana do tworzenia UI, druga do programowania rozgrywki, a jeszcze inna do prac nad obsługą reklam bądź modułu sieciowego. Dopiero w późniejszej fazie produkcji są one łączone w jedną całość.
 
@@ -726,16 +727,16 @@ public class WinLoseCondition : MonoBehaviour {
 
     void OnCollisionEnter (Collision other)
     {
-        if (other.gameObject.tag == "Water") {
+        if (other.gameObject.tag == „Water") {
             Death ();
 
         }
         if (rb.velocity.y < -10) {
-            if (other.gameObject.tag == "Ground") {
+            if (other.gameObject.tag == „Ground") {
                 Death ();
             }
         }
-        if (other.gameObject.tag == "Finish") {
+        if (other.gameObject.tag == „Finish") {
             Win ();
 
         }
@@ -758,16 +759,16 @@ Do naszego skryptu dodajemy poniższe funkcje :
 
 void Death ()
     {
-        anim.Play ("Death");
+        anim.Play („Death");
         Invoke ("Restart", 2f);
 
-        Debug.Log ("Nie żyjesz");
+        Debug.Log („Nie żyjesz");
     }
 
     void Win ()
     {
-        Invoke ("Restart", 2f);
-        Debug.Log ("Wygrałeś");
+        Invoke („Restart", 2f);
+        Debug.Log („Wygrałeś");
     }
 
     void Restart ()
@@ -863,19 +864,215 @@ Teraz gdy nasza gra jest gotowa, powinniśmy zbudować ją na wybrane urządzeni
 
 PC, Linux i Mac nie wymagają dodatkowego oprogramowania. Aby zbudować grę na te urządzenia wybieramy z paska menu File $\rightarrow$ Build Setting. W zakładce Player Settings możemy m.in. zmienić tytuł naszej gry lub sposób jej wyświetlania, dodać ikonki i splashe. Następnie zaznaczamy naszą platformę i klikamy przycisk build. Pozostaje nam czekać, aż gra się skompiluje.
 
-\chapter{„"The Jump" krok po kroku -- Unreal Engine}
+\chapter{„The Jump" krok po kroku — Unreal Engine}
 
 \begin{figure}[!htb]
     \begin{center}
     \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-Climb-NewProject.png}
     \end{center}
-    \caption{Krok po kroku - UE - Nowy projekt}
+    \caption{Krok po kroku - UE - Ekran główny}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-W tym rozdziale prześledzimy proces tworzenia systemu wspinaczki w Unreal Engine przy pomocy Blueprintów. Dla ułatwienia przy tworzeniu nowego projektu wybieramy szablon trzecioosobowy i upewniamy się, że zaimportuje on zawartość początkową dla danego projektu. Dzięki temu zabiegowi otrzymamy nie tylko gotowy system biegania i skoku, ale również już ustawioną scenę, postać wraz z podstawowymi animacjami, przedmioty i materiały przydatne przy tworzeniu naszej gry. Animacje chwytania krawędzi oraz wspinaczki można pobrać ze strony \url{https://www.crocopede.com/free-stuff}.
+W tym rozdziale prześledzimy proces tworzenia prostej gry w Unreal Engine przy pomocy blueprintów. Projekt tworzymy od podstaw. W tym celu na ekranie startowym wybieramy z dostępnych opcji projektu „Blank”. Jeżeli nie chcemy ręcznie pobierać assetów czy materiałów warto upewnić się, że zaznaczona została opcja „with starter content”. W projekcie będziemy również korzystać z modelu i animacji postaci (dostępne na stronie \url{https://wiki.unrealengine.com/File:ThirdPerson_FBX.zip}) oraz z animacji chwytania krawędzi i wspinaczki (dostępne na stronie \url{https://www.crocopede.com/free-stuff}), które już na początku pracy z projektem warto zaimportować.
 
-\section{Krok 1 - Kolizje}
+\section{Krok 1 - Import postaci i ustawianie klawiszy wejściowych}
+
+Aby zaimportować modele i animacje do projektu wystarczy rozpakować pobrane paczki w dowolnym miejscu na komputerze. Następnie należy przeciągnąć rozpakowane pliki do menu kontekstowego w edytorze Unreal Engine. Podczas importowania animacji edytor będzie wymagał od nas wskazania dla niej szkieletu. Warto więc jako pierwszy plik zaimportować „SK\_Maneqquin\_skeleton”, który go zawiera. Po zaimportowaniutego pliku możemy już grupowo dodać resztę animacji. Warto w tym momencie wprowadzić pewien porządek i utworzyć kilka katalogów – główny dla postaci, a w nim zagnieżdżony dla animacji.
+
+Po zaimportowaniu wszystkich plików możemy ustawić klawisze wejściowe. Dzięki temu gra zostanie poinformowana, że wciśnięcie danego klawisza ma wywołać akcję. Aby to zrobić, z lewego górnego rogu edytora wybieramy zakładkę „Edit”, a następnie wybieramy opcję „Project settings...”. W nowootwartym oknie, na liście po lewej stronie, w sekcji „Engine” wyszukujemy i wybieramy „Input”. W zakładce „bindings" dodajemy i ustawiamy odpowiednie klawisze tak jak na obrazku poniżej.
+
+\newpage
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.75]{Screeny/UeKrokPoKroku/UE-Inputs.png}
+    \end{center}
+    \caption{Krok po kroku - UE - Klawisze wejściowe}
+     Możemy przydzielić dowolne klawisze do danej akcji, jednakże powyższe przyjęły się jako domyślne w grach.
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\newpage
+\section{Krok 2 - Graf animacji i graf zdarzeń}
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-BlendSpace-Add.png}
+    \end{center}
+    \caption{Krok po kroku - UE - Blend Spaces - Dodawanie w menu kontekstowym}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Samo dodanie klawiszy wejściowych nie wystarczy aby móc sterować naszą postacią. Program już wie na jakie przyciski ma reagować, nie wie natomiast co ma z nimi zrobić. W tym przypadku przydadzą się nam graf animacji i graf zdarzeń.
+
+Zanim jednak do nich przejdziemy, stworzymy przejście dla naszej animacji. Aby to zrobić w menu kontekstowym, w katalogu „Character” klikamy „Add New”, a następnie z zakładki „Animation” wybieramy „Blend Space 1D”. Zaznaczamy szkielet naszej postaci i po wciśnięciu przycisku „ok” nazywamy nasz nowopowstały plik „Idle\_Walk\_Run”.
+
+Aby go otworzyć klikamy na niego dwukrotnie lewym przyciskiem myszy. Dla naszej wygody możemy zaznaczyć opcję „Display editor vertically” w środkowym dolnym panelu.
+
+W parametrach w „X Axis Range” drugą liczbę zmieniamy na 375. To od niej zależy szybkość zmiany z jednej animacji na drugą. Następnie klikamy „Apply Parameter Changes”, aby zaktualizować panel po lewej stronie. Aby dodać animacje na osi wystarczy ją przeciągnąć z menu assetów. W tym przypadku dodajemy trzy - „Idle” na samym dole, „Walk” nieco wyżej, oraz „Run” na samej górze. Zapisujemy plik i z niego wychodzimy.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-BlendSpace-IdleWalkRun.png}
+    \end{center}
+    \caption{Krok po kroku - UE - Blend Spaces - Idle Walk Run}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Następnie stworzymy nowy plan animacji w menu kontekstowym. Aby to zrobić kliknijmy przycisk „Add New” w momencie, w którym znajdujemy się w katalogu „Character”. Z listy wybierzemy „Animation”, a następnie „Animation Blueprint”.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-Import.png}
+    \end{center}
+    \caption{Krok po kroku - UE - Importowanie}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\newpage
+W nowootwartym okienku mamy dwa pola wyboru. W klasie rodzicielskiej wybieramy „AnimInstance”. O ile nie tworzymy gry z pojazdami będzie to najczęściej używana przez nas klasa. W drugim polu upewniamy się, że został wybrany szkielet naszej postaci i klikamy przycisk „ok”. Nowopowstały plik możemy nazwać „CharacterAnimBP”. W menu konstektowym klikamy na niego dwukrotnie.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.75]{Screeny/UeKrokPoKroku/UE-AnimBPcreate.png}
+    \end{center}
+    \caption{Krok po kroku - UE - Animation Blueprint - tworzenie}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\newpage
+\subsection{Graf Animacji}
+Pierwsze co musimy zrobić to dodać maszynę stanów. W tym celu możemy poprowadzić linię od „Result” w „Final Animation Pose”, a następnie wyszukać i wybrać „Add New State Machine...”. Możemy nazwać ją „Locomotion” i kliknąć na nią dwukrotnie lewym przyciskiem myszy.
+
+W tym miejscu będziemy tworzyć stany i ich połączenia. Aby stworzyć pierwszy stan przeciągamy linię od „entry”, a następnie wybieramy „Add state...”. Nazwijmy go „Idle\_Walk\_Run” i kliknijmy na niego dwukrotnie.
+
+Do grafu z przeglądarki assetów dodajmy stworzone przez nas wcześniej przejście „Idle\_Walk\_Run” i łączymy je z „Final Animation Pose”.  Nie chcemy, aby prędkość animacji była stała, dlatego klikamy prawym przyciskiem na zielonym kółeczko w „Idle\_Walk\_Run” i wybieramy „Promote to Variable”. Naszą zmienną nazwijmy „Speed”.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.6]{Screeny/UeKrokPoKroku/UE-AnimGraph-IdleWalkRun.png}
+    \end{center}
+    \caption{Krok po kroku - UE - Graf Animacji - Idle Walk Run}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\newpage
+Następnie dodajemy stany dla skoku. Jeden dla stanu początkowego, drugi dla zapętlonej animacji skoku, a ostatni dla stanu końcowego. Łączymy je tak jak na poniższym rysunku. Następnie wchodzimy w każdy z nich po kolei i z przeglądarki assetów przyłączamy odpowiednią animację.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.6]{Screeny/UeKrokPoKroku/UE-AnimGraph-Anim.png}
+    \end{center}
+    \caption{Krok po kroku - UE -  Graf Animacji - dodanie skoku}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Połączenia pomiędzy stanami również musimy zedytować. Zacznijmy od połączenia „Idle\_Walk\_Run” z „JumpStart”. Aby je zedytować dwukrotnie klikamy kółeczko obok strzałki. W tym miejscu stwórzmy zmienną, która będzie nas informowała czy postać jest w powietrzu. W tym celu klikamy prawym przyciskiem myszy na czerwone kółko w „Result” i wybieramy „Promote to Variable”. Nazwijmy naszą zmienną „IsInAir?”. Kolejne połączenia zedytujmy według poniższego schematu.
+\newpage
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-AnimGraph-Connect.png}
+    \end{center}
+    \caption{Krok po kroku - UE -  Graf Animacji - Połączenia stanów}
+ (1) połączęnie „Idle\_Walk\_Run” z „JumpStart”, (2) połączenie „JumpStart” z „JumpLoop”, (3) połączenie „JumpLoop” z „JumpEnd”, (4) połączenie „JumpEnd” z „Idle\_Walk\_Run”
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\newpage
+\subsection{Graf Zdarzeń}
+Przechodzimy do grafu zdarzeń. Pierwsze co w musimy zrobić, to sprawdzić, czy w ogóle istnieje gracz. Jeżeli nie, żaden kod się nie wykona. Jeżeli jednak istnieje będziemy mogli wykonywać dalsze czynności.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.6]{Screeny/UeKrokPoKroku/UE-EventGraph-IsValid.png}
+    \end{center}
+    \caption{Krok po kroku - UE -  Graf Zdarzeń - Walidacja postaci}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Następnie sprawdzamy czy postać jest w powietrzu. Możemy to zrobić pobierając pozycję naszej postaci, oraz wykorzystując wbudowane funkcje „IsFalling” i „IsFlynig”.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.6]{Screeny/UeKrokPoKroku/UE-EventGraph-IsInAir.png}
+    \end{center}
+    \caption{Krok po kroku - UE -  Graf Zdarzeń - Sprawdzanie czy jest w powietrzu}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Widząc czy nasza postać się unosi, spada, lub nie zmienia swojego położenia możemy odpowiednio ustalić wartość zmiennej „IsInAir?”.
+\newpage
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.6]{Screeny/UeKrokPoKroku/UE-EventGraph-SetIsInAir.png}
+    \end{center}
+    \caption{Krok po kroku - UE -  Graf Zdarzeń - Ustawianie zmiennej "IsInAir?"}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Na koniec pozostaje nam tylko ustawienie prędokści naszej animacji.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.6]{Screeny/UeKrokPoKroku/UE-EventGraph-Speed.png}
+    \end{center}
+    \caption{Krok po kroku - UE -  Graf Zdarzeń - Ustawianie prędkości}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\newpage
+\section{Postać}
+
+Na początku musimy stworzyć blueprint naszej postaci. W tym celu w katalogu „Character” klikamy „Add New” i wybieramy „Blueprint Class”. Z dostępnych opcji wybieramy „Character”, nowopowstały plik nazywamy „CharacterBP”, a następnie otwieramy go.
+
+W komponentach po lewej stronie nowootwartego okna zaznaczamy „Mesh” i przenosimy swoją uwagę na prawą stronę edytora. W tym miejscu zmieniamy dwie rzeczy. Pierwszą z nich w zakładce „Mesh” jest szkielet. Zmieniamy go na ten, który posiadamy. W głównym oknie dostosowujemy go do strefy kolizji, t.j. obniżamy go, oraz obkręcamy o 90 stopni przeciwnie do ruchów wskazówek zegara. Następnie po prawej stronie wyszukujemy zakładkę „Animation” i w „Anim Blueprint Generated Class” zmieniamy na wcześniej utworzony „CharacterAnimBP”.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-CharacterBP-Viewport.png}
+    \end{center}
+    \caption{Krok po kroku - UE -  CharacterBP - Viewport}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+
+Wracamy do komponentów. Tam wyszukujemy i dodajemy „SpringArm”, a następnie zmieniamy jego nazwę na „CameraBoom”. Klikamy na nią, a następnie w panelu po prawej stronie wyszukujemy „Camera Settings” i zaznaczamy w niej „Use Pawn Control Rotation”. Dzięki temu kamera po napotkaniu kolizji przybliży się do postaci. Jest to przydatne w momencie, w którym gracz pokieruje postać do zamkniętego pomieszczenia. 
+
+Następnie w menu komponentów dodajmy samą kamerę, a następnie przeciągamy ją na „CameraBoom”. Możemy dostosować jej pozycję jakkolwiek chcemy.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-CharacterBP-Camera.png}
+    \end{center}
+    \caption{Krok po kroku - UE -  CharacterBP - Kamera}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+
+W menu komponentów wybieramy „CharacterBP” i odznaczmy w nim „Use Controller Rotation Yaw”. Następnie przejdźmy do komponentu „CharacterMocement” i w panelu po prawej stronie w „General Settings” wyszukujemy i zaznaczamy „Orient Rotation to Movement”.
+
+Następnie przechodzimy do zakładki „Event Graph”. To tutaj będziemy przekazywali postaci co ma robić po wciśnięciu konkretnego przycisku. Zacznijmy od poruszania się. Musimy pobrać pozycje postaci, rozbić ją na wektory, które po wciśnięciu odpowiedniego klawisza będą się zmieniać.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-CharacterBP-Movement.png}
+    \end{center}
+    \caption{Krok po kroku - UE -  CharacterBP - Poruszanie}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Kolejnym krokiem będzie ustawienie akcji dla myszy i skoku.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/UE-CharacterBP-MouseAndJump.png}
+    \end{center}
+    \caption{Krok po kroku - UE -  CharacterBP - Mysz i Skok}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\newpage
+\section{Krok 3 - Kolizje}
 
 Pierwsze co musimy zrobić to ustalić obszar kolizji dla naszej postaci. Dzięki temu będzie ona wiedziała m.in kiedy napotka ścianę na którą może się wspinać. Na początku powinniśmy w ustawieniach projektu zadeklarować „tracery" - funkcje, które będą śledzić czy i kiedy postać się do czegoś zbliża.
 
@@ -920,7 +1117,7 @@ W menu po prawej stronie wyszukujemy zakładkę „Shape". Tam możemy zmienić 
 \end{figure}
 \newpage
 
-Następnie również po prawej stronie wyszukujemy zakładkę „collision". Upewniamy się, że „Generate Overlap Events" zostało ustawione na „prawdę". Następnie "Collision Presets" zmieniamy na „Custom...". Upewniamy się, że „Object Type" został ustawiony na „SphereTracer". Następnie w „Collision Response" ustawiamy wszystko na „Ingore" - jedyne wyjątki stanową "LedgeTracer", który powinien być ustawiony na „Block", oraz „WorldStatic", który powinien być ustawiony na „Overlap".
+Następnie również po prawej stronie wyszukujemy zakładkę „collision". Upewniamy się, że „Generate Overlap Events" zostało ustawione na „prawdę". Następnie „Collision Presets" zmieniamy na „Custom...". Upewniamy się, że „Object Type" został ustawiony na „SphereTracer". Następnie w „Collision Response" ustawiamy wszystko na „Ingore" - jedyne wyjątki stanową „LedgeTracer", który powinien być ustawiony na „Block", oraz „WorldStatic", który powinien być ustawiony na „Overlap".
 
 \begin{figure}[!htb]
     \begin{center}
@@ -931,7 +1128,7 @@ Następnie również po prawej stronie wyszukujemy zakładkę „collision". Upe
 \end{figure}
 \newpage
 
-Teraz możemy powrócić do naszej sceny i wybrać obiekt na który gracz będzie mógł się wspinać. W tym celu klikamy na niego i w prawym menu szukamy zakładki „Collision". Upewniamy się, że "Generate Overlap Events" zostało ustawione na fałsz. Następnie „Collision Presets" zmieniamy na „Custom...". Upewniamy się, że „Object Type" został ustawiony na „WorldStatic". Następnie w „Collision Response" ustawiamy wszystko na „Block" - jedynie „SphereTracer" powinien być ustawiony na „Overlap".
+Teraz możemy powrócić do naszej sceny i wybrać obiekt na który gracz będzie mógł się wspinać. W tym celu klikamy na niego i w prawym menu szukamy zakładki „Collision". Upewniamy się, że „Generate Overlap Events" zostało ustawione na fałsz. Następnie „Collision Presets" zmieniamy na „Custom...". Upewniamy się, że „Object Type" został ustawiony na „WorldStatic". Następnie w „Collision Response" ustawiamy wszystko na „Block" - jedynie „SphereTracer" powinien być ustawiony na „Overlap".
 
 \begin{figure}[!htb]
     \begin{center}
@@ -941,9 +1138,9 @@ Teraz możemy powrócić do naszej sceny i wybrać obiekt na który gracz będzi
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-\section{Krok 2 - Tracery}
+\section{Krok 4 - Tracery}
 
-Powracamy do pliku „ThirdPersonCharacter". Tam w grafie zdarzeń tworzymy „Event Tick" - zdarzenie, które wykonuje się co klatkę w grze. Aby utworzyć jakąkolwiek akcję w grafach wystarczy kliknąć prawym przyciskiem myszy na wolnej przestrzeni. We wspomnianym zdarzeniu tworzymy linię od białego pięcioboku i tworzymy brancha. W nim z kolei od czerwonej kropki przy "condition" tworzymy kolejne połączenie. Z dostępnych opcji wybieramy „Promote to Variable" i powstałą wartość nazywamy „CanTrace".
+Powracamy do pliku „ThirdPersonCharacter". Tam w grafie zdarzeń tworzymy „Event Tick" - zdarzenie, które wykonuje się co klatkę w grze. Aby utworzyć jakąkolwiek akcję w grafach wystarczy kliknąć prawym przyciskiem myszy na wolnej przestrzeni. We wspomnianym zdarzeniu tworzymy linię od białego pięcioboku i tworzymy brancha. W nim z kolei od czerwonej kropki przy „condition" tworzymy kolejne połączenie. Z dostępnych opcji wybieramy „Promote to Variable" i powstałą wartość nazywamy „CanTrace".
 W „Branchu" mamy dwie opcje. W przypadku, kiedy nie znaleźliśmy krawędzi na którą możemy się wspinać nic nie robi. Jeżeli jednak ją znaleźlimy wykonujemy dalsze instrukcje. Dlatego też tworzymy kolejną linię tylko od prawdy i tworzymy „sequence".
 
 \begin{figure}[!htb]
@@ -1029,9 +1226,9 @@ Jeżeli wszystko wykonaliśmy poprawnie po kliknięciu „play" na ekranie powin
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-\section{Krok 3 - Chwytanie}
+\section{Krok 5 - Chwytanie}
 
-Teraz kiedy już nasza postać wykrywa ściany do wspinaczki możemy zająć się chwytaniem krawędzi. Na początek stwórzmy nowy interfejs. Aby to zrobić, w menu kontekstowym (w lewym dolnym rogu) klikamy przycisk „Add New", następnie rozwijamy „Bueprints" i wybieramy „Blueprint interface". Nazwijmy go "CharMoveInterface" i od razu go otwórzmy.
+Teraz kiedy już nasza postać wykrywa ściany do wspinaczki możemy zająć się chwytaniem krawędzi. Na początek stworzymy nowy interfejs. Aby to zrobić, w menu kontekstowym (w lewym dolnym rogu) klikamy przycisk „Add New", następnie rozwijamy „Bueprints" i wybieramy „Blueprint interface". Nazwijmy go „CharMoveInterface" i od razu go otwórzmy.
 
 W prawym górym rogu nowo otwartego okienka mamy możliwość dodania nowych funkcji. Pierwszą jaką dodamy nazwijmy CanGrabLedge$\_$BI. W nią w „Inputs" dodajmy wartość „Boolean" o nazwie "CanGrab$\_$BI.
 
@@ -1062,11 +1259,26 @@ Wracamy do pliku „ThirdPersonCharacter". Od zadeklarowanego niedawno „DoOnce
     \begin{center}
     \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/WallGoToLocation}
     \end{center}
-    \caption{Krok po kroku - UE - Chwytanie - Przesuwanie postaci do krawędzi}
+    \caption{Krok po kroku - UE - Chwytanie - Przysuwanie postaci do krawędzi}
+    Widok rozwiniętego makro „WallGoToLocation"
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Po raz kolejny wracamy do „ThirdPerson$\_$AnimBP", tym razem przechodzimy do Animacji Grafu. Tam klikamy prawym przyciskiem myszy na tło i wybieramy „Add state...". Nasz nowy stan możemy nazwać „LedgeGrab". Klikamy na niego dwukrotnie, aby dodać animacje. Wystarczy, że 
+\newpage
+Po raz kolejny wracamy do „ThirdPerson$\_$AnimBP", tym razem przechodzimy do Animacji Grafu. Tam klikamy prawym przyciskiem myszy na tło i wybieramy „Add state...". Nasz nowy stan możemy nazwać „LedgeGrab". Klikamy na niego dwukrotnie, aby dodać animacje. Aby to zrobić wystarczy przeciągnąć linię od kafelka „Final Animation Pose" i wybrać animację „LedgeGrabPlaceHolder".
+
+Powracamy do głównego ekranu Animacji Grafu. Do nowego stanu musimy dodać połączenia, aby postać wiedziała kiedy ma się krawędzi chwytać.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-AnimGraph}
+    \end{center}
+    \caption{Krok po kroku - UE - Chwytanie - Graf Animacji}
+    Na obrazku przedstawiono połączenia do stanu chwytania oraz logikę, jaką należy do tych połączeń dodać.
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+
 
 \chapter{Podsumowanie tworzenia gier dla obu silników}
 
@@ -1143,7 +1355,9 @@ Treść załącznika jeden.
 
 Treść załącznika dwa.
 
+
 % literatura (obowiązkowo):
+\nocite{*}
 \bibliographystyle{unsrt}
 \bibliography{xml}
 
