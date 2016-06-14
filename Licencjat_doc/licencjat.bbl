@@ -1,3 +1,36 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{UnityDoc}
+Unity Technologies.
+\newblock {\em Dokumentacja Unity, wersja 5.3}, 2016.
+\newblock \url{http://docs.unity3d.com/530/Documentation/Manual/index.html}.
+
+\bibitem{UnrealDoc}
+Epic Games, Inc.
+\newblock {\em Dokumentacja Unreal Engine, wersja 4}, 2014.
+\newblock \url{https://docs.unrealengine.com/latest/INT/}.
+
+\bibitem{UnrealVSUnity}
+unityhacker.
+\newblock {\em Unity 5 vs Unreal Engine 4}.
+\newblock 7 września 2014,
+  \url{https://create3dgames.wordpress.com/2015/09/07/unity-5-vs-unreal-engine-4/}.
+
+\bibitem{Historia}
+Daniel „hELL\_Mariachi" Poręba.
+\newblock {\em Najważniejsze silniki gier cz. 1}.
+\newblock 24 kwietnia 2010,
+  \url{http://www.benchmark.pl/testy_i_recenzje/Najwazniejsze_silniki_gier_cz._1-2798.html}.
+
+\bibitem{testing}
+Game Development Stack Exchange.
+\newblock {\em How common is automated testing in game development?}
+\newblock 22 grudnia 2011,
+  \url{http://gamedev.stackexchange.com/questions/21397/how-common-is-automated-testing-in-game-development}.
+
+\bibitem{climbing}
+Crocopedes.
+\newblock {\em UE4 Ledge Climbing Tutorial}.
+\newblock 23 czerwca 2015, \url{https://www.youtube.com/c/Crocopedes}.
 
 \end{thebibliography}
