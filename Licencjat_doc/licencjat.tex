@@ -1406,7 +1406,8 @@ Następnie klikamy prawym przyciskiem myszy na plik, z którego wyszliśmy i w s
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
-Wracamy do dolnego środkowego panelu, a następnie wyszukujemy i naciskamy przycisk lupy w sekcji „Montage” zaraz pod napisem „DefaultGroup”.W nowootowartym okienku dodajemy nową grupę „TP\_Slot”, a w niej dodajemy nowy slot „TP”. Zamykamy okienko i w tej samej sekcji zmieniamy „DefaultGroup” na tą, którą przed chwilą utworzyliśmy. Zapisujemy i przechodzmy do pliku „CharacterAnimBP”.
+\newpage
+Wracamy do dolnego środkowego panelu, a następnie wyszukujemy i naciskamy przycisk lupy w sekcji „Montage” . Dodajemy nową grupę „TP\_Slot”, a w niej dodajemy nowy slot „TP”. Zamykamy okienko i w tej samej sekcji zmieniamy „DefaultGroup” na „TP\_Slot.TP". Zapisujemy i przechodzmy do „CharacterAnimBP”.
 
 W dolnym panelu, w zakładce „My Blueprint” wyszukujemy i klikamy dwukrotnie „AnimGraph”. Przeciągamy linię od „Locomotion” aby dodać „DefaultSlot”, który następnie łączym z „Final Animation Pose”.  Upewniamy się, że slot jest zaznaczony, a następnie w prawym dolnym panelu w „Slot Name” zmieniamy nazwę na „DefaultGroup.TP”
 
@@ -1417,7 +1418,7 @@ W dolnym panelu, w zakładce „My Blueprint” wyszukujemy i klikamy dwukrotnie
     \caption{Krok po kroku - UE - Wspinanie - Sloty Grafu Animacji}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
-
+\newpage
 Zapisujemy i przechodzimy do „CharacterAnimBP” do grafu zdarzeń. W tym miejscu stworzymy gra dla naszej wspinaczki, zgodny z rysunkiem poniżej.
 
 \begin{figure}[!htb]
@@ -1437,6 +1438,89 @@ Ostatnią rzeczą, jaką musimy zrobić, to zmodyfikować graf skoku. W tym celu
     \caption{Krok po kroku - UE - Wspinanie - Modyfikacja skoku}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
+
+\section{Krok 9 - wykończenie}
+
+Nasza postać potrafi się już poruszać, skakać, a nawet wspinać. Mamy też utworzoną scenę, którą w każdym momencie możemy wyedytować. Pozostało jeszcze kilka rzeczy, które możemy dodać do naszego projektu. Jedną z nich jest usunięcie widoku tracerów. Aby to zrobić wystarczy wejść w „CharacterBP”, i w obu tracerach, w „SphereTraceByChannel” zmienić wartość „Draw Debug Type” na „None”.
+
+\subsection{Menu główne}
+
+Aby utworzyć menu główne musimy stworzyć nowy poziom.W tym celu w wyszukiwarce zawartości klikamy „Add New” i wybieramy „Level”. Nazywamy go „MainMenu”, zatwierdzamy i klikamy na niego dwukrotnie. 
+
+W nowym poziomie tworzymy widget dla naszego menu. W tym celu klikamy „Add New” $\rightarrow$ „User Interface” $\rightarrow$ „Widget Blueprint”. Nowy plik nazywamy „MenuBP” i klikamy na niego dwukrotnie.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.35]{Screeny/UeKrokPoKroku/MainMenu}
+    \end{center}
+    \caption{Krok po kroku - UE - Wykończenie - Menu główne}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Po lewej stronie mamy listę rzeczy, które możemy uszyć w naszym widoku. Przy prostym menu będziemy używać tylko „Button” i „Text”. Wystarczy przeciągnąć odpowiedni komponent na środek ekranu. W naszym przypadku stworzymy przycisk dla poziomu i przycisk wyłączenia gry.
+
+Gdy zaznaczymy przycisk, po prawej stronie wyświetli się nam kilka opcji. Pierwsze, na co powinniśmy zwrócić uwagę, to „Anchors” w zakładce „Slot”. Aby menu poprawnie się wyświetlało warto po każdej zmianie pozycji przycisku kliknąć na „Anchors” i wybrać wycentrowaną opcję. Kolejną ważną sekcją jest „Events”. Aby dodać akcję wystarczy kliknąć znak plusa przy „OnClicked”.
+
+Zostaniemy automatycznie przeniesieni do grafu zdarzeń naszego menu. Widzimy, że utworzył się kafelek dla naszego przycisku. Wystarczy, że przeciągniemy teraz od niego linię i dodamy którąś z wbudowanych funkcji - „Quit game” lub „Open Level” odpowiednio dla zakończenia gry lub otwarcia konkretnego poziomu. Przy tym drugim warto wcześniej spojrzeć jak nazywa się poziom, na którym stworzyliśmy swoją scenę.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/MainMenuEvent}
+    \end{center}
+    \caption{Krok po kroku - UE - Wykończenie - Menu główne - graf zdarzeń}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Warto ustawić jeszcze daną scenę jako domyślną podczas ładowania gry. W tym celu udajemy się do ustawień projektu i „Maps \& Modes”. W sekcji „Default Maps” możemy ustawić odpowiedni poziom dla „Game Default Map” (domyślny poziom po załadowaniu gry) oraz „Editor Startup Map” (domyślny poziom po załadowaniu projektu).
+
+\newpage
+\subsection{Pauza}
+
+Początkowo menu z pauzą tworzymy analogicznie do menu głównego. Rozpoczynamy go od tworzenia widgetu, a następnie edytujemy go w sposób jaki tylko chcemy. Możemy dodać takie przyciski jak powrót, wyjście do menu (otwarcie poziomu „MainMenu") czy wyjście z gry. Następnie dodajemy zdarzenia do przycisków. Dla powrotu do gry stosujemy poniższy graf.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/PauseButton}
+    \end{center}
+    \caption{Krok po kroku - UE - Wykończenie - Pauza - Graf zdarzeń przycisku}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Pauzę trzeba w jakiś sposób aktywować. Aby to zrobić na początku dodajemy klawisz wejściowy „p” w „Inputs” w ustawieniach projektu. W naszym projekcie nazywamy go „Menu”. Następnie przechodzimy do pliku „CharacterBP” i dodajemy do niego poniższy graf.
+
+\subsection{Obszar śmierci}
+
+Gdy tworzymy gry platformowe istnieje prawdopodobieństwo, że postać spadnie w przepaść. W takich przypadkach przydaje się tzw. obszar śmierci. Aby go stworzyć w przeglądarce zawartości dodajemy nowy „Blueprint Class” z klasą rodzicielską „Actor”. Po odpowiednim nazwaniu go, klikamy na niego dwukrotnie. 
+
+Wewnątrz, po lewej stronie mamy menu komponentów. Dodajemy do niego „Box collision”, a następnie już w przeglądarce przeciągamy go na „DefaultSceneRoot”, dzięki czemu obszar ten będzie całkowicie niewidzialny dla gracza. 
+
+Następnie przechodzimy do grafu zdarzeń. Zaczynamy od utworzenia zdarzenia „ActorBeginOverlap”. Tutaj należy zdecydować co właściwie strefa śmierci ma robić. Na poniższym obrazku znajduje się przeniesienie postaci do z góry ustalonej lokacji początkowej poziomu.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/LevelGraph}
+    \end{center}
+    \caption{Krok po kroku - UE - Wykończenie - Obszar śmierci }
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Następnie wystarczy umieścić nasz obszar śmierci w naszym poziomie tam, gdzie gracz nie powinien się znaleźć. Należy pamiętać, że postać zostanie przeniesiona automatycznie po zetknięciu się z obszarem śmierci.
+
+\subsection{Drzwi do menu}
+
+Warto byłoby zakończyć poziom przejściem do kolejnego poziomu lub do menu, z którego można by przechodzić do innych poziomów. Obszar ten wykonuje się analogicznie do obszaru śmierci – różnica tkwi w grafie zdarzeń – zamiast „Teleport” ustawiamy „Open Level”, a wartość w nim ustawiamy na poziom naszego menu głównego.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/Door}
+    \end{center}
+    \caption{Krok po kroku - UE - Wykończenie - Przejście}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\subsection{Pakowanie gry}
+
+W momencie, w którym zdecydujemy, że nasza gra jest gotowa, można ją spakować i udostępnić innym. W tym celu przechodzimy do ekranu głównego projektu. Następnie wybieramy zakładkę „File” i „Package Project”. W tym miejscu mamy wybór na jaką platformę chcemy naszą grę wyeksportować. Kiedy już zdecydujemy wystarczy kliknąć na daną opcję. Po wybraniu miejsca, w którym ma powstać spakowana gra, reszta procesu wykona się automatycznie.
 
 \chapter{Podsumowanie tworzenia gier dla obu silników}
 
