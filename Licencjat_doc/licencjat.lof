@@ -29,7 +29,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Krok po kroku - UE - Ekran główny}}{55}{figure.7.1}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Krok po kroku - UE - Klawisze wejściowe}}{57}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Krok po kroku - UE - Blend Spaces - Dodawanie w przeglądarce zawartości}}{58}{figure.7.3}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Krok po kroku - UE - Blend Spaces - Tworzenie}}{58}{figure.7.3}
 \contentsline {figure}{\numberline {7.4}{\ignorespaces Krok po kroku - UE - Blend Spaces - Idle Walk Run}}{59}{figure.7.4}
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Krok po kroku - UE - Importowanie}}{59}{figure.7.5}
 \contentsline {figure}{\numberline {7.6}{\ignorespaces Krok po kroku - UE - Animation Blueprint - tworzenie}}{60}{figure.7.6}
@@ -37,7 +37,7 @@
 \contentsline {figure}{\numberline {7.8}{\ignorespaces Krok po kroku - UE - Graf Animacji - dodanie skoku}}{62}{figure.7.8}
 \contentsline {figure}{\numberline {7.9}{\ignorespaces Krok po kroku - UE - Graf Animacji - Połączenia stanów}}{63}{figure.7.9}
 \contentsline {figure}{\numberline {7.10}{\ignorespaces Krok po kroku - UE - Graf Zdarzeń - Walidacja postaci}}{63}{figure.7.10}
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Krok po kroku - UE - Graf Zdarzeń - Sprawdzanie czy jest w powietrzu}}{64}{figure.7.11}
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Krok po kroku - UE - Graf Zdarzeń - Czy w powietrzu?}}{64}{figure.7.11}
 \contentsline {figure}{\numberline {7.12}{\ignorespaces Krok po kroku - UE - Graf Zdarzeń - Ustawianie zmiennej "IsInAir?"}}{64}{figure.7.12}
 \contentsline {figure}{\numberline {7.13}{\ignorespaces Krok po kroku - UE - Graf Zdarzeń - Ustawianie prędkości}}{65}{figure.7.13}
 \contentsline {figure}{\numberline {7.14}{\ignorespaces Krok po kroku - UE - CharacterBP - Viewport}}{66}{figure.7.14}
@@ -67,6 +67,14 @@
 \contentsline {figure}{\numberline {7.38}{\ignorespaces Krok po kroku - UE - Chwytanie}}{84}{figure.7.38}
 \contentsline {figure}{\numberline {7.39}{\ignorespaces Krok po kroku - UE - Chwytanie - Przysuwanie postaci do krawędzi}}{84}{figure.7.39}
 \contentsline {figure}{\numberline {7.40}{\ignorespaces Krok po kroku - UE - Chwytanie - Graf Animacji}}{85}{figure.7.40}
+\contentsline {figure}{\numberline {7.41}{\ignorespaces Krok po kroku - UE - Puszczanie krawędzi}}{86}{figure.7.41}
+\contentsline {figure}{\numberline {7.42}{\ignorespaces Krok po kroku - UE - Puszczanie krawędzi - Crouch}}{86}{figure.7.42}
+\contentsline {figure}{\numberline {7.43}{\ignorespaces Krok po kroku - UE - Puszczanie krawędzi - HipSocket}}{87}{figure.7.43}
+\contentsline {figure}{\numberline {7.44}{\ignorespaces Krok po kroku - UE - Puszczanie krawędzi - Dystans do krawędzi}}{88}{figure.7.44}
+\contentsline {figure}{\numberline {7.45}{\ignorespaces Krok po kroku - UE - Wspinanie - Montaż wspinaczki}}{89}{figure.7.45}
+\contentsline {figure}{\numberline {7.46}{\ignorespaces Krok po kroku - UE - Wspinanie - Sloty Grafu Animacji}}{90}{figure.7.46}
+\contentsline {figure}{\numberline {7.47}{\ignorespaces Krok po kroku - UE - Wspinanie - Graf zdarzeń}}{90}{figure.7.47}
+\contentsline {figure}{\numberline {7.48}{\ignorespaces Krok po kroku - UE - Wspinanie - Modyfikacja skoku}}{91}{figure.7.48}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces UnrealEngine a Unity - porównanie grafiki}}{88}{figure.8.1}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces UnrealEngine a Unity - porównanie grafiki}}{94}{figure.8.1}
 \addvspace {10\p@ }

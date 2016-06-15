@@ -34,14 +34,16 @@
 \contentsline {subsection}{\numberline {7.5.1}Wysokość}{78}{subsection.7.5.1}
 \contentsline {subsection}{\numberline {7.5.2}Odległość od ściany}{80}{subsection.7.5.2}
 \contentsline {section}{\numberline {7.6}Krok 6 - Chwytanie}{83}{section.7.6}
-\contentsline {chapter}{\numberline {8}Podsumowanie tworzenia gier dla obu silników}{86}{chapter.8}
-\contentsline {section}{\numberline {8.1}Multiplatformowość}{86}{section.8.1}
-\contentsline {section}{\numberline {8.2}Przystępność}{86}{section.8.2}
-\contentsline {section}{\numberline {8.3}Grafika}{87}{section.8.3}
-\contentsline {section}{\numberline {8.4}Programowanie i zasoby}{88}{section.8.4}
-\contentsline {chapter}{\numberline {9} Testowanie gier}{89}{chapter.9}
-\contentsline {chapter}{Zakończenie}{91}{chapter*.5}
-\contentsline {chapter}{Bibliografia}{92}{chapter*.6}
-\contentsline {chapter}{Spis tabel}{93}{chapter*.7}
-\contentsline {chapter}{Spis rysunków}{94}{chapter*.8}
-\contentsline {chapter}{Oświadczenie}{97}{chapter*.9}
+\contentsline {section}{\numberline {7.7}Krok 7 - Puszczanie krawędzi}{86}{section.7.7}
+\contentsline {section}{\numberline {7.8}Krok 8 - Wspinanie}{88}{section.7.8}
+\contentsline {chapter}{\numberline {8}Podsumowanie tworzenia gier dla obu silników}{92}{chapter.8}
+\contentsline {section}{\numberline {8.1}Multiplatformowość}{92}{section.8.1}
+\contentsline {section}{\numberline {8.2}Przystępność}{92}{section.8.2}
+\contentsline {section}{\numberline {8.3}Grafika}{93}{section.8.3}
+\contentsline {section}{\numberline {8.4}Programowanie i zasoby}{94}{section.8.4}
+\contentsline {chapter}{\numberline {9} Testowanie gier}{95}{chapter.9}
+\contentsline {chapter}{Zakończenie}{97}{chapter*.5}
+\contentsline {chapter}{Bibliografia}{98}{chapter*.6}
+\contentsline {chapter}{Spis tabel}{99}{chapter*.7}
+\contentsline {chapter}{Spis rysunków}{100}{chapter*.8}
+\contentsline {chapter}{Oświadczenie}{103}{chapter*.9}
