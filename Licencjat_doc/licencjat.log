@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xelatex 2016.3.7)  15 JUN 2016 21:30
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xelatex 2016.3.7)  15 JUN 2016 23:51
 entering extended mode
 **./licencjat.tex
 (licencjat.tex
@@ -1420,20 +1420,59 @@ File: Screeny/UeKrokPoKroku/WallGoToLocation.png Graphic file (type QTm)
 File: Screeny/UeKrokPoKroku/UE-AnimGraph.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-AnimGraph.png" > [85]
+File: Screeny/UeKrokPoKroku/LetGoOfLedge.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/LetGoOfLedge.png" >
+File: Screeny/UeKrokPoKroku/Crouch.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/Crouch.png" > [86]
+File: Screeny/UeKrokPoKroku/HipSocket.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/HipSocket.png" >
+File: Screeny/UeKrokPoKroku/HipToLedgeDistanceMacro.png Graphic file (type QTm)
+
+
+<use  "Screeny/UeKrokPoKroku/HipToLedgeDistanceMacro.png" >
+Overfull \hbox (34.49896pt too wide) in paragraph at lines 1386--1387
+ [] 
+ []
+
+[87]
+Overfull \hbox (7.36801pt too wide) in paragraph at lines 1397--1398
+[]\EU1/MinionPro(0)/m/n/12 W przeglądarce zawartości wyszukujemy plik „ClimbLed
+gePlaceHolder” i otwie-
+ []
+
+File: Screeny/UeKrokPoKroku/MontageNotify.png Graphic file (type QTm)
+<use  "Screeny/UeKrokPoKroku/MontageNotify.png" > [88]
+File: Screeny/UeKrokPoKroku/AnimGraphSlot.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/AnimGraphSlot.png" >
+File: Screeny/UeKrokPoKroku/LedgeClimbingGraph.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/LedgeClimbingGraph.png" >
+File: Screeny/UeKrokPoKroku/JumpClimb.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/JumpClimb.png" >
+Overfull \hbox (123.99875pt too wide) in paragraph at lines 1435--1436
+ [] 
+ []
+
+[89] [90] [91]
 Rozdział 8.
-[86
+[92
 
 ]
 File: Screeny/UE_vs_Unity.png Graphic file (type QTm)
  <use  "Screeny/UE_vs_Unity.png" >
 Underfull \vbox (badness 4303) has occurred while \output is active []
 
- [87]
-[88]
+ [93]
+[94]
 Rozdział 9.
-[89
+[95
 
-] [90] (licencjat.bbl [91
+] [96] (licencjat.bbl [97
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 14--18
@@ -1465,37 +1504,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--30
 ] [][][][][][][][][] [] [][][][][] []
  []
 
-) [92
+) [98
 
 ] (licencjat.lot)
 \tf@lot=\write5
 \openout5 = `licencjat.lot'.
 
- [93
+ [99
 
-] (licencjat.lof [94
+] (licencjat.lof [100
 
-] [95])
+] [101])
 \tf@lof=\write6
 \openout6 = `licencjat.lof'.
 
- [96] [97
+ [102] [103
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1436.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1436.
- (licencjat.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1436.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1436.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1436.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1530.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1530.
+
+(licencjat.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1530.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1530.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1530.
  ) 
 Here is how much of TeX's memory you used:
- 23642 strings out of 428721
- 432930 string characters out of 3163015
- 471027 words of memory out of 3000000
- 26756 multiletter control sequences out of 15000+200000
+ 23658 strings out of 428721
+ 433376 string characters out of 3163015
+ 471112 words of memory out of 3000000
+ 26764 multiletter control sequences out of 15000+200000
  7921 words of font info for 61 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
  55i,12n,61p,10401b,1615s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on licencjat.pdf (97 pages).
+Output written on licencjat.pdf (103 pages).

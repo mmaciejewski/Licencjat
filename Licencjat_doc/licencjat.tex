@@ -899,7 +899,7 @@ Po zaimportowaniu wszystkich plików możemy ustawić klawisze wejściowe. Dzię
     \begin{center}
     \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/UE-BlendSpace-Add.png}
     \end{center}
-    \caption{Krok po kroku - UE - Blend Spaces - Dodawanie w przeglądarce zawartości}
+    \caption{Krok po kroku - UE - Blend Spaces - Tworzenie}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -995,7 +995,7 @@ Następnie sprawdzamy czy postać jest w powietrzu. Możemy to zrobić pobieraj�
     \begin{center}
     \includegraphics[scale=0.6]{Screeny/UeKrokPoKroku/UE-EventGraph-IsInAir.png}
     \end{center}
-    \caption{Krok po kroku - UE -  Graf Zdarzeń - Sprawdzanie czy jest w powietrzu}
+    \caption{Krok po kroku - UE -  Graf Zdarzeń - Czy w powietrzu?}
     \source{Zrzut ekranu z UnrealEngine}
 \end{figure}
 
@@ -1295,7 +1295,7 @@ Teraz kiedy już nasza postać wykrywa ściany do wspinaczki możemy zająć si�
 
 W prawym górym rogu nowo otwartego okienka mamy możliwość dodania nowych funkcji. Pierwszą jaką dodamy nazywamy CanGrabLedge$\_$BI. W nią w „Inputs" dodajmy wartość „Boolean" o nazwie "CanGrab$\_$BI.
 
-Wróćmy do „CharacterBP". Z górnego menu klikamy na „Class Settings". Powinno nam się pojawić menu po prawej. Tam w zakładce Interfaces klikamy „Add" i dodajemy nasz niedawno utworzony interfejs. Tę samą operację wykonujemy w pliku „CharacterAnimBP".
+Wracamy do „CharacterBP". Z górnego menu klikamy na „Class Settings". Powinno nam się pojawić menu po prawej. Tam w zakładce Interfaces klikamy „Add" i dodajemy nasz niedawno utworzony interfejs. Tę samą operację wykonujemy w pliku „CharacterAnimBP".
 
 Ponownie wracamy do „CharacterBP" i do „Ledge Height Tracer". Od „Ledge Height" tworzymy linię i wybieramy opcję „DoOnce". Wracamy do „CharacterAnimBP". Tam tworzymy nowe zdarzenie „Event Can Grab Ledge BI". Następnie przeciągamy od czerwonej kropki linię i wybieramy opcję „Promote to variable". Naszą nową zmienną nazywamy „CanGrab".
 
@@ -1343,6 +1343,100 @@ Powracamy do głównego ekranu Animacji Grafu. Do nowego stanu musimy dodać po�
 
 \newpage
 
+\section{Krok 7 - Puszczanie krawędzi}
+
+Na początek przypiszmy klawisz dla puszczania krawędzi w ustawieniach projektu. Robimy to w sekcji „Input” w „Action Mappings”. Naszą nową akcję nazywamy „Crouch” i przypisujemy do niej klawisz „s”.
+
+Następnie wracamy do „CharacterBP”. Tworzymy nowe zdarzenie, które nazywamy „LetGoOfLedge”. Następnie tworzymy połączenia tak jak na obrazku poniżej.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/LetGoOfLedge}
+    \end{center}
+    \caption{Krok po kroku - UE - Puszczanie krawędzi}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Teraz możemy przypisać zdarzenie do naszego przycisku „Crouch”. W tym celu tworzymy nową akcję i schemat do niej tak jak na obrazku poniżej.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/Crouch}
+    \end{center}
+    \caption{Krok po kroku - UE - Puszczanie krawędzi - Crouch}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+W tym momencie postać po oderwaniu się od ściany nie będzie mogła wespnąć się ponownie. Dzieje się tak za sprawą „doOnce”, które łączyło nasze tracery z grafem chwytania krawędzi. W tym miejscu możemy ją zastąpić branchem, z którego linie prowadzimy od wartości „true” do brancha w „Grab Ledge”. Zanim jednak dodamy warunek, przechodzimy do szkieletu naszej postaci.
+
+Upewniamy się, że w prawym górnym rogu został zaznaczony „skeleton”. Następnie po lewej stronie klikamy prawym przyciksiem myszy na „Pelvis” i wybieramy „Add socket”. Nazywamy go „HipSocket” i upewniamy się, że taka nazwa figuruje również w panelu po prawej stronie.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/HipSocket}
+    \end{center}
+    \caption{Krok po kroku - UE - Puszczanie krawędzi - HipSocket}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Wracamy do „CharacterBP” i do naszego brancha. Jako warunek tworzymy schemat widoczny poniżej (po prawej), które później zwijamy do macro i nazywamy „HipToLedgeDistance”. Całość powinna wyglądać tak jak po lewej stronie obrazka, przy czym podane liczby możemy modyfikować w celu uzyskania najlepszego efektu przybliżenia do krawędzi.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/HipToLedgeDistanceMacro}
+    \end{center}
+    \caption{Krok po kroku - UE - Puszczanie krawędzi - Dystans do krawędzi}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+\newpage
+\section{Krok 8 - Wspinanie}
+
+Wracamy do ekranu głównego naszego projektu. Ponownie musimy przypisać klawisz dla akcji, tym razem dla wspinania. Robimy to w tym samym miejscu co „Crouch”. Tym razem akcje nazywamy „Climb” i przypisujemy jej klawisz spacji. Zamykamy okno.
+
+W przeglądarce zawartości wyszukujemy plik „ClimbLedgePlaceHolder” i otwieramy go. Wewnątrz w dolnym lewym panelu w zakładce „Root Motion” wyszukujemy „Enable Root Motion”, a następnie upewniamy się, że jest zaznaczony. Zapisujemy plik i z niego wychodzimy. 
+
+Następnie klikamy prawym przyciskiem myszy na plik, z którego wyszliśmy i w sekcji „create” wybieramy „create AnimMontage”. Nie zmieniając nazwy pliku zatwierdzamy go i otwieramy. W dolnym środkowym panelu wyszukujemy sekcję „Notifies”. Następnie klikamy prawym przyciskiem myszy na pasku, który znajduje się w tej sekcji, wybieramy „Add notify” i następnie „New notify”, który nazywamy „ClimbingEnd”. Upewniamy się, że znajduje się on na końcu paska – sygnalizować on nam będzie koniec animacji wspinaczki. Następnie w panelu po prawej stronie, w sekcji „Event” zmieniamy „Montage Tick Type” na „Branching Point”.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/MontageNotify}
+    \end{center}
+    \caption{Krok po kroku - UE - Wspinanie - Montaż wspinaczki}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Wracamy do dolnego środkowego panelu, a następnie wyszukujemy i naciskamy przycisk lupy w sekcji „Montage” zaraz pod napisem „DefaultGroup”.W nowootowartym okienku dodajemy nową grupę „TP\_Slot”, a w niej dodajemy nowy slot „TP”. Zamykamy okienko i w tej samej sekcji zmieniamy „DefaultGroup” na tą, którą przed chwilą utworzyliśmy. Zapisujemy i przechodzmy do pliku „CharacterAnimBP”.
+
+W dolnym panelu, w zakładce „My Blueprint” wyszukujemy i klikamy dwukrotnie „AnimGraph”. Przeciągamy linię od „Locomotion” aby dodać „DefaultSlot”, który następnie łączym z „Final Animation Pose”.  Upewniamy się, że slot jest zaznaczony, a następnie w prawym dolnym panelu w „Slot Name” zmieniamy nazwę na „DefaultGroup.TP”
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/AnimGraphSlot}
+    \end{center}
+    \caption{Krok po kroku - UE - Wspinanie - Sloty Grafu Animacji}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Zapisujemy i przechodzimy do „CharacterAnimBP” do grafu zdarzeń. W tym miejscu stworzymy gra dla naszej wspinaczki, zgodny z rysunkiem poniżej.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/LedgeClimbingGraph}
+    \end{center}
+    \caption{Krok po kroku - UE - Wspinanie - Graf zdarzeń}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
+
+Ostatnią rzeczą, jaką musimy zrobić, to zmodyfikować graf skoku. W tym celu powracamy do „CharacterBP” i w grafie zdarzeń wyszukujemy „jump”. Graf modyfikujemy tak, by wyglądał jak na obrazku poniżej.
+
+\begin{figure}[!htb]
+    \begin{center}
+    \includegraphics[scale=0.5]{Screeny/UeKrokPoKroku/JumpClimb}
+    \end{center}
+    \caption{Krok po kroku - UE - Wspinanie - Modyfikacja skoku}
+    \source{Zrzut ekranu z UnrealEngine}
+\end{figure}
 
 \chapter{Podsumowanie tworzenia gier dla obu silników}
 
