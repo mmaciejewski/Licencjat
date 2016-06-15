@@ -139,8 +139,8 @@
 \addcontentsline{toc}{chapter}{\SummaryName}}
 %
 \def\oswiadczenieText{%
-Ja, niżej podpisany(a) oświadczam, iż przedłożona praca 
-dyplomowa została wykonana przeze mnie samodzielnie, 
+My, niżej podpisani oświadczamy, iż przedłożona praca 
+dyplomowa została wykonana przez nas samodzielnie, 
 nie narusza praw autorskich, interesów prawnych 
 i~materialnych innych osób.\endgraf }
 %

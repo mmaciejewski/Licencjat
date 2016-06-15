@@ -27,13 +27,13 @@
 \contentsline {section}{\numberline {7.1}Krok 1 - Import postaci i ustawianie klawiszy wejściowych}{56}{section.7.1}
 \contentsline {section}{\numberline {7.2}Krok 2 - Graf animacji i graf zdarzeń}{58}{section.7.2}
 \contentsline {subsection}{\numberline {7.2.1}Graf Animacji}{61}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Graf Zdarzeń}{64}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}Postać}{66}{section.7.3}
-\contentsline {section}{\numberline {7.4}Krok 3 - Kolizje}{68}{section.7.4}
-\contentsline {section}{\numberline {7.5}Krok 4 - Tracery}{74}{section.7.5}
+\contentsline {subsection}{\numberline {7.2.2}Graf Zdarzeń}{63}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}Krok 3 - Postać i scena}{65}{section.7.3}
+\contentsline {section}{\numberline {7.4}Krok 4 - Wspinaczka i kolizje}{72}{section.7.4}
+\contentsline {section}{\numberline {7.5}Krok 5 - Tracery}{76}{section.7.5}
 \contentsline {subsection}{\numberline {7.5.1}Wysokość}{78}{subsection.7.5.1}
 \contentsline {subsection}{\numberline {7.5.2}Odległość od ściany}{80}{subsection.7.5.2}
-\contentsline {section}{\numberline {7.6}Krok 5 - Chwytanie}{82}{section.7.6}
+\contentsline {section}{\numberline {7.6}Krok 6 - Chwytanie}{83}{section.7.6}
 \contentsline {chapter}{\numberline {8}Podsumowanie tworzenia gier dla obu silników}{86}{chapter.8}
 \contentsline {section}{\numberline {8.1}Multiplatformowość}{86}{section.8.1}
 \contentsline {section}{\numberline {8.2}Przystępność}{86}{section.8.2}
@@ -41,9 +41,7 @@
 \contentsline {section}{\numberline {8.4}Programowanie i zasoby}{88}{section.8.4}
 \contentsline {chapter}{\numberline {9} Testowanie gier}{89}{chapter.9}
 \contentsline {chapter}{Zakończenie}{91}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Tytuł załącznika jeden}{92}{appendix.A}
-\contentsline {chapter}{\numberline {B}Tytuł załącznika dwa}{93}{appendix.B}
-\contentsline {chapter}{Bibliografia}{94}{appendix*.6}
-\contentsline {chapter}{Spis tabel}{95}{appendix*.7}
-\contentsline {chapter}{Spis rysunków}{96}{appendix*.8}
-\contentsline {chapter}{Oświadczenie}{98}{appendix*.9}
+\contentsline {chapter}{Bibliografia}{92}{chapter*.6}
+\contentsline {chapter}{Spis tabel}{93}{chapter*.7}
+\contentsline {chapter}{Spis rysunków}{94}{chapter*.8}
+\contentsline {chapter}{Oświadczenie}{97}{chapter*.9}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xelatex 2016.3.7)  14 JUN 2016 23:57
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xelatex 2016.3.7)  15 JUN 2016 21:30
 entering extended mode
 **./licencjat.tex
 (licencjat.tex
@@ -1292,23 +1292,22 @@ Overfull \hbox (55.49892pt too wide) in paragraph at lines 974--975
  [] 
  []
 
-[63]
 File: Screeny/UeKrokPoKroku/UE-EventGraph-IsValid.png Graphic file (type QTm)
- <use  "Screeny/UeKrokPoKroku/UE-EventGraph-IsValid.png" >
-Overfull \hbox (48.60338pt too wide) in paragraph at lines 987--988
+<use  "Screeny/UeKrokPoKroku/UE-EventGraph-IsValid.png" >
+Overfull \hbox (48.60338pt too wide) in paragraph at lines 986--987
  [] 
  []
 
+[63]
 File: Screeny/UeKrokPoKroku/UE-EventGraph-IsInAir.png Graphic file (type QTm)
-<use  "Screeny/UeKrokPoKroku/UE-EventGraph-IsInAir.png" >
-Overfull \hbox (20.40317pt too wide) in paragraph at lines 997--998
+ <use  "Screeny/UeKrokPoKroku/UE-EventGraph-IsInAir.png" >
+Overfull \hbox (20.40317pt too wide) in paragraph at lines 996--997
  [] 
  []
 
-[64]
 File: Screeny/UeKrokPoKroku/UE-EventGraph-SetIsInAir.png Graphic file (type QTm
 )
- <use  "Screeny/UeKrokPoKroku/UE-EventGraph-SetIsInAir.png" >
+<use  "Screeny/UeKrokPoKroku/UE-EventGraph-SetIsInAir.png" > [64]
 File: Screeny/UeKrokPoKroku/UE-EventGraph-Speed.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-EventGraph-Speed.png" >
@@ -1322,10 +1321,7 @@ File: Screeny/UeKrokPoKroku/UE-CharacterBP-Viewport.png Graphic file (type QTm)
  <use  "Screeny/UeKrokPoKroku/UE-CharacterBP-Viewport.png" >
 File: Screeny/UeKrokPoKroku/UE-CharacterBP-Camera.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-CharacterBP-Camera.png" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [66]
+<use  "Screeny/UeKrokPoKroku/UE-CharacterBP-Camera.png" > [66]
 File: Screeny/UeKrokPoKroku/UE-CharacterBP-Movement.png Graphic file (type QTm)
 
 
@@ -1334,77 +1330,88 @@ File: Screeny/UeKrokPoKroku/UE-CharacterBP-MouseAndJump.png Graphic file (type
 QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-CharacterBP-MouseAndJump.png" > [67]
+File: Screeny/UeKrokPoKroku/UE-MyGame-Class.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/UE-MyGame-Class.png" > [68]
+File: Screeny/UeKrokPoKroku/UE-MyGame-WorldSetting.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/UE-MyGame-WorldSetting.png" >
+File: Screeny/UeKrokPoKroku/UE-MyGame-ProjectSettings.png Graphic file (type QT
+m)
+
+<use  "Screeny/UeKrokPoKroku/UE-MyGame-ProjectSettings.png" > [69]
+File: Screeny/UeKrokPoKroku/UE-MyGame-Posses.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/UE-MyGame-Posses.png" > [70]
+File: Screeny/UeKrokPoKroku/UE-MyGame-Scene.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/UE-MyGame-Scene.png" > [71]
 File: Screeny/UeKrokPoKroku/UE-Climb-ProjectSettings.png Graphic file (type QTm
 )
 
 <use  "Screeny/UeKrokPoKroku/UE-Climb-ProjectSettings.png" >
-Underfull \vbox (badness 1383) has occurred while \output is active []
-
- [68]
-[69]
 File: Screeny/UeKrokPoKroku/UE-Climb-Collision.png Graphic file (type QTm)
- <use  "Screeny/UeKrokPoKroku/UE-Climb-Collision.png" > [70]
+
+<use  "Screeny/UeKrokPoKroku/UE-Climb-Collision.png" > [72]
 File: Screeny/UeKrokPoKroku/UE-Climb-Sphere01.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere01.png" > [71]
+<use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere01.png" > [73]
 File: Screeny/UeKrokPoKroku/UE-Climb-Sphere02.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere02.png" > [72]
+<use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere02.png" >
 File: Screeny/UeKrokPoKroku/UE-Climb-Sphere03.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere03.png" > [73]
+<use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere03.png" > [74]
 File: Screeny/UeKrokPoKroku/UE-Climb-ObjectCollision.png Graphic file (type QTm
 )
 
-<use  "Screeny/UeKrokPoKroku/UE-Climb-ObjectCollision.png" > [74]
+<use  "Screeny/UeKrokPoKroku/UE-Climb-ObjectCollision.png" > [75]
 File: Screeny/UeKrokPoKroku/UE-Tick.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-Tick.png" >
-Overfull \hbox (6.9409pt too wide) in paragraph at lines 1154--1155
+<use  "Screeny/UeKrokPoKroku/UE-Tick.png" > [76]
+Overfull \hbox (6.9409pt too wide) in paragraph at lines 1215--1216
 []\EU1/MinionPro(0)/m/n/12 Następnie musimy powiedzieć programowi kiedy możliwo
 ść śledzenia jest praw-
  []
 
-[75] [76]
 File: Screeny/UeKrokPoKroku/UE-canTrace.png Graphic file (type QTm)
- <use  "Screeny/UeKrokPoKroku/UE-canTrace.png" >
+<use  "Screeny/UeKrokPoKroku/UE-canTrace.png" > [77]
 File: Screeny/UeKrokPoKroku/UE-Tracer.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-Tracer.png" > [77]
+<use  "Screeny/UeKrokPoKroku/UE-Tracer.png" >
 File: Screeny/UeKrokPoKroku/UE-HeightMacro.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-HeightMacro.png" > [78]
 File: Screeny/UeKrokPoKroku/UE-Height.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-Height.png" >
-Overfull \hbox (37.99896pt too wide) in paragraph at lines 1191--1192
+Overfull \hbox (37.99896pt too wide) in paragraph at lines 1252--1253
  [] 
  []
 
 [79]
 File: Screeny/UeKrokPoKroku/WallMacro.png Graphic file (type QTm)
  <use  "Screeny/UeKrokPoKroku/WallMacro.png" >
-Overfull \hbox (67.49889pt too wide) in paragraph at lines 1203--1204
+Overfull \hbox (67.49889pt too wide) in paragraph at lines 1265--1266
  [] 
  []
 
 [80]
 File: Screeny/UeKrokPoKroku/UE-WallTracer.png Graphic file (type QTm)
- <use  "Screeny/UeKrokPoKroku/UE-WallTracer.png" >
-Overfull \hbox (18.99901pt too wide) in paragraph at lines 1213--1214
- [] 
- []
-
-[81]
+ <use  "Screeny/UeKrokPoKroku/UE-WallTracer.png" > [81]
 File: Screeny/UeKrokPoKroku/spherecollision.png Graphic file (type QTm)
- <use  "Screeny/UeKrokPoKroku/spherecollision.png" > [82]
+
+<use  "Screeny/UeKrokPoKroku/spherecollision.png" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [82]
 File: Screeny/UeKrokPoKroku/CanGrabInterface.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/CanGrabInterface.png" > [83]
 File: Screeny/UeKrokPoKroku/GrabLedge.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/GrabLedge.png" >
-Overfull \hbox (35.99896pt too wide) in paragraph at lines 1252--1253
+Overfull \hbox (35.99896pt too wide) in paragraph at lines 1315--1316
  [] 
  []
 
@@ -1426,15 +1433,7 @@ Underfull \vbox (badness 4303) has occurred while \output is active []
 Rozdział 9.
 [89
 
-] [90] [91
-
-]
-Dodatek A.
-[92
-
-]
-Dodatek B.
-(licencjat.bbl [93
+] [90] (licencjat.bbl [91
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 14--18
@@ -1466,37 +1465,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--30
 ] [][][][][][][][][] [] [][][][][] []
  []
 
-) [94
+) [92
 
 ] (licencjat.lot)
 \tf@lot=\write5
 \openout5 = `licencjat.lot'.
 
- [95
+ [93
 
-] (licencjat.lof [96
+] (licencjat.lof [94
 
-])
+] [95])
 \tf@lof=\write6
 \openout6 = `licencjat.lof'.
 
- [97] [98
+ [96] [97
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1372.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1372.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1436.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1436.
  (licencjat.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1372.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1372.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1372.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1436.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1436.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1436.
  ) 
 Here is how much of TeX's memory you used:
- 23632 strings out of 428721
- 432594 string characters out of 3163015
- 471069 words of memory out of 3000000
- 26751 multiletter control sequences out of 15000+200000
+ 23642 strings out of 428721
+ 432930 string characters out of 3163015
+ 471027 words of memory out of 3000000
+ 26756 multiletter control sequences out of 15000+200000
  7921 words of font info for 61 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
  55i,12n,61p,10401b,1615s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on licencjat.pdf (98 pages).
+Output written on licencjat.pdf (97 pages).
