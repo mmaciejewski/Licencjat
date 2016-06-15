@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xelatex 2016.3.7)  15 JUN 2016 23:51
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xelatex 2016.3.7)  16 JUN 2016 01:30
 entering extended mode
 **./licencjat.tex
 (licencjat.tex
@@ -996,21 +996,22 @@ Requested font "cmr6" at 6.0pt
  [4
 
 
-])
-\tf@toc=\write4
-\openout4 = `licencjat.toc'.
-
+]
 Requested font "Minion Pro/I/OT:script=latn;language=DFLT;mapping=tex-text;mapp
 ing=tex-text;+onum;mapping=tex-text;" at 12.0pt
  -> C:/Program Files (x86)/Adobe/Acrobat Reader DC/Resource/Font/MinionPro-It.o
 tf
- [5]
+ [5])
+\tf@toc=\write4
+\openout4 = `licencjat.toc'.
+
+ [6]
 Underfull \vbox (badness 2521) has occurred while \output is active []
 
- [6
+ [7
 
 ]
-[7]
+[8]
 Rozdział 1.
 
 Underfull \hbox (badness 1983) in paragraph at lines 102--102
@@ -1096,35 +1097,35 @@ ing=tex-text;+onum;mapping=tex-text;" at 10.95pt
 
 LaTeX Warning: Float too large for page by 131.0275pt on input line 120.
 
-[8
+[9
 
-] [9]
+] [10]
 Rozdział 2.
-[10
+[11
 
-] [11] [12] [13]
+] [12] [13] [14]
 Rozdział 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 216--220
 
  []
 
-[14
+[15
 
-] [15] [16]
+] [16] [17]
 Rozdział 4.
-[17
+[18
 
-] [18] [19]
+] [19] [20]
 File: Screeny/rodzial5screeny/ekran_glowny.png Graphic file (type QTm)
  <use  "Screeny/rodzial5screeny/ekran_glowny.png" >
 Underfull \hbox (badness 10000) in paragraph at lines 284--295
 
  []
 
-[20] [21]
+[21] [22]
 File: Screeny/rodzial5screeny/drag_option.png Graphic file (type QTm)
- <use  "Screeny/rodzial5screeny/drag_option.png" > [22]
+ <use  "Screeny/rodzial5screeny/drag_option.png" > [23]
 File: Screeny/rodzial5screeny/move_option.png Graphic file (type QTm)
 
 <use  "Screeny/rodzial5screeny/move_option.png" >
@@ -1136,88 +1137,88 @@ File: Screeny/rodzial5screeny/scale_option.png Graphic file (type QTm)
 <use  "Screeny/rodzial5screeny/scale_option.png" >
 File: Screeny/rodzial5screeny/recttrans_option.png Graphic file (type QTm)
 
-<use  "Screeny/rodzial5screeny/recttrans_option.png" > [23]
+<use  "Screeny/rodzial5screeny/recttrans_option.png" > [24]
 File: Screeny/rodzial5screeny/przyklad_relacji_rodzic_dziecko.png Graphic file 
 (type QTm)
 
 <use  "Screeny/rodzial5screeny/przyklad_relacji_rodzic_dziecko.png" >
 Underfull \vbox (badness 5403) has occurred while \output is active []
 
- [24]
-[25] [26]
+ [25]
+[26] [27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
+ [28]
 Underfull \hbox (badness 10000) in paragraph at lines 438--442
 
  []
 
-[28]
+[29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
+ [30]
 File: Screeny/rodzial5screeny/moving_cube.png Graphic file (type QTm)
 
-<use  "Screeny/rodzial5screeny/moving_cube.png" > [30]
+<use  "Screeny/rodzial5screeny/moving_cube.png" > [31]
 Underfull \vbox (badness 2326) has occurred while \output is active []
 
- [31]
-[32]
+ [32]
+[33]
 File: Screeny/rodzial5screeny/model_prymitywne_kolidery.png Graphic file (type 
 QTm)
- <use  "Screeny/rodzial5screeny/model_prymitywne_kolidery.png" > [33]
+ <use  "Screeny/rodzial5screeny/model_prymitywne_kolidery.png" > [34]
 Rozdział 5.
 File: Screeny/New_project.png Graphic file (type QTm)
-<use  "Screeny/New_project.png" > [34
+<use  "Screeny/New_project.png" > [35
 
-] [35]
+] [36]
 File: Screeny/Main.png Graphic file (type QTm)
  <use  "Screeny/Main.png" >
 Underfull \vbox (badness 3919) has occurred while \output is active []
 
- [36]
+ [37]
 File: Screeny/Skeleton.png Graphic file (type QTm)
 
-<use  "Screeny/Skeleton.png" > [37]
+<use  "Screeny/Skeleton.png" > [38]
 File: Screeny/Mesh.png Graphic file (type QTm)
- <use  "Screeny/Mesh.png" > [38]
+ <use  "Screeny/Mesh.png" > [39]
 File: Screeny/Animation.png Graphic file (type QTm)
 
-<use  "Screeny/Animation.png" > [39]
+<use  "Screeny/Animation.png" > [40]
 File: Screeny/Blend_Space.png Graphic file (type QTm)
- <use  "Screeny/Blend_Space.png" > [40]
+ <use  "Screeny/Blend_Space.png" > [41]
 File: Screeny/AnimGraph_Event.png Graphic file (type QTm)
 
 <use  "Screeny/AnimGraph_Event.png" >
 File: Screeny/EventGraph_Event.png Graphic file (type QTm)
  <use  "Screeny/EventGraph_Event.png" >
-[41] [42]
+[42] [43]
 Rozdział 6.
 File: Screeny/UnityKrokPoKroku/foldery.png Graphic file (type QTm)
-<use  "Screeny/UnityKrokPoKroku/foldery.png" > [43
+<use  "Screeny/UnityKrokPoKroku/foldery.png" > [44
 
-] [44]
+] [45]
 File: Screeny/UnityKrokPoKroku/krok1_endscreen.png Graphic file (type QTm)
 
-<use  "Screeny/UnityKrokPoKroku/krok1_endscreen.png" > [45] [46] [47]
+<use  "Screeny/UnityKrokPoKroku/krok1_endscreen.png" > [46] [47] [48]
 Underfull \vbox (badness 5533) has occurred while \output is active []
 
- [48]
+ [49]
 Underfull \vbox (badness 2781) has occurred while \output is active []
 
- [49]
+ [50]
 Overfull \hbox (42.0044pt too wide) in paragraph at lines 776--777
 [][][][][][][][][][][][][] 
  []
 
-[50]
+[51]
 File: Screeny/UnityKrokPoKroku/krok4_buttony.png Graphic file (type QTm)
  <use  "Screeny/UnityKrokPoKroku/krok4_buttony.png" >
 Overfull \hbox (27.60425pt too wide) in paragraph at lines 817--818
 [][][][][][][][][][][] 
  []
 
-[51]
+[52]
 Overfull \hbox (63.60461pt too wide) in paragraph at lines 818--819
 [][][][][][][][][][][][][][][][][] 
  []
@@ -1232,14 +1233,14 @@ Overfull \hbox (13.2041pt too wide) in paragraph at lines 820--821
 [][][][][][][][][][][][][][][] 
  []
 
-[52]
+[53]
 Overfull \hbox (6.04483pt too wide) in paragraph at lines 846--847
 [][][]\EU1/MinionPro(0)/m/n/12 http://forum.unity3d.com/threads/riverwater-the-
 free-epic-water-solution-for-
  []
 
 File: Screeny/UnityKrokPoKroku/gotowa_gra.png Graphic file (type QTm)
-<use  "Screeny/UnityKrokPoKroku/gotowa_gra.png" > [53] [54]
+<use  "Screeny/UnityKrokPoKroku/gotowa_gra.png" > [54] [55]
 Rozdział 7.
 File: Screeny/UeKrokPoKroku/UE-Climb-NewProject.png Graphic file (type QTm)
 <use  "Screeny/UeKrokPoKroku/UE-Climb-NewProject.png" >
@@ -1255,25 +1256,25 @@ Requested font "[lmmono12-regular]" at 12.0pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55
+ [56
 
 ]
-[56]
+[57]
 File: Screeny/UeKrokPoKroku/UE-Inputs.png Graphic file (type QTm)
- <use  "Screeny/UeKrokPoKroku/UE-Inputs.png" > [57]
+ <use  "Screeny/UeKrokPoKroku/UE-Inputs.png" > [58]
 File: Screeny/UeKrokPoKroku/UE-BlendSpace-Add.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-BlendSpace-Add.png" >
 File: Screeny/UeKrokPoKroku/UE-BlendSpace-IdleWalkRun.png Graphic file (type QT
 m)
 
-<use  "Screeny/UeKrokPoKroku/UE-BlendSpace-IdleWalkRun.png" > [58]
+<use  "Screeny/UeKrokPoKroku/UE-BlendSpace-IdleWalkRun.png" > [59]
 File: Screeny/UeKrokPoKroku/UE-Import.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-Import.png" > [59]
+<use  "Screeny/UeKrokPoKroku/UE-Import.png" > [60]
 File: Screeny/UeKrokPoKroku/UE-AnimBPcreate.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-AnimBPcreate.png" > [60]
+<use  "Screeny/UeKrokPoKroku/UE-AnimBPcreate.png" > [61]
 File: Screeny/UeKrokPoKroku/UE-AnimGraph-IdleWalkRun.png Graphic file (type QTm
 )
 
@@ -1282,9 +1283,9 @@ Overfull \hbox (6.00305pt too wide) in paragraph at lines 953--954
  [] 
  []
 
-[61]
+[62]
 File: Screeny/UeKrokPoKroku/UE-AnimGraph-Anim.png Graphic file (type QTm)
- <use  "Screeny/UeKrokPoKroku/UE-AnimGraph-Anim.png" > [62]
+ <use  "Screeny/UeKrokPoKroku/UE-AnimGraph-Anim.png" > [63]
 File: Screeny/UeKrokPoKroku/UE-AnimGraph-Connect.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-AnimGraph-Connect.png" >
@@ -1298,7 +1299,7 @@ Overfull \hbox (48.60338pt too wide) in paragraph at lines 986--987
  [] 
  []
 
-[63]
+[64]
 File: Screeny/UeKrokPoKroku/UE-EventGraph-IsInAir.png Graphic file (type QTm)
  <use  "Screeny/UeKrokPoKroku/UE-EventGraph-IsInAir.png" >
 Overfull \hbox (20.40317pt too wide) in paragraph at lines 996--997
@@ -1307,7 +1308,7 @@ Overfull \hbox (20.40317pt too wide) in paragraph at lines 996--997
 
 File: Screeny/UeKrokPoKroku/UE-EventGraph-SetIsInAir.png Graphic file (type QTm
 )
-<use  "Screeny/UeKrokPoKroku/UE-EventGraph-SetIsInAir.png" > [64]
+<use  "Screeny/UeKrokPoKroku/UE-EventGraph-SetIsInAir.png" > [65]
 File: Screeny/UeKrokPoKroku/UE-EventGraph-Speed.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-EventGraph-Speed.png" >
@@ -1315,13 +1316,13 @@ Overfull \hbox (34.80328pt too wide) in paragraph at lines 1017--1018
  [] 
  []
 
-[65]
+[66]
 File: Screeny/UeKrokPoKroku/UE-CharacterBP-Viewport.png Graphic file (type QTm)
 
  <use  "Screeny/UeKrokPoKroku/UE-CharacterBP-Viewport.png" >
 File: Screeny/UeKrokPoKroku/UE-CharacterBP-Camera.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-CharacterBP-Camera.png" > [66]
+<use  "Screeny/UeKrokPoKroku/UE-CharacterBP-Camera.png" > [67]
 File: Screeny/UeKrokPoKroku/UE-CharacterBP-Movement.png Graphic file (type QTm)
 
 
@@ -1329,59 +1330,59 @@ File: Screeny/UeKrokPoKroku/UE-CharacterBP-Movement.png Graphic file (type QTm)
 File: Screeny/UeKrokPoKroku/UE-CharacterBP-MouseAndJump.png Graphic file (type 
 QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-CharacterBP-MouseAndJump.png" > [67]
+<use  "Screeny/UeKrokPoKroku/UE-CharacterBP-MouseAndJump.png" > [68]
 File: Screeny/UeKrokPoKroku/UE-MyGame-Class.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-MyGame-Class.png" > [68]
+<use  "Screeny/UeKrokPoKroku/UE-MyGame-Class.png" > [69]
 File: Screeny/UeKrokPoKroku/UE-MyGame-WorldSetting.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-MyGame-WorldSetting.png" >
 File: Screeny/UeKrokPoKroku/UE-MyGame-ProjectSettings.png Graphic file (type QT
 m)
 
-<use  "Screeny/UeKrokPoKroku/UE-MyGame-ProjectSettings.png" > [69]
+<use  "Screeny/UeKrokPoKroku/UE-MyGame-ProjectSettings.png" > [70]
 File: Screeny/UeKrokPoKroku/UE-MyGame-Posses.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-MyGame-Posses.png" > [70]
+<use  "Screeny/UeKrokPoKroku/UE-MyGame-Posses.png" > [71]
 File: Screeny/UeKrokPoKroku/UE-MyGame-Scene.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-MyGame-Scene.png" > [71]
+<use  "Screeny/UeKrokPoKroku/UE-MyGame-Scene.png" > [72]
 File: Screeny/UeKrokPoKroku/UE-Climb-ProjectSettings.png Graphic file (type QTm
 )
 
 <use  "Screeny/UeKrokPoKroku/UE-Climb-ProjectSettings.png" >
 File: Screeny/UeKrokPoKroku/UE-Climb-Collision.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-Climb-Collision.png" > [72]
+<use  "Screeny/UeKrokPoKroku/UE-Climb-Collision.png" > [73]
 File: Screeny/UeKrokPoKroku/UE-Climb-Sphere01.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere01.png" > [73]
+<use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere01.png" > [74]
 File: Screeny/UeKrokPoKroku/UE-Climb-Sphere02.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere02.png" >
 File: Screeny/UeKrokPoKroku/UE-Climb-Sphere03.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere03.png" > [74]
+<use  "Screeny/UeKrokPoKroku/UE-Climb-Sphere03.png" > [75]
 File: Screeny/UeKrokPoKroku/UE-Climb-ObjectCollision.png Graphic file (type QTm
 )
 
-<use  "Screeny/UeKrokPoKroku/UE-Climb-ObjectCollision.png" > [75]
+<use  "Screeny/UeKrokPoKroku/UE-Climb-ObjectCollision.png" > [76]
 File: Screeny/UeKrokPoKroku/UE-Tick.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-Tick.png" > [76]
+<use  "Screeny/UeKrokPoKroku/UE-Tick.png" > [77]
 Overfull \hbox (6.9409pt too wide) in paragraph at lines 1215--1216
 []\EU1/MinionPro(0)/m/n/12 Następnie musimy powiedzieć programowi kiedy możliwo
 ść śledzenia jest praw-
  []
 
 File: Screeny/UeKrokPoKroku/UE-canTrace.png Graphic file (type QTm)
-<use  "Screeny/UeKrokPoKroku/UE-canTrace.png" > [77]
+<use  "Screeny/UeKrokPoKroku/UE-canTrace.png" > [78]
 File: Screeny/UeKrokPoKroku/UE-Tracer.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-Tracer.png" >
 File: Screeny/UeKrokPoKroku/UE-HeightMacro.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-HeightMacro.png" > [78]
+<use  "Screeny/UeKrokPoKroku/UE-HeightMacro.png" > [79]
 File: Screeny/UeKrokPoKroku/UE-Height.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/UE-Height.png" >
@@ -1389,25 +1390,25 @@ Overfull \hbox (37.99896pt too wide) in paragraph at lines 1252--1253
  [] 
  []
 
-[79]
+[80]
 File: Screeny/UeKrokPoKroku/WallMacro.png Graphic file (type QTm)
  <use  "Screeny/UeKrokPoKroku/WallMacro.png" >
 Overfull \hbox (67.49889pt too wide) in paragraph at lines 1265--1266
  [] 
  []
 
-[80]
+[81]
 File: Screeny/UeKrokPoKroku/UE-WallTracer.png Graphic file (type QTm)
- <use  "Screeny/UeKrokPoKroku/UE-WallTracer.png" > [81]
+ <use  "Screeny/UeKrokPoKroku/UE-WallTracer.png" > [82]
 File: Screeny/UeKrokPoKroku/spherecollision.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/spherecollision.png" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [82]
+ [83]
 File: Screeny/UeKrokPoKroku/CanGrabInterface.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/CanGrabInterface.png" > [83]
+<use  "Screeny/UeKrokPoKroku/CanGrabInterface.png" > [84]
 File: Screeny/UeKrokPoKroku/GrabLedge.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/GrabLedge.png" >
@@ -1416,16 +1417,16 @@ Overfull \hbox (35.99896pt too wide) in paragraph at lines 1315--1316
  []
 
 File: Screeny/UeKrokPoKroku/WallGoToLocation.png Graphic file (type QTm)
-<use  "Screeny/UeKrokPoKroku/WallGoToLocation.png" > [84]
+<use  "Screeny/UeKrokPoKroku/WallGoToLocation.png" > [85]
 File: Screeny/UeKrokPoKroku/UE-AnimGraph.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/UE-AnimGraph.png" > [85]
+<use  "Screeny/UeKrokPoKroku/UE-AnimGraph.png" > [86]
 File: Screeny/UeKrokPoKroku/LetGoOfLedge.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/LetGoOfLedge.png" >
 File: Screeny/UeKrokPoKroku/Crouch.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/Crouch.png" > [86]
+<use  "Screeny/UeKrokPoKroku/Crouch.png" > [87]
 File: Screeny/UeKrokPoKroku/HipSocket.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/HipSocket.png" >
@@ -1437,42 +1438,52 @@ Overfull \hbox (34.49896pt too wide) in paragraph at lines 1386--1387
  [] 
  []
 
-[87]
+[88]
 Overfull \hbox (7.36801pt too wide) in paragraph at lines 1397--1398
 []\EU1/MinionPro(0)/m/n/12 W przeglądarce zawartości wyszukujemy plik „ClimbLed
 gePlaceHolder” i otwie-
  []
 
 File: Screeny/UeKrokPoKroku/MontageNotify.png Graphic file (type QTm)
-<use  "Screeny/UeKrokPoKroku/MontageNotify.png" > [88]
+<use  "Screeny/UeKrokPoKroku/MontageNotify.png" > [89]
 File: Screeny/UeKrokPoKroku/AnimGraphSlot.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/AnimGraphSlot.png" >
+<use  "Screeny/UeKrokPoKroku/AnimGraphSlot.png" > [90]
 File: Screeny/UeKrokPoKroku/LedgeClimbingGraph.png Graphic file (type QTm)
 
 <use  "Screeny/UeKrokPoKroku/LedgeClimbingGraph.png" >
 File: Screeny/UeKrokPoKroku/JumpClimb.png Graphic file (type QTm)
 
-<use  "Screeny/UeKrokPoKroku/JumpClimb.png" >
-Overfull \hbox (123.99875pt too wide) in paragraph at lines 1435--1436
- [] 
- []
+<use  "Screeny/UeKrokPoKroku/JumpClimb.png" > [91]
+File: Screeny/UeKrokPoKroku/MainMenu.png Graphic file (type QTm)
 
-[89] [90] [91]
+<use  "Screeny/UeKrokPoKroku/MainMenu.png" > [92]
+File: Screeny/UeKrokPoKroku/MainMenuEvent.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/MainMenuEvent.png" > [93]
+File: Screeny/UeKrokPoKroku/PauseButton.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/PauseButton.png" >
+File: Screeny/UeKrokPoKroku/LevelGraph.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/LevelGraph.png" > [94]
+File: Screeny/UeKrokPoKroku/Door.png Graphic file (type QTm)
+
+<use  "Screeny/UeKrokPoKroku/Door.png" > [95] [96]
 Rozdział 8.
-[92
+[97
 
 ]
 File: Screeny/UE_vs_Unity.png Graphic file (type QTm)
  <use  "Screeny/UE_vs_Unity.png" >
 Underfull \vbox (badness 4303) has occurred while \output is active []
 
- [93]
-[94]
+ [98]
+[99]
 Rozdział 9.
-[95
+[100
 
-] [96] (licencjat.bbl [97
+] [101] (licencjat.bbl [102
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 14--18
@@ -1504,38 +1515,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--30
 ] [][][][][][][][][] [] [][][][][] []
  []
 
-) [98
+) [103
 
 ] (licencjat.lot)
 \tf@lot=\write5
 \openout5 = `licencjat.lot'.
 
- [99
+ [104
 
-] (licencjat.lof [100
+] (licencjat.lof [105
 
-] [101])
+] [106])
 \tf@lof=\write6
 \openout6 = `licencjat.lof'.
 
- [102] [103
+ [107] [108
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1530.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1530.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1614.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1614.
 
 (licencjat.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1530.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1530.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1530.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1614.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1614.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1614.
  ) 
 Here is how much of TeX's memory you used:
- 23658 strings out of 428721
- 433376 string characters out of 3163015
- 471112 words of memory out of 3000000
- 26764 multiletter control sequences out of 15000+200000
+ 23669 strings out of 428721
+ 433631 string characters out of 3163015
+ 471574 words of memory out of 3000000
+ 26770 multiletter control sequences out of 15000+200000
  7921 words of font info for 61 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
  55i,12n,61p,10401b,1615s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on licencjat.pdf (103 pages).
+Output written on licencjat.pdf (108 pages).
