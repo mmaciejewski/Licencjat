@@ -36,7 +36,7 @@
 \contentsline {section}{\numberline {7.6}Krok 6 - Chwytanie}{84}{section.7.6}
 \contentsline {section}{\numberline {7.7}Krok 7 - Puszczanie krawędzi}{87}{section.7.7}
 \contentsline {section}{\numberline {7.8}Krok 8 - Wspinanie}{89}{section.7.8}
-\contentsline {section}{\numberline {7.9}Krok 9 - wykończenie}{92}{section.7.9}
+\contentsline {section}{\numberline {7.9}Krok 9 - Wykończenie}{92}{section.7.9}
 \contentsline {subsection}{\numberline {7.9.1}Menu główne}{92}{subsection.7.9.1}
 \contentsline {subsection}{\numberline {7.9.2}Pauza}{94}{subsection.7.9.2}
 \contentsline {subsection}{\numberline {7.9.3}Obszar śmierci}{94}{subsection.7.9.3}

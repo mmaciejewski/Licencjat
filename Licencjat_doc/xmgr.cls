@@ -23,6 +23,7 @@
 \RequirePackage{color}
 \definecolor{xmgrBrickRed}{cmyk}{0,0.89,0.94,0.28}
 \usepackage{hyperref}
+\usepackage{array}
 \hypersetup{colorlinks=true,linkcolor=xmgrBrickRed,bookmarks=true}
 %
 \RequirePackage{url}
@@ -139,10 +140,10 @@
 \addcontentsline{toc}{chapter}{\SummaryName}}
 %
 \def\oswiadczenieText{%
-My, niżej podpisani oświadczamy, iż przedłożona praca 
-dyplomowa została wykonana przez nas samodzielnie, 
-nie narusza praw autorskich, interesów prawnych 
-i~materialnych innych osób.\endgraf }
+Ja, niżej podpisany, oświadczam, że przedłożona praca dyplomowa (będąca rezultatem pracy zespołu studentów) została przygotowana przeze mnie – w części, za którą odpowiadam - samodzielnie i nie narusza praw autorskich, interesów prawnych oraz materialnych innych osób.
+\bigbreak
+
+Ponadto oświadczam, że złożona wersja drukowana i elektroniczna niniejszej pracy licencjackiej są ze sobą zgodne.\newline\endgraf }
 %
 \long\def\oswiadczenie{%%\newpage 
 \if@twocolumn \onecolumn \fi
@@ -152,13 +153,27 @@ i~materialnych innych osób.\endgraf }
 \vskip6mm
 \noindent
 \oswiadczenieText
-\par\vskip12mm 
-\centerline{\vbox{%
-\hbox to.8\textwidth{\hbox to45mm{\dotfill}\hss 
-   \hbox to45mm{\dotfill}} 
-\hbox to.8\textwidth{\hbox to45mm{\hss data\hss}\hss
-\hbox to45mm{\hss podpis\hss}}%
-}}\par
+
+
+%\par\vskip12mm 
+%\centerline{\vbox{%
+%\hbox to.8\textwidth{\hbox to45mm{\dotfill}\hss 
+%   \hbox to45mm{\dotfill}} 
+%\hbox to.8\textwidth{\hbox to45mm{\hss data\hss}\hss
+%\hbox to45mm{\hss podpis\hss}}%
+%}}\par
+
+\begin{tabular}{>{\centering\arraybackslash}p{5.5cm} >{\centering\arraybackslash}p{5.5cm}}
+        \dotfill & \dotfill \\
+        data & Czerwińska Agnieszka \\
+        & \\
+        & \dotfill \\ 
+        & Maciejewski Michał \\ 
+        & \\
+        & \dotfill \\ 
+        & Miszczykowski Mariusz \\ 
+ \end{tabular}
+
 \newpage }
 
 \renewcommand\maketitle{%
