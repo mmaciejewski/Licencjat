@@ -155,24 +155,24 @@ Ponadto oświadczam, że złożona wersja drukowana i elektroniczna niniejsze
 \oswiadczenieText
 
 
-%\par\vskip12mm 
-%\centerline{\vbox{%
-%\hbox to.8\textwidth{\hbox to45mm{\dotfill}\hss 
-%   \hbox to45mm{\dotfill}} 
-%\hbox to.8\textwidth{\hbox to45mm{\hss data\hss}\hss
-%\hbox to45mm{\hss podpis\hss}}%
-%}}\par
+\par\vskip12mm 
+\centerline{\vbox{%
+\hbox to.8\textwidth{\hbox to45mm{\dotfill}\hss 
+   \hbox to45mm{\dotfill}} 
+\hbox to.8\textwidth{\hbox to45mm{\hss data\hss}\hss
+\hbox to45mm{\hss podpis\hss}}%
+}}\par
 
-\begin{tabular}{>{\centering\arraybackslash}p{5.5cm} >{\centering\arraybackslash}p{5.5cm}}
-        \dotfill & \dotfill \\
-        data & Czerwińska Agnieszka \\
-        & \\
-        & \dotfill \\ 
-        & Maciejewski Michał \\ 
-        & \\
-        & \dotfill \\ 
-        & Miszczykowski Mariusz \\ 
- \end{tabular}
+%\begin{tabular}{>{\centering\arraybackslash}p{5.5cm} >{\centering\arraybackslash}p{5.5cm}}
+%        \dotfill & \dotfill \\
+%        data & Czerwińska Agnieszka \\
+%        & \\
+%        & \dotfill \\ 
+%        & Maciejewski Michał \\ 
+%        & \\
+%        & \dotfill \\ 
+%        & Miszczykowski Mariusz \\ 
+% \end{tabular}
 
 \newpage }
 
