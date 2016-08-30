@@ -121,6 +121,9 @@
 \def\kierunek#1{\gdef\@kierunek{#1}}
 \def\@kierunek{Informatyka}
 
+\def\specjalizacja#1{\gdef\@specjalizacja{#1}}
+\def\@specjalizacja{Technologie sieciowe i bazy danych}
+
 \def\opiekun#1{\gdef\@opiekun{#1}}
 \def\@opiekun{???\ClassError{xmgr}{Brak danych opiekuna pracy}\@ehc}
 \def\miejsce#1{\gdef\@miejsce{#1}}
@@ -197,6 +200,7 @@ Ponadto oświadczam, że złożona wersja drukowana i elektroniczna niniejsze
         \begin{tabular}{l}
           Praca \@rodzajpracy{} na kierunku:\\[3pt]
           \MakeUppercase{\@kierunek}\\[3pt]
+	\@specjalizacja \\[3pt]
           Promotor: \\[3pt]
           \bfseries \@opiekun
         \end{tabular}
